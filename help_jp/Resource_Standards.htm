@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>リソースの基準</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_3";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">リソースの基準</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">ラノゲツクールMVでは、ユーザー固有のリソースをインポートすることができます。指定しない限り、アセットにかかわらず、画像サイズの基準はありません。モバイルゲームの場合は、1024px 
+ ~ 2048pxの範囲内に収めることをお勧めします。<br />
+</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「キャラクター」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">キャラクターの表情に使用される画像です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 PNG</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">アニメーション<span 
+	 style="font-weight: normal;">&#160;- フレームごとの画像が必要です。</span><br />
+	<img src="willow.jpg" alt="" style=" border:none; width:100%; max-width:365px;" border="0" /></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><span>「背景」</span></p>
+<p>背景に使用される画像です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 PNG、JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><span>「ピクチャー」</span></p>
+<p>CG、アニメーション、システム、画像、UIコマンドで使用される画像です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 PNG、JPG</p></li>
+	<li style="margin-left: -20px; font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">画像サイズ：</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">CGギャラリーのサムネイル：</span>ギャラリーサムネイルのサイズは画面解像度の1／8です。たとえば、画面解像度が1280x720の場合は160x90になります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">アニメーション：<span 
+	 style="font-weight: normal;">スプライトシートとしてインポートされている必要があります。サイズは画像のグリッドサイズによって異なります。以下に例を示します。</span><br />
+	<img src="ANIMATIONSHEET.jpg" alt="Created and Owned by Archeia" title="Created and Owned by Archeia" style=" border:none; width:100%; max-width:194px;" border="0" /><br />
+	<span style="font-weight: normal;">キャラクターのグリッドが幅（X）24 &#160;x 高さ（Y）32の場合、次のような計算になります。</span></p></li>
+	<li><table style=" border-collapse:separate; width:100%; max-width:30.356%;" cellspacing="0" border="1">
+		<col style="width: 29.864%;" />
+		<col style="width: 70.136%;" />
+		<tr>
+			<td colspan="2"><p style="text-align: center; font-family: Arial, sans-serif; 
+								 font-weight: bold;">（幅&#160;x フレーム）px 
+			 x （高さ&#160;x フレーム）px</p></td>
+			
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">幅</span></td>
+			<td><span>24 x 3フレーム = 72</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">高さ</span></td>
+			<td><span>32 x 4フレーム = 128</span></td>
+		</tr>
+		<tr>
+			<td><span style="font-weight: bold;">最終的な画像サイズ</span></td>
+			<td><span>72px x 128px</span></td>
+		</tr>
+	</table></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="SubSubHeading">「フレーム」</p>
+<p>フレームは画面上にグラフィックフレームを表示し、ゲーム内のウィンドウやカーソルなどゲーム内UIの装飾に使用します。フレームは、「<a href="Picture.htm#Show_Picture"> 
+ ピクチャーを表示</a>」コマンドの「<span style="font-weight: bold;">ビジュアルタイプ</span>」が「<span 
+	 style="font-weight: bold;">フレーム</span>」に設定されている場合に使用できます。<br />
+</p>
+<p><img src="image47.gif" alt="" style=" border:none; width:100%; max-width:274px;" border="0" /></p>
+<p>&#160;</p>
+<p>実際の見た目は画像（スキンとも呼ばれます）に左右されます。当然ながら、フレームだけでなくウィンドウ背景も適切なものを選ぶことでより見栄えよく仕上げることができます。上の例でスキン画像をインポートすると次のようになります。</p>
+<p>&#160;</p>
+<p><img src="image48.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>フレームは画像を一度に表示せず、複数の断片をつなぎあわせてフレームを作成します。</p>
+<p>&#160;</p>
+<p><img src="image49.gif" alt="" style=" border:none; width:100%; max-width:64px;" border="0" /></p>
+<p>&#160;</p>
+<p>黄色でマークされた領域はコーナー、赤でマークされた領域はサイドと呼ばれ、フレームのサイズに適合するように延長されます。コーナーとサイドのサイズは、「<a 
+	 href="Picture.htm#Show_Picture">ピクチャーを表示</a>」コマンドのフィールドから設定できます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">「3-パーツイメージ」</p>
+<p>3-パーツイメージは、フレームよりもシンプルなフォームで、画像を3つの断片に分けて個別に表示します。「<a href="Picture.htm#Show_Picture">ピクチャーを表示</a>」コマンドの「<span 
+	 style="font-weight: bold;">ビジュアルタイプ</span>」が「<span style="font-weight: bold;">3-パーツイメージ</span>」に設定されている場合に使用できます。</p>
+<p>&#160;</p>
+<p><img src="image50.gif" alt="" style=" border:none; width:100%; max-width:123px;" border="0" /></p>
+<p>&#160;</p>
+<p>左右の黄色でマークされたパーツは固定されていて、中央の赤でマークされたパーツは延長できます。実際の表示画像は次のようになります。</p>
+<p>&#160;</p>
+<p><img src="image51.gif" alt="" style=" border:none; width:100%; max-width:60px;" border="0" /></p>
+<p>&#160;</p>
+<p>当然ながら拡大が可能で、このガイダンスでは、見やすいように背景を薄緑にしています。元の画像の背景は透明です。左右のパーツと中央のパーツのサイズは、「<a 
+	 href="Picture.htm#Show_Picture">ピクチャーを表示</a>」コマンドのフィールドから設定でき、方向も垂直に変更できます。</p>
+<p>&#160;</p>
+<p>3-パーツイメージは、シンプルなボタンやスクロールバーなど、ゲーム内UIに関連する表示で便利です。たとえば、デフォルトのゲーム内UIではスクロールバーは次のようになります。</p>
+<p>&#160;</p>
+<p><img src="InGameScrollBar.PNG" alt="" style=" border:none; width:100%; max-width:624px;" border="0" /></p>
+<p>&#160;</p>
+<p>右のスクロールバーには3-パーツイメージが使用されています。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「アイコン」</p>
+<p>「言語選択」ウィンドウで使用される画像です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 PNG、JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「マスク」</p>
+<p>マスクで使用される画像です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 PNG、JPG</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「フォント」</p>
+<p>ゲームに使用されるフォントです。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 WOFF、FNT</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">WOFFフォント：</span><a 
+	 href="https://andrewsun.com/tools/woffer-woff-font-converter/">WOFFer</a>などのツールを使用すると、TTF 
+	 ファイルをWOFFに簡単に変換できます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">bitmapフォント：</span><a 
+	 href="http://www.angelcode.com/products/bmfont/">bmfont</a>フォント、<a 
+	 href="https://www.bmglyph.com/">bmGlyph</a>フォントの他、フォントジェネレーターがエクスポートするfnt/bmfont形式がサポートされます。ファイル形式はfnt-textである必要があります。XML/Binaryはサポートされていません。bmGlyphを使用する場合は、出力形式に「bmfont」を選択してください。フォーマットは、テキストの色の変更以外、bitmapフォントには影響しません。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">重要事項：</span>bitmapフォントは、文字セット、スタイル、サイズ、使用されるbitmapフォントの数によって大量のメモリを消費する場合があります。特にスマートフォンなどの携帯端末でbitmapフォントを使用する場合は注意が必要です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「音楽と効果音」</p>
+<p>ゲームで使用されるオーディオトラックです。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 OGG、M4A</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「Live2D」</p>
+<p>Live2D用のファイルです。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">データ形式 <span 
+	 style="font-weight: normal;">-</span> <span style="font-weight: normal;">Live2Dモデル、モーション、顔の表情は、インポートプロセス中に自動的に.live2dアーカイブ（.zip）にパッケージングされます。Live2Dモデルをインポートするには、次のスクリーンショットのように.model.jsonを選択する必要があります。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="live2d_model.png" alt="" style=" border:none; width:100%; max-width:227px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">Live2Dモデルは、ほとんどがJSON形式です。もしJSONファイルではなく、生のモデルファイルしか持っていない場合は、<a href="http://www.live2d.com/en/download">Live2D Viewer</a>と呼ばれるソフトを使い、自身のLive2DモデルをJSON形式でエクスポートしてください。JSONファイルとしてエクスポートする前に、表情やモーション、物理、ポーズといったファイルがすべて正しく追加されていることを確認しておきましょう。</p>
+<p style="font-family: Arial, sans-serif;">JSON file.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="Live2DViewer.png" alt="" style=" border:none; width:100%; max-width:989px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">メニューバーから「  <span style="font-weight: bold;">プロジェクト 
+ &rarr; 書き出し &rarr; モデル設定ファイル</span> 」と選択し、JSON形式でエクスポートしましょう。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="image61.gif" alt="" style=" border:none; width:100%; max-width:268px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「ムービー」</p>
+<p>「ムービー」コマンド用のファイルです。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">データ形式</span>&#160;- 
+	 WEBM</p></li>
+</ul>
+</body>
+</html>

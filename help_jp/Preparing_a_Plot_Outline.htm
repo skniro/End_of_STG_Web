@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>物語の分岐</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.3.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > ノンリニアの物語" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">物語の分岐</p>
+</div>
+<p>&#160;</p>
+<p>では、分岐がある物語を書く場合、一番大きな障害となり得るのはその範囲そのものです。</p>
+<p>&#160;</p>
+<p>最終的に、「きみならどうする？」系ゲームの構造や構想をどうするかについては、開発者であるあなた次第だということを理解することが重要です。このガイドは単に、そうした考えをゲームに実装する方法の足掛かりでしかありません。</p>
+<p>&#160;</p>
+<p>今回も例にもれず、シンプルなフローチャートを使って物語の方向性を明確にしましょう。</p>
+<p>&#160;</p>
+<p><img src="BranchingStoryPath.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>お気づきかもしれませんが、この分岐のある物語は非常にシンプルです。ステータスや親密度を決める変数は必要ありません。ですが、それでもかなりの長さとシナリオが必要だということがわかります。分岐パスやエンディングが増えれば、それだけフローチャートも長くなります。それはつまり、作品の範囲がより大きくなり、作業量も増えることを意味します。今回はチュートリアルですのでそこまでやりません。ステータスや親密度をどうしても追加したいのであれば、<a 
+	 href="Learning_about_Switches.htm">数値変数</a>を学び、<a href="Characters.htm#Parameters">キャラクターのパラメータ</a>を使うといいでしょう。実行そのものには<a 
+	 href="Learning_about_Conditional_Branches.htm">条件</a>を使いましょう。</p>
+<p>&#160;</p>
+<p>ただし、このシナリオはすべて「1つの場所」で起きているため、イベントの流れをシームレスにしなければなりません。その場合は「シーンを変更」ではなく、「<a 
+	 href="SceneCommand.htm#Call_Scene">シーンを呼び出し</a>」を使用します。このコマンドは、「背景を変更」、「シーンに登場」などのコマンドを再作成することなく、代わりに、現在のシーンに呼び出したシーンのコマンドを「コピー&amp;ペースト」します。これによって、物語の流れがシームレスになります。以下はシーンを実装する方法の例です。わかりやすくするため、フレーバーテキストは含まれていません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">実装1</p>
+<p>この物語の性質上、そのコマンドと選択肢の数では「シーンコンテンツ」をデバッグするのがより難しくなります。そこでシーンの構成を変更しなければなりません。</span>今回の場合、次のイメージのように物語を3つのセクションに分けることができます。</p>
+<p>&#160;</p>
+<p><img src="BranchingStoryPath-Breakdown.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>このレイアウトの目的は、編集とデバッグをしやすくすることにあります。ラノゲツクールMVで実装するには、次のように3つのシーンを作成します。</p>
+<p>&#160;</p>
+<p><img src="2017-02-20_8-19-55.jpg" alt="" style=" border:none; width:100%; max-width:312px;" border="0" /></p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;">最初のシーンである「エマにたずねる」<span style="font-weight: normal;">には、物語の始まりの部分が含まれています。ここにはBGMなどの土台となる設定があります。</span></p>
+<p style="font-weight: bold;">&#160;</p>
+<p><img src="BranchingStoryPath-1.jpg" alt="" style=" border:none; width:100%; max-width:1273px;" border="0" /></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">2つ目のシーン「デートに誘う // さようなら」</span>では、最初の選択肢のセットが含まれます。そのうち1つは、バッドエンド#1に続きます。</p>
+<p>&#160;</p>
+<p><img src="BranchingStoryPath-2.jpg" alt="" style=" border:none; width:100%; max-width:1274px;" border="0" /></p>
+<p>&#160;</p>
+<p>最後に、<span style="font-weight: bold;">3つ目のシーン「ゲームセンター // 公園」</span>でも、結末へと続く選択肢のセットが登場します。</p>
+<p>&#160;</p>
+<p><img src="BranchingStoryPath-3.jpg" alt="" style=" border:none; width:100%; max-width:1274px;" border="0" /></p>
+<p>&#160;</p>
+<p>ご覧のように、もしこれらが1つのシーンのみで構成されていたら、すべてのラベルを追跡することが困難になってしまいます。とはいえ、この手法はいささか雑かもしれませんので、別のやり方を紹介します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>実装2</span></p>
+<p><span style="font-weight: bold;">「選択肢を表示」には独自のシーンの呼び出しトリガーがあります。</span>ですので、シーンを分けるとわずかな変更が生じます。</p>
+<p>&#160;</p>
+<p><img src="BranchingStoryPath-Breakdown2.jpg" alt="" style=" border:none; width:100%; max-width:533px;" border="0" /></p>
+<p>&#160;</p>
+<p>3つのシーンの中にそれぞれ選択肢を用意するのではなく、各<span style="font-style: italic;">シーンが</span>選択の結果になっています。ですので、次のようになります。</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">シーン1：エマにたずねる</p>
+<p style="font-weight: bold;">&#160;</p>
+<p><img src="BranchingStoryPath-4.jpg" alt="" style=" border:none; width:100%; max-width:1274px;" border="0" /></p>
+<p>&#160;</p>
+<p style="font-weight: bold;">シーン2：デートに誘う</p>
+<p style="font-weight: bold;">&#160;</p>
+<p><img src="BranchingStoryPath-5.jpg" alt="" style=" border:none; width:100%; max-width:1274px;" border="0" /></p>
+<p>&#160;</p>
+<p style="font-weight: bold;">シーン3：さようなら</p>
+<p style="font-weight: bold;">&#160;</p>
+<p><img src="BranchingStoryPath-6.jpg" alt="" style=" border:none; width:100%; max-width:1274px;" border="0" /></p>
+<p>&#160;</p>
+<p>などとなります。この方法ではより多くのシーンが必要になりますが、適切に整理できれば、各々を追跡するのがより簡単になります。</p>
+<p>&#160;</p>
+<p>いずれの方法でも問題ありませんし、実装方法は他にもあります。開発者として、自分好みのやり方を見つけましょう。以上でシーンの呼び出しについて、理解が深まったのであれば幸いです。</p>
+</body>
+</html>

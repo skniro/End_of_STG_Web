@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：言語バンドルの作成</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに > 実例" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：言語バンドルの作成</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>の例では、エクステンションを他の言語に翻訳する言語バンドルを作成します。そのためには、「Language Bundles」を右クリックして、「新規」 
+ &rarr; 「言語バンドル」の順に選択します。</p>
+<p>これを「CardExtension」と名付けます。</p>
+<p>&#160;</p>
+<p><span class="Code">{ &quot;phrases&quot;: { &quot;D63591732C7F724D8D98B6E5B34B914FFFD6&quot;: 
+ &quot;Sample Text&quot; } }</span></p>
+<p>&#160;</p>
+<p>これにはフレーズ例が含まれているので、削除します。次に、別の言語バンドルを作成して「CardExtension.de」と名付けます。</p>
+<p>「CardExtension」バンドルには、既定の言語でフレーズが含まれています。現在の言語での翻訳がない場合、既定の言語が使用されます。</p>
+<p>2つ目のバンドル「CardExtension.de」は、ドイツ語を表す「.de」が接尾辞として付けられています。つまり現在の言語がドイツ語の場合、このバンドルが使用されます。</p>
+<p>&#160;</p>
+<p>ではプロパティを見てみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">phrases</p></li>
+</ul>
+<p>バンドルの異なるフレーズを定義する、キーフレーズのペアを含みます。つまり、各フレーズには固有のキーが必要になります。キーは、固有でさえあればどんなテキストでも構いません。</p>
+<p>既定では、各フレーズにはUIDが使われています。UIビューでフレーズを使用するには、「$$CardExtension.D63591732C7F724D8D98B6E5B34B914FFFD6」のような、</p>
+<p>$$&lt;bundle&gt;.&lt;phrase_uid&gt;構文を使用することができます。このような構文は、表示可能なテキストを指定できるほとんどの場所で使うことができます。以下に例を示します。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;GSLabel&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;text&quot;: &quot;$$CardExtension.D63591732C7F724D8D98B6E5B34B914FFFD6&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;frame&quot;: [0, 0] 
+ &#160;</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>このラベルは、存在する場合、「D63591732C7F724D8D98B6E5B34B914FFFD6」キーのフレーズを表示します。</p>
+<p>はじめこのフレーズは現在の言語用に存在しているように見えますが、そうでない場合、既定の言語によるフレーズを使用します。</p>
+<p>&#160;</p>
+<p>新しいフレーズを作成するには、手動でバンドルに加えればいいのですが、作業量が増えると少々厄介に感じられるので、自動でこれを行ってくれる2つの便利な関数があります。</p>
+<p>その2つとは、「Insert New String」と「Insert New String (LCS)」です。これらの関数は「ツール」 
+ &rarr; 「デベロッパーツール」のメニューバーまたは</p>
+<p>エクステンションエディタのツールバーにあります。</p>
+<p>&#160;</p>
+<p>どちらの関数も実際には同じことをしますが、出力時のフォーマットが異なります。これらの関数がどのように便利なのか、確認してみましょう。</p>
+<p>&#160;</p>
+<p>まず、ビュー、シーンコマンド、スクリプトのいずれかで、翻訳するテキストを選択する必要があります。次に、「Insert New String」をクリックします。</p>
+<p>するとバンドル名を入力するようメッセージが表示されます。バンドル「CardExtension」の名前を入力したら「OK」をクリックします。</p>
+<p>すると、次の2つのことが起こります。</p>
+<p>&#160;</p>
+<p>1．選択したテキストが自動的に「$$CardExtension.&lt;uid&gt;」に置き換わります。</p>
+<p>2．選択したテキストがデフォルトの言語の「CardExtension」バンドルに追加され、UIDが自動的に生成されます。</p>
+<p>&#160;</p>
+<p>これで今後は何かを翻訳する際に毎回自分の手でUIDを作って手動でフレーズを追加しなくてもよくなるので、時間を大幅に節約できます。</p>
+<p>この2つの便利な関数は1つだけ使いましょう。もう1つの関数「Insert New String (LCS)」の動作は同じですが、出力は次のとおりになります。</p>
+<p>&#160;</p>
+<p><span class="Code">lcs('&lt;bundle&gt;.&lt;uid&gt;')</span></p>
+<p>&#160;</p>
+<p>これは必要に応じ、スクリプトや計算式で使用することができます。</p>
+</body>
+</html>

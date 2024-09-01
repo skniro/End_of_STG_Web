@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Templates</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：テンプレート</p>
+</div>
+<p><span class="Topic_Start">2</span>つ目の例で、レイアウト内の冗長データを避けるのにスタイルが役に立つことを見てきました。しかし、スタイルは限定的ですので、</p>
+<p>ここではさらに効果的なやり方「テンプレート」を説明します。テンプレートは、よく使うコントロールの、カスタムのコントロールタイプを定義します。</p>
+<p>「Templates」フォルダには既に、既定のゲーム内UIのテンプレートが多数あります。これまで例の中で使用してきた「ui.Button」アイテムも実は、</p>
+<p>「Template_Button」と呼ばれるテンプレートでした。では、そのテンプレートを見てみましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes[&quot;ui.Button&quot;] = 
+ {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;controls&quot;:[</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.SelectableWindow&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, &quot;100%&quot;, &quot;100%&quot;],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 30],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;action&quot;: 
+ -&gt; p.action</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;zIndex&quot;: 
+ 4999</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Text&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sizeToFit&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;styles&quot;: 
+ [&quot;regularUIText&quot;],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;alignmentX&quot;: 
+ &quot;center&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;alignmentY&quot;: 
+ &quot;center&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: 
+ -&gt; p.text</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;zIndex&quot;: 
+ 5100</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>レイアウトやスタイル同様、最初の行は常に次のような同じフォーマットがあります。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes[&quot;&lt;module&gt;.&lt;unique_template_name&gt;&quot;] 
+ = {</span></p>
+<p>&#160;</p>
+<p>もしくは次のようなフォーマットです。。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.customTypes.&lt;unique_template_name&gt; 
+ = {</span></p>
+<p>&#160;</p>
+<p>この内容を完全に理解する必要はありません。ただテンプレートには固有の名前を付ける必要がある、という点だけ覚えておいてください。</p>
+<p>&#160;</p>
+<p>ここで、「ui.Button」がどのように定義されているかを確認できます。「ui.Button」が「ui.SelectableWindow」や中の「ui.Text」コントロールを伴った</p>
+<p>フリーレイアウトだということがわかります。「ui.SelectableWindow」もまたテンプレートです。つまり、テンプレートはより複雑なUIを構築する他のテンプレートを使用できるということです。</p>
+<p>&#160;</p>
+<p>「ui.SelectableWindow」は既定のUIデザインで影が付いたフレームです。サイズの比率は「100％」で、親となるフリーレイアウトの寸法に一致します。</p>
+<p>というわけで、テンプレートにおいてパーセンテージの値は、動的なサイズでテンプレートを使用できるようにするため非常に便利です。</p>
+<p>&#160;</p>
+<p>「ui.Text」はテキストプロパティのテキストを表示するのみです。この例では、テキストのボタンも機能させたいので、</p>
+<p>実際のテキストではなくプレースホルダー関数の「-&gt; p.text」で設定しています。プレースホルダーはテンプレートのすべてのプロパティで使用することができます。</p>
+<p>調節可能な特定の値を使用したい時はいつでも、次のフォーマットを使用してプレースホルダーを定義できます。</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.&lt;placeholder_name&gt;</span></p>
+<p>&#160;</p>
+<p>プレースホルダーの名前はテンプレート内で固有でなくてはなりません。またスペースや特殊文字を含むことはできません。プレースホルダーの実際の値は、テンプレートが「params-property」を</p>
+<p>利用して使われる場合、設定されます。これはタイトル画面の例ですでに行っています。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;params&quot;: { &quot;text&quot;: 
+ &quot;ニューゲーム&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;resizable&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;margin&quot;: [0, 0, 
+ 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>「params」のプロパティには、使用中のテンプレートにおけるすべてのプレースホルダーの値が含まれています。「params<span style="font-size: 13pt;">」はテンプレートに対してのみ有効です。</span></p>
+<p>&#160;</p>
+<p>プレースホルダーの値が「params」プロパティを使ってテンプレートに受け渡されていない場合、値は既定で「null」または空です。</p>
+<p>ただし、次のフォーマットを使って、必要に応じプレースホルダーの既定値を定義することができます。</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.&lt;placeholder_name&gt; or &lt;default_value&gt;</span></p>
+<p>&#160;</p>
+<p>または</p>
+<p>&#160;</p>
+<p><span class="Code">-&gt; p.text</span> <span class="Code" style="font-weight: bold;">?</span> 
+ <span class="Code">&quot;ボタン&quot;</span></p>
+<p>&#160;</p>
+<p>今回は「?-operator」を使っているので、テキストのプレースホルダーに有効な値を指定しないのであれば、テキストは「ボタン」になります。</p>
+<p>&#160;</p>
+<p>テンプレートを使えば、複雑なコントロールやレイアウトも非常に簡単に構築できます。既定のテンプレートを見ると、テンプレートが他のテンプレートを使用している例が多いことに気づくはずです。</p>
+<p>ただし、「ui.Text」や「ui.Image」のようにテンプレートとして定義されていない基本的なコントロールのセットもあります。</p>
+<p>通常は、この基本的なコントロールを使用して、オリジナルのコントロールを作成することになります。</p>
+</body>
+</html>

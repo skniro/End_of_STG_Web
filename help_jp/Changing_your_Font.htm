@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ゲーム内フォントの変更</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > UIシリーズ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">ゲーム内フォントの変更</p>
+</div>
+<p>&#160;</p>
+<p>ゲーム内で使うフォントを変更することで、ゲームが一層個性的な作品になります。一貫性を保つため、フォントを変更した方がいいであろう4つのエリアに気を配ることが重要です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="font-weight: normal;"><span style="font-weight: bold;">アドベンチャー（ADV）メッセージテキスト 
+	 -</span> 既定のメッセージボックスを使用する場合</li>
+	<li style="font-weight: normal;"><span style="font-weight: bold;">ノベル（NVL）メッセージテキスト</span> 
+	 <span>- NVLコマンドを使用する場合</span></li>
+	<li style="font-weight: normal;"><span style="font-weight: bold;">バックログのメッセージテキスト</span> 
+	 <span>- バックログをチェックする場合</span></li>
+	<li style="font-weight: normal;"><span style="font-weight: bold;">カスタムメッセージテキスト</span> 
+	 <span>- </span>「メッセージエリアを設定」を使用する場合</li>
+</ul>
+<p>&#160;</p>
+<p>フォントの変更方法は次のようにいくつもあります。</p>
+<ul style="list-style: disc;">
+	<li><a href="Message.htm#Text_Codes">テキストコード</a></li>
+	<li><a href="Message.htm#Message_Settings">メッセージ設定</a></li>
+	<li>スクリプトの呼び出し</li>
+	<li>スクリプトエディタ</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">スクリプトエディタの使用</p>
+<p>勇気がある方は、スクリプトエディタを使ってフォントを変更してみましょう。</p>
+<p style="text-align: center;"><img src="Metisnotes12_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>「<span style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_code_edit.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span><span style="font-weight: bold;">スクリプトエディタ</span><span 
+	 style="font-family: Arial, sans-serif;">」を開きます。</span><br />
+	<img src="ScriptEditor.jpg" alt="" style=" border:none; width:100%; max-width:384px;" border="0" /></li>
+	<li>右クリックから-&gt;「<span style="font-weight: bold;"><img src="icon_folder_closed_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />新規フォルダー</span><span>」を選択し、次のように「</span><span 
+	 style="font-weight: bold;">Main</span><span>」の上に新しいフォルダーを作ります。</span><br />
+	<img src="SCRIPTEDITOR-2.jpg" alt="" style=" border:none; width:100%; max-width:384px;" border="0" /></li>
+	<li>右クリックから-&gt;「<span style="font-weight: bold;"><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />新規フォルダー</span><span 
+	 style="font-family: Arial, sans-serif;">」</span><span style="font-weight: bold; 
+															 font-family: Arial, sans-serif;">-&gt;</span><span 
+	 style="font-family: Arial, sans-serif;">「</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">プロパティ</span><span 
+	 style="font-family: Arial, sans-serif;">」の順に選択し、任意の名前を付けます。</span></li>
+	<li><span style="font-family: Arial, sans-serif;">作成したばかりのフォルダーを選択します。右クリックから</span>-&gt;<span>「</span><img src="icon_code_beanshell_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span 
+	 style="font-weight: bold; font-family: Arial, sans-serif;">新規 CoffeeScript 
+	 ファイル</span><span style="font-family: Arial, sans-serif;">」の順に選びます。</span></li>
+	<li><span style="font-family: Arial, sans-serif;">右クリックから</span>-&gt;「<img src="icon_code_beanshell_new.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span 
+	 style="font-weight: bold;">新規 </span><span style="font-weight: bold; 
+												 font-family: Arial, sans-serif;">CoffeeScript 
+	 ファイル</span><span style="font-family: Arial, sans-serif;">」</span><span 
+	 style="font-weight: bold; font-family: Arial, sans-serif;">-&gt;</span><span 
+	 style="font-family: Arial, sans-serif;">「</span><span style="font-weight: bold; 
+															 font-family: Arial, sans-serif;">プロパティ</span><span 
+	 style="font-family: Arial, sans-serif;">」の順に選択します。「Style_New」と名付けましょう。</span></li>
+	<li><span style="font-family: Arial, sans-serif;">そこに次のコードを挿入してください。</span></li>
+</ul>
+<pre style="width: 588px; float: none;">
+###<br /># CONSTANTS FOR FONT SIZE<br />###<br />class DesktopUIConstants<br />&#160;&#160;&#160;&#160;@TEXT_SIZE_SMALL = 20<br />&#160;&#160;&#160;&#160;@TEXT_SIZE_MESSAGE = 24<br />&#160;&#160;&#160;&#160;@TEXT_SIZE_MESSAGE_NAME = 25<br />gs.DesktopUIConstants = DesktopUIConstants<br />gs.UIConstants = DesktopUIConstants<br />###<br /># NAME BOX<br />###<br />ui.UIManager.styles.messageBoxNameText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE_NAME, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;color&quot;: [59, 59, 59, 255],<br />&#160;&#160;&#160;&#160;}<br />}<br />###<br /># ADV MODE<br />###<br />ui.UIManager.styles.advMessageText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;color&quot;: [59, 59, 59, 255],<br />&#160;&#160;&#160;&#160;}<br />}<br />###<br /># NVL MODE<br />###<br />ui.UIManager.styles.nvlMessageText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;color&quot;: [59, 59, 59, 255],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br />&#160;&#160;&#160;&#160;}<br />}<br />###<br /># CUSTOM MESSAGE<br />###<br />ui.UIManager.styles.customMessageText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;color&quot;: [59, 59, 59, 255],<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;} <br />}<br />###<br /># BACKLOG, ETC.<br />###<br />ui.UIManager.styles.messageText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE, <br />&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;}<br />}<br />###<br /># Defines the font used for the name-column of the message backlog.<br />###<br />ui.UIManager.styles.backlogNameText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE_NAME, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;border&quot;: true, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;borderSize&quot;: 4 }<br />}</pre>
+<p>簡単に説明します。</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">name</span> - フォントフォルダーにインポートしたフォントの名前。Times 
+	 New RomanやArialなど、システムに既定でインストールされているフォントを使うこともできます。</li>
+	<li><span style="font-weight: bold;">size</span>&#160;- フォントサイズ。一定ではなくサイズを指定したい場合、この値を数値に変更することができます。</li>
+	<li><span style="font-weight: bold;">TEXT_SIZE_MESSAGE</span>&#160;- 
+	 メッセージフォントの既定のサイズ</li>
+	<li><span style="font-weight: bold;">TEXT_SIZE_MESSAGE_NAME</span>&#160;- 
+	 名前フォントの既定のサイズ</li>
+	<li><span style="font-weight: bold;">smallCaps</span> <span>- すべてのテキストを小文字に変更</span></li>
+	<li><span style="font-weight: bold;">italic</span> <span>- フォントをイタリック化</span></li>
+	<li><span style="font-weight: bold;">outline</span>&#160;- フォントのアウトラインの色とサイズ</li>
+</ul>
+<p>&#160;</p>
+<p>独自のプロパティを追加することもできます。例えば、メッセージに太字を追加すると、次のようになります。</p>
+<pre>
+###<br /># ADV MODE<br />###<br />ui.UIManager.styles.advMessageText = {<br />&#160;&#160;&#160;&#160;&quot;font&quot;: { <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Times New Roman&quot;, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;size&quot;: gs.UIConstants.TEXT_SIZE_MESSAGE, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;smallCaps&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;italic&quot;: false, <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span style="background-color: #ffff00;">&quot;bold&quot;: true,</span>
+<br />
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;color&quot;: [59, 59, 59, 255],<br />&#160;&#160;&#160;&#160;}<br />}</pre>
+<p>どうか恐れず、いろいろ試してみてください！エラーが発生すれば、エディターがメッセージでお知らせします。ですので、プロジェクトを台無しにしないかと心配しなくても大丈夫です。</p>
+<p><br />
+</p>
+<p>ゲームのフォントの変更方法については以上です。どうぞお楽しみください！</p>
+</body>
+</html>

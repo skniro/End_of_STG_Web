@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>スイッチと変数</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > 基礎を学ぶ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">スイッチと変数</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>のページでは、ゲーム開発において基礎となるコマンドのひとつ、スイッチと変数について見ていきます。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes6_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">スイッチとは？</p>
+<p><a href="Basic.htm#Switch">スイッチ</a>とは、現実世界で照明を点けたり消したりするスイッチに似ています。スイッチは基本的に、true（オン）またはfalse（オフ）のいずれかのみを返す変数です。スイッチをオンまたはオフにする時に何が起こるかは、あなたがスイッチで何をしたいか次第です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>プレイヤーがそのエリアやアイテムをすでに確認している場合に、異なる応答を返したい場合に使用できます。</li>
+	<li>コマンドを実行するのに複数のスイッチを並行して使用することができます。</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">変数とは？</p>
+<p>変数は、値や情報を格納する容器のようなものです。スイッチとは異なり、変数に格納する情報の種類に制限はありません。変数には、<a href="Basic.htm#Number_Variable">数値</a>と<a 
+	 href="Basic.htm#Text_Variable">テキスト</a>の2種類があります。</p>
+<p>&#160;</p>
+<p>数値の変数として設定できるのは整数のみであるということを覚えておいてください。つまり、double型やfloat型といった浮動小数点（例：1.05）を入力することはできません。また、テキスト変数には文字列を格納しますが、数値変数には数字以外のものは入力できません。つまり、テキスト変数には何でも格納でき、プレーンテキストとして扱われます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">数値変数の使用法</p>
+<p>数値変数の使い道は、次のようなものがあります。</p>
+<ul style="list-style: disc;">
+	<li>通貨</li>
+	<li>デバッグ</li>
+	<li>スタッツなど、画面上での値の表示</li>
+	<li>キャラクターごとの「親密度」</li>
+	<li>数字のみを使用するパスワード</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">テキスト変数の使用法</p>
+<p>テキスト変数の使い道は、次のようなものがあります。</p>
+<ul style="list-style: disc;">
+	<li>テキストによるパスワード</li>
+	<li>デバッグ時のtrue（真）またはfalse（偽）の返答</li>
+	<li>プレイヤーが入力した内容を受けて、文字や言葉を格納または表示</li>
+	<li>画面上で喋っているキャラクターの名前の表示</li>
+</ul>
+<p>&#160;</p>
+<p>スイッチおよび変数は、ゲームのデータ（現在どの言語でゲームがプレイされているか、など）も含めることができること、多様な使用用途があるということを知っておくことが重要です。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ローカル、グローバル、永続の違い</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">ラノゲツクールMVでは、「ローカル」「グローバル」「永続」という、3つのタイプのスイッチと変数のコントロールができます。 
+ </p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">ローカル</span>は、「self」とも呼ばれています。つまり、これらの変数およびスイッチはそのシーンまたはイベントのためだけに存在できるということです。<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;">そのシーンやイベントの外からこれらの変数およびスイッチにアクセスすることはできません。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">グローバル</span>は、どのシーンでも使用できますし、どこからでも参照可能です。その値は「ニューゲーム」を始めたり、<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;">「ゲームを読み込む」際にリスタートしたりします。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">永続</span>は、セーブゲームとは別でデータを保持します。これもどこででも使用できます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">例えば、RPGで<a 
+	 href="Learning_about_Conditional_Branches.htm#Example__2:_Creating_a_Treasure_Chest">宝箱を作りたい場合</a>、プレイヤーが宝箱に話しかけるとスイッチがアクティベートされるようにします。<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;">また、もう一度話しかけると「宝箱はすでに開いています！」という反応を返すように設定します。するとそれ以降、宝箱はずっとその状態を維持します。ローカルスイッチを使用できる場合にはグローバルスイッチは使わないほうが賢明です。グローバルスイッチのリストを一度限りのインタラクションのために多く使用するとごちゃごちゃした構造になってしまいます。グローバルスイッチと変数は、フラグや親密度などの重要な要素のためだけに取っておくようにしましょう。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">永続変数とスイッチについては、開発者ノートや「強くてニューゲーム」など、セーブファイルを必要としないおまけ要素をプレイヤーがアンロックした場合に、値を格納する手段だと思ってください。</span></p>
+<p>&#160;</p>
+<p>スイッチと変数について、情報を格納しかしませんが、<a href="Learning_about_Conditional_Branches.htm">練習すれば</a>、すぐうまく活用できるでしょう。その際には「<a 
+	 href="Learning_about_Conditional_Branches.htm">条件</a>」が役に立ちますので、リンク先のページを必ず読んでおきましょう！</p>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; VN Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>セーブシステム</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_5";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > VNエンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">セーブシステム</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラノゲツクールMV</span> のセーブシステムはオブジェクトのシリアライゼーション 
+ / デシリアライゼーションを使って、ゲームデータのセーブとロードを行っています。 </p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームをセーブする</p>
+<p>&#160;</p>
+<p>現在のゲームをセーブするには、 2 つのメソッドを呼び出す必要があります。GameManager.prepareSave と GameManager.save 
+ です。prepareSave メソッドは現在のゲーム状態の実際のスナップショットを作成し、オプションで現在のゲームシーンのスクリーンショットを作成します。prepareSave 
+ が呼び出された後、 GameManager.saveGame プロパティ経由でスナップショットにアクセス可能です。save メソッドは続いてそのゲームのスナップショットをディスクにファイルとして書き込みます。 
+ </p>
+<p>&#160;</p>
+<p>サンプルシーンを使って実際に確認してみましょう。 デバッグツールを開きます (Windows/Linux では F12 を、OS X では 
+ Ctrl + Shift + i を押します)。スクリプトエディタにテストベッドシーンがありますので、この例で使用したいシーンを右クリックして 
+ イントロシーンに設定 を選択します。続いてゲームを開始します。</p>
+<p>&#160;</p>
+<p><img src="SaveGame_ScriptGuide.png" alt="" style=" border:none; max-width:613px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>GameManager.prepareSaveGame を呼び出すと、現在のゲーム状態のスナップショットが作成され、返されますが、 GameManager.saveGame 
+ プロパティにも格納されます。パラメータとして <span style="font-weight: bold;">true</span>を渡し、ゲームのセーブ/ロード 
+ メニューで使用するため、現在のシーンのスナップショットが必要であることも伝えます。次に行わなければならないのは、スナップショットをディスク上にファイルとして書き込むことです。 
+ </p>
+<p>&#160;</p>
+<p><img src="SaveGameFile_ScriptGuide.PNG" alt="" style=" border:none; max-width:565px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>GameManager.save を使って、ゲームのスナップショットをディスクに書き込み、保存します。そうすることで、次のステップで再びそれを読み込むことができます。セーブスロット 
+ 6 に格納したいので、パラメータとして 5 を渡します (0 から数え始めるため)。</p>
+<p>&#160;</p>
+<p>テストベッドのシーンを戻すには、データベースを表示し、システムを選択して「イントロシーン」のチェックボックスを外します。ゲームを開始して元のテストベッドシーンに戻ったことを確認してください。</p>
+<p>&#160;</p>
+<p><img src="image40.gif" alt="" style=" border:none; max-width:269px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームをロードする</p>
+<p>&#160;</p>
+<p>セーブしたゲームをロードするには、次の例のように GameManager.load メソッドを呼び出すだけです。</p>
+<p>&#160;</p>
+<p><img src="LoadGame_ScriptGuide.png" alt="" style=" border:none; max-width:478px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>もちろん、指定されたスロットにゲームが保存されている必要があります。呼び出しの後、ゲームに戻ると、フェードアウトしてセーブされたゲームをロードします。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">セーブのプロセス</p>
+<p>&#160;</p>
+<p>続いて、実際のセーブのプロセスについてもう少し詳しくみながら、通常の VN シーンではなく、カスタマイズしたテストベッドシーンを保存してみます。セーブのプロセスは 
+ 4 つのステップに分かれます。</p>
+<p>&#160;</p>
+<ol style="list-style: decimal;">
+	<li>セーブするデータを収集する</li>
+	<li>収集したデータを JSON 文字列にシリアライズできるようエンコードする</li>
+	<li>JSON.stringify のビルトイン関数を使って、データを JSON 文字列にシリアライズする</li>
+	<li>JSON 文字列をディスク上のファイルに書き込む</li>
+</ol>
+<p>&#160;</p>
+<p>一つずつみていきましょう。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">セーブするデータを収集する</p>
+<p>&#160;</p>
+<p>最初のステップでは、シリアライズしたいすべてのデータを収集する必要があります。セーブしたいシーンに 「saveGame」 という新しいメソッドを追加しましょう。</p>
+<pre>
+<code class="coffee">
+# Saves our game &#160;&#160;
+saveGame: () -&gt;
+&#160;&#160;&#160;&#160;# Collect the data to save. We only need to save
+&#160;&#160;&#160;&#160;# our NPC and player character object.
+&#160;&#160;&#160;&#160;gameData = {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;npcObject: @npcObject
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;playerObject: @playerObject
+&#160;&#160;&#160;&#160;}
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Let&amp;apos;s create a screenshot of the current scene
+&#160;&#160;&#160;&#160;# Get current (old) screenshot object.
+&#160;&#160;&#160;&#160;snapshot = ResourceManager.getCustomBitmap(&quot;$snapshot&quot;)
+&#160;&#160;&#160;&#160;# If exists, free memory of old screenshot object.
+&#160;&#160;&#160;&#160;snapshot?.dispose()
+&#160;&#160;&#160;&#160;# Create a new snapshot and store it as a custom bitmap object under &quot;$snapshot&quot; ID.
+&#160;&#160;&#160;&#160;ResourceManager.setCustomBitmap(&quot;$snapshot&quot;, Graphics.snapshot())</code></pre>
+<p>ご覧のように、最初に必要なデータとシーン全体を再構築するのに必要なゲームオブジェクトをすべて収集します。私達のシーンは非常にシンプルなので、必要なのは 
+ NPC キャラクターとプレイヤーキャラクターだけです。次に画面のスナップショットを作成します。 これは後でセーブ/ロードメニューでプレビューイメージとして使用します。setCustomBitmap 
+ メソッドにより、ビットマップオブジェクトを指定した名前で格納することができます。この例では、スナップショットビットマップを 「$snapshot」 
+ としています。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">収集したデータを JSON 文字列にシリアライズできるようエンコードする</p>
+<p>&#160;</p>
+<p>次のステップでは、収集したデータを JSON 文字列にシリアライズできるようエンコードします。JSON フォーマットは次のような機能に対応していないため、エンコードが必要になります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>参照</li>
+	<li>循環参照</li>
+	<li>クラス情報</li>
+	<li>関数 / メソッド / コールバック</li>
+</ul>
+<p>&#160;</p>
+<p>したがって単純に JSON.stringify メソッドを使用してゲームオブジェクトをシリアライズすることはできません。 それを行うとシリアライズエラーが発生したり、JSON 
+ 出力が不完全に終わり復元できなくなります。 </p>
+<p>&#160;</p>
+<p>そのため ラノゲツクールMV には gs.ObjectCodec および gs.ObjectCodecContext クラスを使ったエンコードメカニズムが用意されています。「Codec 
+ (コーデック)」という言葉は「Encoder &amp; Decoder」を意味しますが、これによってクラスがデータをエンコード/デコードすることができます。</p>
+<p>&#160;</p>
+<p>それでは次に saveGame メソッドを拡張してみましょう。</p>
+<pre>
+<code class="coffee">
+# Saves our game &#160;&#160;
+saveGame: () -&gt;
+&#160;&#160;&#160;&#160;# Collect the data to save. We only need to save
+&#160;&#160;&#160;&#160;# our NPC and player character object.
+&#160;&#160;&#160;&#160;gameData = {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;npcObject: @npcObject
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;playerObject: @playerObject
+&#160;&#160;&#160;&#160;}
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Let&amp;apos;s create a screenshot of the current scene
+&#160;&#160;&#160;&#160;# Get current (old) screenshot object.
+&#160;&#160;&#160;&#160;snapshot = ResourceManager.getCustomBitmap(&quot;$snapshot&quot;)
+&#160;&#160;&#160;&#160;# If exists, free memory of old screenshot object.
+&#160;&#160;&#160;&#160;snapshot?.dispose()
+&#160;&#160;&#160;&#160;# Create a new snapshot and store it as a custom bitmap object under &quot;$snapshot&quot; ID.
+&#160;&#160;&#160;&#160;ResourceManager.setCustomBitmap(&quot;$snapshot&quot;, Graphics.snapshot())
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a codec context to encode the game data
+&#160;&#160;&#160;&#160;context = new gs.ObjectCodecContext()
+&#160;&#160;&#160;&#160;# Add the root viewport to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Add the scene object to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(@object)
+&#160;&#160;&#160;&#160;# Add the test-bed behavior component to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(this)
+&#160;&#160;&#160;&#160;# Create save game object
+&#160;&#160;&#160;&#160;saveGame = {}
+&#160;&#160;&#160;&#160;# Encode the game data so that it can be serialized to a JSON string later.
+&#160;&#160;&#160;&#160;saveGame.data = gs.ObjectCodec.encode(gameData, context)
+&#160;&#160;&#160;&#160;# Add property to store all encoded objects by reference ID.
+&#160;&#160;&#160;&#160;saveGame.encodedObjectStore = context.encodedObjectStore</code></pre>
+<p>ご覧のように、まずは新規インスタンスオブジェクト gs.ObjectCodecContext を作成します。 これはエンコーディング処理の現在の状態を反映します。実際のエンコーディングは後で 
+ gs.ObjectCodec.encode メソッドを使用して処理されます。gs.ObjectCodec は静的クラスであり、 gs.ObjectCodecContext 
+ オブジェクトを使用して正しいデータを処理します。</p>
+<p>&#160;</p>
+<p>decodedObjectStore はこれまでにエンコードされたすべてのオブジェクトのリストです。エンコーダーはこのリストを使用して、どのオブジェクトがエンコード済みであるかを確認します。エンコーダーは、データを再帰的に走査し、オブジェクトを見つけるとそれを 
+ decodedObjectStore リストに追加して、出力構造で 「$vnm_ref_&lt;index&gt;」 文字列と置き換えます。</p>
+<p>&#160;</p>
+<p>例えば次の構造の場合を考えみましょう。</p>
+<pre>
+<code class="coffee">
+peter = { name: &quot;Peter&quot;, job: &quot;CEO&quot; }
+mike = { name: &quot;Mike&quot;, job: &quot;Developer&quot; }
+james = { name: &quot;James&quot;, job: &quot;Lead Developer&quot;, superior: peter, subordinate: mike }</code></pre>
+<p>ここで james をエンコードすると、エンコードされた出力は次のようになります。 </p>
+<p>&#160;</p>
+<p>$$vnm_obj_ref 0 </p>
+<p>&#160;</p>
+<p>これは、オブジェクトがコンテキストの encodedObjectStore のインデックス 0 で見つけることができると伝えている参照です。したがって 
+ context.encodedObjectStore[0] をプリントアウトすると次のようになります。</p>
+<p>&#160;</p>
+<p><img src="image41.gif" alt="" style="border: none; width: 100%; max-width: 233px;" 
+		 border="0" /></p>
+<p>&#160;</p>
+<p>つまり、すべてのオブジェクトが &quot;vnm object references&quot; というものに置き換えられたことがわかります。末尾の番号は、そのオブジェクトがコンテキストの 
+ encodedObjectStore のどこで見つけることができるかを示しています。このようなデータのエンコード方式は、参照と循環参照に対応し、ゲーム状態を完全に再構築するために必要です。ここでは、オブジェクトを正常に再構築できるよう、 
+ 「$class」 と 「$ns」 がオブジェクトのクラスと名前空間を格納していることもわかります。</p>
+<p>&#160;</p>
+<p>saveGame メソッドで、decodedObjectStore に手動で 3 つのオブジェクトを追加しています。root-viewport 
+ と scene-object と test-bed behavior コンポーネントです。それらのオブジェクトが実際にはエンコードされていなくても既にエンコード済みであるようにエンコーダーが判断するようにしています。これらのオブジェクトは特別なケースであるためです。エンコーダーには、それらへの参照をエンコードされた出力構造に追加させたいのですが、それらを実際にはエンコードしたくありませんし、後で 
+ JSON にシリアライズしたくもありません。</p>
+<p>&#160;</p>
+<p>これらのオブジェクトはゲームのセーブファイル内には含めるべきではありませんが、ゲームオブジェクト内で参照される必要があるため、このようなやり方になっています。したがって、ゲームを読み込んで再構築する場合、ランタイム時の正しいオブジェクトへの参照をゲームオブジェクト内に設定する必要があります。これはまた後で設定します。</p>
+<p>&#160;</p>
+<p>しかしながら、現在の saveGame メソッドの最後で、次の 2 つを格納する saveGame オブジェクトを作成します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>エンコードされたデータ、 gs.ObjectCodec.encode の結果 </li>
+	<li>実際にエンコードされたオブジェクトを含むリスト、 encodedDataStore。 encode メソッドが参照 ID のみを返すため</li>
+</ul>
+<p>&#160;</p>
+<p>その後 saveGame オブジェクトはシーンの再構築に必要なすべてのデータを含みます。では次に JSON 文字列へのシリアライズを行いましょう。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">JSON.stringify ビルトイン関数を使って、データを JSON 文字列にシリアライズする</p>
+&#160;&#160;<br />
+これまでの作業で、収集されたデータは正常にエンコードされていますので、それを JSON.stringify 関数を使って JSON 文字列にシリアライズするのは簡単です。 
+ 
+<pre>
+<code class="coffee">
+# Saves our game &#160;&#160;
+saveGame: () -&gt;
+&#160;&#160;&#160;&#160;# Collect the data to save. We only need to save
+&#160;&#160;&#160;&#160;# our NPC and player character object.
+&#160;&#160;&#160;&#160;gameData = {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;npcObject: @npcObject
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;playerObject: @playerObject
+&#160;&#160;&#160;&#160;}
+&#160;&#160;&#160;&#160;# Let&amp;apos;s create a screenshot of the current scene
+&#160;&#160;&#160;&#160;# Get current (old) screenshot object.
+&#160;&#160;&#160;&#160;snapshot = ResourceManager.getCustomBitmap(&quot;$snapshot&quot;)
+&#160;&#160;&#160;&#160;# If exists, free memory of old screenshot object.
+&#160;&#160;&#160;&#160;snapshot?.dispose()
+&#160;&#160;&#160;&#160;# Create a new snapshot and store it as a custom bitmap object under &quot;$snapshot&quot; ID.
+&#160;&#160;&#160;&#160;ResourceManager.setCustomBitmap(&quot;$snapshot&quot;, Graphics.snapshot())
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a codec context to encode the game data
+&#160;&#160;&#160;&#160;context = new gs.ObjectCodecContext()
+&#160;&#160;&#160;&#160;# Add the root viewport to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Add the scene object to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(@object)
+&#160;&#160;&#160;&#160;# Add the test-bed behavior component to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(this)
+&#160;&#160;&#160;&#160;# Create save game object
+&#160;&#160;&#160;&#160;saveGame = {}
+&#160;&#160;&#160;&#160;# Encode the game data so that it can be serialized to a JSON string later.
+&#160;&#160;&#160;&#160;saveGame.data = gs.ObjectCodec.encode(gameData, context)
+&#160;&#160;&#160;&#160;# Add property to store all encoded objects by reference ID.
+&#160;&#160;&#160;&#160;saveGame.encodedObjectStore = context.encodedObjectStore
+&#160;&#160;&#160;&#160;# Serialize the save game data into a JSON string
+&#160;&#160;&#160;&#160;jsonOutput = JSON.stringify(saveGame)</code></pre>
+jsonOutput 変数はセーブゲームデータをディスク上に格納可能な JSON 文字列として含んでいます。 <br />
+&#160; 
+<p class="SubSubHeading">JSON 文字列をディスク上のファイルに書き込む</p>
+&#160;&#160;<br />
+最後の作業は、JSON 文字列をディスク上にファイルとして書き込むことです。ラノゲツクールMV は PC/Mac でのゲームの起動に NW.js 
+ を使用していますので、その API を使って JSON 文字列をディスク上のファイルに書き込むことも可能です。 
+<pre>
+<code class="coffee">
+# Store the data in &quot;saveGame.dat&quot; file on disk.
+require(&quot;fs&quot;).writeFileSync(&quot;./saveGame.dat&quot;, jsonOutput, &quot;utf-8&quot;)</code></pre>
+しかしながら、その方法はプラットフォームに依存します。ラノゲツクールMV のゲームは、スマートフォン、タブレット、ウェブブラウザなどさまざまなプラットフォームで実行することが可能です。しかし 
+ NW.js API は PC/Mac でのみ使用可能なものなので、プラットフォームに依存したくないことを考えれば、これを使うことは避けたほうがよいでしょう。代わりに 
+ gs.GameStorage クラスを使用してデータを格納します。 この方法はプラットフォームに依存しません。 
+<pre>
+<code class="coffee">
+# Saves our game &#160;&#160;
+saveGame: () -&gt;
+&#160;&#160;&#160;&#160;# Collect the data to save. We only need to save
+&#160;&#160;&#160;&#160;# our NPC and player character object.
+&#160;&#160;&#160;&#160;gameData = {
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;npcObject: @npcObject
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;playerObject: @playerObject
+&#160;&#160;&#160;&#160;}
+&#160;&#160;&#160;&#160;# Let&amp;apos;s create a screenshot of the current scene
+&#160;&#160;&#160;&#160;# Get current (old) screenshot object.
+&#160;&#160;&#160;&#160;snapshot = ResourceManager.getCustomBitmap(&quot;$snapshot&quot;)
+&#160;&#160;&#160;&#160;# If exists, free memory of old screenshot object.
+&#160;&#160;&#160;&#160;snapshot?.dispose()
+&#160;&#160;&#160;&#160;# Create a new snapshot and store it as a custom bitmap object under &quot;$snapshot&quot; ID.
+&#160;&#160;&#160;&#160;ResourceManager.setCustomBitmap(&quot;$snapshot&quot;, Graphics.snapshot())
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a codec context to encode the game data
+&#160;&#160;&#160;&#160;context = new gs.ObjectCodecContext()
+&#160;&#160;&#160;&#160;# Add the root viewport to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Add the scene object to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(@object)
+&#160;&#160;&#160;&#160;# Add the test-bed behavior component to the context
+&#160;&#160;&#160;&#160;context.decodedObjectStore.push(this)
+&#160;&#160;&#160;&#160;# Create save game object
+&#160;&#160;&#160;&#160;saveGame = {}
+&#160;&#160;&#160;&#160;# Encode the game data so that it can be serialized to a JSON string later.
+&#160;&#160;&#160;&#160;saveGame.data = gs.ObjectCodec.encode(gameData, context)
+&#160;&#160;&#160;&#160;# Add property to store all encoded objects by reference ID.
+&#160;&#160;&#160;&#160;saveGame.encodedObjectStore = context.encodedObjectStore
+&#160;&#160;&#160;&#160;# Serialize the save game data into a JSON string
+&#160;&#160;&#160;&#160;jsonOutput = JSON.stringify(saveGame)
+&#160;&#160;&#160;&#160;# Store the save game data permanently.
+&#160;&#160;&#160;&#160;gs.GameStorage.setData(&quot;CustomSaveGame&quot;, jsonOutput)</code></pre>
+上の例では、 saveGame メソッドを呼び出すだけで、デバッグコンソールを使用しゲームを保存することができました。 <br />
+&#160;&#160;<br />
+<img src="image42.gif" alt="" style=" border:none; max-width:602px; width:100%;" border="0" /> <br />
+&#160; 
+<p class="Sub_Heading">ロードのプロセス</p>
+&#160;&#160;<br />
+カスタムシーンの保存に成功したら、次はそれを復元してみましょう。ロードのプロセスは、セーブのプロセスに非常に似ています。 <br />
+<br />
+
+<ol style="list-style: decimal;">
+	<li>ディスクから JSON 文字列を読み込む (gs.GameStorage)</li>
+	<li>エンコード済みゲームデータを表すオブジェクトにJSON 文字列をデシリアライズする</li>
+	<li>ゲームデータをデコードする</li>
+	<li>シーンを復元する</li>
+</ol>
+&#160;&#160;<br />
+読み込みを行うため、 「loadGame」 という新しいメソッドを作成します。 
+<pre>
+<code class="coffee">
+# Loads our game &#160;&#160;&#160;
+loadGame: -&gt;
+&#160;&#160;&#160;&#160;# Get the save game data from storage
+&#160;&#160;&#160;&#160;saveGame = gs.GameStorage.getData(&quot;CustomSaveGame&quot;)
+&#160;&#160;&#160;&#160;# If no saveGame exists we will abort here
+&#160;&#160;&#160;&#160;if not saveGame then return
+&#160;&#160;&#160;&#160;# Parse the save game data JSON text
+&#160;&#160;&#160;&#160;saveGame = JSON.parse(saveGame)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Clean Up the current scene and dispose our characters.
+&#160;&#160;&#160;&#160;@npcObject.dispose()
+&#160;&#160;&#160;&#160;@playerObject.dispose()
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a codec context to decode the data properly
+&#160;&#160;&#160;&#160;context = new gs.ObjectCodecContext()
+&#160;&#160;&#160;&#160;# Add the root-viewport, scene-object and test-bed behavior to the list
+&#160;&#160;&#160;&#160;# of already decoded objects
+&#160;&#160;&#160;&#160;context.decodedObjectStore = [Graphics.viewport, @object, this]
+&#160;&#160;&#160;&#160;# Assign the list of encoded objects from the save-game data.
+&#160;&#160;&#160;&#160;context.encodedObjectStore = saveGame.encodedObjectStore
+&#160;&#160;&#160;&#160;# Decode the save game data
+&#160;&#160;&#160;&#160;saveGame.data = gs.ObjectCodec.decode(saveGame.data, context)
+&#160;&#160;&#160;&#160;# Fire restore-event to all decoded game objects.
+&#160;&#160;&#160;&#160;gs.ObjectCodec.onRestore(saveGame.data, context)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Reconstruct the Player and NPC
+&#160;&#160;&#160;&#160;@playerObject = saveGame.data.playerObject
+&#160;&#160;&#160;&#160;@npcObject = saveGame.data.npcObject
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Add the reconstructed Player and NPC to the scene
+&#160;&#160;&#160;&#160;@object.addObject(@playerObject)
+&#160;&#160;&#160;&#160;@object.addObject(@npcObject)</code></pre>
+ご覧の通り、セーブのプロセスに非常によく似ています。セーブゲームデータを読み込んでパースした後、現在のゲームオブジェクトを破壊して、重複を回避します。 
+ それらは後でセーブゲームデータから再構築するためです。続いて codec-context を作成し、次の 3 オブジェクトで decodedObjectStore 
+ を実行します: root-viewport と scene-object と test-bed behavior コンポーネント。 <br />
+&#160;&#160;<br />
+データの保存を思い出してみると、セーブゲームデータのこれら 3 オブジェクトへの参照は追加しましたが、オブジェクト自体はエンコードは行いませんでした。したがって、セーブゲームデータにおいて、これら 
+ 3 オブジェクトは次を参照します： 「$$vnm_obj_ref 0」、 「$$vnm_obj_ref 1」 および 「$$vnm_obj_ref 
+ 2」。デコーダーは、decodedObjectStore の 0、 1 および 2 にこれら 3 つのオブジェクトがあることを要求します。そうすることでデコーダーがこれら 
+ 3 オブジェクトををデコードせず、これらへの参照を再構築するようにしています。 <br />
+&#160;&#160;<br />
+続いて decode メソッドでデータをデコードし、すべての再構築されたゲームオブジェクトに対して restore イベントを開始して、必要に応じて特定のコードを実行できるようにします。例えば、多くの 
+ UI 関連のゲームオブジェクトはグローバルイベントマネージャの登録を復元後に再構築します。それらの登録はエンコードされておらずセーブゲームデータに格納されているためです。 
+ <br />
+&#160;&#160;<br />
+最後のステップでは、再構築されたゲームオブジェクトを適切なインスタンス変数に割当、それらをシーンに追加しています。以上です。次のようにしてセーブしたゲームを読み込むことができます。 
+ <br />
+<img src="image43.gif" alt="" style=" border:none; max-width:611px; width:100%;" border="0" /> <br />
+&#160;&#160;<br />
+呼び出しの後、シーンが読み込まれます。 <br />
+&#160; 
+<p class="Sub_Heading">既定のセーブ処理</p>
+&#160;&#160;<br />
+本稿では、ラノゲツクールMV のセーブシステムについて多くを学びました。カスタムシーンのセーブやロードもできました。しかしながら、既定のセーブ/ロード処理はもう少し複雑です。それでも本項での知識があれば、それも習得できるでしょう。次の説明も理解の助けとなるはずです。 
+ <br />
+&#160; 
+<p class="SubSubHeading">セーブのプロセス</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>メッセージボックスメニューでセーブボタンを押すと、その瞬間に GameManager.prepareSaveGame を使ってスナップショットが作成されます。</li>
+	<li>スナップショットには、すべての背景、キャラクター、ピクチャーに加えて変数や設定などの関連データも含まれます。</li>
+	<li>セーブメニューでセーブゲームスロットをクリックすると、選択したスロットで GameManager.save が呼び出され、 GameManager.saveGame 
+	 プロパティにスナップショットを格納します。</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">ロードのプロセス</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>セーブスロットをクリックすると、 GameManager.load が呼び出され、データが GameStorage から読み込まれ、パースされますが、すぐにはデコードされません。</li>
+	<li>GameManager.load は新規に gs.Object_Scene を作成し、シーンを新規ゲームシーンに切り替えます。</li>
+	<li>gs.Component_GameSceneBehavior で GameManager.loadedSaveGame セットが存在するか確認し、存在する場合だけゲームオブジェクトのデコードと再構築が始まります。</li>
+</ul>
+</body>
+</html>

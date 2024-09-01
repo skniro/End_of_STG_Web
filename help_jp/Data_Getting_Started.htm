@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>はじめに：データフォーマット</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > データフォーマットに関するドキュメンテーション" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">はじめに：データフォーマット</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">開</span>発者の場合、または単に「ラノゲツクールMV」でスクリプトを作成している場合、いくつものプロジェクトファイルやデータ構造にアクセスすることになります。</p>
+<p>このガイドでは、「ラノゲツクールMV」のプロジェクトにおける構造について簡単に概要を説明します。特定のデータ構造について詳しくは、<a 
+	 href="data_doc/index.html">データフォーマットのリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>プロジェクト構造</span></p>
+<p>「ラノゲツクールMV」の有効なプロジェクトは、次のファイルとフォルダーで構成されています。</p>
+<p>&#160;</p>
+<p><img src="image4.gif" alt="" style=" border:none; width:100%; max-width:166px;" border="0" /></p>
+<p>&#160;</p>
+<p class="SubSubHeading">data</p>
+<p>このフォルダーには、グラフィックやオーディオなどのリソースを除く、プロジェクトに関するすべてのデータが含まれています。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">resources</p>
+<p>このフォルダーには、プロジェクトで使用されるすべてのグラフィックとオーディオリソースが含まれています。新しいリソースをインポートする場合は、必ずリソースマネージャーを使用してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Game.vnproject</p>
+<p>プロジェクトファイルです。データは格納されておらず、「ラノゲツクールMV」のプロジェクトを開いて識別するアンカーポイントのような役目を果たします。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">icon.png</p>
+<p>デフォルトのゲームアイコンです。このアイコンは、ゲームの実行には使用されません。ゲームのウィンドウにのみ使用されます。ゲームの実行に使用するアイコンは、プラットフォームに従い個別に設定する必要があります。</p>
+</body>
+</html>

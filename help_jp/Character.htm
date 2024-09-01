@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>キャラクター</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">キャラクターコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;「キャラクター」コマンドでは、シーンに登場しているキャラクターにさまざまな効果を適用できます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Join_Scene" id="Join_Scene"></a>「シーンに登場」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターをシーンに追加します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - シーンに登場させるキャラクターを選択します。あらかじめデータベースに設定しておく必要があります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表情」</span> 
+	 - キャラクターがシーンに登場する際の表情を選択します。あらかじめデータベースに設定しておく必要があります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - キャラクターの立ち位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム 
+	 &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用してターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> - 座標でターゲット位置を指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 登場アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 登場アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - キャラクターの出現方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「モーションブラー」 
+	 <span style="font-weight: normal;">- 「はい」に設定するとモーションブラーを適用し、「いいえ」に設定するとオフにします。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「発生間隔」</span> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「消滅速度」</span> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「不透明度」</span> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br>例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span> 
+	 - キャラクターの表示順とアンカーを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span> - キャラクターのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「Z オーダー」</span>&#160;- キャラクターの表示順を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビューポート」</span>&#160;- キャラクターに割り当てられるビューポートです。ビューポートの設定次第で、背景がカメラの移動や画面効果に影響を受けるかどうかが決まります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーン」</span> - キャラクターはシーンビューポートに割り当てられ、シーンに属するオブジェクトのように動作します。そのため、カメラの移動や画面効果に影響を受けます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - キャラクターをユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br />
+		そのため、カメラの移動や画面効果に影響を受けません。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Expression" id="Change_Expression"></a>「表情を変更」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターの表情を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - 表情を変更するキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表情」</span> 
+	 - キャラクターの表現を選択します。あらかじめデータベースに設定しておく必要があります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 変更アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Character_Motion_Blur" id="Character_Motion_Blur"></a>「キャラクターをモーションブラー」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターにモーションブラーを適用します。このコマンドは、「キャラクターを移動」や「キャラクターをパスに沿って移動」といった、キャラクターを移動させるコマンドの上位に設定しなければ効果はありません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- モーションブラーを適用するキャラクターを選択します。</span></p></li>
+<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーションブラー」</span> 
+	 - 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「発生間隔」</span> 
+	 - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「消滅速度」</span> 
+	 - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「不透明度」</span> 
+	 - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br>例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Character" id="Blend_Character"></a>「キャラクターをブレンド」</p>
+<p style="font-family: Arial, sans-serif;">指定した不透明度でキャラクターをブレンドします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- ブレンドするキャラクターです。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「不透明度」</span> - キャラクターをブレンドする際の不透明度を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> ブレンドアニメーションの描写時間をミリ秒単位で設定します</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- アニメーションのブレンドが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Character" id="Move_Character"></a>「キャラクターを移動」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">キャラクターを画面上の指定の位置に移動します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - 移動するキャラクターです。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - キャラクターのターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム 
+	 &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用してターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> - 座標でターゲット位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 移動アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Character_along_Path" id="Move_Character_along_Path"></a>「キャラクターをパスに沿って移動」</p>
+<p style="font-family: Arial, sans-serif;">ポイントと曲線を使用してキャラクターを動かすことのできる、カスタムパスを作成します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- パスに沿って移動させるキャラクターを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パス」</span> - 曲線でパスを定義するパスエディターを開きます。右クリックでモーションポイントの追加・削除ができます。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Sの円</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの開始点です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">緑の円</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーション内のポイントです。このポイントを使うことで、より動的なモーションを作成することができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">黄色の円</span>（<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />） はモーションの曲線を調整します。緑の円（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）をクリックすると、そのパスのモーションも同様に調整が可能です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Eの円</span>（<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終了点です。</p></li>
+	</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「垂直方向に鏡像反転」 </span>- 曲線を垂直に反転します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「水平方向に鏡像反転」</span> - 曲線を水平に反転します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「90度回転」</span> - 曲線を90度回転させます。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「効果」</span> - キャラクターがパスに従って移動する際に、一定の間隔で効果音を再生			します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ループ」</span> - パスを繰り返し移動させることができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「なし」</span> - ループをオフにします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「通常」</span> - パスを終了点からループします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「反転」</span> - パスを終了点から反対方向にループします。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - モーションの移動時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- モーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Character" id="Zoom_Character"></a>「キャラクターを拡大／縮小」</p>
+<p style="font-family: Arial, sans-serif;">シーンに登場しているキャラクターを拡大／縮小します。</p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> -拡大／縮小するキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「拡大／縮小 X」</span> - 0～1000%の値で、水平方向の拡大／縮小を設定します。100%が元の画像サイズです。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「拡大／縮小 Y」</span> - 0～1000%の値で、垂直方向の拡大／縮小を設定します。100%が元の画像サイズです。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - キャラクターを拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 拡大／縮小アニメーションが終了するまでシーンを待機させます。</span></p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「効果」</span> - キャラクターの出現方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Character" id="Rotate_Character"></a>「キャラクターを回転」</p>
+<p style="font-family: Arial, sans-serif;">指定した速度や方向でキャラクターを回転させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- 回転させるキャラクターを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「方向」</span> 
+	 - キャラクターの回転方向（時計回り／反時計回り）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - 回転速度を設定します。数値が高くなるほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 回転アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 回転アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Character" id="Tint_Character"></a>「キャラクターを色付け」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターの色調を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- 色調を変更するキャラクターを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色調」</span> 
+	 - 色調コントローラーを用いてキャラクターの色調を変更します。「赤」「緑」「青」の色調（-255～255）を調整することが可能です。<br />
+	グレイスケールフィルターを強さを設定する際は「灰（0～255）」を調整します。値が大きくなるほど、色の全体的な強度が高まります。<br />
+	色調コントローラーの下部にある「通常」「ダーク」「セピア」「モーニング」「ナイト」のボタンを押すと、<br />
+	それぞれの名称で表された色調の値をすぐに適用できます。「通常」ボタンは元の色調を復元します。ウィンドウ上部のプレビューエリアで色調の変化を確認できます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 色調変化アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 色調変化のアニメーションが終了するまでシーンを待機させます。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Character" id="Shake_Character"></a>「キャラクターを揺らす」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターを振動させます。ショックや衝撃を表現するシーンで役立ちます。</p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - 振動させるキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">「範囲 X」<span 
+	 style="font-weight: normal;"> - 水平方向の動作を設定します。キャラクターは、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「範囲 Y」<span 
+	 style="font-weight: normal;"> - 垂直方向の動作を設定します。キャラクターは、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - ピクセルオフセットを設定することで、振動の強度を決定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - キャラクターが振動するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 振動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「効果」</span> - キャラクターの出現方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Flash_Character" id="Flash_Character"></a>「キャラクターを点滅」</p>
+<p style="font-family: Arial, sans-serif;">指定した色で瞬時にキャラクター全体を覆い、徐々に元の色に戻していきます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - 点滅させるキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色」</span> 
+	 - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、点滅する際の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 点滅アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 点滅アニメーションが完了するまでシーンを待機させます。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Character" id="Mask_Character"></a>「キャラクターをマスク」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターに静的マスクを適用したり、動的なマスキングアニメーションを実行したりできます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「キャラクター」 <span 
+	 style="font-weight: normal;">- マスキングするキャラクターを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ファイル」</span> 
+	 - キャラクターに適用するマスクファイルの種類を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクチャー」</span>&#160;- 「Graphics/Masks」フォルダから、使用するマスク画像を選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムービー」</span>&#160;- マスクとして使用するムービーを選択します。.webm形式のムービーをあらかじめ「Movies」にインポートしておく必要があります。<br>設定したムービーファイルに色彩情報が格納されている場合であっても、赤のカラーチャンネルしか使用されません。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」 
+	 </span>- マスキングの種類を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「静的」&#160;</span>- アルファチャンネルマスクを重ねます。<br />
+	<img src="characterstaticmask.jpg" alt="" style=" border:none; width:100%; max-width:391px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「オフセット-X」</span>&#160;- 設定した値に応じて、マスキングが左右に移動します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「オフセット-Y」</span>&#160;- 設定した値に応じて、マスキングが上下に移動します。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「動的」</span>&#160;- マスキングで、キャラクターの特定の部分を描写します。<br />
+	<img src="characterdynamicmask.gif" alt="" style=" border:none; width:100%; max-width:388px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「値」</span>&#160;- 「0」～「255」で任意の値（ピクセル）を設定することで、マスキングが表示される部分を調整できます。「0」の場合、マスキングは一切描写されません。値が大きくなればなるほど、マスキングの描写範囲が広くなります。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「スムーズ」<span 
+		 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><img src="charactervague0.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /> <img src="charactervague255.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - マスキングアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- マスキングアニメーションが終了するまでシーンを待機させます。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「効果」</span> - キャラクターの出現方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Parameter" id="Set_Parameter"></a>「パラメータを設定」</p>
+<p style="font-family: Arial, sans-serif;"><span>既存キャラクターのパラメータに値を設定します。</span></p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - パラメータを設定するキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パラメータ」</span> - 値を設定するパラメータを指定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「種類」</span> - パラメータに設定する値の種類を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「数」<span 
+	 style="font-weight: normal;">&#160;- 数値を入力します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「スイッチ」&#160;<span 
+	 style="font-weight: normal;">- スイッチのパラメータ、「有効／無効」を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span> <span>- テキストを入力します。</span></p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「値」</span> - 設定するパラメータ値です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Get_Parameter" id="Get_Parameter"></a>「パラメータを取得」</p>
+<p style="font-family: Arial, sans-serif;"><span>既存キャラクターのパラメータから値を取得します。</span></p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - パラメータを取得するキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パラメータ」</span> - 値を取得するパラメータを指定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「値」</span> - 取得・保存する値のタイプを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「数」<span 
+	 style="font-weight: normal;">&#160;- 数値を取得します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「スイッチ」&#160;<span 
+	 style="font-weight: normal;">- スイッチの値（「有効／無効」）を取得します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span> - テキスト値を取得します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「保存先」</span> - パラメータ値の保存先を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Exit_Scene" id="Exit_Scene"></a>「シーンから退場」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">キャラクターをシーンから削除します。</span></p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - シーンから削除するキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - 退場アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 退場アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「効果」</span> - キャラクターの退場方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 退場時のアニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下へとキャラクターを退場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- 
+		 キャラクターをフェードアウトできます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「マスキング」<span 
+		 style="font-weight: normal;">&#160;- ブレンド機能を用いてキャラクターをフェードアウトさせます。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「スムーズ」<span 
+			 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Character_Effect" id="Character_Effect"></a>「キャラクター効果」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">キャラクターに効果を適用します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - キャラクターに適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - キャラクターを不規則にぐらつかせます。</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「方向」</span> - ぐらつきの方向を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「垂直」<span 
+			 style="font-weight: normal;">&#160;- ぐらつきを垂直方向に設定します。</span></p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「水平」<span 
+			 style="font-weight: normal;">&#160;- ぐらつきを水平方向に設定します。</span></p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「両方」<span 
+			 style="font-weight: normal;">&#160;- ぐらつきを垂直水平の両方向に設定します。</span></p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきのアニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- キャラクターには効果がありません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセル化」</span>&#160;- キャラクターをピクセル／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「幅」<span 
+		 style="font-weight: normal;">&#160;- ブロック／ピクセルの幅を設定します。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「高さ」<span 
+		 style="font-weight: normal;">&#160;- ブロック／ピクセルの高さを設定します。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。キャラクターをスムーズにピクセル化させる際に使用します。</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Character_Defaults" id="Character_Defaults"></a>「キャラクターの既定」</p>
+<p style="font-family: Arial, sans-serif;">キャラクターコマンドの既定値を上書きします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場時間」</span>&#160;- 
+	 登場アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;- 
+	 退場アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「登場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 登場時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「退場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 退場時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Z オーダー」<span 
+	 style="font-weight: normal;">&#160;- キャラクターの表示順を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「モーションブラー」</span> - 「はい」に設定するとモーションブラーが適用されます。「なし」に設定するとオフになります。</p></li>
+</ul>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「発生間隔」<span 
+		 style="font-weight: normal;"> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「消滅速度」<span 
+		 style="font-weight: normal;"> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「不透明度」<span 
+		 style="font-weight: normal;"> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</span></p></li>
+	</ul></li>
+</ol>
+</body>
+</html>

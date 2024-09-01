@@ -1,0 +1,110 @@
+1.15.2版本
+2020/7/9  1.15.2-1.15.2beta-4.0.5023-Forge1.15.2-31.2.31[build-12230]
+加入了
+[CB]懒人厨房CookingForBlockheads_1.15.2-8.0.3.jar
+[CCL]CodeChickenLib-1.15.2-3.3.1.376-universal.jar
+[CTM]连接材质CTM-MC1.15.2-1.1.0.10.jar
+[JEI]JEI物品管理器jei-1.15.2-6.0.2.12.jar
+[R键整理]inventorysorter-1.15.2-17.0.0.jar
+[Silent的机械装置] SilentMechanisms-1.15.2-0.7.6+57.jar
+[地狱传送修复]NetherPortalFix_1.15.2-6.0.2.jar
+[高亮显示]Hwyla-forge-1.10.8-B72_1.15.2.jar
+[高亮显示]WAWLA-1.15.2-3.0.3.jar
+[高亮显示前置]Bookshelf-1.15.2-5.6.40.jar
+[更多箱子]ironchest-1.15.2-10.0.3.jar
+[工业重生]Industrial-Reborn-1.15.2-0.4.0.jar
+[合成冲突消除]polymorph-FORGE-1.15.2-0.3
+[加速火把]torcherino-10.0.1
+[家具]furniture-7.0.0-pre16-1.15.1
+[静谧四季]SereneSeasons-1.15.2-3.0.0.72-universal
+[矿石兼容]JAOPCA-1.15.2-3.2.0.11
+[旅行地图]journeymap-1.15.2-5.7.0b3
+[魔法使]mahoutsukai-1.15.2-v1.19.6
+[暮色森林]twilightforest-1.15.2-4.0.99-universal
+[耐久显示]DurabilityViewer-1.15.2-forge31.1.30-1.7.1
+[帕秋莉手册]Patchouli-1.15.2-1.2-35
+[潘马斯农场2食物]pamhc2foodcore-1.15.2-1.0.5
+[潘马斯农场2植物]pamhc2trees-1.15.2-1.0.5
+[潘马斯农场2作物]pamhc2crops-1.15.2-1.0.5
+[前置] SilentLib-1.15.2-4.6.5+58
+[前置]curios-FORGE-1.15.2-2.0.2.4
+[遗迹]Ruins-1.15.2.1
+[照明优化]phosphor-forge-mc1.15.2-0.5.2+build.4
+[植物科技2]planttech2-0.02.11+-+1.15.2
+[植物魔法]Botania-r1.15-387
+[自然音效]AmbientSounds_v3.0.20_mc1.15.2
+WailaHarvestability-mc1.15.2-1.1.12
+
+2020/7/21  1.15.2-[Releases]1.15.2-4.0.6010-Forge1.15.2-31.2.31[build-13089]
+加入了
+[AE2]应用能源2appliedenergistics2-7.0.0-1.15.2-alpha.7.jar
+[AI改进]AI-Improvements-1.15.2-0.3.0.jar
+[Latest][优化]lithium-mc1.15.2-forge-0.4.6-rc3-mod.jar
+[Macaw的吊桥]mcw-bridges-1.0.4fix-mc1.15.2.jar
+[Mek]通用机械Mekanism-1.15.2-9.10.9.422.jar
+[MekA]通用机械附加MekanismAdditions-1.15.2-9.10.9.422.jar
+[MekG]通用机械发电机MekanismGenerators-1.15.2-9.10.9.422.jar
+[MekT]通用机械工具MekanismTools-1.15.2-9.10.9.422.jar
+[神化]Apotheosis-1.15.2-3.2.4.jar
+[舒适用品]comforts-FORGE-1.15.2-2.0.0.3.jar
+[熔炉性能优化]FastFurnace-1.15.1-3.0.0.jar
+[前置]Placebo-1.15.2-3.1.0.jar
+[前置]MixinBootstrap-1.0.3-1.15.2.jar
+[更好的燃烧机制]BetterBurning-1.15.2-1.3.4.jar
+[YUNG的矿井优化]BetterMineshaftsForge-1.15.2-1.3.jar
+[工作台性能优化]FastWorkbench-1.15.2-3.1.1.jar
+删除了
+[Silent的机械装置] SilentMechanisms-1.15.2-0.7.6+57.jar
+[前置] SilentLib-1.15.2-4.6.5+58
+
+2020/8/12  1.15.2-[Releases]1.15.2-4.0.6232 -Forge1.15.2-31.2.31[build-13089]
+更新了forge
+删除了
+暮色森林
+加入了
+[高清修复]OptiFine-1.15.2_HD_U_G1_pre30.jar
+[前置]OptiForge-MC1.15.2-0.1.27.jar
+[匠魂3]TConstruct-1.15.2-3.0.1.67.jar
+[夸克]Quark-r2.1-245.jar
+[未来版本]FutureVersions+v3.0.jar
+[前置]Mantle-1.15.2-1.5.17.jar
+[前置]AutoRegLib-1.5-40.jar
+更新了
+[魔法使]mahoutsukai-1.15.2-v1.21.6.jar
+
+2020/8/16  1.15.2-[Releases]1.15.2-4.1.3 -Forge1.15.2-31.2.36[build-13903]
+[JEI扩展]jeiintegration_1.15.2-3.1.1.2.jar
+[JEI扩展]JustEnoughResources-1.15.2-0.10.1.77.jar
+[旧版攻击]SwordBlockingCombat-v1.4-1.15.2.jar
+[前置]MaterialMaster-v1.2-1.15.2.jar
+[通用拼音搜索]JustEnoughCharacters-1.15.2-4.1.0.jar
+[凿子]Chisel_DEV-MC1.15.2-0.0.1.12.jar
+更新了
+[潘马斯农场2食物]pamhc2foodcore-1.15.2-1.0.9.jar
+[潘马斯农场2植物]pamhc2trees-1.15.2-1.0.6.jar
+
+2021/2/14  1.15.2-[Releases]1.15.2-4.2.0 Forge1.15.2-31.2.48 [build-15000]
+加入了
+ChinjufuMod[1.15.2]5.4.2.jar
+TravelersBackpack-1.15.2-4.0.8.jar
+thermal_expansion-1.15.2-0.3.0b.jar
+thermal_cultivation-1.15.2-0.3.0b.jar
+thermal_innovation-1.15.2-0.3.0b.jar
+cofh_core-1.15.2-0.7.0b.jar
+thermal-1.15.2-0.3.0b.jar
+ImmersiveEngineering-1.15.2-4.0.0-117.jar
+create-mc1.15.2_v0.2.4e.jar
+更新了
+[潘马斯农场2植物]pamhc2trees-1.15.2-1.0.7.jar
+[潘马斯农场2食物]pamhc2foodcore-1.15.2-1.1.0.jar
+Apotheosis-1.15.2-3.3.8.jar
+appliedenergistics2-7.0.5.jar
+CookingForBlockheads_1.15.2-8.0.3.jar
+
+2021-12-12   1.15.2-4.3.0[Build-22105]
+重要！！
+更新Forge
+修复CVE-2021-44228 log4j2 RCE漏洞
+更新HMCL至3.4.212
+更新PLC至2.2.7
+

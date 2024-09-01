@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>スクリプターズ ガイド</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4";
+</script>
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">スクリプターズ ガイド</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラノゲツクールMV</span> には、強力なスクリプト作成機能が用意されており、必要に合わせてゲームエンジンに変更を加えることが可能です。本ヘルプファイルにはスクリプトとプラグインの詳細な資料を収録し、そこでは 
+ API の説明や用例を確認できます。</p>
+<p>&#160;</p>
+<p>本スクリプターズ ガイドは、ラノゲツクールMVのゲームスクリプト作成システムについて、最初の一歩を踏み出すお手伝いをします。何か質問したいこと、お困りのことがございましたら、フォーラムに投稿をお願いいたします。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ラノゲツクールMVのスクリプト作成</p>
+<p>&#160;</p>
+<p>ビジュアルノベルを制作しようとしているあなたが、「スクリプト作成」という言葉から想像するのは以下のようなものではないでしょうか？</p>
+<pre>
+<code class="coffee">
+show image &quot;background.jpg&quot; 
+show image &quot;character_nina.png&quot; at center 
+nina = create character &quot;Nina&quot;, Color.Blue
+nina &quot;Hey! How is it going!&quot; 
+if $already_seen
+&#160;&#160;nina &quot;Ah... its just you...&quot;
+else
+&#160;&#160;nina &quot;So nice to meet you!&quot;</code></pre>
+<p>これは架空の例なのですが、従来のビジュアルノベルのスクリプトエンジンはグラフィカルユーザーインターフェイスを持たず、そこでのスクリプト作成は確かにこのようなものでした。しかし、 
+ ラノゲツクールMVのスクリプト作成システムは全く異なります。ラノゲツクールMVでのスクリプト作成とは、実際のビジュアルノベルのゲームエンジンを変更したり拡張したりすることを意味するもので、ビジュアルノベルのシーンを一行一行書いていくものではありません。</p>
+<p>&#160;</p>
+<p>ラノゲツクールMVでのスクリプト作成とは、そういった類の作業のベースになるものです。つまり、 ラノゲツクールMVのゲームエンジンについて学べば、従来型のスクリプトエンジンを自分で作れてしまうかもしれない、ということです。ただし、 
+ ラノゲツクールMVには、 <a href="Scene_Content.htm">シーンエディタ</a> という強力で拡張性に優れたグラフィカルエディタが用意されていますので、 
+ シーンのスクリプト作成にはこちらを利用して ラノゲツクールMVの全機能を最大限活用してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">本ガイドについて</p>
+<p>&#160;</p>
+<p>本ガイドでは、 ラノゲツクールMVのベーシックゲームエンジンとオブジェクトコンポーネントシステムおよび実際の VN エンジンの基本についてご説明しますが、プラグインの作り方やシーンエディタコマンドのカスタマイズ、ゲーム内ユーザーインターフェイスの変更方法などを具体的にお教えするものではありません。これらについてお知りになりたい場合は、次の項目をご確認ください:</p>
+<p>&#160;</p>
+<p><a href="Plugin_Getting_Started.htm">エクステンションのドキュメント + 用例</a> (エディタやゲームエンジン用プラグインの作り方)</p>
+<p><a href="IGUI_Getting_Started.htm">ゲーム内ユーザーインターフェイスシステムのドキュメント + 用例</a> 
+ (ゲーム内ユーザーインターフェイスのレイアウト変更方法など)</p>
+<p>&#160;</p>
+<p>上記に加えて、次の項目も確認されることをお勧めします:</p>
+<p>&#160;</p>
+<p><a href="Game_Script_API_Reference.htm">ゲームスクリプト API のドキュメント</a></p>
+<p><a href="Engine_Getting_Started.htm">ベーシックエンジン API のドキュメント</a></p>
+</body>
+</html>

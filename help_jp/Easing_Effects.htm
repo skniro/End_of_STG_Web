@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>イージング効果</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1_1";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">イージング効果</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">イージングとは、オブジェクトのアニメーションに加速や減速を付与する技術です。イージングには「リニア」のほかに、「イン」、「アウト」、「イン/アウト」の3パターンがあります。そのインやアウトの&#160;「トウィーニングパターン」には、「イージング処理 
+ Quadratic」、「イージング処理 Cubic」、「イージング処理 Quartic」、「イージング処理 Quintic」、「イージング処理 
+ Sinusoidal」、「イージング処理 Exponential」、「イージング処理 Circula」の7種類を用意しています。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="EasingsNew.gif" alt="" style=" border:none; width:100%; max-width:429px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「リニア」</p>
+<p>一定の割合で値が増加します。</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr class="t1st">
+		<td><p style="text-align: center;"><span style="font-weight: bold;">Linear</span></p>
+		<p style="text-align: center;"><span style="font-weight: bold;"><img src="linear.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" />&#160;</span>&#160;</p>
+		<p>加速や減速はありません。</p>
+		<p>&#160;</p></td>
+		<td><p style="text-align: center;">&#160;</p>
+		<p style="text-align: center;"><span style="font-weight: bold;"><img src="linearnew.gif" alt="" style=" border:none; width:100%; max-width:178px;" border="0" />&#160;</span>&#160;</p>
+		<p style="text-align: center;">&#160;</p></td>
+	</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「イン」</p>
+<p style="font-family: Arial, sans-serif;">ゆっくりと動き出し、最後に速くなります。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr class="t1st">
+		<td><p style="text-align: center;"><img src="easequadin.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+		<p>値は0から上昇していきます。</p>
+		<p style="font-family: Arial, sans-serif;">&#160;</p></td>
+		<td><p style="text-align: center; font-weight: bold;"><img src="EaseIn-New.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p></td>
+	</tr>
+</table>
+
+<p style="font-weight: bold;">&#160;</p>
+<p class="Sub_Heading">「アウト」</p>
+<p style="font-family: Arial, sans-serif;">高速で動き出し、最後に減速します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr class="t1st">
+		<td><p style="text-align: center;"><img src="easequadout.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+		<p style="text-align: center;">加速度は最終的に0になります。</p>
+		<p style="font-family: Arial, sans-serif;">&#160;</p></td>
+		<td><p style="text-align: center; font-weight: bold;"><img src="EaseOut.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p></td>
+	</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「イン／アウト」</p>
+<p style="font-family: Arial, sans-serif;">「イン／アウト」は「イン」と「アウト」の動きを半分ずつ組み合わせたものです。「イン／アウト」の一般的な例としては、エレベーターが挙げられます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+
+<table class="SimplyCentered" style="border-collapse: separate; border-collapse: separate;" cellspacing="0px" width="100%" border="1">
+	<col style="width: 50%;" />
+	<col style="width: 50%;" />
+	<tr class="t1st">
+		<td><p style="text-align: center;"><img src="easequadinout.png" alt="" style=" border:none; width:100%; max-width:256px;" border="0" /></p>
+		<p style="text-align: center;">半分まで加速し、その後は減速します。</p>
+		<p style="font-family: Arial, sans-serif;">&#160;</p></td>
+		<td><p style="text-align: center; font-weight: bold;"><img src="EaseInOut.gif" alt="" style=" border:none; width:100%; max-width:894px;" border="0" /></p></td>
+	</tr>
+</table>
+
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「トウィーニングパターン」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「トウィーニングパターン」は、特定の等式に基づいてさまざまなイージングモーションを設定できます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">次のリストはトウィーニングの簡単な概要です。詳細については、ページ下部のリンクを参照してください。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング処理 Quadratic」</span> - いわゆる「通常の」イージングです。2次関数（t<span 
+	 style="vertical-align: Super;">2</span>）に基づいたモーションになります。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング処理Cubic」 
+	 <span style="font-weight: normal;">- 3次関数（t</span><span style="vertical-align: Super; 
+															 font-weight: normal;">3</span><span 
+	 style="font-weight: normal;">）に基づき、モーションにカーブが生じます。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「イージング処理 
+	 Quartic」 <span style="font-weight: normal;">- 4次関数（t</span><span style="vertical-align: Super; 
+	 font-weight: normal;">4</span><span style="font-weight: normal;">）に基づき、カーブしたモーションに1か所屈曲が生じ、加速がより強調されます。</span></p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング処理Quintic」） 
+	 <span style="font-weight: normal;">- 5次関数（t</span><span style="vertical-align: Super; 
+															 font-weight: normal;">5</span><span 
+	 style="font-weight: normal;">）に基づき、非常にゆっくりと始まり、最後に非常に速くなる、極端なカーブのモーションになります。 
+	 </span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング処理 Sinusoidal」 
+	 <span style="font-weight: normal;">- 正弦または余弦（p(t) = sin(t × π/2）により、モーションに正弦波が生じます。</span></p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング処理Exponential 
+	 」 <span style="font-weight: normal;">- スロープのようなモーションになります。トウィーニングの時間を正確にコントロールし、トウィーニングを開始点から実行することなく任意の点にジャンプできます。</span></p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング処理Circula」 
+	 <span style="font-weight: normal;">- 平方根を使用した半円の等式に基づき、5次関数や指数関数と類似したモーションで最も激しく極端な加速になります。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">トウィーニングの詳細や図解については、下記のウェブサイトを参照してください。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><a 
+	 href="http://easings.net/" target="_blank">Easings.net</a></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="color: #808080;">このページのグラフは、<a href="http://creativecommons.org/licenses/by/3.0/" 
+											 style="color: #808080;">Creative 
+	 Commons Attribution 3.0 License</a>の元、Paul Lewisによる『<a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/the-basics-of-easing?hl=en" 
+															 target="_blank" 
+															 style="color: #808080;">The 
+	 Basics of Easing</a>』のグラフを基にしています。</p>
+</div>
+</body>
+</html>

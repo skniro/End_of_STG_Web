@@ -1,0 +1,525 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>基本コマンド</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">基本コマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">基本コマンドは、ゲームを調整する際に必ず必要となるコマンド群です。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Wait" id="Wait"></a>「ウエイト」</p>
+<p style="font-family: Arial, sans-serif;">シーンの処理を一時的に停止します。並列実行がオンとなっている共通イベントは対象になりません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 次のコマンドが実行されるまでの時間です。既定ではミリ秒（1秒 = 1000ミリ秒）で実行されます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Comment" id="Comment"></a>「コメント」</p>
+<p style="font-family: Arial, sans-serif;">シーンコンテンツ内にメモを作成します。このコマンドに記入した文字は、ゲーム内で実行されることがないため、安全にコマンドとコマンドの間に挿入できます。</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">メモ：</span>タブ付けが必要なコマンド（「条件」など）の下に位置していなければ、右矢印キー（<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />）でコマンドを無効化することもできます。 </p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Switch" id="Switch"></a>「スイッチ」</p>
+<p style="font-family: Arial, sans-serif;">スイッチの値（&#160;「有効／無効」）をコントロールする際に使用します。単体のスイッチまたは複数のスイッチを選択することができ、「ローカル」「グローバル」「永続」と3つの範囲があります。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ターゲット」</span> 
+	 - 「スイッチ」「範囲」「参照」と3種類あります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>は単体のスイッチを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「範囲」</span>はスイッチインデックスXからYまでを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span>はポインターとも呼ばれ、選択した変数に設定されているスイッチの値を、このコマンドで使用する変数のIDとして設定・取得します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲」</span> 
+	 - 変更するスイッチの範囲です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ローカル」</span>は現在のシーンに限定されます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「グローバル」</span>はあらゆるシーンに使用できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「永続」</span>はゲームのセーブとは別にデータを保持します。「ターゲット」が「範囲」に設定されている場合は使用できません。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - そのスイッチに対して行われる計算を指定する機能です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「無効」</span> - スイッチを無効にします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「有効」</span> - スイッチを有効にします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「有効／無効切り替え」 </span>- スイッチが「有効」の場合は「無効」に、「無効」の場合は「有効」になります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Number_Variable"></a>「数値変数」</p>
+<p style="font-family: Arial, sans-serif;">数値変数は数値を保持するために使用されます。単体の数値変数または複数の数値変数を選択することができ、「ローカル」「グローバル」「永続」と3つの範囲があります。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ターゲット」</span> 
+	 - 変更するターゲットです。3種類あります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「変数」</span>は単体の変数を変更します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「範囲」</span>は変数インデックスXからYまでを変更します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span>はポインターとも呼ばれ、選択した変数に設定されている数値変数を、このコマンドで使用する変数のIDとして設定・取得します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲」</span> 
+	 - 変数の場所・範囲を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ローカル」</span>は現在のシーンに限定されます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「グローバル」</span>はあらゆるシーンに使用できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「永続」</span>はゲームのセーブとは別にデータを保持します。「ターゲット」が「範囲」に設定されている場合は使用できません。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「操作」</span> 
+	 - 変数に対して行われる計算を指定する項目です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「設定」</span> - 選択した変数に数値を割り当てます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「加算」</span> - 選択した変数に数値を加算します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「減算」</span> - 選択した変数から数値を減算します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「乗算」</span> - 選択した変数に数値を乗算します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「除算」</span> - 選択した変数を数値で除算します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「余り」</span> - 選択した変数を数値で剰余算し、余りを割り当てます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ソース」 
+	 </span>- 実行時に使用されるソース値です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「値」</span> - 定数の値または変数です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「乱数」</span> - XからYまでのランダムな値です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span> - はポインターとも呼ばれ、選択した変数に設定されている数値変数を、このコマンドで使用する変数のIDとして設定・取得します。 
+	 &#160;<br />
+	詳細については、「<a href="Tips_and_Tricks.htm">ヒントとコツ</a>」を参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">メモ：</span>「値」に「変数」を使用するには、「...」ボタンを押します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading" style="font-family: Arial, sans-serif;"><a name="Decimal_Variable" 
+	 id="Decimal_Variable"></a>「10進型変数」</p>
+<p style="font-family: Arial, sans-serif;">10進型変数は数値変数と同じく、数値を保持するために使用されます。単体の10進型変数と複数の10進型変数を選択することができ、「ローカル」「グローバル」「永続」と3つの範囲があります。これは、新しい種類の変数というわけ<span 
+	 style="font-weight: bold;">ではありません</span>。「<a href="#Number_Variable">数値変数</a>」コマンドと「10進型変数」コマンドは、<span 
+	 style="font-weight: bold;">どちらも同じく</span>数値変数に対して機能します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「<a href="#Number_Variable">数値変数</a>」コマンドとの唯一の違いとして、このコマンドでは、結果の端数の処理方法を設定することが可能で、さらに値には小数点や浮動小数点が入力できます。既定では、結果の端数は処理されません。「<a 
+	 href="#Number_Variable">数値変数</a>」コマンドでは除算の結果は必ず切り捨てされ、小数点／浮動小数点を入力することができません。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">まとめると、「10進型変数」コマンドは、小数点／浮動小数点を持つ数値を扱うためのものです。できる限り「<a 
+	 href="#Number_Variable">数値変数</a>」コマンドを使用することを<span style="font-weight: bold;">お勧めします</span>。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ターゲット」</span> 
+	 - 変更するターゲットです。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「変数」</span>は単体の変数を変更します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「範囲」</span>は変数インデックスXからYまでを変更します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span>はポインターとも呼ばれ、選択した変数に設定されている数値変数を、このコマンドで使用する変数のIDとして設定・取得します。 
+	 &#160; </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲」</span> 
+	 - 変数の場所・範囲を設定します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ローカル」</span>は現在のシーンに限定されます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「グローバル」</span>はあらゆるシーンに使用できます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「永続」</span>はゲームのセーブとは別にデータを保持します。「ターゲット」が「範囲」に設定されている場合は使用できません。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「操作」</span> 
+	 - 変数に対して行われる計算を指定するオプションです。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「設定」</span> - 選択した変数に数値を割り当てます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「加算」</span> - 選択した変数に数値を加算します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「減算」</span> - 選択した変数から数値を減算します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「乗算」</span> - 選択した変数に数値を乗算します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「除算」</span> - 選択した変数を数値で除算します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「余り」</span> - 選択した変数を数値で剰余算し、余りを割り当てます。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ソース」</span>- 
+	 実行時に使用されるソース値です。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「値」</span> - 定数の値または変数です。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「乱数」</span> - XからYまでのランダムな値です。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span> - はポインターとも呼ばれ、選択した変数に設定されている数値変数を、このコマンドで使用する変数のIDとして設定・取得します。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「端数処理」</span> 
+	 - 結果の端数処理の有無や方法を決定します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「いいえ」</span> - 結果は端数処理されません。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「四捨五入」</span> - 結果は四捨五入されます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「切り上げ」</span> - 結果は切り上げられます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「切り捨て」</span> - 結果は切り捨てられます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">メモ：</span>「値」に「変数」を使用するには、「...」ボタンを押します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Variable" id="Text_Variable"></a>「テキスト変数」</p>
+<p style="font-family: Arial, sans-serif;">テキストを保持するために使用されます。単体のテキスト変数と複数のテキスト変数を選択することができ、「ローカル」「グローバル」「永続」と3つの範囲があります。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ターゲット」</span> 
+	 - 「テキスト」「範囲」「参照」と3種類あります。. </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「変数」</span>は単体の変数を変更します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「範囲」</span>は変数インデックスXからYまでを変更します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「参照」</span> - はポインターとも呼ばれ、選択した変数に設定されている数値変数を、このコマンドで使用する変数のIDとして設定・取得します。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「テキスト」</span> 
+	 - 変更する変数の場所・範囲を設定します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ローカル」</span>は現在のシーンに限定されます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「グローバル」</span>はあらゆるシーンに使用できます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「永続」</span>はゲームのセーブとは別にデータを保持します。「ターゲット」が「範囲」に設定されている場合は使用できません。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">&#160;「操作」</span> 
+	 - 変数に対して行われる計算を指定するオプションです。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「設定」</span> - 選択した変数にテキスト値を割り当てます。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「追加」</span> -選択した変数にテキスト値を追加します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「大文字へ」</span> - 選択した変数のテキストをすべて大文字にします（例：VARIABLE）。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「小文字へ」</span> - 選択した変数のテキストをすべて小文字にします（例：variable）。 
+	 </p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">メモ：</span>「値」に「変数」を使用するには、「...」ボタンを押します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Label" id="Label"></a>「ラベル」</p>
+<p style="font-family: Arial, sans-serif;">ラベルはマーカーの役割を果たすコマンドです。名前を設定することで、シーンはそのラベルの下部にある場面へとジャンプすることができます。一般的に、1つのシーンだけで様々な結末を生み出したい時に使用されます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Jump_to_Label" id="Jump_to_Label"></a>「ラベルに移動」</p>
+<p style="font-family: Arial, sans-serif;">「ラベルに移動」は、名前が設定されたラベルすなわちマーカーにシーンを移動させます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Condition" id="Condition"></a>「条件」</p>
+<p style="font-family: Arial, sans-serif;">このコマンドと使うと、コマンドを実行するために満たさなければならない条件を作成できます。次のように、条件コマンドの下位に設定してタブ付けする必要があります。</p>
+<p style="font-family: Arial, sans-serif;"><img src="21.jpg" alt="" style=" border:none; width:100%; max-width:814px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「もし」</span> 
+	 - 実行のために確認しなければならない条件の変数タイプを設定します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span>は数値変数を確認します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span> はスイッチを確認します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>はテキスト変数を確認します。 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「変数」</span> 
+	 - 条件が確認する変数です。 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「が」</span> 
+	 - 実行のために確認しなければならない条件を設定します。 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「＝」</span>&#160;- 「変数」と「値」が同じ内容である場合、条件コマンドを起動します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「≠」</span>&#160;- 「変数」と「値」が同じ内容でない限り、条件コマンドを起動します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「＞」</span>&#160;- 「変数」が「値」よりも大きい場合、条件コマンドを起動します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「≧」</span>&#160;- 「変数」が「値」よりも大きい、または等しい場合、条件コマンドを起動します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「＜」</span>&#160;- 「変数」が「値」よりも小さい場合、条件コマンドを起動します。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「≦」</span>&#160;- 「変数」が「値」よりも小さい、または等しい場合、条件コマンドを起動します。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 条件を起動するトリガーです。<br />
+	<span style="font-weight: bold;">メモ：</span>「値」に「変数」を使用するには、「...」ボタンを押します。 
+	 </p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">コマンドを「条件」の傘下として追加したい場合は、次のような方法があります。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ol style="list-style: decimal;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">「条件」を選択している状態で、新しいコマンドをクリックすると、「条件」コマンドの下位に自動的に追加され、タブ付けされます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">新しいコマンドを「条件」の下位にドラッグすると、タブ付けされた状態で表示されます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">「条件」の下位に位置するコマンドを選択している状態で右矢印キー（<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />）を押すと、タブ付けすることができます。</p></li>
+</ol>
+<p style="font-family: Arial, sans-serif;">「条件」の傘下にあるコマンドを、削除せずにタブ付け解除するには、左矢印キー（<img src="Keyboard_White_Arrow_Left.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />）を押します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">メモ：</span>「条件」の下位にあるコマンドがタブ付けされていない場合、「条件」は終了したものとみなされ、後続のタブ付けされたコマンドはすべて「<a 
+	 href="#Comment">コメント</a>」として扱われます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Else" id="Else"></a>「その他」</p>
+<p style="font-family: Arial, sans-serif;">「条件」がトリガーされなかった場合の結末を設定できます。次のシナリオのように、分岐条件を作成する場合に便利です。</p>
+<p style="font-family: Arial, sans-serif;"><img src="22.jpg" alt="" style=" border:none; width:100%; max-width:862px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Else_If" id="Else_If"></a>「Else If 文」</p>
+<p style="font-family: Arial, sans-serif;">「条件」がトリガーされなかった場合の「条件」セットを新たに設定できます。<span 
+	 style="font-family: Arial, sans-serif;">何らかの理由でいずれの条件もトリガーされた際に、古い条件がトリガーされないようにするために使用します。</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Check_Switch" id="Check_Switch"></a>「スイッチをチェック」</p>
+<p style="font-family: Arial, sans-serif;">「<a href="#Condition">条件</a>」と同じく「スイッチ」の「有効／無効」を確認し、設定した条件と一致した場合、指定したラベルに移動します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Check_Number" id="Check_Number"></a>「数値をチェック」</p>
+<p style="font-family: Arial, sans-serif;">「<a href="#Condition">条件</a>」と同じく「数値変数」が特定の値であるかどうかを確認し、設定した条件と一致した場合、指定したラベルに移動します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Check_Text" id="Check_Text"></a>「テキストをチェック」</p>
+<p style="font-family: Arial, sans-serif;">「<a href="#Condition">条件</a>」と同じく「テキスト変数」が特定の値であるかどうかを確認し、設定した条件と一致した場合、指定したラベルに移動します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Loop" id="Loop"></a>「ループ」</p>
+<p style="font-family: Arial, sans-serif;">「ループ」コマンドの傘下として設定されたコマンドは、繰り返し実行されるようになります。ループ傘下内に複数のループを設定することもできます。ループ処理は無限に続くため、ループを無効化したい場合は「<a 
+	 href="#Break_Loop">ループを終了</a>」コマンドを使用する必要があります。
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<span style="font-weight: bold;">メモ：</span>以下に「ループ」コマンドの使用例を示します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="18.jpg" alt="" style=" border:none; width:100%; max-width:863px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Break_Loop" id="Break_Loop"></a>「ループを終了」</p>
+<p style="font-family: Arial, sans-serif;">ループを終了します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Start_Timer" id="Start_Timer"></a>「タイマーを開始」</p>
+<p>タイマーに設定した時間が経過した際に、共通イベントを呼び出したり、ラベルに移動したりすることができます。画面上に視覚的効果は描写されません。<br />
+タイマーはいずれも、現在のシーンでのみ適用されます。そのため、シーンを変更すると、タイマーはすべて無効になります。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - タイマーのインデックス（ID）です。IDの異なるタイマーは、それぞれ独立したタイマーになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インターバル」</span> 
+	 - タイマーのインターバルです。たとえば「500 ms」の場合、タイマーは500ミリ秒ごとにトリガーされます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アクション」</span> 
+	 - タイマーのインターバルが経過した際の動作を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「移動」</span>&#160;- ラベルにジャンプします。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「呼び出し」</span>&#160;- 共通イベントを呼び出します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Pause_Timer" id="Pause_Timer"></a>「タイマーを一時停止」</p>
+<p>タイマーをすぐに一時停止します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 一時停止するタイマーのインデックス（ID）です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Resume_Timer" id="Resume_Timer"></a>「タイマーを再開」</p>
+<p>タイマーをすぐに再開します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 再開するタイマーのインデックス（ID）です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Stop_Timer" id="Stop_Timer"></a>「タイマーを停止」</p>
+<p>タイマーをすぐに停止します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 終了するタイマーのインデックス（ID）です。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Idle" id="Idle"></a>「待機」</p>
+<p style="font-family: Arial, sans-serif;">シーンを止める、共通イベントの処理を停止するなど、挿入する位置によってさまざまな用途として使用できます。このコマンドは、とあるシーンの特定のコマンドを起動したくない場合に便利です。 
+ </p>
+<p style="font-family: Arial, sans-serif;">詳細については、「<a href="Tips_and_Tricks.htm">ヒントとコツ</a>」のページを参照してください。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Script" id="Script"></a>「スクリプト」</p>
+<p style="font-family: Arial, sans-serif;">ユーザーがコマンド内に入力したコマンドラインを実行します。このコマンドは上級者向けです。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Wait_for_Input" id="Wait_for_Input"></a>「入力を待機」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">キー／ボタンが押される／離されるまで待機します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「キー」</span> - キー／ボタンを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「が」</span> - 設定したキー／ボタンのステータスを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「押されている」</span> - 設定したキー／ボタンが押されるまで待機します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「離されている」</span> - 設定したキー／ボタンが離されるまで待機します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Reset_Variables" id="Reset_Variables"></a>「変数をリセット」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">「ローカル変数」「すべてのローカル変数」「グローバル変数」「永続変数」のいずれかをリセットします。カスタムしたイベント／シーンベースのインゲームUIを使用している状態で、（ユーザーが新しくゲームを開始する際など）すべての変数をリセットしたい場合に便利です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「範囲」</span> - リセットする変数の範囲を設定します。範囲内の変数のみが影響を受けます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ローカル」</span> - 指定したシーンのローカル変数のみがリセットされます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「すべてのローカル」</span> - あらゆるシーン／共通イベントのすべてのローカル変数がリセットされます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「グローバル」</span> - あらゆるグローバル変数がリセットされます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「永続」</span> - あらゆる永続変数がリセットされます（「永続データを保存」コマンドを呼び出す必要はありません）。 
+	 </p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「シーン」</span> - ローカル変数をリセットするシーンを指定します。これは「<span 
+	 style="font-weight: bold;">範囲」</span>で「<span style="font-weight: bold;">ローカル</span>」が選択されている場合のみ表示されます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「種類」</span> - リセットする変数の種類です。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「すべて」</span> - すべての種類の変数をリセットします。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「スイッチ」</span> - すべてのスイッチをリセットします。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「数」</span> - すべての数値をリセットします。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「テキスト」</span> - すべてのテキストをリセットします。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「リスト」</span> - すべてのリストをリセットします。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ターゲット」</span> - リセット対象を、指定した範囲の変数IDに限定するかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「すべて」</span> - すべての変数が影響を受けます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「範囲」</span> - 指定した変数範囲のみが影響を受けます。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+</body>
+</html>

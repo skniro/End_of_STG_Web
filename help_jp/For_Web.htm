@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Web用</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > テストとデプロイ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Web用</p>
+<p>&#160;</p>
+<p>Webプラットフォームの場合、テストとデプロイは非常に簡単です。必要な手順について説明します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Webプラットフォームでのテスト</p>
+<p>&#160;</p>
+<p>簡単なテストビルドを行うには、メニューバーから「ゲーム &rarr; 指定してビルド &rarr; Web Browser」を選択します。その後、プロジェクトフォルダを選択するか、メニューバーから「ゲーム 
+ &rarr; ゲームフォルダを開く」を選択します。フォルダにはいくつかのファイルとindex.htmlファイルが1つ入っています。このファイルを&#160;Firefoxで開くとゲームをプレイできます。</p>
+<p>&#160;</p>
+<p>他にも、実際の環境に近い状態でテストを行うために、ローカルのWebサーバーを設定したり、ビルドフォルダをWebサーバーにアップロードしたりするなどの方法もあります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">オーディオと動画のアセット</p>
+<p>&#160;</p>
+<p>現時点で、Webブラウザの半数はオーディオ形式として.m4a／.mp4／.mp3／.aac／.wav、動画形式として.mp4のみに対応となっています。残りの半数はオーディオ形式として.ogg／.wav、動画形式として.webmのみ対応です。主要なブラウザをすべてサポートしたい場合、すべてのオーディオファイルと動画ファイルを、2つ以上の形式でゲームに含める必要があります。シンプルな効果音用の.wavファイルは唯一の例外となります。</p>
+<p>&#160;</p>
+<p>ラノゲツクールMVでは、同じファイルを異なる形式で複数回インポートし、ランタイム時に適切な形式を選択できます。</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">注：</span><span>一部のモバイルWebブラウザでは、セキュリティ上の制限により、動画再生が正しく機能しない場合があります。</span></p>
+<p>&#160;</p>
+<p class="Sub_Heading">Web用開始ロゴ</p>
+<p>特にモバイルの一部のプラットフォームでは、モバイル版のWebブラウザでゲームをロードすると、Web用開始画面が表示されます。ゲームを実際に開始するには、プレイヤーがこの画面をタップする必要があります。この画面は、モバイルブラウザのセキュリティ要件が厳しいことが理由で設定されています。</p>
+<p>&#160;</p>
+<p><img src="web-start-screen.png" alt="" style=" border:none; width:100%; max-width:719px;" border="0" /></p>
+<p>&#160;</p>
+<p>「<a href="Resource_Manager.htm">リソースマネージャー</a>」を開き、「Graphics/Pictures」フォルダにある「<span style="font-weight: bold;">web-start-screen</span>」画像ファイルを差し替えることで、Web用開始ロゴを変更することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Webプラットフォームでのデプロイ</p>
+<p>&#160;</p>
+<p>ゲームをデプロイする場合、<a href="The_Menu_Bar.htm">メニューバー</a>から「ゲーム　&rarr;　指定してビルド」を選択する方法か「<a 
+	 href="Create_Game_Package.htm">ゲームパッケージを作成</a>」ウィザードを使用してすぐに提供可能なWebパッケージを作成する方法を選択できます。後は、Web用パッケージをWebサーバーにアップロードするだけで、全世界のユーザーに公開できるようになりました！</p>
+<p>&#160;</p>
+<p>ゲームのパッケージを詳細に設定する方法については、「<a href="Getting_Started.htm">ビルドと起動</a>」のページを参照してください。</p>
+</body>
+</html>

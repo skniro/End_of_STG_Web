@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc21.js\"  name=\"エンジンに関するドキュメンテーション\"><item name=\"はじめに\" url=\"Engine_Getting_Started.htm\" /><item name=\"APIリファレンス\" url=\"engine_doc/index.html\" /></data>";

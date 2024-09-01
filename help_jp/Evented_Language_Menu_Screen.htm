@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>イベント付き言語メニュー画面</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > UIシリーズ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">イベント付き言語メニュー画面</p>
+</div>
+<p>&#160;</p>
+<p>イベントを使って、言語メニュー画面を作成することができます。今回は、<a href="Picture.htm#Show_Image_Map">イメージマップ</a>を使用します。あらかじめ「<a 
+	 href="Imagemap_Tutorial.htm">イメージマップとホットスポットのチュートリアル</a>」を読んでおいてください。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="wtd_language_idle.png" alt="" style=" border:none; width:100%; max-width:645px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">グラフィックの準備</p>
+<p>言語画面用に2つのインスタンスを用意する必要があります。他の場合と同じく、その際、両方のイメージは必ず同じサイズである必要があります。。以下のイメージを参考にしてください。<br />
+</p>
+<p><img src="wtd_language_idle.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>イメージの準備ができたら<a href="Importing_Resources.htm">インポートしましょう</a>！ファイル名の末尾に「filename_ground」や「filename_hover」などを付けて、わかりやすくしておくことをおすすめします。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンの設定</p>
+<p><img src="EventedUILang_en.jpg" alt="" style=" border:none; width:100%; max-width:979px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>今回の対象言語は英語と日本語の2つなので、<a href="Imagemap_Tutorial.htm#Setting_up_the_Hotspots">2つのホットスポットを作成します</a>。ということはつまり、2つのラベルを作成する必要があります。ラベル名はすべて小文字でつけることをおすすめします。そのほうが楽です。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>各ラベルの下に、「<a href="System_Command.htm#Set_Game_Data">ゲームデータを設定</a>」コマンドを追加し、「言語 
+	 - コード」を設定します。これにより、現在の言語をコードで設定できます。<a href="Language_Configuration.htm">コードは、「言語プロファイル」の管理時に設定できます</a>。ですので、もし英語のホットスポットがクリックされると、「english」ラベルにジャンプし、「en_US」を英語選択時のコードとして設定します。日本語のホットスポットがクリックされれば「japanese」にジャンプし、「jp」が日本語選択時のコードとして設定されます。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>最後に、シーンを「<a href="Evented_Title_Screen.htm">タイトル画面</a>」に変更します。</li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

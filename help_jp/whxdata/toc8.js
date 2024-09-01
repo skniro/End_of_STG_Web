@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc2.js\"  name=\"テストとデプロイ\"><item name=\"パソコン用\" url=\"For_PC_Mac.htm\" /><item name=\"iOS用\" url=\"For_iOS.htm\" /><item name=\"Android用\" url=\"For_Android.htm\" /><item name=\"Web用\" url=\"For_Web.htm\" /></data>";

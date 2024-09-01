@@ -1,0 +1,604 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>メッセージ</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_9";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">メッセージコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「メッセージ」コマンドでは、会話関連のイベントをシーンに描写します。 
+ </p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Box_Visibility" id="Message_Box_Visibility"></a>「メッセージボックスの表示設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージボックスにはあらゆる会話が表示されますが、「メッセージボックスの表示」と「メッセージテキストの表示」はそれぞれ独立しているため、メッセージボックスを非表示にしていても、メッセージテキストは描写されます。メッセージテキストの表示／非表示を切り替えるには、「メッセージの表示設定」コマンドを使用します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スタイル」</span> - 表示するメッセージボックスUIのスタイルを設定します。<a href="GameScript_Getting_Started.htm">スクリプトエディター</a>の「Layouts &rarr; Layout_Game」内にメッセージボックスを新しく定義していない限り、選択できる項目は「ADVスタイル」「NVLスタイル」「メニューのみ」の3つとなります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「表示」</span> - メッセージボックスの表示／非表示を切り替えます。「はい」で表示、「いいえ」で非表示になります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - メッセージボックスを表示するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「ウエイト」</span>&#160;- メッセージボックスを表示するアニメーションが終了するまでシーンを待機させます。</p></li>
+	</ul></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「効果」</span> - メッセージボックスの出現方法に関するオプションです。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「イージング」&#160;- 
+		 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「アニメーション」</span>&#160;- メッセージボックスの動作を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からメッセージボックスを表示させます。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてメッセージボックスをフェードイン／フェードアウトさせます。メッセージボックスがデフォルトの場合は<span 
+			 style="font-weight: bold;">効果がありません</span>。</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「マスキング」<span 
+			 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてメッセージボックスをフェードイン／フェードアウトさせます。</span>効果がありません<span 
+			 style="font-weight: normal;">。</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「スムーズ」<span 
+				 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li>
+			</ul>
+			<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Visibility" id="Message_Visibility"></a>「メッセージの表示設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージや会話の表示／非表示を設定します。ただし、メッセージテキストの表示とメッセージボックスの表示はそれぞれ独立しているため、メッセージテキストを非表示にしても、メッセージボックスは表示されます。<br />
+メッセージボックスの表示／非表示を切り替えるには「メッセージボックスの表示設定」コマンドを使用します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「表示」</span> - メッセージテキストの表示／非表示を変更します。「はい」で表示、「いいえ」で非表示になります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - メッセージテキストを表示するタイミングをミリ秒単位で設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「ウエイト」</span>&#160;- メッセージテキストがすべて表示し終わるまでシーンを待機させます。</p></li>
+	</ul></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「効果」</span> - メッセージテキストの出現方法に関するオプションです。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「イージング」&#160;- 
+		 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「アニメーション」</span>&#160;- メッセージテキストの動作を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からメッセージテキストを登場させます。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ブレンド」</span>&#160;-  ブレンド機能を用いてメッセージテキストをフェードイン／フェードアウトさせます。</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「マスキング」<span 
+			 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてメッセージテキストをフェードイン／フェードアウトさせます。</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「スムーズ」<span 
+				 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li>
+			</ul>
+			<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p class="Sub_Heading"><a name="Message_Fading" id="Message_Fading"></a>「メッセージのフェーディング」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">このコマンドは、メッセージが消える速度に影響します。「メッセージ設定」の「自動消去」がオフになっている場合は機能しません。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - メッセージが終了するまでの時間をミリ秒単位で指定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「効果」</span> - これらのオプションはメッセージのフェードアウトの方法に影響します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。 
+		 詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「アニメーション」</span>&#160;- メッセージボックスの動作を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ムーブメント」</span> -画面の左／上／右／下からメッセージボックスを登場させます。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてメッセージボックスをフェードイン／フェードアウトさせます。</p></li>
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「マスキング」<span 
+			 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてメッセージボックスをフェードイン／フェードアウトさせます。</span></p></li>
+			<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+				<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「スムーズ」<span 
+				 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li>
+			</ul></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Settings" id="Message_Settings"></a>「メッセージ設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージボックスにおけるテキスト描写に関するデフォルトオプションを変更します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「自動消去」</span> - デフォルトでは「有効」になっています。「無効」にすると、その前に表示したテキストが消去されないようになります。「メッセージをクリア」コマンドで、表示中のメッセージテキストを消去できます。<br />
+	<img src="autoerase.jpg" alt="" style=" border:none; width:100%; max-width:758px;" border="0" /></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「終了時待機」</span> - デフォルトでは「有効」になっています。ユーザーからの入力を確認してから、次のメッセージを表示するようになります。<br />
+	「無効」にすると、入力を待たずに次のメッセージを表示します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「バックログ」</span> - メッセージをバックログに追加するかどうかを設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「フォント」</span> - 表示フォントを変更します。フォントは.WOFF形式、またはシステムにインストールされているフォントである必要があります。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「サイズ」</span> - フォントのサイズを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スタイル」</span> - メッセージテキストのスタイルを設定します。</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「色」 </span>- テキストの色を変更します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「太字」</span> - テキストを太字にします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「斜体」 </span>- テキストを斜体にします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「スモールキャピタル」</span>&#160;- 小文字を「小さなサイズの大文字」として表示します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「下線」</span> - テキストに下線を引きます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「取り消し線」</span> - テキストに取り消し線を引きます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「行の高さ」 </span>- メッセージテキスト1行に対する高さの最小値を、ピクセル単位で指定します。「0」にするとテキストの高さは自動計算されます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「行の間隔」</span> - メッセージテキストの行間を、ピクセル単位で指定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「枠から行までの余白」</span>&#160;- メッセージボックスの枠からメッセージテキストまでの余白（左右）をピクセル単位で指定します。</p></li>
+	</ul>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「袋文字」</span> - メッセージテキストに輪郭を追加します。</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「袋文字」 </span>- テキストに輪郭を追加します。「はい」にすると輪郭が追加され、「いいえ」にすると通常のテキストになります。</p></li>
+	</ul>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">「色」</span> - カラーコントローラーを用いて輪郭の色を変更します。「赤」「緑」「青」のスライドバー（-255～255）で色を指定します。<br />指定した色はコントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を設定するには「パワー」を指定します。 
+		 「パワー」を「0」に設定すると、色は完全に透明になり、画面上で見えなくなります。</p></li>
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">「サイズ」</span> - 輪郭の厚みをピクセル単位で指定します。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「影」</span><span> - メッセージテキストに影を追加します。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: normal;"><span 
+		 style="font-weight: bold;">「影」</span> - 「はい」にすると影がオンに、「いいえ」にするとオフになります。</p></li>
+		<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+				 style="list-style: disc;">
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">「色」<span 
+			 style="font-weight: normal;"> - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、影の色を指定します。指定した色は、カラーコントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。</span></p></li>
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">「オフセット-X」 
+			 <span style="font-weight: normal;">- 設定した値（ピクセル）に応じて、影が右に移動します。</span></p></li>
+			<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">「オフセット-Y」<span 
+			 style="font-weight: normal;"> - 設定した値（ピクセル）に応じて、影が下に移動します。</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Message" id="Show_Message"></a>「メッセージを表示」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">アドベンチャー（ADV）スタイルでテキストを表示します。コマンドの左上にある下向き矢印（<img src="command-expander-arrow.png" alt="" style=" border:none; width:100%; max-width:13px;" border="0" />）を押すと、テキスト内容を入力することができます。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - シーンで喋らせるキャラクターです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ボイス」</span>&#160;- メッセージで再生する音声ファイルです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「表情の変更」</span> - メッセージに設定されるキャラクターの表情です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「時間」 
+	 <span style="font-weight: normal;">- メッセージの表示時間をミリ秒単位で指定します。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- テキストの表示が終了するまでシーンを待機させます。</p></li>
+
+</li></ul></ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Add_Choice" id="Add_Choice"></a>「選択肢を追加」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">シーンに選択肢を追加します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">追加した選択肢は、「選択肢を表示」コマンドを呼び出さない限り表示されません。<br />
+そのため、「<a href="Basic.htm#Condition">条件</a>」コマンドと組み合わせて動的な選択肢を作成することができます。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「説明」</span> - 選択肢の内容を記入します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「選択時」</span> - ユーザーが選択肢をクリックした際の動作を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「移動」</span> - 指定したラベルに移動します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「共通イベントを呼び出す」</span> - 指定した共通イベントを呼び出します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「バインド」</span> - 指定したスイッチを「有効」に設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーンを呼び出し」</span> - 指定したシーンを呼び出します。詳細については、「<a href="SceneCommand.htm#Call_Scene">シーンを呼び出し</a>」コマンドを参照してください。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「位置」</span> - 選択肢の表示位置を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「自動」</span>&#160;- 既定の位置に表示します。画面中央に、上から順番に表示されます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「直接」</span>&#160;- グラフィックエディターを用いて自由に配置します。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「既定」</span> - 「選択肢タイマー」がアクティブ、またはゲームがスキップモードとなっている際には、「既定」が有効になっている選択肢が自動的に選択されます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「有効」</span> - 選択肢を有効にするかどうかを設定します。無効の場合、画面には表示されますが、選択することができなくなります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Choices" id="Show_Choices"></a>「選択肢を表示」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「選択肢を追加」コマンドであらかじめ設定した選択肢をすべて表示します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Clear_Message" id="Clear_Message"></a>「メッセージをクリア」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">表示されているメッセージをすべて消去します。ADVモードとNVLモードの両方で機能します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Input_Number" id="Input_Number"></a>「数を入力」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">数値を入力するウィンドウを表示し、プレイヤーが入力した値を変数に保存します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「桁」<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;"> - プレイヤーが入力できる桁数を設定します。最大で8桁です。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「保存先」</span> - プレイヤーが入力した値の保存先を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Input_Text" id="Input_Text"></a>「テキストを入力」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">テキストを入力するウィンドウを表示し、プレイヤーが入力した値を変数に保存します。<br />
+使用可能な文字は「データベース &rarr; システム &rarr; テキスト入力文字セット」で変更できます。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「文字数」</span> - プレイヤーが入力できる文字数を設定します。最大で12文字です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「保存先」</span> - プレイヤーが入力した値の保存先を設定します。</p></li>
+</ul>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Create_Message_Area" id="Create_Message_Area"></a>「メッセージエリアを作成」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージを表示することのできるエリアを追加作成します。漫画の吹き出しのように、同時に複数のメッセージボックスを表示させたい場合は、このコマンドを使用します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> - 操作するメッセージエリアのインデックス（ID）を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「位置」</span> - グラフィックエディタを用いて、メッセージエリアの位置とサイズを設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージエリアにおけるメッセージの表示方法については、「<a 
+	 href="#Set_Message_Area">メッセージターゲットを設定</a>」を参照してください。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Message_Area" id="Set_Message_Area"></a>「メッセージエリアを設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージエリアの位置とサイズを変更します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」 </span>- メッセージエリアのインデックス（ID）です。これにより、操作するメッセージエリアを決定できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「位置」</span> - メッセージエリアの画面上の位置とサイズです。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Message_Target" id="Set_Message_Target"></a>「メッセージターゲットを設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「<a 
+	 href="#Show_Message">メッセージを表示</a>」といったコマンドのターゲットエリアを設定します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「<a href="#Create_Message_Area">メッセージエリアを作成</a>」コマンドで作成したエリアや、レイアウトベースのメッセージエリア（ゲーム内UIシステムにあります）に、コンテンツを表示させることができます。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「種類」</span> - ターゲットの種類を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「エリア」</span> - 「<a href="#Create_Message_Area">メッセージエリアを作成</a>」コマンドで作成したエリアにテキストを表示します。</p></li></li></ul>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「数」</span> - 操作するメッセージエリアのインデックス（ID）を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「クリア」 </span>- 新しいターゲットメッセージエリアをクリアするかどうかを設定します。</p></li>
+</ul>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;">&#160;</li>
+</ol>
+<p class="Sub_Heading"><a name="Erase_Message_Area" id="Erase_Message_Area"></a>「メッセージエリアを消去」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージエリアを消去します。メッセージエリアは使用できなくなり、そのエリアに適用されていた「メッセージ」コマンドはすべて、デフォルトのメッセージエリアに自動的に転送されます。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> - 消去するメッセージエリアのインデックス（ID）を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Choice_Timer" id="Choice_Timer"></a>「選択肢タイマー」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択肢に制限時間を設定します。既定では、時間切れになると自動的に「はい」が選択されるようになっています。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「分」</span>&#160;- タイマーの分数を設定します。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「秒」</span>&#160;- 
+	 タイマーの秒数を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Backlog_Visibility" id="Backlog_Visibility"></a>「バックログの表示設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">ログウィンドウを設定します。</p>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span> 
+	 - 有効にすると、ログウィンドウが表示されます。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「背景表示」</span> 
+	 - 無効にすると、ログウィンドウの背景画像が非表示になり、カスタムの背景画像を使用できるようになります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Message_Box_Defaults" 
+	 id="Message_Box_Defaults"></a>「メッセージボックスの既定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージボックスに関する既定の動作を設定します。</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場時間」</span>&#160;-&#160;出現アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;-&#160;消失アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場効果」</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「登場効果 &#160;- イージング」</span>&#160;-&#160;アニメーションの加速・減速を設定します。詳細については「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」ページを参照してください。</p></li></li></ul>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「登場効果 &#160;- アニメーション」</span>&#160;-&#160;出現時のアニメーションを設定します。</p></li></li></ul>
+</ul>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場効果」</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「退場効果&#160;- イージング」</span>&#160;-&#160;アニメーションの加速・減速を設定します。詳細については「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」ページを参照してください。</p></li></li></ul>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「退場効果 - アニメーション」</span>&#160;-&#160;消失時のアニメーションを設定します。</p></li></li></ul>
+
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Codes" id="Text_Codes"></a>テキストコード</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">メッセージテキストに記入すると機能するコマンド郡です。テキストスタイルを変更したり、変数の中身を表示させたりすることができます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<table style=" border-collapse:separate; width:100%; max-width:62.219%;" cellspacing="0" border="1">
+	<col style="width: 37.992%;" />
+	<col style="width: 62.008%;" />
+	<tr>
+		<td><p style="text-align: center;"><span style="font-weight: bold;">テキストコード</span></p></td>
+		<td><p style="text-align: center;"><span style="font-weight: bold;">機能</span></p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{N:index}</p></td>
+		<td>キャラクター名を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{C:index}</p></td>
+		<td>指定のカラーコードでテキストを表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SP:index}</p></td>
+		<td>メッセージ中に効果音を再生します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SZ:size}</p></td>
+		<td>テキストサイズを変更します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:I}</p></td>
+		<td>テキストに斜体を適用します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:B}</p></td>
+		<td>テキストに太字を適用します。 
+		<br />&#160;</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:C}</p></td>
+		<td>テキストにスモールキャピタルを適用します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:U}</p></td>
+		<td>テキストに下線を適用します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:S}</p></td>
+		<td>テキストに取り消し線を適用します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{Y:N}</p></td>
+		<td>メッセージに適用されたすべてのスタイルを消去します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GN:index}</p></td>
+		<td>グローバル数値変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GT:index}</p></td>
+		<td>グローバルテキスト変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GS:index}</p></td>
+		<td>グローバルスイッチの値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{GL:index,elm}</p></td>
+		<td>グローバルリストの値を表示します。 
+		<br />たとえば、グローバルリスト変数「1」から<br />「0」番目のリスト項目を参照したい場合は{GL:1,0}と記入します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LN:index}</p></td>
+		<td>ローカル数値変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LT:index}</p></td>
+		<td>ローカルテキスト変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LS:index}</p></td>
+		<td>ローカルスイッチの値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LL:index,elm}</p></td>
+		<td>ローカルリストの値を表示します。<br />たとえば、ローカルリスト変数「1」から<br />「0」番目のリスト項目を参照したい場合は{LL:1,0}と記入します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PN:index}</p></td>
+		<td>永続数値変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PT:index}</p></td>
+		<td>永続テキスト変数の値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PS:index}</p></td>
+		<td>永続スイッチの値を表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{PL:index,elm}</p></td>
+		<td>永続リストの値を表示します<br />たとえば、永続リスト変数「1」から<br />「0」番目のリスト項目を参照したい場合は{PL:1,0}と記入します。 </td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{S:speed}</p></td>
+		<td>設定値に基づいてメッセージ速度を調整します。既定では、次のような値があります。<br /> 
+		<br />0 - 最も遅い 
+		<br />1 - 遅い 
+		<br />2 - 通常 
+		<br />3 - 速い 
+		<br />4 - 最も速い 
+		<br />5 - 即時</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{W:ms}</p></td>
+		<td>残りのメッセージを表示するまでの待機時間をミリ秒単位で設定します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{WE:Y}</p></td>
+		<td>「終了時待機」をオンにします。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{WE:N}</p></td>
+		<td>「終了時待機」 をオフにします。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{W:A}</p></td>
+		<td>キーやボタンなどの入力を待機します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{DI:Y/N}</p></td>
+		<td>テキストを即時表示します。<br />
+		「Y」 = 即時表示を有効にします。「N」 = 即時表示を無効にします。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{A:index}</p></td>
+		<td>メッセージボックス内にアニメーションを表示します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LK:index}</p></td>
+		<td>テキストをクリック可能なリンクとして表示し、指定したインデックスで共通イベントを呼び出します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{LK:E}</p></td>
+		<td>クリック可能なリンクのフォーマットを削除します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{E:index}</p></td>
+		<td>&#160;「メッセージを表示」の設定キャラクターに基づいて、キャラクターのアクションを変更します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{M:name}</p></td>
+		<td>「<a href="System.htm#Text_Macro">テキストマクロ</a>」内でユーザーが定義したコマンドを実行します。</td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{RT:rb/rt/id}</p></td>
+		<td>ルビテキストを表示します。<br /> 
+		<br /> 
+		<br />「rb」は、ルビベーステキストの値を示します。<br />
+		<br />「rt」は、ルビベーステキストの上に表示されるルビテキストです。 
+		「id」は、ルビテキストのスタイルのインデックスを指定するオプションです。<br />
+		デフォルトでは、スクリプト「Style_Default」に定義された「rubyText」が使用されます。<br />
+		IDに設定された値は、スタイル名の接尾辞として追加されます（IDが「2」の場合、「rubyText-2」など）。</p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SLK:index,id}</p></td>
+		<td>スタイルが適用可能かつクリック可能なリンクを表示し、指定したインデックスで共通イベントを呼び出します。 <br />
+		リンクを解除すると、スクリプトに定義されたリンクにカスタムスタイルを適用できます。 
+		<br />&#160; 
+		<br />「id」は、使用するスタイルのインデックスを指定するオプションです。<br />
+		デフォルトでは、スクリプト「Style_Default」に定義された「hyperlink」が使用されます。<br />
+		IDに設定された値は、スタイル名の接尾辞として追加されます（IDが「2」の場合、「hyperlink-2」など）。 
+		<br />&#160;&#160; 
+		ただし、スタイルが適用可能なリンクは、通常のリンクよりも処理に負担がかかります。<br />
+		また、スタイルはスクリプトに書かれた定義に基づくため、スタイルが適用可能なリンクに、他のスタイルテキストコードを追加することはできません。</p></td>
+	</tr>
+	<tr>
+		<td><p style="text-align: center;">{SLK:E}</p></td>
+		<td>スタイルが適用可能なリンクのフォーマットを削除します。</td>
+	</tr>
+</table>
+</body>
+</html>

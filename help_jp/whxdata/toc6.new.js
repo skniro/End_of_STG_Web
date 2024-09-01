@@ -1,0 +1,4 @@
+(function() {
+var toc =  [{"type":"item","name":"基本","url":"Basic.htm"},{"type":"item","name":"リスト","url":"List.htm"},{"type":"item","name":"オーディオ再生","url":"Audio_Playback.htm"},{"type":"item","name":"背景","url":"Background.htm"},{"type":"item","name":"ムービー","url":"Movie.htm"},{"type":"item","name":"シーン","url":"SceneCommand.htm"},{"type":"item","name":"キャラクター","url":"Character.htm"},{"type":"item","name":"Live2D","url":"Live2D.htm"},{"type":"item","name":"メッセージ","url":"Message.htm"},{"type":"item","name":"ピクチャー","url":"Picture.htm"},{"type":"item","name":"テキスト","url":"Text.htm"},{"type":"item","name":"画面","url":"Screen.htm"},{"type":"item","name":"システム","url":"System_Command.htm"}];
+window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });
+})();

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <link href="../project/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="../assets/jquery-3.6.0.min.js"></script>
+</head>
+<body class="ms-Fabric" dir="ltr">
+    <div id="new-header">
+        <script>
+            $("#new-header").load("../master.html");
+        </script>
+    </div>
+    <article class="container">
+        <div class="row align-items-center">
+            <div class="ms-Grid-col ms-sm10 ms-md10 ms-lg10">
+                <div class="text" style=" text-align:center;">
+                    <div class="jumbotron ms-bgColor-purpleLight ms-scaleDownIn100">
+                        <h2>Project LA</h2>
+                        <p class="lead">详情请见STT团队2018年度作品汇总展示</p>
+                        <div class="new-button" style="background: rgb(124, 85, 67); border: 1px solid rgb(86,58,45); ">
+                            <div class="new-button-delta" style="padding-top: 18%;float: left">
+                            </div>
+                            <a style="color: white; font-weight: bold; text-decoration: none; " href="https://www.bilibili.com/video/BV1ZC4y1s74G">跳转至bilibili </a>
+                        </div><br>
+                        <iframe id="stg2018-1" src="//player.bilibili.com/player.html?cid=69071579&aid=795274571&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100% height=30%></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </article>
+    <div id="new-footer">
+        <script>
+            $("#new-footer").load("../master2.html");
+        </script>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("stg2018-1").style.height = document.getElementById("stg2018-1").scrollWidth * 0.36 + "px";
+    </script>
+</body>
+</html>

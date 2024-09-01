@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：新しいシーンコマンドの追加</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに > 実例" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：新しいシーンコマンドの追加</p>
+</div>
+<p>&#160;</p>
+<p>ラノゲツクールMVには、オリジナルのビジュアルノベルを簡単に制作できる便利なコマンドが多数内蔵されています。ところが作品の複雑さによっては、</p>
+<p>内蔵のコマンドでは不十分だったり、それらを変更しなくてはならないような特別な状況も起こり得ます。</p>
+<p>&#160;</p>
+<p>この例では、「新しいデータベースカテゴリーの追加」の例から、画面上にカードを表示できる新しいシーンコマンドを追加します。</p>
+<p>それでは「表示」 &rarr; 「エクステンション」を開きましょう。</p>
+<p>&#160;</p>
+<p>次に、「Scene Commands」フォルダーで右クリックをして、「新規」 &rarr; 「シーンコマンド」を選択して新しいシーンコマンドを作成します。</p>
+<p>画面にカードを1枚表示したいので、これに「Show Card」と名付けます。この中にはすでに、次のような基本的なJSONが含まれています。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;id&quot;: &quot;ext.ShowCard&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;group&quot;: &quot;カスタム&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;defaultValue&quot;: 
+ {},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;quickItems&quot;: []</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>JSONの中身を順番に見ていきましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">id</p></li>
+</ul>
+<p>コマンドの固有の識別子。固有でさえあれば、どんなテキストでも構いませんので、いかなる形式または構文にも従う必要はありません。</p>
+<p>ただし、デフォルトの構文はビジュアルノベルに特有なコマンドらしく、vn.&lt;name&gt;を使った&lt;module&gt;.&lt;name&gt;となっています（一般的なコマンドではgs.&lt;name&gt;です）。</p>
+<p>とは言え、vn.&lt;name&gt;もgs.&lt;name&gt;も内蔵コマンド専用なので、混乱を避けるためにこれらは使用しないほうがよいでしょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">group</p></li>
+</ul>
+<p>新しいコマンドが追加されるべきグループまたはカテゴリー。既存のカテゴリーならどんなものでも使用できます。または、「My Custom Commands」など</p>
+<p>オリジナルのもので定義しても構いません。今回のケースでは、「カスタム」を使います。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">defaultValue</p></li>
+</ul>
+<p>ユーザーが新しいコマンドをツールボックスからシーンコンテンツにドラッグするなどして、コマンドが新たに作成された場合の、コマンドのデフォルトの値。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">quickItems</p></li>
+</ul>
+<p>アイテムのリストが含まれます。アイテムとは、ユーザーにインタラクトさせて数値やテキストの値を入力させたり、ドロップダウンメニューから値を選択させるUIコントロールです。</p>
+<p>&#160;</p>
+<p>シーンコマンドで使用可能なフィールドの完全なリストについては、<a href="plugin_doc/index.html">プラグインAPIリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<p>コマンドのUIをデザインする前に、そのコマンドが具体的に何をするか、そのためにどんなデータが必要なのかを考える必要があります。この例では2点が必要になります。</p>
+<p>カードと、カードが表示される画面上の位置情報です。次で、そのためのUIを実装しましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;quickItems&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSQDataRecordField&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;cardId&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;dataSource&quot;:&quot;cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;label&quot;: 
+ &quot;Card&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;valueFormula&quot;: 
+ &quot;return fmtRecord('cards', p.cardId);&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;variableButton&quot;: 
+ { &quot;dataSource&quot;: &quot;numbers&quot; }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSQStepper&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;position.x&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;valueFormula&quot;: 
+ &quot;return fmtNumVar(p.position.x);&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;label&quot;: 
+ &quot;X&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;variableButton&quot;: 
+ { &quot;dataSource&quot;: &quot;numbers&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;minimum&quot;: 
+ -GS.CONST.MAX_NUMBER_VALUE,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;maximum&quot;: 
+ GS.CONST.MAX_NUMBER_VALUE</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSQStepper&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;position.y&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;valueFormula&quot;: 
+ &quot;return fmtNumVar(p.position.y);&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;label&quot;: 
+ &quot;Y&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;variableButton&quot;: 
+ { &quot;dataSource&quot;: &quot;numbers&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;minimum&quot;: 
+ -GS.CONST.MAX_NUMBER_VALUE,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;maximum&quot;: 
+ GS.CONST.MAX_NUMBER_VALUE</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">]</span></p>
+<p>&#160;</p>
+<p>ご覧のように、コマンドに3つのアイテムを追加しました。表示するカードを選択するポップアップコントロールが1つと、位置を選択する数値フィールドが2つです。</p>
+<p>各アイテムのフィールドを詳しく見てみましょう。各アイテムにはいくつかの全般的なフィールド（全アイテムタイプ用と、特定のタイプ専用）を設けることができます。</p>
+<p>まずは例で使用されている全般的なフィールドから説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type（必須）</p></li>
+</ul>
+<p>ポップアップフィールド、数値フィールドなど、アイテムのタイプを示します。タイプは必ずなくてはなりません。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">attribute</p></li>
+</ul>
+<p>アイテムがそのデータを格納するバックエンドのJavaScript属性名。この名前を使用し、スクリプトを介して後からデータにアクセスすることができます。</p>
+<p>コリジョンを避けるため、コマンドのための名前は固有のものでなくてはなりません。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">valueFormula</p></li>
+</ul>
+<p>コントロール用に表示されるテキストを算出するJavaScriptの計算式。ここでは自動的にほとんどの作業を担ってくれるfmtXXX関数を使用します。</p>
+<p>指定したレコードの表示テキストを自動的に返すfmtRecordのように、fmtNumVarは変数によって算出される値の表示テキストを返します。</p>
+<p>詳しくは、<a href="plugin_doc/index.html">プラグインAPIリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">label</p></li>
+</ul>
+<p>ユーザーに表示されるフィールドのラベルまたは説明。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">variableButton</p></li>
+</ul>
+<p>値が変数によっても算出されるということを示します。「dataSource」で使用する変数を指定することができます。すべてのフィールドは内部的に数値を格納しているので、</p>
+<p>数値変数には「numbers」を使用します。</p>
+<p>&#160;</p>
+<p>それでは、例で使用されている特定のタイプ専用のフィールドを見てみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">dataSource</p></li>
+</ul>
+<p>データレコードを取得するデータソースを定義するために、データレコードフィールドで使用。これは、データレコードビューのカテゴリーまたは属性フィールドで指定される名前です。</p>
+<p>ここではカードにアクセスするため「cards」を使用しています。カードは内部的に数値として格納されます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">minimum</p></li>
+</ul>
+<p>数値フィールドの最小値。ここでは最大負数の値を使用できるようにグローバル定数のGS.CONST.MAX_NUMBER_VALUEを使用します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">maximum</p></li>
+</ul>
+<p>数値フィールドの最大値。ここでは最大数の値を使用できるようにグローバル定数のGS.CONST.MAX_NUMBER_VALUEを使用します。</p>
+<p>&#160;</p>
+<p>次に「プレビュー」ボタンをクリックして、設定したコマンドのインタラクティブなプレビューで、UIが正しく表示されるかどうか確認しましょう。</p>
+<p>&#160;</p>
+<p>以上です！これでエディター側の作業は完了しました！後はプロジェクトを保存して、「ラノゲツクールMV」を再起動して変更点を確認しましょう。</p>
+<p>シーンを開き、コマンドツールボックスに移動したら、使用可能な新しいコマンドを含む新しいカテゴリー「カスタム」があります！</p>
+</body>
+</html>

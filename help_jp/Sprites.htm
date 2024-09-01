@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>スプライト</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_4";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">スプライト</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ス</span>プライトとは、ビットマップや動画を画面上に表示するのに使用するグラフィックオブジェクトです。スプライトには目的の異なる様々な種類がありますので、１つずつ見ていきましょう。動画の表示に興味がある場合は「<a 
+	 href="Videos.htm">動画</a>」の項を読みください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">標準スプライト</p>
+<p>&#160;</p>
+<p>標準スプライトは、 gs.Sprite オブジェクトで、画面にビットマップを表示するために使用されます。これは最も一般的なスプライトです。回転や拡大/縮小、色付けなどの効果を追加することができます。次の例で見てみましょう。</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new sprite object to show our bitmap on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our bitmap to the sprite to display it on screen
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @bitmap.width) / 2
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @bitmap.height) / 2
+&#160;&#160;&#160;&#160;# Define the portion of the bitmap we want to display on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set the anchor-point to the center of the sprite so that rotation and zooming
+&#160;&#160;&#160;&#160;# are done around the center of the sprite and not the top-left corner.
+&#160;&#160;&#160;&#160;@sprite.anchor.x = 0.5
+&#160;&#160;&#160;&#160;@sprite.anchor.y = 0.5
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set rotation angle to 45 degree.
+&#160;&#160;&#160;&#160;@sprite.angle = 45
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set vertical and horizontal zoom-level to 50% (0.5).
+&#160;&#160;&#160;&#160;@sprite.zoomX = 0.5
+&#160;&#160;&#160;&#160;@sprite.zoomY = 0.5
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Change the color-tone to reach a sepia-like tint.
+&#160;&#160;&#160;&#160;@sprite.tone.set(35, -35, -70, 255)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the background image &quot;Bench_Morning&quot;.
+&#160;&#160;&#160;&#160;@bitmap = ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)</code></pre>
+<p>回転や拡大/縮小、色付けが簡単に行えることがおわかりでしょうか。必要なのは、スプライトオブジェクトの対応するプロパティを設定するだけです。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">タイリングスプライト</p>
+<p>&#160;</p>
+<p>標準スプライトは割り当てられたビットマップを一つ表示するだけですが、タイリングスプライトはその名の示すとおり、ビットマップを画面いっぱい 
+ (または指定した領域) に並べて表示します。これはウィンドウの背景など、ゲーム内ユーザーインターフェイスの装飾に使用できます。</p>
+<p>&#160;</p>
+<pre class="coffee">
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new tiling sprite object to tile our bitmap over a defined
+&#160;&#160;&#160;&#160;# area on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.TilingSprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our bitmap to the sprite to tile it.
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Setup the position and size on screen. We make it centered with a size of
+&#160;&#160;&#160;&#160;# 400x400 pixels. The assigned bitmap is tiled over that area.
+&#160;&#160;&#160;&#160;@sprite.rect.x = (Graphics.width - 400) / 2
+&#160;&#160;&#160;&#160;@sprite.rect.y = (Graphics.height - 400) / 2
+&#160;&#160;&#160;&#160;@sprite.rect.width = 400
+&#160;&#160;&#160;&#160;@sprite.rect.height = 400
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Define the portion of the bitmap we want to tile.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the image &quot;skin-tile&quot;, useful for in-game UI.
+&#160;&#160;&#160;&#160;@bitmap = ResourceManager.getBitmap(&quot;Graphics/Pictures/skin-tile&quot;)</code></pre>
+<p>上のコードを見るとわかりますが、ここでは gs.TilingSprite を使用しています。これは標準スプライトとほとんど同じ設定に対応しています。主な違いは、ただ位置を指定するだけでなく、矩形領域を指定する必要がある点です。割り当てられたビットマップは指定した領域内で並べて表示されます。下図のように表示されます。</p>
+<p>&#160;</p>
+<p><img src="image30.gif" alt="" style=" border:none; max-width:479px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>ここでは 400 x 400 ピクセルの領域を中央に指定しました。元のビットマップは下図のものです。</p>
+<p>&#160;</p>
+<p><img src="image31.gif" alt="" style=" border:none; max-width:128px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>並べて表示されているのがわかりますね。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">タイリングプレーン</p>
+<p>&#160;</p>
+<p>タイリングプレーンは gs.TilingPlane クラスを使用し、タイリングスプライトに非常によく似ています。 主な違いは、</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>矩形領域はなく、標準スプライトのように X 座標と Y 座標で指定します。</li>
+	<li>常に画面全体に並べて表示されますが、 clip-rects で制御可能です。</li>
+	<li>エンドレスにスクロールしたりアニメーション表示が可能です。</li>
+</ul>
+<p>&#160;</p>
+<p>したがって、タイリングプレーンは、パララックススクロールやアニメーション背景などに利用できます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">フレーム</p>
+<p>&#160;</p>
+<p>フレームは gs.Frame クラスを使用して、画面にグラフィカルフレームを表示し、ゲームウィンドウやカーソルなど、ゲーム内ユーザーインターフェイスの装飾に利用できます。</p>
+<p>&#160;</p>
+<p><img src="image47.gif" alt="" style=" border:none; max-width:274px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>実際の見た目は、使用するビットマップ (スキンとも呼ばれます) によって異なります。フレームに加えて、適切なウィンドウ背景を使用すれば見栄えはさらによくなるでしょう。上の例で使用したスキンビットマップは以下のものです。</p>
+<p>&#160;</p>
+<p><img src="image48.gif" alt="" style=" border:none; max-width:64px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>つまり、フレームは使用するビットマップを一度に表示するのではなく、複数のパーツに分けて表示し、それらをつなぎ合わせることでフレームを作るのです。</p>
+<p>&#160;</p>
+<p><img src="image49.gif" alt="" style=" border:none; max-width:64px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>黄色で表示した部分は角で、赤で表示した部分は辺です。 辺はフレームのサイズに合わせて伸縮されます。角と辺のサイズはフレームオブジェクトのプロパティで設定できます。次の例を見てみましょう。下のスキングラフィックを 
+ Graphics/Pictures フォルダーに名前をつけて保存し、それを 「WindowFrame」と名付けてください。</p>
+<p>&#160;</p>
+<p><img src="WindowFrame.png" alt="" style=" border:none; max-width:64px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with ラノゲツクールMV&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load all scene documents
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@scenes = DataManager.getDocumentsByType(&quot;vn.scene&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame = new gs.Frame(Graphics.viewport)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Assign skin bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.skin = ResourceManager.getBitmap(&quot;Graphics/Pictures/WindowFrame&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set thickness of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.thickness = 16
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set corner-size of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.cornerSize = 16
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set width of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.width = 250
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set height of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.height = 250
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set position of the frame. Center it on screen
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.x = (Graphics.width - @frame.width) / 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@frame.y = (Graphics.height - @frame.height) / 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start Screen Transition
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load skin bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/WindowFrame&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>ここでは gs.Frame を使用してフレームオブジェクトを新規作成しています。スキンのプロパティはフレームの作成に使用するビットマップオブジェクトになります。thickness 
+ と cornerSize では、辺と角のサイズを自由に設定できます。いろいろ変更してみましょう。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">3-パーツイメージ</p>
+<p>&#160;</p>
+<p>3-パーツイメージは gs.ThreePartImage クラスを使用し、スキンビットマップを 3 つの異なるパーツに分割して別々に表示します。gs.Frame 
+ オブジェクトをよりシンプルにしたようなものです。</p>
+<p>&#160;</p>
+<p><img src="image50.gif" alt="" style=" border:none; max-width:123px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>左右に黄色で表示した部分は固定ですが、真ん中の赤で表示した部分は伸縮します。実際のビットマップは下図のようになっています。</p>
+<p>&#160;</p>
+<p><img src="image51.gif" alt="" style=" border:none; max-width:60px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>見やすいように拡大し、背景を薄いグリーンにしています。また、元のビットマップの背景は透過に設定されています。左右および中央のパーツのサイズは変更可能で、向きも縦に変更できます。 
+ </p>
+<p>&#160;</p>
+<p>3-パーツイメージは、シンプルなボタンやスクロールバーなどのゲーム内ユーザーインターフェイス関連で使用するとよいでしょう。例えば既定のゲーム内ユーザーインターフェイスで使われているスクロールバーを見てみましょう。</p>
+<p>&#160;</p>
+<p><img src="InGameScrollBar.PNG" alt="" style=" border:none; max-width:624px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>右側の縦のスクロールバーに 3-パーツイメージが使われています。</p>
+<p>&#160;</p>
+<p>それでは実際に 3-パーツイメージを試してみましょう。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load all scene documents
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@scenes = DataManager.getDocumentsByType(&quot;vn.scene&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage = new gs.ThreePartImage(Graphics.viewport)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Assign skin bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.skin = ResourceManager.getBitmap(&quot;Graphics/Pictures/scrollbar&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set size of the first fixed part.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.firstPartSize = 7
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set size of the middle streched part.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.middlePartSize = 1
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set size of the last fixed part.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.lastPartSize = 7
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set orientation
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.orientation = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set width of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.width = 450
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set height of the frame
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.height = 15
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set position of the frame. Center it on screen
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.x = (Graphics.width - @threePartImage.width) / 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@threePartImage.y = (Graphics.height - @threePartImage.height) / 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start Screen Transition
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load skin bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/scrollbar&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>&#160;</p>
+<p>gs.ThreePartImage クラスのインスタンスを作成し、パーツサイズと向きを設定するだけです。</p>
+</body>
+</html>

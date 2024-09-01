@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ドメイン</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "";
+</script>
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">コンテンツ ドメインの共有</p>
+<p>&nbsp;</p>
+<p><span 
+	 class="Topic_Start">V</span>isual Novel Maker では、エクステンションを利用して、スクリプトやシーン、データベース、アセットまで簡単に共有することが可能です。共有について考える際、グループという概念を理解することが大変重要です。</p>
+<p>ラノゲツクールMV では、画面上のピクチャーやテキストなど、多くのゲームオブジェクトは下図のように、番号/ID と関連付けられています:</p>
+<p>&nbsp;</p>
+<p><img src="NumberDomain.png" alt="" style=" border:none; width:100%; max-width:1054px;" border="0" /></p>
+<p>&nbsp;</p>
+<p>このコマンドでは、番号 5 番のピクチャーを画面上に表示します。5 番は今画面上のピクチャーと関連付けられています。ピクチャーに 「5」という名前を付けたと考えてもかまいません。つまり、このピクチャーをアニメーション表示したり別の場所に移動したい場合は、この 5 番という番号を使って ラノゲツクールMV にどのピクチャーのことを指しているかを伝えます。したがって、画面に 2 つ以上のピクチャーを表示したい場合は、それぞれに異なる番号を使ってそれらを区別しなければなりません。ラノゲツクールMV で、このような番号システムは、ピクチャーだけでなく、テキスト、背景、動画、メッセージ領域、ホットスポット、イメージマップでも利用されています。 </p>
+<p>&nbsp;</p>
+<p>しかしながら、シンプルな番号だけでは限界があり、番号が重複すればバグを引き起こします。この問題を解決するのがグループです。</p>
+<p>&nbsp;</p>
+<p>上図では、番号の前に「@default」が見えますが、これはそのピクチャーが所属する現在のグループです。クリックすると、このピクチャーのグループを変更できます。グループ自体は 「com.degica.vnm.bj」 とか 「peter.usefulstuff.cool-gender-selection」といったような単なる一意の名前ですが、変数やゲームオブジェクト番号のグループとして機能します。すべてのグループは個々に独立していますので、 「peter.usefulstuff.cool-gender-selection」というグループの 5 番のピクチャーと「com.degica.vnm.bj」というグループの 5 番のピクチャーは、グループが異なりますので、同時に表示することができ、互いに干渉することはありません。次のスクリーンショットでおわかりのように、変数も同じです。 </p>
+<p>&nbsp;</p>
+<p><img src="VariableDomain.png" alt="" style=" border:none; width:100%; max-width:480px;" border="0" /></p>
+<p>&nbsp;</p>
+<p>変数の場合、グローバルかつ永続的な変数のみグループを使用できます。ローカル変数はすでに一意のシーン/共通イベントにバインドされているためです。グループを利用すれば、あなたが作成したコンテンツを簡単に他のユーザーと共有できます。必要なのは、すべてのピクチャー番号とグローバル変数をユニークなグループ下に置くだけです。</p>
+<p>&nbsp;</p>
+<p class="Sub_Heading">グループの使い方</p>
+<p>グループのもっとも優れた点は、特に何も注意することがない、ということです。既定では、すべてのゲームオブジェクトと変数は「default」というグループに属します。何らかのエクステンションをインストールしていると、「default」以外のグループも利用でき、そのエクステンションが提供するゲームオブジェクトや変数が利用できるでしょう。コンテンツを共有したい場合は、エクステンション作成ウィザードを使用します。エクスポートの際に、「default」グループはユニークなグループに置き換えられますが、それはエクステンション作成ウィザードで選択した ID です。</p>
+<p>&nbsp;</p>
+<p><img src="CreateExtensionForSharing.png" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&nbsp;</p>
+<p>上の例では、 ID 「com.example.usefulevent」がグループ名として使用されます。どんな名前でも利用できますが、ドメインのような形式の名前をお勧めします。</p>
+<p>Thementext hier eingeben.</p>
+</body>
+</html>

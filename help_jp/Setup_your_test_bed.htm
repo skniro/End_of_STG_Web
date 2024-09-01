@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>テストベッドの設定</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.0_1";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">テストベッドの設定</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラノゲツクールMV</span> で実際にスクリプト作成をする前に、テストベッド (テスト環境) 
+ を用意する必要があります。テストベッドでは、 ラノゲツクールMV のエンジンについて、あれこれ様々なことを試してみることができます。</p>
+<p>&#160;</p>
+<p>テストベッドを設定するには、 <a href="GameScript_Getting_Started.htm">スクリプトエディタ</a> 
+ を開きます。エディタ画面左で「Components」&rarr;「Scene」フォルダーを右クリックして「新規 CoffeeScript 
+ ファイル」を選択します。作成された「新規スクリプト」を右クリックして「プロパティ」を選択し、Component_TestBedBehavior 
+ という名前に変更します。</p>
+<p>&#160;</p>
+<p>そこに次のコードをコピー＆ペーストで入力してください:</p>
+<pre>
+<code class="coffee"># ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super()
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game objects for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>入力したらプロジェクトを保存します。この段階でゲームを開始すると、真っ黒な画面しか表示されません。表示されているのは、まだ中身が何もないテストベッドですので、この動作は正常です。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンのワークフロー</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">initialize</p>
+<p>このメソッドでは、シーンを初期化したり、ドキュメントやリソースを読み込んだりできます。</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">prepareVisual</p>
+<p>このメソッドでは、ビジュアルオブジェクトを準備/作成することができます。ビジュアルオブジェクトとは、スプライト、テキスト、ゲーム内ユーザーインターフェイスなどのことです。このメソッドが呼び出されると、要求されたすべてのリソースとドキュメントが読み込まれます。このメソッドでも追加のリソースの読み込みを開始することができますが、その場合、このメソッドはリソースの読み込みが完了した後で再度呼び出されます。</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">prepareData</p>
+<p>このメソッドでは、非ビジュアルオブジェクトを準備したり、リソースを読み込んだりすることができます。このメソッドが呼び出されると、initialize 
+ メソッドで要求されたすべてのドキュメントが読み込まれます。このメソッドでも追加のドキュメントを読み込むことができますが、その場合、このメソッドはドキュメントの読み込みが完了した後で再度呼び出されます。 
+ </p>
+<p>&#160;</p>
+<p style="font-weight: bold;">updateContent</p>
+<p>このメソッドはフレームごとに呼び出されます。ここでは画面上のオブジェクトを移動したり、アニメーション表示させることができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">画面に赤い正方形を表示する</p>
+<p>&#160;</p>
+<p>テストベッドが本当に動作しているか確認するため、これからコードを少しだけ変更して画面上に赤い正方形を表示してみます。驚くようなことではありませんが、本ガイドの後半ではもっと面白いことができますのでお楽しみに。</p>
+<p>&#160;</p>
+<p>赤い正方形は画面上ではビジュアルオブジェクトと見なされますので、prepareVisual メソッドを次のように変更します: </p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new quad graphic object.
+&#160;&#160;&#160;&#160;@quad = new gs.Quad(Graphics.viewport)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Setup the size of the rectangle
+&#160;&#160;&#160;&#160;@quad.rect.width = 100
+&#160;&#160;&#160;&#160;@quad.rect.height = 100
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@quad.rect.x = (Graphics.width - @quad.rect.width) / 2
+&#160;&#160;&#160;&#160;@quad.rect.y = (Graphics.height - @quad.rect.height) / 2
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set the color of the rectangle.
+&#160;&#160;&#160;&#160;@quad.color.set(255, 0, 0, 255)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()</code></pre>
+<p>ここでゲームを起動すると、画面の中央に赤い正方形が表示されるはずです。ここでは gs.Quad クラスを使用していますが、これはベーシックエンジンの一部です。gs.Quad 
+ の詳細は、<a href="Engine_Getting_Started.htm">エンジン API のドキュメント</a> を参照してください。</p>
+<p>&#160;</p>
+<p>transition メソッドが呼び出されている最終行も重要です。prepareVisual では画面は静止していますので、これが必要になります。いかなる種類の変更を行っても画面の静止を解除するまでは何も表示されません。静止の解除を滑らかに行うため、transition()を呼び出し、静止を解除して新規作成された赤い正方形を滑らかにフェードインしています。</p>
+<p>&#160;</p>
+<p>エンジン API のドキュメントを参照してこのサンプルを自由に変更し、他のビジュアルオブジェクトでも色々試してみてください。</p>
+<p>&#160;</p>
+</body>
+</html>

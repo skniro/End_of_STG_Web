@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Android用</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > テストとデプロイ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">Android用</p>
+<p>&#160;</p>
+<p>Androidでのテストとデプロイを正しく機能させるにはいくつかの準備手順が必要です。必要な手順について説明します。&#160;疑問や不明な点がある場合は、当社のサポートフォーラムを参照してください。<br />
+</p>
+<p class="Sub_Heading">要件</p>
+<p>&#160;</p>
+<p>Androidでゲームをテスト／デプロイするには次の要件を満たす必要があります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>Android 5以降のAndroid端末（エミュレーターを使用することもできますが、推奨されません）</li>
+	<li>JDK 7以降（Java開発キット）</li>
+	<li>Android StudioとSDK </li>
+	<li>Node.js</li>
+	<li>Cordova</li>
+</ul>
+<p>&#160;</p>
+<p>ゲームをGoogle Playストアで公開する場合は（オプション）、次の手順も実行する必要があります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>GoogleアカウントをGoogle Playストアに登録／接続する</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>各要件の説明は次のとおりです。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">JDK（Java開発キット）をインストールする</p>
+<p>&#160;</p>
+<p>対象となるサイトからJDK（Java開発キット）をインストールしてください。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Android Studio + SDK をインストールする</p>
+<p>&#160;</p>
+<p>ゲームをビルドしたり、デプロイしたりするにはAndroid SDKが必要です。Android SDKツールは単体でインストールすることも、SDKとセットになったAndroid 
+ Studio全体をインストールすることもできます。<br />
+</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Node.jsをインストールする</p>
+<p>&#160;</p>
+<p>Cordova（ゲームを、Androidへのデプロイ用にパッケージングする際に使います）を起動するには、Node.jsが必要です。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Cordovaをインストールする</p>
+<p>&#160;</p>
+<p>Androidへのデプロイ用にゲームをパッケージングするにはCordovaが必要です。Cordovaをインストールするには、「ターミナル」／「コマンドライン」ウィンドウを開きます。</p>
+<p>&#160;</p>
+<p>ターミナルが開くと、黒いウィンドウが表示されます。カーソルが点滅している箇所にはテキスト（コマンド）を入力できます。次のコマンドを入力してください。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">npm install -g cordova</p>
+<p>&#160;</p>
+<p>入力後にEnterキーを押すと、ターミナルウィンドウにはシステムメッセージが表示されます。処理が完了するのを待ってから次のコマンドを入力してください。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">cordova --version</p>
+<p>&#160;</p>
+<p>入力後、Enterキーを押します。Cordovaのバージョン番号が表示された場合、インストールは成功です。 エラーが表示された場合は問題が生じています。その場合は、ターミナルウィンドウのテキスト／メッセージを確認し、当社のフォーラムを参照してください。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Google Playストアにサインアップする（オプション）</p>
+<p>&#160;</p>
+<p>この手順はオプションです。アプリをテストするだけの場合やGoogle Playストアでゲームを公開しない場合はスキップできます。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>Google Playストアにサインアップして指示に従い、ゲームの投稿方法の詳細を確認してください。<br />
+</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ラノゲツクールMVプロジェクトをAndroidへのデプロイ用に準備する</p>
+<p>&#160;</p>
+<p>すべての設定が完了し、Android用にゲームをビルドできるようになりました。「データベース &rarr; システム」でプロジェクトに<span 
+	 style="font-weight: bold;">ゲームタイトル</span>が設定されていることを確認してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">オーディオと動画のアセット</p>
+<p>&#160;</p>
+<p>現時点で、Cordova でパッケージングされたAndroidゲームは.m4a／.mp4／.mp3／.aacのオーディオファイル形式および.mp4の動画形式に対応していません。安全のため、オーディオには.oggおよび.wav形式を、動画には.webm形式を使用する必要があります。すべてのオーディオや動画ファイルが適切な形式に変換されていることを確認してください。VN 
+ Makerでは、同じファイルを異なる形式で複数回インポートし、ランタイム時に適切な形式を選択できます。この方法はHTML5ウェブブラウザゲームで便利です。ただし、ゲームをPlay 
+ ストアでオフライン提供する場合、またはAPKダウンロードとして提供する場合は、使用しないファイルをすべて削除してファイルサイズを抑える必要があります。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">プロジェクトの環境設定 (署名 &amp; Play Store)</p>
+<p>Android デバイス上でアプリをテストしたいだけの場合は、次の手順をスキップしてもかまいません。そうでない場合は、 <a href="Project_Preferences.htm">プロジェクトの環境設定</a> で Android Deployment タブを開いてください。</p>
+<p>&#160;</p>
+<p><img src="AndroidDeployment.png" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p>
+<p>(上図のデータは実際のデータではありません。あくまでも入力例ですので、ご注意ください)</p>
+<p>&#160;</p>
+<p>APK を正しく署名するには、キーストア情報を指定する必要があります。指定しないと development-certificate で署名されます。Play Store に APK を登録しない場合は、<span style="font-weight: bold;">Play ストア ライセンスキー</span><span> および </span><span 
+	 style="font-weight: bold;">Play ストア拡張ファイルを使用</span><span> は無視してかまいません。また、そのゲームで使用される</span><span style="font-weight: bold;">ゲーム  ID</span><span> を </span><span style="font-weight: bold;">全般</span><span> タブ</span><span>で指定することを忘れないでください。</span></p>
+<p>&#160;</p>
+<p>必要な情報をすべて入力したら、閉じる ボタンをクリックしてプロジェクトを保存します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Androidでのテスト</p>
+<p>&#160;</p>
+<p>Androidで簡単なテストプレイを行うには端末をコンピュータに接続し、端末がロック解除されていること／アクティブであることを確認します。<br />
+次に、端末でデベロッパーモードが有効になっていることを確認します。Android端末で設定アプリを確認し、デベロッパーモードと無署名のAPKの実行を有効化します。</p>
+<p>&#160;</p>
+<p>その後はメニューバーから「指定してビルド &rarr; Android（Cordova）」を選択し、Android用にゲームをビルドします。ビルドプロセスは数分かかります。 
+ ビルドプロセスがの完了後、「ツール  &rarr; デバッグコンソール」からデバッグコンソールを開き、エラーがないかどうか点検します。</p>
+<p>&#160;</p>
+<p>プロジェクトのビルドフォルダには、<span style="font-weight: bold;">.apk</span>ファイルがあるはずです。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">&lt;プロジェクトフォルダ&gt;/build/&lt;プロジェクト名&gt;/&lt;プロジェクト名&gt;/platforms/android/build/outputs/apk/&lt;プロジェクト名&gt;.apk</p>
+<p>&#160;</p>
+<p>上記の場所から必要に応じて.apk ファイルを手動でインストールできます。</p>
+<p>&#160;</p>
+<p><br />
+これでメニューバーから「指定してプレイ &rarr; Android (Cordova)」を選択すると、接続した端末でゲームをプレイできます。 
+ ゲームのビルドは接続された端末に転送およびインストールされ（数分かかる場合があります）、自動的に起動します。<br />
+デバッグコンソールでエラーがないかどうか点検してください。ゲームが自動的に起動しない場合は手動で起動する必要があります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Androidへのデプロイ</p>
+<p>ラノゲツクールMV では、配布形態にあわせて２種類の APK を作成できます。自分で配布する場合とPlayストアで配布する場合です。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">APK を自分で配布する (Play Store を使用しない)</p>
+<p>「<a href="Create_Game_Package.htm">ゲームパッケージを作成</a> 」ウィザードを使用すると、Androidにゲームをデプロイできます。<br />
+プラットフォームのリストから「Android &#160;(Cordova)」（Android（Cordova））を選択し、デバッグコンソールを開いてエラーがないかどうか点検してください。<br />
+パッケージの作成には時間がかかる場合があります。.ipaファイルは以下の場所にあります。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">&lt;出力場所&gt;/&lt;プロジェクト名&gt;/&lt;プロジェクト名&gt;/platforms/android/build/outputs/apk/&lt;プロジェクト名&gt;.apk</p>
+<p>&#160;</p>
+<p class="SubSubHeading">APK を Play Store で配布する</p>
+<p><a href="Create_Game_Package.htm">ゲームパッケージを作成</a> ウィザードを使って、Play Store で配布するゲームを作成できます。プラットフォームの選択メニューから Android (Cordova, Play Store) を選択してください。<a href="Project_Preferences.htm">プロジェクトの環境設定</a> の Android Deployment タブに必要な情報を入力してください。デバッグコンソールを開き、エラーをチェックします。パッケージの作成には少し時間がかかります。作成された .apk ファイルは次の場所に保存されます:</p>
+<p>&#160;</p>
+<p style="font-style: italic;">&lt;output-location&gt;/&lt;project-name&gt;/&lt;project-name&gt;/platforms/android/build/outputs/apk/&lt;project-name&gt;.apk</p>
+<p>&#160;</p>
+<p>アプリをPlayストアで公開する方法の詳細については、Google Playストアのウェブサイトのガイドに従ってください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">トラブルシューティング</p>
+<p>&#160;</p>
+<p>上記手順がすべてエラーなしに終わればテストとデプロイは完了ですが、特にゲームのテストとデプロイを初めて行う場合、エラーなしに終わることはまれです。 
+ エラーメッセージが表示されても心配はありません。設定の誤りに関連することがほとんどで、簡単に解決できます。</p>
+<p>&#160;</p>
+<p>トラブルシューティングの最初の手順はエラーログを点検してエラーメッセージを把握することです。 <br />
+一部のエラーメッセージはプログラマーでなくても理解できるものになっています。以下に一般的なエラーを示します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>端末が接続されていないかロック画面になっています</li>
+	<li>端末は接続されていますが、コンピュータが端末にアクセスできません</li>
+	<li>JDK 7以降がインストールされていません</li>
+	<li>Android SDKツールがインストールされていません</li>
+	<li>Cordovaがインストールされていません</li>
+	<li>オーディオファイルか動画ファイルの形式が間違っています</li>
+	<li>Play Store 用にエクスポートされている APK をデバイス上で直接インストール、プレイしようとしています。</li>
+</ul>
+<p>&#160;</p>
+<p>エラーを解決できない場合は、当社のサポートフォーラムを参照してください。</p>
+<p>&#160;</p>
+</body>
+</html>

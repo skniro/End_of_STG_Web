@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：エクステンションの作成</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに > 実例" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：エクステンションの作成</p>
+</div>
+<p>&#160;</p>
+<p>さて、今度はいよいよエクステンションコンポーザーを使用してカードのエクステンションを作成し、他の人々と共有することができるようになります。</p>
+<p>エクステンションを作成するには、<span style="font-weight: bold;">「ツール」 &rarr; 「デベロッパーツール」 
+ &rarr; 「エクステンションを作成」</span>のメニューからエクステンションコンポーザーを開いてください。</p>
+<p><img src="ExtensionComposer.png" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">ドキュメント</p></li>
+</ul>
+<p>エクステンションによって変更可能なすべてのドキュメントを表示します。エクステンションエディタのすべてのドキュメントや、ゲームスクリプト、シーン、データベースがこれに相当します。</p>
+<p>ここで作成または変更したドキュメントを選択し、「追加」ボタンをクリックしてエクステンションに加えることができます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">あなたのエクステンション</p></li>
+</ul>
+<p>エクステンションの内容を表示します。「ドキュメント」ビュー内のドキュメントを選択し、「追加」ボタンをクリックしてエクステンションへと簡単に加えることができます。</p>
+<p>エクステンションからドキュメントを削除するには、削除するドキュメントまたはフォルダーを選択して「削除」ボタンをクリックしてください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">ID</span></li>
+</ul>
+<p>エクステンションの固有の識別子。所属する企業またはウェブサイトのドメインのような、固有のものを使います。（例：com.example.ExampleExtension）</p>
+<p>今回は「com.degica.ExampleCardExtension」を使います。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">組織</span></li>
+</ul>
+<p>組織や会社の名前</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">名前</span></li>
+</ul>
+<p>エクステンションの名前。ここでは「Card Extension」と名付けることにします。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">バージョン</p></li>
+</ul>
+<p>エクステンションのバージョン。今回は「1.0.0.0」を使います。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">作者</span></li>
+</ul>
+<p>エクステンションの作者または開発者。今回は「DEGICA」を使います。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">ウェブサイト</p></li>
+</ul>
+<p>作者または開発者のウェブサイト。エクステンションに関する情報をユーザーが参照できるよう、あなたのウェブサイトへのリンクをここに入力してください。</p>
+<p>今回は「www.degica.com」を挿入します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">スクリプトをインストール</p></li>
+</ul>
+<p>エクステンションにオプションのインストールスクリプトを使用することができます。以前のバージョンのエクステンションで作成されたデータレコードまたはシーンコマンドを移行する必要がある場合に便利です。<br />
+詳しくは、エクステンションシステムのリファレンスを参照してください。今回は空白にしておきます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">スクリプトをアンインストール</p></li>
+</ul>
+<p>クリーンアップの必要がある場合、オプションのアンインストールスクリプトをエクステンションに使用することができます。</p>
+<p>詳しくは、エクステンションシステムのリファレンスを参照してください。今回は空白にしておきます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">説明</span></li>
+</ul>
+<p>エクステンションが何をするか、エディターやゲームエンジンにどんな機能を追加するかなど、詳細な説明を含めます。今回は次のテキストを追加します。</p>
+<p>「カードを使ったちょっとしたミニゲームに使える、シンプルなカードをユーザーがデータベースに作成できるエクステンション。</p>
+<p>カードをスクリーンに表示するためのシンプルなシーンコマンド「Show Card」（カードを表示）も提供。」</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">ライセンス</p></li>
+</ul>
+<p>ライセンスの使用許諾契約書をここに入力することができます。エクステンションをインストールする前に、ユーザーはこれに同意する必要があります。今回は空白にしておきます。</p>
+<p>&#160;</p>
+<p>では、作成したドキュメントをエクステンションに追加しましょう。作成したドキュメントは、データレコードビュー「Cards」、新しいシーンコマンド「Show 
+ Card」（カードを表示）、</p>
+<p>そしてインタプリンタを拡張するゲームスクリプト「Component_CommandInterpreterCardExtension」の3点です。これらを選択して「追加」ボタンをクリックするとエクステンションに追加されます。</p>
+<p>これで、エクステンションコンテンツは次のようになっているはずです。</p>
+<p><img src="CardExtensionStructure.png" alt="" style=" border:none; width:100%; max-width:263px;" border="0" /></p>
+<p>これができたら「作成」ボタンをクリックし、エクステンションが作成される場所を選択したら完了です！</p>
+<p>&#160;</p>
+<p>エクステンションコンポーザーは、選択した場所にエクステンション名が付いた.zipアーカイブを作成します。このzipアーカイブを共有すれば、</p>
+<p>他のユーザーも簡単にエクステンションマネージャーを使ってこのエクステンションをインストールすることができます！</p>
+</body>
+</html>

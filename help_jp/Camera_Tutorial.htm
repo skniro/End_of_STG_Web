@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>カメラのチュートリアル</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.4.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > カメラの動き" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">カメラのチュートリアル</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>のチュートリアルでは、「カメラ」と呼ばれる画面に関する機能について説明します。この効果を使えば、ビジュアルノベル作品を生き生きと表現できます。例として、以下のムービーを参照してください。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"CameraTutorialSimple.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="CameraTutorialSimple.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+<p class="Sub_Heading">実装</p>
+<p>上記の例では、少なくとも2つの機能が使われています。</p>
+<p>&#160;</p>
+<p>1. 喋っているキャラクターに画面をパン</p>
+<p>2. 第3のキャラクターを明らかにするために、背景のエリアに画面をパン</p>
+<p>&#160;</p>
+<p>すべてのコマンドが<img src="ScreenCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span 
+	 style="font-weight: bold;">画面</span>にあります。こちらがコマンドのリストです。</p>
+<p>&#160;</p>
+<p><img src="CameraTut-01.jpg" alt="" style=" border:none; width:100%; max-width:1035px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>まず、「<a href="Screen.htm#Zoom_Screen">画面を拡大／縮小</a>」と「180%」の値を追加しました。これは後ほど画面をパンする際に必要になります。</li>
+	<li>コマンドの第2列目には、キャラクターと背景を追加しました。これらが画面に表示される際にはすでに180%のズーム効果がかかっており、より自然になります。</li>
+	<li>その後、「<a href="Screen.htm#Pan_Screen">画面をパン</a>」コマンドを追加しました。XとYの項目は要するに、現在のX位置とY位置にオフセットを追加するためのものです。</li>
+</ul>
+<p>&#160;</p>
+<p>さらに「画面を揺らす」や「画面を回転」、トランジションなどを追加すると、さらに面白いシーンを作ることもできます。次のシーン例を参考に、いろいろ試したり、同じシーンが作れるかどうか挑戦してみてください！</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"CameraTutorial.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="CameraTutorial.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+</body>
+</html>

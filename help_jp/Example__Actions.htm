@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：アクション</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：アクション</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">ア</span>クションを使えば、新しいゲームを開始したり、ゲームをセーブしたり、ゲームを終了したり、別のレイアウトに切り替えたり、その他にも多くの</p>
+<p>バックグラウンド機能を実行することができます。必要ならば、独自のアクションを定義することも可能です。</p>
+<p>最初の、オリジナルのタイトル画面を作成する例で、新しいゲームを開始したり、ゲームを終了したりするためのアクションは使いましたね。</p>
+<p>今回はもっとよく見てみましょう。タイトル画面で使用した、新しいゲームを開始するためのアクションは次の通りです。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ニューゲーム&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;newGame&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;titleScreenButton&quot;</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>このボタンをクリックすると、新しいゲームが開始されます。時折次の例のように、追加のデータをアクションにパスしなくてはならないことがあります。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ゲームを読み込む&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;switchLayout&quot;, &quot;params&quot;: { &quot;name&quot;: &quot;loadMenuLayout&quot; 
+ } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;titleScreenButton&quot;</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>ここでは新しいレイアウトに切り替えるアクション「switchLayout」を実行します。その場合は、切り替え先のレイアウト名を指定する必要があります。</p>
+<p>&#160;</p>
+<p>アクションのロジックは、アクションのターゲットで定義されます。既定ではターゲットは「Component_LayoutSceneBehavior」や「Component_GameSceneBehavior」のような</p>
+<p>シーンコンポーネントです。 上記の例では、アクション「newGame」が通常の手法で「Component_LayoutSceneBehavior」スクリプトで定義されています。</p>
+<p>&#160;</p>
+<p><span class="Code">newGame: (sender, params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;...........................</span></p>
+<p>&#160;</p>
+<p>アクションメソッドとして呼び出されたメソッドは、常に「sender」と「params」という2つのパラメータを持たなければなりません。</p>
+<p>「sender」はこのアクションをトリガーしたオブジェクトです。今回の場合はボタンのオブジェクトになっています。「params」オブジェクトには「params」属性によってアクションへと受け渡された</p>
+<p>データが含まれます。</p>
+<p>&#160;</p>
+<p>アクション名は、ターゲットとなるオブジェクトのメソッドのうちのどちらか1つの名前と一致しなければなりません。メソッドは、「sender」オブジェクトを1つ目として、</p>
+<p>「params」オブジェクトを2つ目のパラメータとして受け取ります。</p>
+<p>&#160;</p>
+<p>必須ではありませんが、「action_」という接頭辞をアクションメソッドに使って「action_myMethod」のようにして、これがアクションメソッドとして安全に実行できるメソッドだと</p>
+<p>明確にしておくことをおすすめします。</p>
+</body>
+</html>

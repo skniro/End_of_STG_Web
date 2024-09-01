@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>アニメーションの基本</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_5";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">アニメーション</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラノゲツクールMV</span> のエンジンには、なめらかなアニメーション表示を簡単に実現するコンポーネントを数多く搭載しています。ただし、この章では 
+ ラノゲツクールMV のアニメーションシステムは使わず、極簡単なアニメーションをいくつか一から作成しながら、アニメーションの基本を学んでいくことにします。</p>
+<p>&#160;</p>
+<p>その知識はアニメーションの仕組みを理解したり、オリジナルのアニメーションシステムを構築するのに役立つはずですが、初心者の方は ラノゲツクールMV 
+ 既定のアニメーションシステムをお使いください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">アニメーションの仕組み</p>
+<p>&#160;</p>
+<p>あなたが作成するゲームは、いわゆるゲームループ内で実行されます。つまりゲームロジックのある部分が何度も何度も繰り返して実行されるということです。通常は 
+ 1 秒間に 60 回繰り返されます。このループはユーザーがゲームを終了するまで終わりません。ラノゲツクールMV では、ゲームウィンドウが非アクティブになるとループが一時停止します。</p>
+<p>&#160;</p>
+<p>話を簡単にするため、あなたのテストベッドシーンの updateContent メソッドをゲームループへの入り口だとしましょう。</p>
+<pre>
+<code class="coffee">###*
+* Update the scene&amp;apos;s content.
+### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# Your entry point into the game loop.</code></pre>
+<p>最後の例では、 updateContent は空にしていました。 使う必要がなかったからです。しかしこのメソッドは通常 1 秒間に 60 
+ 回呼び出されます。それを利用して、メソッドが呼び出される度に毎回グラフィックオブジェクトの位置を変更すれば、オブジェクトをアニメーション表示することができます。メソッドを少し変更し、スプライトに移動と回転を加えてみましょう。</p>
+<pre>
+<code class="coffee">
+###*
+* Update the scene&amp;apos;s content.
+### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# Add 1 to the sprite&amp;apos;s rotation angle to rotate with 60 degrees per second.
+&#160;&#160;&#160;&#160;@sprite.angle += 1
+&#160;&#160;&#160;&#160;# Add 1 to the sprite&amp;apos;s x-coordinate to move it to the right with 60 pixels per second.
+&#160;&#160;&#160;&#160;@sprite.x += 1</code></pre>
+<p>この例を実行すると、スプライトは画面から消えてなくなるまでゆっくりと右のほうへ移動と回転を続けます。アニメーションを停止させていないので、ゲームが実行されている限り移動と回転を続けるわけです。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">アニメーションの制御</p>
+<p>&#160;</p>
+<p>上の例のアニメーションをもう少しコントロールするため、タイマーを設定し、タイマーが 0 になったらアニメーションを停止することにします。</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the background image &quot;Bench_Morning&quot;.
+&#160;&#160;&#160;&#160;@bitmap = ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)
+&#160;&#160;&#160;&#160;# Set an animation timer to 300 frames which are 5 seconds. 
+&#160;&#160;&#160;&#160;@animationTimer = 300
+###*
+* Update the scene&amp;apos;s content.
+### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# As long as the timer has not reached 0 we will animate the sprite.
+&#160;&#160;&#160;&#160;if @animationTimer &gt; 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add 1 to the sprite&amp;apos;s rotation angle to rotate with 60 degrees per second.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@sprite.angle += 1
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add 1 to the sprite&amp;apos;s x-coordinate to move it to the right with 60 pixels per second.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@sprite.x += 1
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Reduce the timer by 1.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@animationTimer -= 1</code></pre>
+<p>prepareData を使って、timer の変数を 300 に設定します。つまり、300 ゲームループ (「フレーム」とも呼ばれます) 
+ 実行された後で、アニメーションを停止します。1 秒間に 60 フレームありますので、このアニメーションは 5 秒間実行されることになります。updateContent 
+ でタイマーをチェックし、タイマーが 0 に達していない場合に限り、アニメーションを続行し、タイマーの値を 1 ずつ減らします。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">アニメーションをなめらかにする</p>
+<p>&#160;</p>
+<p>現在のアニメーションは 5 秒経過したらすぐに停止しますが、なめらかにフェードアウト/イージングするように設定することもできます。 アニメーションが徐々にゆっくりになって最後に停止するようにです。</p>
+<pre>
+<code class="coffee">
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# As long as the timer has not reached 0 we will animate the sprite.
+&#160;&#160;&#160;&#160;if @animationTimer &gt; 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add 5 to the sprite&amp;apos;s rotation angle at the beginning but then reduce
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the increment more and more depending on how much time has elapsed so that
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the rotation becomes slower and slower until it stops.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@sprite.angle += 5 * (@animationTimer / 300)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Reduce the timer by 1.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@animationTimer -= 1</code></pre>
+<p>この例では、最初は回転が高速ですが、最後に停止するまで徐々にスピードが落ちていきます。これはリニアイージングとよも呼ばれる非常にシンプルなものです。「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」の項では他の種類のイージングについて説明しています。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">スプライトシート アニメーション</p>
+<p>&#160;</p>
+<p>ゲーム開発におけるスプライトシートとは、複数の小さなイメージをタイル上に並べた 1 つのイメージファイルです。下図は 2D キャラクターのスプライトシートです。</p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><img src="4FramesNaia-Helpfile.png" alt="" style=" border:none; max-width:327px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>このスプライトシートには、キャラクターが向くすべての方向と移動アニメーションのためのすべてのイメージが含まれています。スプライトシート中の 
+ 1 つのイメージは「フレーム」とも呼ばれます。 </p>
+<p>&#160;</p>
+<p>スプライトシートベースのアニメーションを作成するには、まずスプライトシート内の 1 つのフレームだけを表示します。続いて一定時間が経過したら、スプライトシート内の次のフレームを表示します。アニメーションをスムーズに見せるにはそのタイミングが重要です。この例ではキャラクターが歩きます。</p>
+<p>&#160;</p>
+<p><img src="$Naia.gif" alt="" style=" border:none; max-width:32px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>「<a href="Display_a_Picture.htm">ピクチャーを表示する</a>」の項で設定した srcRect プロパティを覚えていますか。そこではフルサイズのイメージに設定しましたが、スプライトシート 
+ アニメーションでは、このプロパティを使って 1 つのフレームのみを表示します。 srcRect は画面上にイメージの一部だけを表示可能です。</p>
+<p>&#160;</p>
+<p><img src="4FramesNaia-Helpfile_Select.png" alt="" style=" border:none; max-width:327px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>黄色く囲んだ領域がスプライトの srcRect で、この部分だけが画面上に表示されます。 つまりこの領域を高速に移動させれば動いているように見えるわけです。</p>
+<p>&#160;</p>
+<p>次の例を見てみましょう。下図のスプライトシートを使います。</p>
+<p>&#160;</p>
+<p><img src="4FramesNaia.png" alt="" style=" border:none; max-width:128px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>コードは次の通りです。</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new sprite
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign the spritesheet bitmap to the sprite
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Set the portion of the spritesheet which should be visible on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(32, 0, 32, 48)
+&#160;&#160;&#160;&#160;# Center the sprite on screen
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @sprite.srcRect.width) / 2
+&#160;&#160;&#160;&#160;# Center the sprite on screen
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @sprite.srcRect.height) / 2
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the spritesheet bitmap
+&#160;&#160;&#160;&#160;@bitmap = ResourceManager.getBitmap(&quot;Graphics/Pictures/Naia&quot;)</code></pre>
+<p>準備として、上のスプライトシートをプロジェクトの Graphics/Pictures フォルダーにインポートして 「Naia」 というファイル名を付けます。この例をテストすると、画面の中央にキャラクターが表示されます。なぜなら 
+ srcRect をスプライトシートの 32 x 48 ピクセルの大きさに設定したからです。スプライトシートの 1 つのフレームは 32 x 
+ 48 ピクセルです。</p>
+<p>&#160;</p>
+<p>次に updateContent を変更してフレームをアニメーション表示させましょう。</p>
+<pre>
+<code class="coffee">
+###*
+* Update the scene&amp;apos;s content.
+### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# We only want to change to the next frame on each 8th frame of the game-loop which
+&#160;&#160;&#160;&#160;# is 1/4 second. 
+&#160;&#160;&#160;&#160;if Graphics.frameCount % 15 == 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We move our srcRect 32 pixels to the right to display the next frame of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# spritesheet. We use a modulo-operation with 128 to loop the animation.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@sprite.srcRect.x = (@sprite.srcRect.x + 32) % 128</code></pre>
+<p>ここでゲームを起動すると、画面上でキャラクターが歩いているのが見えるはずです。実際に移動しているわけではありませんが、歩いているアニメーションが見えます。なぜそうなるのでしょう。上のコードを詳しくみていきましょう。</p>
+<p>&#160;</p>
+<p>まず、現在の Graphics.frameCount にモジュロ演算を行います。 Graphics.frameCount は 1 フレーム毎にカウンターが 
+ 1 増加するものです。つまり、Graphics.frameCount にはゲームを開始してから経過したフレーム数を格納します。モジュロ 15 
+ であれば、15 フレーム毎に結果が 0 になります。したがって、15 フレーム後に初めて if 文から下のアニメーションコードを実行します。</p>
+<p>&#160;</p>
+<p>ここで行うのは、src-rect を 32 ピクセル移動することです。前述のように、スプライトシートの 1 つのフレームは 32 x 48 
+ ピクセルです。したがって src-rect を X 軸に沿って 32 ピクセル移動すれば、スプライトシートの次のフレームを表示することになります。src-rect 
+ をスプライトシートビットマップ上に浮かぶ黄色いカーソルのように考えてもよいでしょう。 そのカーソルが示す領域だけが画面に表示されるのです。</p>
+<p>&#160;</p>
+<p>しかし、この src-rect カーソルをあまり右に移動し過ぎるとスプライトシートの外に出てしまいます。これを避けるために 128 のモジュロ演算を追加しています。スプライトシートの幅は 
+ 128 ピクセルです。対して 1 つのフレームの幅は 32 ピクセルです。したがって、src-rect カーソルの X 座標が 128 に達すると、モジュロ演算の結果が 
+ 0 になります。つまり srcRect カーソルが 0 の位置に戻りますので、アニメーションはエンドレスに続くことになります。</p>
+<p>&#160;</p>
+<p>ちょっと複雑でわかりづらいなと思ったら、上の例をいろいろ変更してどう変化するか確認してみてください。例えばモジュロ演算を削除するとどうなるか。また 
+ % 15 を % 60 に変更したらアニメーションがゆっくりになることなどを確認してみましょう。実際に試してみると理解は深まります。</p>
+<p>&#160;</p>
+<p>本稿の最初に述べましたが、すべて <a href="Animations_Animator.htm">ラノゲツクールMV のアニメーションシステム</a> 
+ に実装されていますので、実際には難しく考えずにご利用いただけます。</p>
+</body>
+</html>

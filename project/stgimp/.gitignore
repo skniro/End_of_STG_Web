@@ -1,0 +1,23 @@
+
+# folders
+!/.github
+!/gradle/wrapper
+!/src
+/src/generated
+/.vs
+/amWiki
+
+# files
+!/.gitignore
+!/CLA.txt
+!/CONTRIBUTING.md
+!/LICENSE.txt
+!/license-header.txt
+!/README.md
+!/gradle.properties
+!/build.gradle
+!/build.xml
+!/gradlew
+!/gradlew.bat
+!/cla-signatures.txt
+!/formatting-settings.jar

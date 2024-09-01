@@ -1,0 +1,1042 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; VN Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例: 移動可能なキャラクター</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_3";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > VNエンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">例: 移動可能なキャラクター</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>の例では、キーボードの操作で画面上を歩き回ることができる RPG/アドベンチャーゲームスタイルのキャラクターと勝手に歩く 
+ NPC (ノンプレイヤーキャラクター) を作成したいと思います。さらに、キャラクターの現在の位置を画面の左上に表示します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">プランニング</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV のオブジェクトコンポーネントデザインに従うため、どのような種類のゲームオブジェクトやコンポーネントが必要かをまず考えなくてはなりません。 
+ </p>
+<p>&#160;</p>
+<p class="SubSubHeading">ゲームオブジェクト</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>プレイヤーが操作できるキャラクター</li>
+	<li>勝手に歩き回る NPC</li>
+	<li>操作できるキャラクターの位置を画面左上で表示するテキスト</li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">コンポーネント</p>
+<p>&#160;</p>
+<p>作成する 2 つのキャラクターにはどんなコンポーネントが必要か考えてみましょう。操作できるキャラクターには、次の機能が必要です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>キャラクターを画面に表示する</li>
+	<li>キャラクターがアニメーション表示しながら 4 方向に歩ける</li>
+	<li>キャラクターがキーボードを使って 4 方向に歩ける</li>
+</ul>
+<p>&#160;</p>
+<p>操作できない NPC には、次の機能が必要です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>キャラクターを画面に表示する</li>
+	<li>キャラクターがアニメーション表示しながら 4 方向に歩ける</li>
+	<li>キャラクターが NPC のようにハードコードされたルート/パターンに沿って歩ける</li>
+</ul>
+<p>&#160;</p>
+<p>ご覧のように、最初の2 つの機能は両キャラクター共通です。最後だけ異なります。これらをコンポーネントに分けて考えると、1 キャラクターにつき、3 
+ つのコンポーネントが必要で、コンポーネントの種類は全部で 4 種類必要となります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>gs.Component_Sprite - キャラクターを画面に表示する</li>
+	<li>gs.Component_CharacterWalking - キャラクターがアニメーション表示しながら 4 方向に歩くことを可能にする</li>
+	<li>gs.Component_CharacterPlayer - キャラクターがキーボードを使って 4 方向に歩くことを可能にする</li>
+	<li>gs.Component_CharacterNpc - キャラクターがルート/パターンに沿って 4 方向に歩くことを可能にする</li>
+</ul>
+<p>&#160;</p>
+<p>最初のコンポーネントについては、既定のスプライトコンポーネントを再利用してキャラクターを画面に表示できます。しかし残りの 3 つはまだありませんので、これらは自分で開発しなければなりません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンをセットアップする</p>
+<p>&#160;</p>
+<p>新しいコンポーネントの開発を始める前に、シーンを設定し、次の内容で新規に 2 つのゲームオブジェクトテンプレートを 「Objects」 
+ フォルダーに作成します。 「Object_PlayerCharacter」と「Object_NpcCharacter」です。</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define srcRect-property to control which portion of the spritesheet is
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# displayed on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@srcRect = new gs.Rect()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code></pre>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define srcRect-property to control which portion of the spritesheet is
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# displayed on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@srcRect = new gs.Rect()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_NpcCharacter = Object_NpcCharacter</code></pre>
+<p>&#160;</p>
+<p>次にベーシックシーンを設定し、新たに作成したゲームオブジェクトテンプレートを使用して 2 つのゲームオブジェクトを作成します。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create NPC Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject = new gs.Object_NpcCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place NPC Character to the right.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.x = Graphics.width - 228
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the NPC character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create Player Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject = new gs.Object_PlayerCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place Player Character to the left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.x = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the Player character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the NPC Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@npcObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the Player Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@playerObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the spritesheet image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/Naia&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>ここでゲームを起動すると、画面上に 2 つのスプライトシートが表示されるはずです。1 つが左側、もう 1 つが右側です。ただし、それらは正しいフレームを表示していませんし、アニメーション表示もしないし動いてもいません。またキーボードを使って動かすこともできません。今はまだスプライトコンポーネントをそれぞれに追加しただけだからです。この例を動かすには、別のコンポーネントを開発、追加する必要があります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ウォーキングコンポーネント</p>
+<p>&#160;</p>
+<p>キャラクターを画面上で歩かせるため、 gs.Component_CharacterWalking という新しいコンポーネントを開発します。そのため、「Components」 
+ フォルダーに 「Component_CharacterWalking」 という新しいスクリプトを作成し、次のコードを追加します。</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterWalking = Component_CharacterWalking</code></pre>
+<p>&#160;</p>
+<p>続いて Object_PlayerCharacter と Object_NpcCharacter スクリプトに戻って、それらが動作するよう新しいコンポーネントを追加します。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define direction-property to know where the character is looking at.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@direction = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define walking-property for quick-access to the walking component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@walking = new gs.Component_CharacterWalking()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add walking component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@walking)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code></pre>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define direction-property to know where the character is looking at.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@direction = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define walking-property for quick-access to the walking component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@walking = new gs.Component_CharacterWalking()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add walking component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@walking)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_NpcCharacter = Object_NpcCharacter</code></pre>
+<p>&#160;</p>
+<p>ゲームをテストしてみてください。 見た目は何も変わりません。キャラクターはまだ画面上を移動することができません。まだスプライトシートが表示されているだけです。Component_CharacterWalking 
+ に戻って理由を確認してみましょう。我々のコンポーネントはほとんど空っぽで、ゲームオブジェクトに何ら新しいビヘイビアを追加していません。次はそれを変更します。</p>
+<p>&#160;</p>
+<p>どんな機能をキャラクターに追加することが必要か考えてみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>スプライトシート全体ではなく、 1 つのキャラクターフレームのみ表示する</li>
+	<li>適切なキャラクターフレームを表示して、キャラクターが 4 つの方向を向くことができる</li>
+	<li>キャラクターが歩行のアニメーション表示しながら 4 方向に歩くことができる</li>
+	<li>キャラクターが歩いていない時は、現在の向きで立っているポーズを表示する </li>
+</ul>
+<p>&#160;</p>
+<p>ここで問題になっているのは向きです。ウォーキングコンポーネントがキャラクターを正しい方向に移動できるよう、キャラクターが現在どの方向を向いているのかを知る必要があります。direction 
+ プロパティを追加して現在の方向を数値で指定するようにしたのはそういう理由からです。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>0 = 下を向く</li>
+	<li>1 = 左を向く</li>
+	<li>2 = 上を向く</li>
+	<li>3 = 右を向く</li>
+</ul>
+<p>&#160;</p>
+<p>このプロパティは、ウォーキングコンポーネントではなく、ゲームオブジェクトに追加しました。これは、方向が歩行というビヘイビアに固有のものではなく、他の機能/コンポーネントでも利用する、より一般的なキャラクターの要素であるためです。 
+ </p>
+<p>&#160;</p>
+<p>次にコンポーネントに数多くの機能を実装する必要があります。 本ガイドのこれまでの例にはなかったものです。とはいえ一つ一つやっていきましょう。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">スプライトシート全体ではなく、 1 つのキャラクターフレームのみ表示する</p>
+<p>&#160;</p>
+<p>リストの最初の項目は、スプライトシート内の 1 つのキャラクターフレームのみを表示する、ということです。</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# to show the stand-pose frame.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.set(32, 0, 32, 48)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the display size of the character to 32x48. Changing that values
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# zooms the character.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.width = 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.height = 48
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Disposes the component
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Update the component logic
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterWalking = Component_CharacterWalking</code></pre>
+<p>上記のコードでゲームを起動すると、キャラクターの見え方が随分と良くなったことがわかるでしょう。ここでは setup メソッドを一度呼び出して、 
+ srcRect をスプライトシートの立位ポーズのフレームに設定し、スプライトシートのフレームサイズ (32 x 48) に合わせてゲームオブジェクトのサイズを変更しています。そうしないとキャラクターは大きく拡大表示されてしまいます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">適切なキャラクターフレームを表示して、キャラクターが 4 つの方向を向くことができる</p>
+<p>&#160;</p>
+<p>キャラクターが正しい方向を向くようにするため、コンポーネントの update メソッドをフレーム毎に一度呼び出し、 direction 
+ のプロパティをチェックしてその値に応じてキャラクターフレームを変更しています。この後まだ多くの機能を追加しなければなりませんので、コードをより簡潔にするため、 
+ updateDirection という新しいメソッドを作成します。 </p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# to show the stand-pose frame.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.set(32, 0, 32, 48)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the display size of the character to 32x48. Changing that values
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# zooms the character.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.width = 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.height = 48
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Disposes the component
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Updates the direction the character is looking at depending on the
+&#160;&#160;&#160;&#160;# direction-property.
+&#160;&#160;&#160;&#160;updateDirection: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Depending on the direction-property, we let the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# character look at the appropriate direction
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;switch @object.direction
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 0 # Down
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set y-coordinate of srcRect to 0 because the first row of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# spritesheet shows the look-down frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 1 # Left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set y-coordinate of srcRect to 48 because the second row of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# spritesheet shows the look-down frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 48
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 2 # Top
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set y-coordinate of srcRect to 144 because the last row of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# spritesheet shows the look-down frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 144
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 3 # Right
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set y-coordinate of srcRect to 96 because the third row of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# spritesheet shows the look-down frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 96
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Update the component logic
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the character&amp;apos;s direction.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@updateDirection()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterWalking = Component_CharacterWalking</code></pre>
+<p>この段階でゲームを起動すると、 direction プロパティに応じてキャラクターが正しい方向を向くようになっていることが確認できます。したがってそのプロパティを変更すれば、キャラクターは異なる方向を向くことになります。これはゲームプレイ中に 
+ F12 (Windows/Linux の場合) または Ctrl + Shift + I (Mac の場合) を押し、デバッグツールを開いて実際に確かめることができます。デバッグツールの 
+ Console を選択し、次のように入力してください。</p>
+<p>&#160;</p>
+<p><img src="image33.gif" alt="" style=" border:none; max-width:446px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>ゲームプレイ中にキャラクターの向きをその場で変更することができます。 </p>
+<p>&#160;</p>
+<p><img src="image34.gif" alt="" style=" border:none; max-width:422px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>これはデバッグやテストに便利です。注意点としては、ほどんどの変更において、コンソールでスクリプト行を実行した後、ゲームウィンドウを再度クリックしないと、こういうリアルタイムの変更は適用されません。これは、ゲームウィンドウが非アクティブになるとゲームが一時停止するためです。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">キャラクターが歩行のアニメーション表示しながら 4 方向に歩くことができる</p>
+<p>&#160;</p>
+<p>ここまでの作業で、キャラクターに 4 つの方向を向かせることはできるようになりました。次のステップはキャラクターが歩行する仕組みです。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# A component which allows a character to walk
+class Component_CharacterWalking extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Stores pixels to move in the character&amp;apos;s current direction.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@pixelsToMove = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Indicates if the character is currently walking.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@isWalking = no
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the srcRect to 32x48 pixel area with 32 pixel offset on x-axis
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# to show the stand-pose frame.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.set(32, 0, 32, 48)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the display size of the character to 32x48. Changing that values
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# zooms the character.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.width = 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.height = 48
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Disposes the component
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Let&amp;apos;s the character walk X steps into it&amp;apos;s current direction. One step
+&#160;&#160;&#160;&#160;# is 32 pixels.
+&#160;&#160;&#160;&#160;walk: (steps) -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if the character is not already walking
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if not @isWalking
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set isWalking to indicate that the character is currently walking.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@isWalking = yes
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Convert the steps into pixels.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@pixelsToMove = steps * 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Updates the direction the character is looking at depending on the
+&#160;&#160;&#160;&#160;# direction-property.
+&#160;&#160;&#160;&#160;updateDirection: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;switch @object.direction
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 0 # Down
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 1 # Left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 48
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 2 # Top
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 144
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 3 # Right
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.y = 96
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Updates the spritesheet walking-animation. We just need to shift
+&#160;&#160;&#160;&#160;# the x-coordinate of our srcRect area.
+&#160;&#160;&#160;&#160;updateWalkingAnimation: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if our character is currently working. Because only then we
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# want to play the spritesheet-animation.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if @isWalking
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Every 15th frame we want to show the next frame of the animation. Change that
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# very to increase or decrease the animation speed.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if Graphics.frameCount % 15 == 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# The width of a frame is 32 pixel so we shift the x-coordinate by
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# 32 to get the next frame. If we reach 128 we go back to 0 thanks to
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the modulo operation.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.x = (@object.srcRect.x + 32) % 128
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Updates the actual walking, the actual movement in the correct direction. &#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateWalking: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if our character is currently walking. Because only then we want to
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# move the character.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if @isWalking
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if the amount of pixels to move is still
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# greater than 0. Means the movmeent is not finished yet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if @pixelsToMove &gt; 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check the character&amp;apos;s current direction to move the character
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# in the right direction.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;switch @object.direction
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 0 # Down
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Move 1 pixel down
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.y++
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 1 # Left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Move 1 pixel left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.x--
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 2 # Up
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Move 1 pixel up
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.y--
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;when 3 # Right
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Move 1 pixel right
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.dstRect.x++
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Reduce steps left by 1
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@pixelsToMove--
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if amount of pixels left is 0. If yes, we have to stop
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# walking.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if @pixelsToMove == 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# If amount of pixels left is 0, walking is finished
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@isWalking = no
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Otherwise, if the character is not walking, we will show stand-pose.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the x-coordinate of srcRect to 32 to make sure
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the stand-pose frame is displayed after walking is finished.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.srcRect.x = 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Update the component logic
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the character&amp;apos;s direction.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@updateDirection()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the character&amp;apos;s spritesheet animation for walking.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@updateWalkingAnimation()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the character&amp;apos;s walking behavior.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@updateWalking()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterWalking = Component_CharacterWalking</code></pre>
+<p>上の例を見てもうおわかりかと思いますが、ここでは数多くの機能を追加しています。一つずつみていきましょう。新規に 「walk」 というメソッドを追加し、現在の方向に歩いて行く歩数を取得します。1 
+ 歩は 32 ピクセルで、キャラクターは 32 x 32 ピクセルの仮想のグリッド上を移動します。</p>
+<p>&#160;</p>
+<p>updateWalkingAnimation と updateWalking() では、 <a href="Animation_Basics.htm">アニメーションの基本</a> 
+ で学んだ知識を利用し、スプライトシートのアニメーションを再生し、歩行中の場合はキャラクターを正しい方向に移動します。walk メソッドで X 
+ 歩の歩行を開始できます。歩行の開始はデバッグコンソールで簡単に行えます。</p>
+<p>&#160;</p>
+<p><img src="image35.gif" alt="" style=" border:none; max-width:491px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>上図のように指定すると、NPC キャラクターは下に向かって 10 歩 (320 ピクセル) 進みます。キャラクターの向きを変えて右や左に移動させたりしてみてください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Player コンポーネント</p>
+<p>&#160;</p>
+<p>これまでの作業で、私達のキャラクターは異なる方向を向き、またアニメーションしながら歩けるようになりました。つまり、この例における最も難しい部分はもう終わったということです！残っている作業は、キーボードのキーを押したときにキャラクターが画面上を歩くようにするコンポーネントの作成です。</p>
+<p>&#160;</p>
+<p>「Components」 フォルダー内に 「Component_CharacterPlayer」 という名前のコンポーネントを新規作成し、次のコードを記述します。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# A component which allows to move a character via keyboard / gamepad.
+class Component_CharacterPlayer extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Disposes the component
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Update the component logic
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if DOWN is pressed. If pressed, we move the character 1 step down.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if Input.press(Input.DOWN)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set direction to down (0)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.direction = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Let the character walk 1 step down.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.walking.walk(1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if LEFT is pressed. If pressed, we move the character 1 step left.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if Input.press(Input.LEFT)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set direction to left (1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.direction = 1
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Let the character walk 1 step to the left.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.walking.walk(1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if UP is pressed. If pressed, we move the character 1 step up.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if Input.press(Input.UP)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set direction to up (2)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.direction = 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Let the character walk 1 step up.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.walking.walk(1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Check if RIGHT is pressed. If pressed, we move the character 1 step right.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if Input.press(Input.RIGHT)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set direction to right (3)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.direction = 3
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Let the character walk 1 step to the right.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.walking.walk(1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterPlayer = Component_CharacterPlayer</code></pre>
+<p>ここで行うのは、矢印キーかゲームパッドのボタンがどれか押されたかどうかを確認し、押された場合には walk メソッドを呼び出してキャラクターを適切な方向に歩かせること。それだけです！そのために、ゲームオブジェクトテンプレートである 
+ 「Object_PlayerCharacter」 に新しいコンポーネントを追加する必要があります。</p>
+<pre>
+<code class="coffee">
+# Game Object Template for the Player Character
+class Object_PlayerCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define srcRect-property to control which portion of the spritesheet is
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# displayed on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@srcRect = new gs.Rect()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define direction-property to store where the character is currently looking at.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@direction = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define walking-property for quick-access to the walking component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@walking = new gs.Component_CharacterWalking()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add walking component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@walking)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add player component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(new gs.Component_CharacterPlayer())
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_PlayerCharacter = Object_PlayerCharacter</code></pre>
+<p>今回は、player コンポーネントに追加の quick-access プロパティを設定していません。素早くアクセスする必要がないからです。必要な場合は自由にプロパティを追加してもかまいません。ここでゲームを実行してみましょう。 
+ 画面左のプレイヤーキャラクターは、キーボードの矢印キーかゲームパッドで動かすことができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">NPC コンポーネント</p>
+<p>&#160;</p>
+<p>そろそろ完成が近づいてきました。次は NPC キャラクターが勝手に動くようにします。 これができたらほとんど完成です。「Component_CharacterNpc」 
+ という NPC 用のコンポーネントを新規作成し、次のコードを記述します。</p>
+<pre>
+<code class="coffee">
+# A component which allows to move a character via keyboard / gamepad.
+class Component_CharacterNpc extends gs.Component
+&#160;&#160;&#160;&#160;# Define component properties, etc. here.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Stores the route the NPC should walk along.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@route = []
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Stores index of current step of the route
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@currentStep = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Initialize the component
+&#160;&#160;&#160;&#160;setup: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Disposes the component
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Update the component logic
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# If a route is set and if the character is not already walking then walk
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# through the route and let the character walk.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if @route.length &gt; 0 and not @object.walking.isWalking
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the direction defined at the current step of the route.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.direction = @route[@currentStep]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Let the character walk 1 step
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.walking.walk(1)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Increase the index of the current step so that the next entry
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# of the route is accessed next time. If we reach the end of the
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# route, we jump back to the first step so that the route becomes
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# endless.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@currentStep = (@currentStep + 1) % @route.length
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_CharacterNpc = Component_CharacterNpc</code></pre>
+<p>&#160;</p>
+<p>上の例では、「@route」 というプロパティを追加しました。 これは番号を含むリストで、それぞれの番号は 1 つの方向への 1 歩を表します。方向は番号によって異なります。update 
+ メソッドで、そのリストを検討し、walk メソッドを使ってキャラクターを番号に応じた方向に歩かせます。ルートの終わりに到達したら、リストの先頭に戻って 
+ NPC の動作をエンドレスにします。</p>
+<p>&#160;</p>
+<p>続いて ゲームオブジェクトテンプレートである 「Object_NpcCharacter」 に新しい NPC コンポーネントを追加する必要があります。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# Game Object Template for NPC Character
+class Object_NpcCharacter extends gs.Object_Visual
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define image-property for the spritesheet
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@image = null
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define srcRect-property to control which portion of the spritesheet is
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# displayed on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@srcRect = new gs.Rect()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define direction-property to store where the character is currently looking at.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@direction = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define visual-property for quick-access to the visualization component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@visual = new gs.Component_Sprite()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define walking-property for quick-access to the walking component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@walking = new gs.Component_CharacterWalking()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define npc-property for quick-access to the npc component.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npc = new gs.Component_CharacterNpc()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add sprite component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@visual)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add walking component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@walking)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add npc component to the object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@addComponent(@npc)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Object_NpcCharacter = Object_NpcCharacter</code></pre>
+<p>その後で、デバックコンソールを再び開き、route プロパティにキャラクターを円状に歩き回らせるシンプルなルートを設定します。</p>
+<p>&#160;</p>
+<p><img src="image37.gif" alt="" style=" border:none; max-width:660px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>ルートの設定は route プロパティにアクセスしているだけです。これで NPC が歩き始めます！ルートをハードコーディングせず、ルートをグラフィカルレベルエディタから持ってくることも可能です。また複数の 
+ NPC のインスタンスを作成し、それぞれに異なるルートを設定したり、歩行以外の種類の動作を実装することも可能です。 </p>
+<p>&#160;</p>
+<p class="Sub_Heading">プレイヤーキャラクターの現在位置を表示する</p>
+<p>&#160;</p>
+<p>まだ 100% 完成したわけではありません。最後に実装するのは、キャラクターの現在の位置をゲーム内に表示することです。ここでは 2 つの異なるアプローチを学びます。1 
+ つは定義済みのゲームオブジェクトを使う方法、もう 1 つは ラノゲツクールMV のゲーム内ユーザーインターフェイスシステムを使用する方法です。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">ui.Object_Text を使ってテキストを表示する</p>
+<p>&#160;</p>
+<p>便利なことに、ラノゲツクールMV には、画面上にテキストを表示するためのゲームオブジェクト、 ui.Object_Text が用意されています。シーン内にそのクラスのインスタンスを作成し、 
+ text プロパティをキャラクターオブジェクトの現在の位置に設定するだけです。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create NPC Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject = new gs.Object_NpcCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place NPC Character to the right.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.x = Graphics.width - 228
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the NPC character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create Player Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject = new gs.Object_PlayerCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place Player Character to the left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.x = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the Player character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a Text Object to display the character&amp;apos;s current position on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@textObject = new ui.Object_Text()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Enable size-to-fit so that the text object&amp;apos;s bounds are automatically adjusted to
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# fit the text size.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@textObject.sizeToFit = yes
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the NPC Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@npcObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the Player Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@playerObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the Text Object to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@textObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the spritesheet image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/Naia&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Updating the position-display.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@textObject.text = &quot;Position: (#{@playerObject.dstRect.x}, #{@playerObject.dstRect.y})&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>prepareVisual メソッドを見るとわかるように、 ui.Object_Text を使用して 3 つ目のゲームオブジェクトを作成し、それをシーンに追加しています。updateContent 
+ で、テキストを更新し、プレイヤーキャラクターの現在位置を表示するようにしています。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">ゲーム内ユーザーインターフェイスシステムを使用する</p>
+<p>&#160;</p>
+<p>実は最初のソリューションで、ゲーム内ユーザーインターフェイスシステムは既に使用しています。ui.Object_Text テンプレートはゲーム内ユーザーインターフェイスシステムのゲームオブジェクトの一部であり、テキストを画面上に表示しています。この例での唯一の違いは、 
+ JSON レイアウトを使用して位置表示をより美しくしていることです。JSON レイアウトの詳細については <a href="IGUI_Getting_Started.htm">ゲーム内ユーザーインターフェイスシステム</a> 
+ のドキュメントをお読みください。</p>
+<p>&#160;</p>
+<p>まず、スクリプトエディタ内の 「Layouts」 フォルダーに移動し、 「Layout_CharacterDisplay」 という CoffeeScript 
+ ファイルを新規作成しています。その内容は次の通りです。</p>
+<pre>
+<code class="json">
+ui.UIManager.layouts.characterDisplay = {
+&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,
+&#160;&#160;&#160;&#160;&quot;frame&quot;: [(Graphics.width - 300) / 2, 0, Graphics.width, Graphics.height],
+&#160;&#160;&#160;&#160;&quot;controls&quot;: [
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.TitledWindow&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: { &quot;title&quot;: &quot;Character Info&quot; }
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: [0, 0, 300, 100]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.Text&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: &quot;regularUIText&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;id&quot;: &quot;positionDisplay&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;updateBehavior&quot;: &quot;continuous&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;formulas&quot;: [$ -&gt; 
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;x = SceneManager.scene.behavior.playerObject.dstRect.x
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y = SceneManager.scene.behavior.playerObject.dstRect.y
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;o.text = &quot;Position: (#{x}, #{y})&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;],
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: &quot;Position: (0, 0)&quot;,
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: [10, 55],
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sizeToFit&quot;: true
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+&#160;&#160;&#160;&#160;]
+}</code></pre>
+<p>&#160;</p>
+<p>上記の JSON シンタックスで、 上部にテキストを表示した背景 UI ウィンドウを定義しています。テキストをプレイヤーの現在位置に変更する式を持つ 
+ formulas プロパティを追加しています。必要に応じて、「positionDisplay」 を値として持つ id プロパティにより、次のスクリプトからテキストオブジェクトにアクセスしています。</p>
+<p>&#160;</p>
+<p>textObject = gs.ObjectManager.current.objectById(&quot;positionDisplay&quot;)</p>
+<p>&#160;</p>
+<p>Formulas の利用は、非常に簡単なデータバインドに限定し、複雑なコードブロックには使わないことをお勧めします。</p>
+<p>&#160;</p>
+<p>次に画面上にこのレイアウトを表示しなければなりません。そのためシーンを少し変更する必要があります。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create NPC Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject = new gs.Object_NpcCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place NPC Character to the right.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.x = Graphics.width - 228
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the NPC character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@npcObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create Player Character Object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject = new gs.Object_PlayerCharacter()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set image to &quot;Naia&quot; spritesheet.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.image = &quot;Naia&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place Player Character to the left
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.x = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.dstRect.y = 50
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the Player character object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@playerObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a layout game object using our character-display layout.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@layout = ui.UIManager.createFromDescriptor(ui.UIManager.layouts.characterDisplay, @object)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the NPC Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@npcObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the Player Character to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@playerObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the Text Object to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@layout)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the spritesheet image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/Naia&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>prepareVisual メソッドで、 ui.UIManager.createFromDescriptor を使って新規にレイアウトオブジェクトを作成します。 
+ これによって、指定された JSON レイアウトから簡単にレイアウトゲームオブジェクトを作成することができます (layout descriptor 
+ とも呼ばれます)。そのレイアウトゲームオブジェクトをシーンに追加すれば完成です。</p>
+<p>&#160;</p>
+<p><img src="image38.gif" alt="" style=" border:none; max-width:797px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>位置表示の見栄えがだいぶ良くなったはずです。さらに詳しくは、<a href="IGUI_Getting_Started.htm">ゲーム内ユーザーインターフェイスシステム</a> 
+ ドキュメントに記載された例をご確認ください。</p>
+</body>
+</html>

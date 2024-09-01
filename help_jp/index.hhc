@@ -1,0 +1,642 @@
+﻿<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="FrameName" value="bsscright">
+  <param name="SiteType" value="toc">
+  <param name="Image Width" value="16">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ラノゲツクールMV">
+    <param name="Local" value="Visual_Novel_Maker.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="更新履歴">
+      <param name="Local" value="Update_History.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="エディタの使用方法">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ホームビュー画面">
+      <param name="Local" value="Editor.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="Creating_a_Project.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="メニューバー">
+        <param name="Local" value="The_Menu_Bar.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ツールバー">
+        <param name="Local" value="The_Toolbar.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="コンテキストメニュー">
+        <param name="Local" value="Context_Menu.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="データベース">
+      <param name="Local" value="Database.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="キャラクター">
+        <param name="Local" value="Characters.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="キャラクターの表情">
+        <param name="Local" value="Character_Expressions.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="表情インポーター">
+        <param name="Local" value="Expression_Importer.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="CGギャラリー">
+        <param name="Local" value="CG_Gallery.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="アニメーション">
+        <param name="Local" value="Animations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="共通イベント">
+        <param name="Local" value="Common_Events.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="システム">
+        <param name="Local" value="System.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="シーン">
+      <param name="Local" value="Scene_Content.htm">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="チャプター">
+        <param name="Local" value="Chapter.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="シーンのプロパティ">
+        <param name="Local" value="Scene_Properties.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="シーンコンテンツのコマンド">
+        <param name="Local" value="Scene_Content_Commands.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="基本">
+          <param name="Local" value="Basic.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="リスト">
+          <param name="Local" value="List.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="オーディオ再生">
+          <param name="Local" value="Audio_Playback.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="背景">
+          <param name="Local" value="Background.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ムービー">
+          <param name="Local" value="Movie.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="シーン">
+          <param name="Local" value="SceneCommand.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="キャラクター">
+          <param name="Local" value="Character.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="Live2D">
+          <param name="Local" value="Live2D.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="メッセージ">
+          <param name="Local" value="Message.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ピクチャー">
+          <param name="Local" value="Picture.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="テキスト">
+          <param name="Local" value="Text.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="画面">
+          <param name="Local" value="Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="システム">
+          <param name="Local" value="System_Command.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="イージング効果">
+        <param name="Local" value="Easing_Effects.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="一括編集">
+        <param name="Local" value="Mass_Edit.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ビルドと起動">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ビルド設定">
+        <param name="Local" value="Build_Configurations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="起動設定">
+        <param name="Local" value="Run_Configurations.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="環境変数">
+        <param name="Local" value="Environment_Variables.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ゲームテスト">
+        <param name="Local" value="Game_Test.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="テストとデプロイ">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="パソコン用">
+        <param name="Local" value="For_PC_Mac.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="iOS用">
+        <param name="Local" value="For_iOS.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Android用">
+        <param name="Local" value="For_Android.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Web用">
+        <param name="Local" value="For_Web.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="言語設定">
+      <param name="Local" value="Language_Configuration.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="リソースマネージャー">
+      <param name="Local" value="Resource_Manager.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="リソースの基準">
+      <param name="Local" value="Resource_Standards.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ゲームパッケージを作成">
+      <param name="Local" value="Create_Game_Package.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="エクステンションマネージャー">
+      <param name="Local" value="Extension_Manager.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="アプリケーションの環境設定">
+      <param name="Local" value="Application_Preferences.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="プロジェクトの環境設定">
+      <param name="Local" value="Project_Preferences.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="キーボードショートカット">
+      <param name="Local" value="Notes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Live2Dサポート">
+      <param name="Local" value="Live2D_Support.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ビギナーズガイド">
+    <param name="Local" value="Beginner_s_Guide.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="基礎を学ぶ">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="スクリプトの準備">
+        <param name="Local" value="Preparing_a_Script.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="物語の表現方法">
+        <param name="Local" value="Narrative_Presentation.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="チャプターとシーンの追加">
+        <param name="Local" value="Adding_Chapters_and_Scenes.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="最初のシーンの作成">
+        <param name="Local" value="Making_your_first_scene.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="選択肢とラベル">
+        <param name="Local" value="Understanding_Choices_and_Labels.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="スイッチと変数">
+        <param name="Local" value="Learning_about_Switches.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="条件">
+        <param name="Local" value="Learning_about_Conditional_Branches.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="トランジションとシーンの変更">
+        <param name="Local" value="Transitions_and_Change_Scene.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="環境と効果">
+        <param name="Local" value="Weather_Effects.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="共通イベント">
+        <param name="Local" value="Common_Events_Guide.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ゲームのカスタマイズ">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="リソースのインポート">
+        <param name="Local" value="Importing_Resources.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="キャラクター">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="キャラクターと表情の追加">
+          <param name="Local" value="Adding_Characters.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="バストアップイメージの表示方法">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="定義済みのオブジェクト位置">
+          <param name="Local" value="Understanding_Predefined_Position.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="バストアップイメージの表示">
+          <param name="Local" value="Understanding_Predefined_Objects.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ノンリニアの物語">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="物語の分岐">
+          <param name="Local" value="Preparing_a_Plot_Outline.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="条件選択">
+          <param name="Local" value="Conditional_Choices.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="カメラの動き">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="パララックススクロール">
+          <param name="Local" value="Parallax_Scrolling.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="カメラのチュートリアル">
+          <param name="Local" value="Camera_Tutorial.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ミニゲーム">
+        <param name="Local" value="Mini_Games.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ブラックジャック">
+          <param name="Local" value="Black_Jack.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="UIシリーズ">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="イメージマップとホットスポットのチュートリアル">
+          <param name="Local" value="Imagemap_Tutorial.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="イベント付き言語メニュー画面">
+          <param name="Local" value="Evented_Language_Menu_Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="イベント付きタイトル画面">
+          <param name="Local" value="Evented_Title_Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="ゲーム内フォントの変更">
+          <param name="Local" value="Changing_your_Font.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="レイアウトに切り替えのリファレンス一覧">
+          <param name="Local" value="Switch_to_Layout_Reference_List.htm">
+        </object>
+        </ul>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="スクリプターズ ガイド">
+    <param name="Local" value="Scripter_s_Guide.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="テストベッドの設定">
+      <param name="Local" value="Setup_your_test_bed.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="基本エンジン">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ピクチャーを表示する">
+        <param name="Local" value="Display_a_Picture.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="データ＆リソース マネージメントt">
+        <param name="Local" value="Resource_Management.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ビットマップの基本">
+        <param name="Local" value="Bitmap_Basics.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="スプライト">
+        <param name="Local" value="Sprites.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="アニメーション">
+        <param name="Local" value="Animation_Basics.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="動画">
+        <param name="Local" value="Videos.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="タイルマップ">
+        <param name="Local" value="Tilemaps.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ビューポート">
+        <param name="Local" value="Viewports.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="VNエンジン">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="オブジェクトコンポーネントシステム">
+        <param name="Local" value="Object_Component_System.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="アニメーション">
+        <param name="Local" value="Animations_Animator.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="例: 移動可能なキャラクター">
+        <param name="Local" value="Example__Movable_Character.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="ゲーム内ユーザーインターフェイス">
+        <param name="Local" value="In-Game_UI.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="セーブシステム">
+        <param name="Local" value="Save_System.htm">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="スクリプトとプラグインのリファレンス">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="データフォーマットに関するドキュメンテーション">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="Data_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="リファレンス">
+        <param name="Local" value="data_doc/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="エクステンションに関するドキュメンテーション">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="Plugin_Getting_Started.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="インストールスクリプトとアンインストールスクリプト">
+          <param name="Local" value="Install_Uninstall_Scripts.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="セクションエクステンション">
+          <param name="Local" value="Section_Extensions.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="スクリプトエージェント">
+          <param name="Local" value="Script_Agents.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="カスタムコントロール">
+          <param name="Local" value="Extension_Custom_Controls.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="カスタムリソースプロセッサー">
+          <param name="Local" value="Custom_Resource_Processor.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="実例">
+        </object>
+        <ul>
+          <li><object type="text/sitemap">
+            <param name="Name" value="例：新しいデータベースカテゴリーの追加">
+            <param name="Local" value="Example__Adding_a_new_database_category.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="例：新しいシーンコマンドの追加">
+            <param name="Local" value="Example__Adding_a_new_scene_command.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="例：スクリプト側での新しいコマンドの実装">
+            <param name="Local" value="Example__Implementing_a_new_command_on_script-side.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="例：言語バンドルの作成">
+            <param name="Local" value="Example_Create_a_Language_Bundle.htm">
+          </object>
+          <li><object type="text/sitemap">
+            <param name="Name" value="例：エクステンションの作成">
+            <param name="Local" value="Example_Create_an_Extension.htm">
+          </object>
+          </ul>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="APIリファレンス">
+        <param name="Local" value="plugin_doc/index.html">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Objective-J API">
+        <param name="Local" value="objj_doc/html/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ゲーム内UIに関するドキュメンテーション">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="IGUI_Getting_Started.htm">
+      </object>
+      <ul>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：カスタムタイトル画面">
+          <param name="Local" value="Example__Custom_Title-Screen.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：スタイル">
+          <param name="Local" value="Example__Styles.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：アニメーション">
+          <param name="Local" value="Example__Animations.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：テンプレート">
+          <param name="Local" value="Templates.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：アクション">
+          <param name="Local" value="Example__Actions.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：データバインディング">
+          <param name="Local" value="Example__Data_Bindings.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：計算式">
+          <param name="Local" value="Example__Formulas.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：コンポーネントの使用">
+          <param name="Local" value="Example__Using_Components.htm">
+        </object>
+        <li><object type="text/sitemap">
+          <param name="Name" value="例：カスタムのレイアウト動作">
+          <param name="Local" value="Example__Custom_Layout_Behavior.htm">
+        </object>
+        </ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="APIリファレンス">
+        <param name="Local" value="igui_doc/index.html">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="スクリプトに関するドキュメンテーション">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="GameScript_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="APIリファレンス">
+        <param name="Local" value="game_script_doc/index.html">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="外部スクリプトエディタ">
+        <param name="Local" value="External_Script_Editor.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="外部ライブラリ">
+        <param name="Local" value="External_Libraries.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="エンジンに関するドキュメンテーション">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="はじめに">
+        <param name="Local" value="Engine_Getting_Started.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="APIリファレンス">
+        <param name="Local" value="engine_doc/index.html">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="ライセンスとクレジット">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="使用許諾契約">
+      <param name="Local" value="End_User_License_Agreement.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ライブラリーライセンス">
+      <param name="Local" value="Registered_Trademarks.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="クレジット">
+      <param name="Local" value="Staff_Credits.htm">
+    </object>
+    </ul>
+</ul>
+</html>

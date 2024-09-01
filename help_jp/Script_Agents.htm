@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>スクリプトエージェント</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">スクリプトエージェント</p>
+</div>
+<p>&#160;</p>
+<p>スクリプトエージェントとは、エクステンションエディタでの特殊なスクリプトです。スクリプトエージェントにより、次のような方法で</p>
+<p>ユーザーから入力をリクエストしたり処理したりできるようになります。</p>
+<p>&#160;</p>
+<p>スクリプトエージェントに関連するカスタムビューがある場合、まずユーザーに対し、ダイアログボックスとしてカスタムビューを表示します。</p>
+<p>ユーザーがそのダイアログを承認すると、スクリプトエージェントはプロジェクトのすべてのドキュメントをチェックし、入力内容によってはそれらを修正したり、</p>
+<p>あるいは新しいドキュメントを作成したり、既存のものを削除したりします。</p>
+<p>&#160;</p>
+<p>スクリプトエージェントは自動的に、「ツール」 &rarr; 「スクリプトエージェント」に追加されます。</p>
+<p>スクリプトエージェントの実装例として、「表情インポーター」があります。</p>
+<p>これはラノゲツクールMVとともにシップされるエージェントで、ファイル名をもとに、大量のキャラクターを簡単にインポートできます。</p>
+<p>&#160;</p>
+<p>スクリプトエージェントの例として、次のコードを参照してください。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Test 
+ Agent&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;GSScriptAgent&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;category&quot;: { &quot;name&quot;: 
+ &quot;My Name/Company&quot;, &quot;identifier&quot;: &quot;com.example&quot; 
+ },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;target&quot;: &quot;none&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;dialog&quot;: { &quot;uid&quot;: 
+ &quot;437DE2FE934E8148B15918D9CB1146033372&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;process&quot;: {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;description&quot;: 
+ &quot;Testing...&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;run&quot;: 
+ function(object, context){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var 
+ documents = context.getDocumentsByType(&quot;scenes&quot;);</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;documents.forEachAsync(function(doc){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// 
+ Modify document</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;context.markDocumentAsUnsaved(doc);</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}, 
+ function(){</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;context.finishExecution(&quot;Execution 
+ successfully finished!&quot;);</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;});</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>ではプロパティについて見てみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">name</p></li>
+</ul>
+<p>ラノゲツクールMVのメインメニューにおけるエージェントの表示名</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type</p></li>
+</ul>
+<p>内部オブジェクトタイプ。「GSScriptAgent 」でなくてはなりません。</p>
+<p style="font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">category</p></li>
+</ul>
+<p>スクリプトエージェントが追加されるカテゴリー</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">category.name</p></li>
+</ul>
+<p>ラノゲツクールMVのメインメニューにおけるカテゴリーの表示名</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">category.identifier</p></li>
+</ul>
+<p>カテゴリー独自の識別子</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">target</p></li>
+</ul>
+<p>保留中。値は常に「none」です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">dialog</p></li>
+</ul>
+<p>エージェントが実行される前に、ユーザーから入力データをリクエストするためのダイアログ。これがなければ、エージェントは即時的に実行されます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">process.description</p></li>
+</ul>
+<p>進行状況を表すウィンドウで表示されるエージェントの説明（ランタイムでエージェントによって変更可能）</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">process.run</p></li>
+</ul>
+<p>エージェントのロジックを定義するJavaScript機能。次の2つの引数を取ります。<br />
+</p>
+<ul style="list-style: disc;">
+	<li><p style="font-weight: bold;">object<br />
+	<span style="font-weight: normal;">ダイアログプロパティがある場合、ユーザーからの入力データを含みます。そうでない場合は「null」です。</span></p></li>
+	<li><p style="font-weight: bold;">context<br />
+	<span style="font-weight: normal;">ドキュメントやその他のアクションを取得、修正、作成、および削除することができるスクリプトコンテキスト（GSScriptContext）のオブジェクト</span></p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>Objective-Jの使用について</span></p>
+<p>Objective-Jを使用すると、スクリプトエージェントをより確実にコントロールすることができます。<br />
+Objective-JはJavaScriptの上位セットなので、JavaScriptファイルではなくObjective-Jファイルが作成されます。<br />
+Objective-J APIにアクセスできる点を除き、手順は全く同じです。</p>
+</body>
+</html>

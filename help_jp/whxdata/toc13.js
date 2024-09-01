@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"バストアップイメージの表示方法\"><item name=\"定義済みのオブジェクト位置\" url=\"Understanding_Predefined_Position.htm\" /><item name=\"バストアップイメージの表示\" url=\"Understanding_Predefined_Objects.htm\" /></data>";

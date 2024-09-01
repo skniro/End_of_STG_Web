@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>はじめに：エクステンション</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">はじめに：エクステンション</p>
+</div>
+<p><br />
+ラノゲツクールMVには、エディターやゲームエンジン向けに新たな機能を開発して他の人々と共有できる強力なエクステンションシステムがあります。</p>
+<p>エクステンションを開発するには、「表示」 &rarr; 「エクステンション」を開いてください。</p>
+<p>&#160;</p>
+<p><img src="ExtensionEditor.PNG" alt="" style=" border:none; width:100%; max-width:1190px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: Arial, sans-serif;">エクステンションドキュメント</span></p>
+<p>左側にプロジェクトのすべての「エクステンションドキュメント」があります。エクステンションドキュメントはフォルダーを使って自由に整理することができます。</p>
+<p>プロジェクトを保存するたび、すべての編集済みのエクステンションドキュメントが内部JavaScriptオブジェクトにコンパイルされ、構文エラーに関するメッセージが表示されます。</p>
+<p>構文エラーが発生したら、該当するエラーを修正し、もう一度プロジェクトを保存してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>スクリプト/コードエディタ</span></p>
+<p>右側には現在選択されているエクステンションドキュメントの内容を表示する「コードエディタ」があります。ラノゲツクールMVはACEコードエディタを使用しています。</p>
+<p>ACEそのものについて詳しくは、<a href="https://ace.c9.io">www.ace.c9.io</a> を参照してください。フォントサイズなどを変更できるACE設定を開くには、Ctrl 
+ + ,（コンマ）またはCmd + ,（コンマ）を使用します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>エクステンションの作成</span></p>
+<p>ラノゲツクールMVに新しい機能を追加したい場合は、まずはこのガイドを利用するといいでしょう。</p>
+<p>さらなるサポートが必要な場合は、<a href="plugin_doc/index.html">プラグインAPIリファレンス</a>や当社のフォーラムをチェックしてみてください。</p>
+<p>&#160;</p>
+<p>エクステンションを作成するには、「ツール」 &rarr; 「デベロッパーツール」 &rarr; 「エクステンションを作成」でエクステンションコンポーザーを開きます。</p>
+<p>&#160;</p>
+<p>ただし、エクステンションを作成する前に、エディターまたはゲームエンジンに変更を加えてエクステンションを開発する必要があります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>ゲームエンジンの修正</span></p>
+<p>ゲームエンジンに変更を加えるには、「表示」 &rarr; 「スクリプト」のメニューから<a href="GameScript_Getting_Started.htm">スクリプトエディタ</a>を開きます。ここでは変更や削除が可能なすべてのゲームスクリプトが確認できます。</p>
+<p>スクリプトやクラスを拡張する場合、特定のスクリプトに直接変更を加えるのではなく、新規のスクリプトを作成することをおすすめします。</p>
+<p>そうしなければ、エクステンション間でコリジョンが起こることがあります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;">ゲームエディタの修正</span></p>
+<p>ゲームエディタに変更を加えるには、「<span style="font-weight: bold;">表示</span>」 &rarr; 
+ 「<span style="font-weight: bold;">エクステンション</span>」を開きます。</p>
+<p>&#160;</p>
+<p>エクステンションエディタでは、次のエディター要素を作成または変更することができます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">データレコードビュー</p></li>
+</ul>
+<p>データベースのカテゴリーを説明します。1つのカテゴリーデータレコードについて、名前、バックエンドフィールド、UI全体が含まれています。</p>
+<p>「キャラクター」など、すべての既存のカテゴリーを確認、変更、または削除することができます。<br />
+ただし、「&quot;System &quot; DataRecordView」は技術的な理由により、必ずこのビュー内に存在する必要があるため、削除することはおすすめしません。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">シーンコマンド</p></li>
+</ul>
+<p>ユーザーがシーンのロジックを定義するのに使用できる、シーンビューの1つのコマンドを説明します。つまり、ここで新しいコマンドを追加したり、既存のコマンドを変更、削除することもできます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">カスタムビュー</p></li>
+</ul>
+<p>他のビューやシーンコマンドによって、さまざまな方法で使用することのできる独立したビューです。例えば、ポップアップコントロールのポップアップダイアログとして使用したり、</p>
+<p>パーシャルビューとして別のビューに埋め込むのに使用したりすることが可能です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">JavaScriptファイル</p></li>
+</ul>
+<p>定数を定義するためのビューまたはシーンコマンドで使用されます。ランタイムでテキストやその他の種類のロジックを算出したり、デザイン時間中にJSONを作成したりします。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">Objective-Jファイル</p></li>
+</ul>
+<p>カスタムUIのコントロール、リソースパイプラインプロセッサ、より強力なスクリプトエージェント、その他さらにコントロールが必要なものなどを作成する際に使用されます。ファイル名が<span 
+	 style="font-weight: bold;">Objective-Jのクラス名と一致している</span><span>ことが重要です。</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">言語バンドル</p></li>
+</ul>
+<p>ビューのUIやシーンコマンドを異なる言語に翻訳する際に使用されます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>JSONを使用したビューのデザイン</span></p>
+<p>ビューはJSONを使用して定義されます。ですので、テキストやその他ちょっとしたロジックをランタイムで算出する時以外、プログラミングは必要ありません。セクションとUIコントロールを定義し、それらがどのようにデータを処理すべきか、そしてどのバックエンドフィールドにそのデータが書き込まれるべきかを説明すればいいだけです。</p>
+<p>&#160;</p>
+<p>ビューはセクションに分けられます。各セクションには枠とタイトル、表示アイテムのリストを設定できます。アイテムとは、ユーザーがビューとインタラクトできるようにするUIコントロールです。アイテムにはテキストフィールド、チェックボックス、ラジオボタンなど、様々なタイプがあります。詳しいリストについては、<a 
+	 href="plugin_doc/index.html">プラグインAPIリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">実例</p>
+<p>オリジナルのエクステンションを作成する方法について詳しくは、以下の例を参考にしてください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Adding_a_new_database_category.htm">例1：新しいデータベースカテゴリーの追加</a></p>
+<p>エディターのデータベースに新しいカテゴリーを追加する方法を説明します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading" style="font-size: 12pt;"><a href="Example__Adding_a_new_scene_command.htm">例2：新しいシーンコマンドの追加</a></p>
+<p>ラノゲツクールMVには、オリジナルのビジュアルノベルを簡単に制作できる便利なコマンドが多数内蔵されています。ところが作品の複雑さによっては、内蔵のコマンドでは不十分だったり、それらを変更しなくてはならないような特別な状況も起こり得ます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading" style="font-size: 12pt;"><a href="Example__Implementing_a_new_command_on_script-side.htm">例3：スクリプト側での新しいコマンドの実装</a></p>
+<p>上記の例ではエディターに新しいシーンコマンドを追加しました。ところが、そのロジックをまだ実装していないので、この時点でそのシーンコマンドを使ったとしてもゲームには何の効果もありません。コマンドのロジックを実装するには、「表示」 
+ &#160;&rarr; &#160;「スクリプト」を開く必要があります。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example_Create_a_Language_Bundle.htm">例4：言語バンドルの作成</a></p>
+<p>この例では、エクステンションを他の言語に翻訳する言語バンドルを作成します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example_Create_an_Extension.htm">例5：エクステンションの作成</a></p>
+<p>今度はいよいよエクステンションコンポーザーを使用してカードのエクステンションを作成し、他の人々と共有することができるようになります。</p>
+</body>
+</html>

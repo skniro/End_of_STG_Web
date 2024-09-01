@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>定義済みのオブジェクト位置</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.2.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > バストアップイメージの表示方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">定義済みのオブジェクト位置</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">「定</span>義済みの位置」機能を使えば、画面上のキャラクターの位置を決める計算式を設定できます。この機能の一番のメリットは、必要に応じて作品に変更を加えることができる点です。異なるファイルディメンションでアセットを変更する必要がある時や、キャラクターを設置する位置を変えたくなった場合などに便利です。通常なら、座標を使用したコマンドで見つけることができます。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p><img src="PredefinedObjectPosition.jpg" alt="" style=" border:none; width:100%; max-width:842px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>既定のオブジェクト位置を参照、修正、または作成する場合、「<img src="icon_database_view.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">データベース</span><span 
+	 style="font-family: Arial, sans-serif;">」</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr;</span><span 
+	 style="font-family: Arial, sans-serif;">「</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;"><img src="icon_database_system.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />システム</span><span 
+	 style="font-family: Arial, sans-serif;">」の順に開いてください。</span></p>
+<p>&#160;</p>
+<p class="Sub_Heading">オブジェクトについて</p>
+<p>既定のオブジェクト位置には、&#160;「左上」「上」「右上」「左下」「下」「右下」「左」そして「中央」があります。これは対象のオブジェクトのアンカーポイントのためです。次のイメージをご覧ください。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="AnchorPoints.png" alt="" style=" border:none; width:100%; max-width:223px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+<p>キャラクターが画面の中央にいる場合、「上」と「下」、「中央」は、同じに見えますが違いがあります。次の画像を見てみましょう。エースを画面に登場させたいとき、彼の体のプロキシミティはこのように設定されます。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="topcenterbottomaceimage.jpg" alt="" style=" border:none; width:100%; max-width:198px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+<p>つまり、エースの頭を見せたい場合、左上、上、右上の座標を選択することになります。体にフォーカスさせる場合は、中央の座標を使います。このとき、表示のプロキシミティは、画像の幅と高さにも依存します。そのため、画像の透明な領域についても考慮する必要があります。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">計算式の分解</p>
+<p>キャラクターの画像のどの部分がどう表示されるのか説明しましたが、画面上の位置についてはどうでしょうか？計算式の例を見ると、複雑そうに見えますが、予想よりも複雑な話ではないはずです。「上」の計算式を詳しく見てみましょう。</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2, y: 0 &#160;}</pre>
+<p class="SubSubHeading">計算式の仕組み</p>
+<p>まず、画面の幅を知る必要があります。デフォルトの解像度は720p（1280x720）です。次に、画面を2で割ります。すると640という数字になりますね。</p>
+<p>&#160;</p>
+<p>オブジェクト（キャラクター）を表示する場合、すぐに中央に移動されるわけではありません。次の画像のように表示されます。</p>
+<p>&#160;</p>
+<p>&#160;<img src="ScreenExplain.png" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>オブジェクトを中央に表示したいので、オブジェクトを2で割ります。その値を画面の残りの半分から引きます。この時点での疑似的なコード式では、次のようになっているはずです。</p>
+<pre>
+x = (Screen Width / 2) - (Object Width / 2)</pre>
+<p>オブジェクトにズームしないことを前提にすると、次の画像のように表示されます。コードは視覚的にこのように見えます。</p>
+<p>&#160;</p>
+<p><img src="ScreenExplain2.png" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="SubSubHeading">最初から自分で計算式を書く場合</p>
+<p>では、最初からこの式を自分で書いて簡素化しましょう。算数における計算の順序の決まり、PEMDAS（<span style="color: rgb(34, 34, 34); 
+															 font-family: Arial, sans-serif; 
+															 font-size: 16px; 
+															 font-variant-ligatures: normal; 
+															 font-variant-caps: normal; 
+															 orphans: 2; 
+															 widows: 2; 
+															 -webkit-text-stroke-width: 0px; 
+															 background-color: #ffffff; 
+															 display: inline	 ! important ; 
+															 float: none; 
+															 font-weight: bold;">P</span><span 
+	 style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; 
+	 widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 display: inline	 ! important ; float: none;">arentheses = 括弧、</span><span 
+	 style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; 
+	 widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 display: inline	 ! important ; float: none; font-weight: bold;">E</span><span 
+	 style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 16px; 
+	 font-variant-ligatures: normal; font-variant-caps: normal; orphans: 2; 
+	 widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 display: inline	 ! important ; float: none;">xponents = 指数、</span></p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; background-color: #ffffff; display: inline	 ! important ; 
+	 color: rgb(34, 34, 34); orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;"><span 
+	 style="font-weight: bold;">M</span>ultiplication = 乗算、<span style="font-weight: bold;">D</span>ivision 
+ = 除算、<span style="font-weight: bold;">A</span>ddition = 加算、<span style="font-weight: bold;">S</span>ubtraction 
+ = 減算）を思い出してください。</p>
+<p style="font-family: Arial, sans-serif; font-size: 16px; font-variant-ligatures: normal; 
+	 font-variant-caps: normal; background-color: #ffffff; display: inline	 ! important ; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px;">&#160;</p>
+<p>まずは次のように計算式を書いてみましょう。</p>
+<pre>
+return { &#160;}</pre>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">return</span> - 計算式の結果をコマンドの座標項目に導くことを意味します。</li>
+	<li><span style="font-weight: bold;">波括弧（{ }）</span><span>- ここにパラメータとその計算式を挿入します。</span></li>
+</ul>
+<pre>
+return { x: &#160;}</pre>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">x:</span> - コマンドのX座標を意味します。これがここでは最初のパラメータになります。</li>
+</ul>
+<pre>
+return { x: (Graphics.width - object.dstRect.width) / 2 }</pre>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">Graphics.width</span> <span>- 
+	 ゲーム内の画面幅</span></li>
+	<li><span style="font-weight: bold;">object.dsRect.width</span> <span>- 
+	 オブジェクトの幅</span></li>
+	<li style="font-weight: bold;"><span style="font-family: Arial, 'Arial New', 'ＭＳ Ｐ ゴシック', sans-serif; 
+										 font-size: 14px; font-variant-ligatures: normal; 
+										 font-variant-caps: normal; orphans: 2; 
+										 widows: 2; -webkit-text-stroke-width: 0px; 
+										 background-color: rgb(253, 253, 253); 
+										 text-decoration-style: initial; 
+										 text-decoration-color: initial; 
+										 display: inline	 ! important ; 
+										 float: none;">除算演算子</span><span> 
+	 （/）</span><span style="font-weight: normal;">- 結果を指定された数値（ここでは2）で割ります。</span></li>
+</ul>
+<p>&#160;</p>
+<p>今度は、後からオブジェクトをズームインまたはズームアウトしたいとします。そうするとこの計算式は使用できません。オブジェクトを拡大または縮小すると、幅や高さも変わるのでそのオブジェクトの位置が変わります。そこで、もう1つ変数を使用する必要があります。</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2 }</pre>
+<ul style="list-style: disc;">
+	<li style="font-weight: bold;">object.zoom.x <span style="font-weight: normal;">- 
+	 X軸の画像の大きさの倍率が考慮されます。</span></li>
+</ul>
+<p>&#160;</p>
+<p>最後に、オブジェクトのY座標を確認します。今回の位置は真ん中の上になるので、0を入力するだけです。</p>
+<pre>
+return { x: (Graphics.width - object.dstRect.width * object.zoom.x) / 2, y: 0 &#160;}</pre>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">y</span> <span>-</span>&#160;コマンドのY座標を意味します。これがここでは2つ目のパラメータになります。</li>
+	<li><span style="font-weight: bold;">コンマ（,）</span><span>- パラメータを区切ります。ここではX座標とY座標を区切っています。</span></li>
+</ul>
+<p>&#160;</p>
+<p>以上です！ビジュアルノベルの中で使う既定位置の他の例については、「<a href="Understanding_Predefined_Objects.htm">バストアップ画像の表示</a>」を参照してください。</p>
+</body>
+</html>

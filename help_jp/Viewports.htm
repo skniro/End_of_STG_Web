@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ビューポート</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_8";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">ビューポート</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラ</span>ノゲツクールMVエンジンのソースコードを眺めていると、gs.Viewport 
+ と呼ばれるものに遭遇するでしょう。ラノゲツクールMV では、1 つのビューポートにスプライトやタイリングスプライトなどのグラフィックオブジェクトのリストが含まれ、それらのレンダリングを制御しています。例えば 
+ Graphics.viewport はルートビューポートです。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲーム内カメラとしてビューポートを使用する</p>
+<p>&#160;</p>
+<p>ビューポートは画面上の領域を定義します。 Graphics.viewport の場合、その領域が画面全体を占めます。すべての子オプジェクトはその領域に関連します。例えばビューポートが 
+ 0,0 でなく 100,100 から開始した場合、(0,0) の位置の gs.Sprite は画面上の 100,100 の位置に現れます。子オブジェクトの位置はビューポートの領域に関連しているためです。</p>
+<p>&#160;</p>
+<p>さらに、ビューポートはそれ自身グラフィックオブジェクトであり、移動や回転、色付けなどが可能です。回転などの変形に関して興味深いのは、それが自動的にすべての子オブジェクトにも影響するという点です。したがって、ビューポートが移動すれば、子オブジェクトもすべて移動します。ビューポートが中心で回転すれば、すべての子オブジェクトもビューポートの中心の周りを回転します。これによってビューポートをゲーム内カメラとして利用し、ゲームシーンをスクロールすることができます。</p>
+<p>&#160;</p>
+<p>ビューポートを色付けすると、ビューポートの領域だけが色付けされます。Graphics.viewport の場合、ビューポートにセピアトーンを設定すると、画面全体がセピアトーンに変わり、特殊効果として使用できます。早速試してみましょう。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a background sprite and assign it to the root-viewport.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@background = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Assign &quot;Bench_Morning&quot; bitmap to it.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@background.bitmap = ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set srcRect to display entire bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@background.srcRect = new gs.Rect(0, 0, @background.bitmap.width, @background.bitmap.height)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a character sprite and assign it to the root-viewport
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@character = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Assign &quot;JaneDate_Normal&quot; bitmap to it.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@character.bitmap = ResourceManager.getBitmap(&quot;Graphics/Characters/JaneDate_Normal&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set srcRect to display entire bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@character.srcRect = new gs.Rect(0, 0, @character.bitmap.width, @character.bitmap.height)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Place character centered on screen.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@character.x = (Graphics.width - @character.bitmap.width) / 2
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the viewport&amp;apos;s anchor point to it&amp;apos;s center.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Graphics.viewport.anchor.x = 0.5
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Graphics.viewport.anchor.y = 0.5
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the viewport&amp;apos;s tone to sepia
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Graphics.viewport.tone.set(35, -35, -70, 255)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Zoom the viewport to 150%
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Graphics.viewport.zoomX = 1.5
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Graphics.viewport.zoomY = 1.5
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the background image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the character image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Characters/JaneDate_Normal&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>上の例を実行すると、背景にキャラクターがが表示され、いずれもセピアトーンで色付けされ、拡大されているのがわかります。ここで行っているのは、まずルートビューポートをセピアに色付けし、続いてそこに拡大を追加しています。もちろんこの種の拡大/縮小はアニメーションと組み合わせることも可能で、ゲーム内カメラの動きをなめらかに表現することができます。</p>
+<p>&#160;</p>
+<p>ルートビューポートを背景とキャラクターの両スプライトの constructor に渡しているため、それらはルートビューポートに属しています。ビューポートの角度のプロパティを変更すれば、シーン全体を回転させることができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">カスタムビューポート</p>
+<p>&#160;</p>
+<p>場合により、カスタムビューポートの作成が必要なことがあります。例えば、すべてのキャラクターと背景を 1 つのビューポートにまとめ、すべてのメッセージとゲーム内ユーザーインターフェイスを別のビューポートにまとめることができます。そうすると、シーンは色付けしたいけれどもゲーム内ユーザーインターフェイスは通常のままにしたい場合に、キャラクターと背景を含むビューポートだけを色付けすればいいわけです。同じことはゲーム内カメラにも言えます。例えば、シーンをスクロールしたり拡大したくても、ゲーム内ユーザーインターフェイスはその影響を受けたくない場合があるでしょう。</p>
+<p>&#160;</p>
+<p>このような場合に、カスタムビューポートを作成する意味があります。gs.Viewport クラスのインスタンスを作成するだけで簡単にカスタムビューポートを作成できます。スプライトのようなグラフィックオブジェクトを作成したら、そのグラフィックオブジェクトの 
+ constructor にカスタムビューポートオブジェクトを渡すだけです。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a custom viewport
+&#160;&#160;&#160;&#160;@viewport = new gs.Viewport(0, 0, Graphics.width, Graphics.height, Graphics.viewport)
+&#160;&#160;&#160;&#160;# Set the viewport&amp;apos;s anchor point to it&amp;apos;s center.
+&#160;&#160;&#160;&#160;@viewport.anchor.x = 0.5
+&#160;&#160;&#160;&#160;@viewport.anchor.y = 0.5
+&#160;&#160;&#160;&#160;# Set the viewport&amp;apos;s tone to sepia
+&#160;&#160;&#160;&#160;@viewport.tone.set(35, -35, -70, 255)
+&#160;&#160;&#160;&#160;# Zoom the viewport to 150%
+&#160;&#160;&#160;&#160;@viewport.zoomX = 1.5
+&#160;&#160;&#160;&#160;@viewport.zoomY = 1.5
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a background sprite and assign it to the root-viewport.
+&#160;&#160;&#160;&#160;@background = new gs.Sprite(@viewport)
+&#160;&#160;&#160;&#160;# Assign &quot;Bench_Morning&quot; bitmap to it.
+&#160;&#160;&#160;&#160;@background.bitmap = ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)
+&#160;&#160;&#160;&#160;# Set srcRect to display entire bitmap
+&#160;&#160;&#160;&#160;@background.srcRect = new gs.Rect(0, 0, @background.bitmap.width, @background.bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a character sprite and assign it to the root-viewport
+&#160;&#160;&#160;&#160;@character = new gs.Sprite(@viewport)
+&#160;&#160;&#160;&#160;# Assign &quot;JaneDate_Normal&quot; bitmap to it.
+&#160;&#160;&#160;&#160;@character.bitmap = ResourceManager.getBitmap(&quot;Graphics/Characters/JaneDate_Normal&quot;)
+&#160;&#160;&#160;&#160;# Set srcRect to display entire bitmap
+&#160;&#160;&#160;&#160;@character.srcRect = new gs.Rect(0, 0, @character.bitmap.width, @character.bitmap.height)
+&#160;&#160;&#160;&#160;# Place character centered on screen.
+&#160;&#160;&#160;&#160;@character.x = (Graphics.width - @character.bitmap.width) / 2
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a square object which could be used to display a message for example.
+&#160;&#160;&#160;&#160;# We assign it to the root-viewport so it does not get affected by the zooming.
+&#160;&#160;&#160;&#160;@square = new gs.Quad(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Set color to transparent black
+&#160;&#160;&#160;&#160;@square.color = new gs.Color(0, 0, 0, 100)
+&#160;&#160;&#160;&#160;# Place it at the bottom of the screen
+&#160;&#160;&#160;&#160;@square.rect.set(0, Graphics.height - 150, Graphics.width, 150)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()</code></pre>
+<p>ここでは独自の gs.Viewport オブジェクトを作成して両スプライトの constructor に渡しています。矩形のオブジェクトも作成していますが、それにはルートビューポートを渡しています。テストしてみるとキャラクターと背景のスプライトだけが影響を受けていることがわかります。矩形オブジェクトは変更しません。これはメッセージを表示するために使用したいので、ゲーム内ユーザーインターフェイスの一部となっており、拡大縮小したくはありません。ビューポートはそれ自身がグラフィックオブジェクトであるため、既定のルートビューポートは既定の 
+ constructor に渡す必要があります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ルートビューポート</p>
+<p>&#160;</p>
+<p>ルートビューポートは Graphics.viewport 経由でアクセスできる特別なビューポートです。他のビューポートと異なり、どのビューポートをグラフィックオブジェクトの 
+ constructor に渡しても、ルートビューポートは自動的にゲームのすべてのグラフィックオブジェクトを含みます。したがってカスタムビューポートを作成しグラフィックオブジェクトをそれに割り当てても、そのグラフィックオブジェクトは自動的にルートビューポートにも追加されます。 
+ </p>
+<p>&#160;</p>
+<p>これはルートビューポートがグラフィックオブジェクトの実際のレンダリングを管理しているためです。</p>
+</body>
+</html>

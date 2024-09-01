@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>はじめに：基本エンジン</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.5.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エンジンに関するドキュメンテーション" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">はじめに：基本エンジン</p>
+</div>
+<p>&#160;</p>
+<p>このトピックでは、ラノゲツクールMVの基本エンジンについて説明します。<br />
+基本エンジンの上位で動作するVisual Novelエンジンについて説明した「<a href="GameScript_Getting_Started.htm">ゲームスクリプト</a>」のページと混同しないように注意してください。</p>
+<p>&#160;</p>
+<p>基本エンジン（単に「エンジン」とも呼ばれます）は、基本的な2Dグラフィック、動画、オーディオ、入力処理に必要なすべての機能を備えています。</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">重要事項</p>
+<p>基本エンジンは、プラットフォームによって、また将来的なアップデートや修正によって変更される可能性がありますが、現時点ではHTML5によってのみ実装できます。<br />
+ただし、保証はありませんが、将来的には別のプラットフォームがサポートされ、同じAPIを使用した基本エンジンの実装が導入される予定です。</p>
+<p>&#160;</p>
+<p>基本エンジンの編集、パッチ、特定のクラスやメソッドの置き換え／上書き、さらには文書化されていないまたはプライベートなもしくは保護された属性／メソッド／クラスへのアクセスは<br />
+<span style="font-weight: bold;">推奨されません</span>。これらを行うと、アップデートの互換性やクロスプラットフォームのサポートが失われる可能性があります。<br />
+ただし、ユーザーは自己の判断でこれらを行うことができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>スクリプトでのDOM、jQuery、HTML5などのAPIへのアクセス</span></p>
+<p>DOMやjQueryはゲームがHTML5環境で実行されている場合にのみアクセス可能で、特定のプラットフォームによってはアクセスできません。<br />
+ただし、現時点で、DOM／jQuery／HTML5はサポートされているすべてのプラットフォームで利用可能であり、当社はHTML5を維持する予定です。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">OpenGLコンテキストへのアクセスと独自のシェーダーの書き込み</p>
+<p>OpenGLコンテキストへのアクセスと独自のシェーダーの書き込みをすることは可能ですが、各プラットフォームでのレンダリングにOpenGLが使用されるという保証はありません。<br />
+ただし、現時点で、&#160;OpenGL／WebGLはサポートされているすべてのプラットフォームで使用されているため、<br />
+gs.Graphics.contextを使用してOpenGLコンテキストにアクセスし、GLSLを使用して独自のシェーダーを書き込むことができます。<br />
+独自のGLSLシェーダー効果を実装する方法の詳細については、「<a href="GameScript_Getting_Started.htm">スクリプトエディター</a>」のページで「<span 
+	 style="font-weight: bold;">Effects &rarr; CircularDistortionEffect</span>」の例を参照してください。</p>
+<p>&#160;</p>
+<p>ただし、ゲームはOpenGLやシェーダーをサポートしていないプラットフォームでは起動しない可能性があるため、注意が必要です。</p>
+</body>
+</html>

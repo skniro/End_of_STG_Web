@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>セクションエクステンション</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">セクションエクステンション</p>
+</div>
+<p>&#160;</p>
+<p><a href="Example__Adding_a_new_database_category.htm">カードエクステンションの例</a>では、まったく新しいデータベースのカテゴリーを追加しました。しかし、たとえば新しい選択肢を「システム」に追加する時など、</p>
+<p>既存のデータベースカテゴリーを修正するのみにとどめるほうが理にかなっている場合があります。そうした場合は「システム」カテゴリーを編集すればよいだけですが、</p>
+<p>他のエクステンションとのコリジョンが起こる可能性があります。こうしたコリジョンを避けるために、セクションエクステンションを作成することができます。</p>
+<p>&#160;</p>
+<p>セクションエクステンションは、既存のUIビューに新しいセクション（複数可）を追加することのみを目的としたエクステンションです。セクションエクステンションを作成するには、</p>
+<p>セクションエクステンションによってインストールしたいすべてのセクションに対し、UIDプロパティを使って個別の識別子を追加する必要があります。</p>
+<p>「システム」データベースカテゴリーに入れたセクションの例として、次を参照してください。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Custom 
+ Section&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;uid&quot;: &quot;ext.CustomSystemSection&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;items&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSLabel&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: 
+ &quot;Custom Field:&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;group&quot;: 
+ &quot;labels&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSTextField&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [1, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;ext.customValue&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>「システム」カテゴリーに当該のセクションのみを追加するセクションエクステンションを作成するには、エクステンションコンポーザーを開き、</p>
+<p>「システム」のデータレコードビューをエクステンションに追加します。次に、「あなたのエクステンション」ツリービューの「システム」データレコードビューで右クリックします。</p>
+<p>「プロパティ」を選択すると、次のようなポップアップウィンドウが表示されます。</p>
+<p>&#160;</p>
+<p><img src="InstallSections.png" alt="" style=" border:none; width:100%; max-width:512px;" border="0" /></p>
+<p>「セクションのみインストール」にチェックを入れ、「&lt;New&gt;」をダブルクリックします。その後、ドロップダウン項目から</p>
+<p>「Custom Section」を選択し、「OK」をクリックします。</p>
+<p><img src="InstallSections2.png" alt="" style=" border:none; width:100%; max-width:512px;" border="0" /></p>
+<p>もう一度「OK」をクリックすると完了です。</p>
+<p>&#160;</p>
+<p>これでエクステンションをインストールすれば、選択したセクションのみが「システム」カテゴリーにインストールされます。「セクションのみインストール」にチェックを入れない場合、</p>
+<p>「システム」カテゴリー全体が差し替えられます。これは既定の動作ですが、この例では必要ありません。</p>
+<p>&#160;</p>
+<p>ご覧のように、セクションエクステンションにより、カスタムセクションを同じUIビューに追加することで、複数の独立したエクステンションで同じUIビューに修正を加えることが可能になります。</p>
+<p>セクションプラグインを開発している場合、より適切にコントロールするために独自の属性名をつけるとよいでしょう。そうしなければ、同じ項目に2つ以上のエクステンションがデータを書き込んでいる場合、</p>
+<p>属性名のコリジョンが起こることがあります。</p>
+</body>
+</html>

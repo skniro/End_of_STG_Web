@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>カスタムリソースプロセッサー</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">カスタムリソースプロセッサー</p>
+</div>
+<p><br />
+ラノゲツクールMVはデフォルトで、最も一般的なグラフィックとオーディオのフォーマットをサポートしています。<br />
+しかし、複雑なエクステンションの開発に取り組んでいる場合、新しいリソースまたはファイルタイプを追加しなければならないことがあります。<br />
+<a href="http://www.cappuccino-project.org/learn/objective-j.html">Objective-J</a>を使ってカスタムのリソースパイプラインプロセッサーを定義すれば、そうした作業も簡単に行えます。</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">「エクステンション」&rarr; 
+ 「Scripts」 &rarr; 「Resource Processors」 &rarr; 「GSFntResourcePipelineProcessor 
+ 」</span>に</p>
+<p>リソースプロセッサーの例があります。ここでは、.fntファイルもサポートされています。詳しくはObjective-J APIリファレンスを参照してください。</p>
+<p>また、わからないことがあれば、どうぞフォーラムをご利用ください。</p>
+<p>&#160;</p>
+<p>リソースマネージャーでカスタムのメインフォルダーを作成するには、エクステンションのインストールスクリプトの中で&lt;project-dir&gt;/resources/folders.jsonを編集します。</p>
+<p>&#160;</p>
+</body>
+</html>

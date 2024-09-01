@@ -1,0 +1,1052 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ピクチャー</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_10";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">ピクチャーコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「ピクチャー」コマンドでは、ピクチャーやイメージマップ、 
+ アニメーションなどさまざまな演出を追加し、ダイナミックで没入感のあるシーンを作成することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Picture" id="Show_Picture"></a>「ピクチャーを表示」</p>
+<p style="font-family: Arial, sans-serif;">シーンにピクチャーを追加します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」 
+	 </span>- 追加するピクチャーのインデックス（ID）を設定し、レイヤーの順番を決定します。<br />
+	数値入力ボックスの横にある「...」をクリックして、変数を使用することもできます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: bold;">「ファイル」 <span style="font-weight: normal;">- 「Graphics/Pictures」フォルダから、使用するピクチャーを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「アンカー」<span style="font-family: Arial, sans-serif; font-weight: normal;"> - </span><span style="font-family: Arial, sans-serif; font-weight: normal;">ピクチャーのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - ピクチャーの位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム 
+	 &rarr; 既定のオブジェクト位置」に設定された既定の位置の1つを選択できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用して位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span>&#160;- 座標で位置を指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 登場アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 登場アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - ピクチャーの表示方法に影響するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- ピクチャーの登場アニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からピクチャーを登場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold; font-size: 12pt;">「ブレンド」</span>&#160;- 
+		 ブレンド機能を用いてピクチャーをフェードインさせます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「マスキング」<span 
+		 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてピクチャーをフェードインさせます。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「スムーズ」<span 
+			 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 40px;"><img src="showpicturemask.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 margin-left: 0px;"><span style="font-weight: bold;">「表示」</span> 
+	 - ピクチャーの表示順とアンカーを指定することができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「Z オーダー」</span>&#160;- 写真の表示順を設定します。数値入力ボックスの横にある「...」をクリックして、変数を使用することもできます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブレンドモード」</span> - ピクチャーを表示させる際に使用するブレンドの種類を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「通常」</span>&#160;- 標準のブレンドモードです。色を混ぜることなく、ピクチャーをシンプルに画面上に表示します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold; text-decoration: none; ">「加算」</span>&#160;- 
+		 表示するピクチャーをより明るくします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「減算」</span>&#160;- 表示するピクチャーをより暗くします。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビジュアルタイプ」</span> - ピクチャーを表示させる際に使用するロジックの種類を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「イメージ」</span> - 通常の単一画像として画面に表示します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「タイル状」</span> - 指定した<span 
+		 style="font-weight: bold;">サイズ</span>のスペースに、タイル状に敷き詰めます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「フレーム」</span> - ゲーム内のウィンドウとして便利なフレームを、指定した<span 
+		 style="font-weight: bold;">サイズ</span>で作成します。<br />
+		フレームの詳細については、「<a href="Resource_Standards.htm">リソースの基準</a>」を参照してください。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「厚み」</span> - フレームの厚みをピクセル単位で設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「角のサイズ」</span> <span>- フレームの角のサイズをピクセル単位で設定します。</span></p></li>
+		</ul></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「3-パーツイメージ」</span> - ボタンなどに便利な3-パーツイメージを、指定した<span 
+		 style="font-weight: bold;">サイズ</span>で作成します。<br />
+		3-パーツイメージの詳細については、「<a href="Resource_Standards.htm">リソースの基準</a>」を参照してください。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「方向」</span> - 3-パーツイメージを引き延ばす方向を設定します。<span 
+			 style="font-weight: bold;">「垂直」</span>または<span style="font-weight: bold;">「水平」</span>が選択できます。</p></li>
+		</ul></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「四角形」</span> - 選択した画像の内容を無視し、指定した<span 
+		 style="font-weight: bold;">色</span>と<span style="font-weight: bold;">サイズ</span>で、メッセージの背景などに使用できる四角形を表示します。<br />
+		画像と比較してのメリットとしては、メモリー消費が非常に少ない点が挙げられます。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「色」</span> <span>- 四角形の色を設定します。</span></p></li>
+		</ul></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「サイズ」</span> - ピクチャーのサイズを設定します。<span style="font-weight: bold;">「ビジュアルタイプ」</span>を<span 
+	 style="font-weight: bold;">「イメージ」</span>に設定している場合は機能しません。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「自動」</span> - 選択したピクチャーのサイズと同じになるように設定されます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「設定」</span>&#160;- ピクチャーのサイズを指定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「幅」</span> - ピクチャーの幅を設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「高さ」</span> - ピクチャーの高さを設定します。</p></li>
+		</ul></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビューポート」</span>&#160;- ピクチャーに割り当てられるビューポートです。ビューポートの設定次第で、ピクチャーがカメラの移動や画面効果に影響を受けるかどうかが決まります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーン」</span> - ピクチャーをシーンビューポートに割り当て、シーンに属するオブジェクトのように動作させます。そのため、カメラの移動や画面効果に影響を受けます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - ピクチャーをユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br>そのため、カメラの移動や画面効果に影響を受けません。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Picture" id="Move_Picture"></a>「ピクチャーを移動」</p>
+<p style="font-family: Arial, sans-serif;"><span>ピクチャー</span>を指定した位置に移動させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 移動させるピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - ピクチャーの移動先を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span> - 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用して位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> - 座標で位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 移動アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Picture" id="Tint_Picture"></a>「ピクチャーを色付け」</p>
+<p style="font-family: Arial, sans-serif;">表示されているピクチャーの色調を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 色調を変更するピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色調」</span> 
+	 - 色調コントローラーを用いてピクチャーの色調を変更します。「赤」「緑」「青」の色調（-255～255）を調整することが可能です。<br />
+	グレイスケールフィルターを強さを設定する際は「灰（0～255）」を調整します。値が大きくなるほど、色の全体的な強度が高まります。<br />
+	色調コントローラーの下部にある「通常」「ダーク」「セピア」「モーニング」「ナイト」のボタンを押すと、<br />
+	それぞれの名称で表された色調の値をすぐに適用できます。「通常」ボタンは元の色調を復元します。ウィンドウ上部のプレビューエリアで色調の変化を確認できます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 色調変化アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 色調変化アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Flash_Picture" id="Flash_Picture"></a>「ピクチャーを点滅」</p>
+<p style="font-family: Arial, sans-serif;">指定した色で瞬時にピクチャー全体を覆い、徐々に元の色に戻していきます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 点滅させるピクチャーのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色」</span> 
+	 - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、点滅する際の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 点滅アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 点滅アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Picture"></a>「ピクチャーを回転」</p>
+<p style="font-family: Arial, sans-serif;">指定した速度や方向でピクチャーを回転させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 回転させるピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「方向」</span> 
+	 - ピクチャーの回転方向（時計回り／反時計回り）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - 回転速度を設定します。数値が高いほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 回転アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 回転アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Picture" id="Erase_Picture"></a>「ピクチャーを消去」</p>
+<p style="font-family: Arial, sans-serif;">シーンに表示されているピクチャーを消去します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 画面から削除するピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - ピクチャーが画面から消えるアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アニメーション」</span>&#160;- 
+	 ピクチャーのアニメーションを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下へとピクチャーを撤去します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてピクチャーをフェードアウトさせます。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「マスキング」<span 
+	 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてピクチャーをフェードアウトさせます。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「スムーズ」<span 
+		 style="font-weight: normal;"> - マスクの外縁の滑らかさを設定します。以下は、スムーズが「0（最小）」の場合と「255（最大）」の場合を比較したものです。</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="pictureerase.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;">&#160;</p>
+<p class="Sub_Heading"><a name="Crop_Picture" id="Crop_Picture"></a>「ピクチャーをトリミング」</p>
+<p style="font-family: Arial, sans-serif;">ピクチャーのウィンドウを調整することで、元のムービーファイルを直接編集することなく、自由にピクチャーを表示させることができます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- トリミングするピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><b style="mso-bidi-font-weight: normal;">「X」</b> 
+	 - トリミングを開始する場所を、ピクチャーの左（または右）から、Xに設定した数値（ピクセル）まで移動した地点に設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「Y」</b> 
+	 - トリミングを開始する場所を、ピクチャーの上（または下）から、Yに設定した数値（ピクセル）まで移動した地点に設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「幅」<span 
+	 style="font-weight: normal;"> - 「X」で設定した地点から始まるウィンドウの幅を設定し、その部分をトリミングします。</span></b></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「高さ」<span 
+	 style="font-weight: normal;"> - 「Y」で設定した地点から始まるウィンドウの高さを設定し、その部分をトリミングします。</span></b></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="croppic.jpg" alt="" style=" border:none; width:100%; max-width:469px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Picture" id="Blend_Picture"></a>「ピクチャーをブレンド」</p>
+<p style="font-family: Arial, sans-serif;">指定した不透明度までピクチャーをブレンドします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」<span style="font-weight: normal;"> 
+	 - ブレンドするピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「不透明度」</span> - 不透明度を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> ブレンドアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ブレンドアニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Picture" id="Zoom_Picture"></a>「ピクチャーを拡大／縮小」</p>
+<p style="font-family: Arial, sans-serif;">ピクチャーを拡大／縮小します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 拡大／縮小するピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「拡大／縮小 X」</b> 
+	 - 水平方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「拡大／縮小 Y」</b><span 
+	 style="font-weight: bold;"> </span>- 垂直方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> ピクチャーを拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ズームアニメーションが完了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Picture" id="Mask_Picture"></a>「ピクチャーをマスク」</p>
+<p style="font-family: Arial, sans-serif;">ピクチャーにマスクを適用します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「番号」 
+	 <span style="font-weight: normal;">- マスキングするピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「ファイル」 
+	 <span style="font-weight: normal;">- ピクチャーに適用するマスクファイルの種類を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「ピクチャー」&#160;<span 
+	 style="font-weight: normal;">- 「Graphics/Masks」フォルダから、使用するマスク画像を選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「ムービー」&#160;<span 
+	 style="font-weight: normal;">- マスクとして使用するムービーを選択します。.webm形式のムービーをあらかじめ「Movies」にインポートしておく必要があります。<br />
+	設定したムービーファイルに色彩情報が格納されている場合であっても、赤のカラーチャンネルしか使用されません。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「種類」<span 
+	 style="font-weight: normal;"> - マスキングの種類を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「静的」</span>&#160;- 
+	 アルファチャンネルマスクを重ねます。<br />
+	<img src="characterstaticmask.jpg" alt="" style=" border:none; width:100%; max-width:391px;" border="0" /></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「オフセット-X」</span>&#160;- 設定した値に応じて、マスキングが左右に移動します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「オフセット-Y」</span>&#160;- 設定した値に応じて、マスキングが上下に移動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「動的」</span>&#160;- 
+	 マスキングで、ピクチャーの特定の部分を描写します。<br />
+	<img src="characterdynamicmask.gif" alt="" style=" border:none; width:100%; max-width:388px;" border="0" /></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「値」</span>&#160;- 「0」～「255」で任意の値（ピクセル）を設定することで、マスキングが表示される部分を調整できます。「0」の場合、マスキングは一切描写されません。値が大きくなればなるほど、マスキングの描写範囲が広くなります。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「スムーズ」</span>&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold; margin-left: 0px;"><img src="charactervague0.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /> 
+ <img src="charactervague255.png" alt="" style=" border:none; width:100%; max-width:540px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - マスキングアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- マスキングアニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「効果」</span></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Image_Map" id="Show_Image_Map"></a>「イメージマップを表示」</p>
+<p class="MsoNormal">イメージマップを作成し、ユーザーが操作できるエリアを設定します。イメージマップとピクチャーは、同じインデックス（ID）の空間を共有しています。<br />
+そのため、「<a href="#Rotate_Picture">ピクチャーを回転</a>」や「<a href="#Zoom_Picture">ピクチャーを拡大／縮小</a>」を除く「ピクチャー」コマンドはすべて、イメージマップにも適用できます。</p>
+<p class="MsoNormal"><img src="imagemap.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「数」</span> 
+	 -<span style="font-weight: bold;"> </span>イメージマップのインデックス（ID）を設定します。複数のイメージマップを扱う際に必要です。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「位置」</span><span 
+	 style="font-family: Arial, sans-serif;"> - イメージマップの位置を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用して位置を設定します。配置の精度をより高めるために、背景を設定することもできます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span>&#160;- 座標で位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「ホットスポット」</b> 
+	 - ユーザーの操作やカーソルを検出するエリアを設定します。ホットスポットは追加・削除・移動することが可能です。</p></li>
+</ul>
+<p class="MsoNormal"><img src="imagemap-a.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">（1）「ホットスポットを追加」</span> 
+	 - イメージマップにホットスポットを追加します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">（2）「ホットスポット」</span> 
+	 - 「状態」の設定に応じて、マウスオーバー画像／選択画像／非選択画像が表示されるインタラクティブなエリアを追加します。<br />
+	ダブルクリックすると、サイズの変更やプロパティの設定ができます。</p></li>
+	<li><p class="MsoNormal"><span style="font-weight: bold;">「ホットスポットのプロパティ」</span> 
+	 - イメージマップのホットスポットに関する設定が可能です。このウィンドウは、ホットスポットをダブルクリックすると開くことができます。<br />
+	.<img src="HotspotProps.png" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「位置とサイズ」</span> 
+	 - ホットスポットの座標やサイズを調整します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「X」</span> 
+		 - 水平の位置を指定します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「Y」</span>&#160;- 
+		 垂直の位置を指定します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「幅」</span>&#160;- 
+		 幅を指定します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「高さ」</span>&#160;- 
+		 高さを指定します。</p></li>
+	</ul></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「設定」</span> 
+	 - ホットスポットをクリックした時に実行されるイベントを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「移動」</span>&#160;- 
+		 ラベルに移動します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「共通イベントを呼び出す」</span>&#160;- 共通イベントを呼び出します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「スイッチにバインド」</span>&#160;- 
+		 ホットスポットの選択／非選択ステータスを、指定したスイッチ変数に保存します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「有効化状態をバインド」</span>&#160;- ホットスポットの有効／非有効ステータスを、指定したスイッチ変数に保存します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「バインド値」</span>&#160;- ホットスポットをクリックした際に、指定した数値変数に任意の数値を保存します。</p></li>
+	</ul>
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「イメージマップを完了」</span>&#160;- 「イメージマップ」コマンドを終了し、次のコマンドを実行します。<br />
+		イメージマップを画面から消去するには、「イメージマップを消去」コマンドを呼び出す必要があります。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">（3）「ホットスポットを削除」</span> 
+	 - イメージマップからホットスポットを削除します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 - イメージマップを表示するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「状態」</span> 
+	 - 「ベース」「マウスオーバー」「非選択」「選択」「マウスオーバーと選択」の、各状態で表示させるイメージマップを設定します。</p></li>
+</ul>
+<p class="MsoNormal"><img src="buttons.png" alt="" style=" border:none; width:100%; max-width:873px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">「ベース」</span>&#160;- イメージマップのベースとなるピクチャーを設定します。</p></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">「マウスオーバー」</span>&#160;- 設定したホットスポットエリアにマウスカーソルが乗っている間に表示されるピクチャーを設定します。</li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「非選択」</span> 
+	 - ホットスポットが選択されていない状態のピクチャーを設定します。<br />
+	<span style="font-weight: bold;">この設定が有効である限り、ベースピクチャーは表示されません。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「選択」</span>&#160;- 設定したホットスポットエリアがクリックされた際のピクチャーを設定します。「スイッチにバインド」が設定されている場合にのみ機能します。</p></li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">「マウスオーバーと選択」</span>&#160;- すでにクリックされたホットスポットエリアに、マウスカーソルが乗っている間に表示されるピクチャーを設定します。</li>
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">「効果」</span> 
+	 <span style="font-family: Arial, sans-serif;">- イメージマップの表示方法に影響するオプションです。</span></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- イメージマップの登場アニメーションを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からイメージマップを登場させます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてイメージマップをフェードインさせます。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「マスキング」<span 
+	 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてイメージマップをフェードインさせます。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「スムーズ」<span 
+		 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Image_Map" id="Erase_Image_Map"></a>「イメージマップを消去」</p>
+<p class="MsoNormal">イメージマップを消去します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「数」</span> - 消去するイメージマップのインデックス（ID）を設定します。複数のイメージマップを扱う際に必要です。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - イメージマップが消えるアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 消去アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- イメージマップのアニメーションを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ムーブメント」</span> 
+	 - 画面の左／上／右／下へとイメージマップを撤去します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ブレンド」</span>&#160;- 
+	 ブレンド機能を用いてイメージマップをフェードアウトさせます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">「マスキング」<span 
+	 style="font-weight: normal;"> - 「Graphics/Masks」フォルダにあるマスク画像を用いてイメージマップをフェードアウトさせます。</span></p></li>
+<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「スムーズ」<span 
+	 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。</span></p></li></li></ul>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Picture_Along_Path" id="Move_Picture_Along_Path"></a>「ピクチャーをパスに沿って移動」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">ポイントと曲線を使用してピクチャーを動かすことのできる、カスタムパスを作成します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - パスに沿って移動するピクチャーのインデックス（ID）を設定します。</p></li>
+<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パス」</span> - 曲線でパスを定義するパスエディターを開きます。右クリックでモーションポイントの追加・削除ができます。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Sの円</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの開始点です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">緑の円</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーション内のポイントです。このポイントを使うことで、より動的なモーションを作成することができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">黄色の円</span>（<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />） はモーションの曲線を調整します。緑の円（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）をクリックすると、そのパスのモーションも同様に調整が可能です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Eの円</span>（<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終了点です。</p></li>
+	</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「垂直方向に鏡像反転」 </span>- 曲線を垂直に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「水平方向に鏡像反転」</span> - 曲線を水平に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「90度回転」</span> - 曲線を90度回転させます。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「効果」</span> - ピクチャーがパスに従って移動する際			に、一定の間隔で効果音を再生します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ループ」</span> - パスを繰り返し移動させることができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「なし」</span> - ループをオフにします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「通常」</span> - パスを終了点からループします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「反転」</span> - パスを終了点から反対方向にループします。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - モーションの移動時間をミリ秒単位で設定します。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ウエイト」</span>&#160;- モーションが終了するまでシーンを待機させます。</p></li>
+	</ul></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">パス</span>」- 
+	 曲線によってパスを定義できる、パスエディタを開きます。モーションポイントは右クリックで削除したり、<span>何もないエリアをクリックして新規のモーションポイントを追加できます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">S丸</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの開始点です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">緑の丸</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はより動的なモーションを作れるポイントです。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">黄色の丸</span><span>（</span><img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションカーブを調整します。緑の丸（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）を押すと、そのパスの調整もできます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">E丸</span><span>（</span><img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終点です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">垂直方向に鏡像反転</span><span>」</span><span style="font-weight: bold;">-</span> 
+	 カーブを垂直方向に反転させます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">水平方向に鏡像反転</span><span>」</span>- カーブを水平方向に反転させます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">90度回転</span><span>」</span><span style="font-weight: bold;">*</span>- 
+	 カーブを90度回転させます。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;">「<span 
+	 style="font-weight: bold;">効果</span><span>」</span>- 背景をパスに沿って動かしながら、一定間隔で効果音を設定することができます。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">ループ</span><span>」</span>- 
+	 指定した時間パスを繰り返します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">なし</span><span>」</span>- ループをオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">普通</span>」<span>- 終点からパスをループします。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">反転</span>」- 終点から逆方向にパスをループします。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">時間</span><span>」</span>- 
+	 モーションが終了しなくてはならない時間（ミリ秒）。</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: normal;">「<span 
+	 style="font-weight: bold;">ウエイト</span>」<span style="font-weight: bold;">/</span>「<span 
+	 style="font-weight: bold;">続行</span><span>」</span>- 待機するようコマンドを設定すると、モーションが次のコマンドを読み込む前に、現在のモーションが完了するのを待つことになります。</p></li>
+</ul>
+</div>
+<p class="MsoNormal">&#160;</p>
+<p class="Sub_Heading"><a name="Show_Animation" id="Show_Animation"></a>「アニメーションを表示」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">アニメーションを表示します。アニメーションとピクチャーは同じインデックス（ID）のスペースを共有しています。そのため、「ピクチャー」コマンドはすべて、アニメーションにも適用できます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「数」 
+	 <span style="font-weight: normal;">- アニメーションを再生する際に使用する、ピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アニメーション」</span> 
+	 - データベースに設定されているアニメーションを選択します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アンカー」</span> 
+	 - アニメーションのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - アニメーションの位置を設定します。</p></li>
+	<li><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「定義済み」</span>&#160;- 
+	 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「直接」</span> 
+	 - グラフィックエディターを使用して位置を設定します。配置の精度をより高めるために、背景を設定することもできます。</p></li>
+	<li><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「計算済み」</span>&#160;- 
+	座標で位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 登場アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「続行」</span>&#160;- 
+	 シーンをすぐに続行します。</p></li>
+	<li><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト」</span>&#160;- 
+	 登場アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「効果」</span> - アニメーションの登場方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「アニメーション」</span>&#160;- 
+	 アニメーションの動作を設定します。</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ムーブメント」</span>&#160;- 
+		 画面の左／上／右／下からアニメーションを登場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ブレンド」</span>&#160;- 
+		 ブレンド機能を用いてアニメーションをフェードインさせます。</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「マスキング」</span>&#160;- 
+		 「Graphics/Masks」フォルダにあるマスク画像を用いてアニメーションをフェードインさせます。</p></li>
+		<ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「スムーズ」</span>&#160;- 
+			 マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。<br />
+			<img src="showpicturemask.gif" alt="" style=" border:none; width:100%; max-width:470px;" border="0" /></p></li>
+		</ul>
+	</ul>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 margin-left: 0px;"><span style="font-weight: bold;">「表示」</span> 
+	 - アニメーションの表示順とアンカーを指定することができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「Z オーダー」</span> 
+	 - アニメーションの表示順を設定します。数値入力ボックスの横にある「...」をクリックして、変数を使用することもできます。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ブレンドモード」</span> 
+	 - アニメーションを表示させる際に使用するブレンドの種類を設定します。</p></li>
+	<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「通常」</span>&#160;- 
+		 標準のブレンドモードです。色を混ぜることなく、アニメーションをシンプルに画面上に表示します。</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold; 
+															 text-decoration: none; ">「加算」</span>&#160;- 
+		 表示するアニメーションをより明るくします。</p></li>
+		<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「減算」</span>&#160;- 
+		 表示するアニメーションをより暗くします。</p></li>
+	</ul>
+</ul>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Picture" id="Shake_Picture"></a>「ピクチャーを揺らす」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">ピクチャーを激しく動かすことで、ドラマチックな効果を生み出します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「数」 
+	 <span style="font-weight: normal;">- 振動させるピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲 X」</span> 
+	 - 水平方向の動作を設定します。ピクチャーは、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲 Y」</span> 
+	 - 垂直方向の動作を設定します。ピクチャーは、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - ピクセルオフセットを設定することで、振動の強度を決定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 振動するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト」</span>&#160;- 
+	 振動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「効果」</span> - 振動アニメーションに影響するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、<a href="Easing_Effects.htm">「イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Effect" id="Picture_Effect"></a>「ピクチャー効果」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">ピクチャーに効果を適用します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - ピクチャーに適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - キャラクターを不規則にぐらつかせます。ループが無効になっている場合にのみ機能します。</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「方向」</span> - ぐらつきの方向を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「垂直」</span>&#160;- ぐらつきを垂直方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「水平」</span>&#160;- ぐらつきを水平方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「両方」</span>&#160;- ぐらつきを垂直水平の両方向に設定します。</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきのアニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- ピクチャーには効果がありません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセル化」</span>&#160;- ピクチャーをピクセル／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「幅」</span>&#160;- ブロック／ピクセルの幅を設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「高さ」</span>&#160;- ブロック／ピクセルの高さを設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。ピクチャーをスムーズにピクセル化させる際に使用します。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span></li>
+	<li><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Motion_Blur" id="Picture_Motion_Blur"></a>「ピクチャーをモーションブラー」</p>
+<p style="font-family: Arial, sans-serif;">ピクチャーにモーションブラーを適用します。このコマンドは、「ピクチャーを移動」や「ピクチャーをパスに沿って移動」といった、ピクチャーを移動させるコマンドの上位に設定しなければ効果はありません。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- モーションブラーを適用するピクチャーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーションブラー」</span> 
+	 -「はい」に設定するとモーションブラーを適用し、「いいえ」に設定するとオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「発生間隔」</span> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「消滅速度」</span> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「不透明度」</span> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+</ul>
+
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span>「</span><span 
+	 style="font-weight: bold;">モーションブラー</span>」- 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">スポーン時間</span><span>」</span>- 新規コピーが作成された後のフレーム数。既定では2。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">ディゾルブ速度</span>」- スポーンしたコピーが消える速度。具体的には、フレームごとにコピーの不透明度が落ちます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">不透明度</span>」- スポーン時のコピーの不透明度。既定では100。<br />
+		例えば、ディゾルブ速度が2の場合、50ミリ秒、アニメーションが動く際の意図しない残像や粒子は完全になくなります。</p></li>
+	</ul></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Add_Hotspot" id="Add_Hotspot"></a>「ホットスポットを追加」</p>
+<p style="font-family: Arial, sans-serif;">クリックやドラッグが可能なホットスポットエリアをシーンに追加します。ホットスポットは、クリックすると「選択」状態になります。この状態は、もう一度クリックするまで維持されます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 操作するイメージマップのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - イメージマップの位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用して位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span>&#160;- 変数を設定してターゲット位置を操作できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクチャーID」</span> - シーンに表示されているピクチャーを、ホットスポットに変身させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ホットスポットのプロパティ」</span>&#160;- 
+	 ホットスポットのプロパティを設定できます。この機能には、ホットスポットをダブルクリックするか、<br />
+	右クリックメニューから「プロパティ」を選択してアクセスすることができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「位置とサイズ」</span> - 各値を入力し、ホットスポットの座標とサイズを調整します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「X」</span><span 
+		 style="font-family: Arial, sans-serif;">&#160;- 水平の位置を指定します。</span></p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「Y」</span><span 
+		 style="font-family: Arial, sans-serif;">&#160;- 垂直の位置を指定します。</span></p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「幅」</span><span 
+		 style="font-family: Arial, sans-serif;">&#160;- 幅を指定します。</span></p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「高さ」</span><span 
+		 style="font-family: Arial, sans-serif;">&#160;- 高さを指定します。</span></p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「反転」</span><span style="font-family: Arial, sans-serif;">&#160;- 
+		 ホットスポットを反転します。</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-weight: bold;">「クリック時に」</span> - ユーザーがクリックした時に、次のコマンドを実行します。</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「移動」</span>&#160;- 
+	 ラベルにジャンプします。</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-family: Arial, sans-serif; 
+															 font-size: 12pt; 
+															 font-weight: bold;">「呼び出し」</span>&#160;- 共通イベントを呼び出します。</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「バインド」</span>&#160;- 
+	 ホットスポットの選択／非選択ステータスを、指定したスイッチに保存します。</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「シーンを呼び出し」</span>&#160;- 
+	 「<a href="SceneCommand.htm#Call_Scene">シーンを呼び出し</a>」コマンドと同じ方法でシーンを呼び出します。</p></li>
+	<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-family: Arial, sans-serif; 
+															 font-size: 12pt; 
+															 font-weight: bold;">「値をバインド」</span>&#160;- ホットスポットをクリックした際に、指定した数値変数に任意の数値を保存します。その後、ラベルに移動します。<br />
+	複数のホットスポットで同じラベルを使用する場合に、どのホットスポットがトリガーされているのかを把握するのに便利です。</p></li>
+	<ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「保存先」</span>&#160;- 
+		 数値の保存先を設定します。</p></li>
+		<li><p class="MsoNormal" style="margin-left: 0px;"><span style="font-weight: bold;">「ラベルに移動」</span>&#160;- 
+		 ジャンプするラベルを指定します。</p></li>
+	</ul>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-weight: bold;">「イメージ」</span> - それぞれの状態におけるホットスポットの外観を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-left: 0px;"><img src="buttons.png" alt="" style=" border:none; width:100%; max-width:873px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="mso-bidi-font-weight: normal; font-weight: bold;">「ベース」</span> 
+	 - イメージマップのベースとなるピクチャーを設定します。「非選択」が設定されておらず、かつ／またはホットスポットが無効な場合にのみ表示されます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「マウスオーバー」</b> 
+	 - ホットスポットエリアにマウスカーソルが乗っている間に表示されるピクチャーを設定します。</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal">「選択」 
+	 <span style="font-weight: normal;">- ホットスポットが選択された場合に表示されるピクチャーです。</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">「マウスオーバーと選択」</span> 
+	 <span style="font-weight: normal;"> -</span> <span style="font-weight: normal;">ホットスポットが選択された状態で<br />
+	マウスカーソルが乗っているときに表示されるピクチャーです。</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">「非選択」 
+	 <span style="font-weight: normal;">- ホットスポットが選択されていない状態のピクチャーを設定します。<br />
+	これを設定すると、ホットスポットが無効にならない限りベースピクチャーが表示されないようになります。</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="font-weight: bold;">「ドラッグ」 
+	 <span style="font-weight: normal;">- ホットスポットをドラッグする場合のオプションを設定します。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「ドラッグ可」 
+	 <span style="font-weight: normal;">- 「はい」に設定すると、ホットスポットをドラッグできるようになります。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「水平」<span 
+	 style="font-weight: normal;"> -</span> <span style="font-weight: normal;">「はい」に設定すると、ホットスポットを左右にドラッグできます。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「垂直」<span 
+	 style="font-weight: normal;">&#160;-</span> <span style="font-weight: normal;">「はい」に設定すると、ホットスポットを上下にドラッグできます。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「ドラッグ可能範囲」 <span style="font-weight: normal;">- ホットスポットをドラッグできるエリアの範囲を設定します。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「保存先」<span 
+	 style="font-weight: normal;"> - ホットスポットの現在位置を、パーセンテージで変数に保存します。<br />
+	水平と垂直が両方有効になっている場合、水平の位置のパーセンテージのみが保存されます。</span></p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p class="MsoNormal" 
+															 style="margin-left: 0px;">「アクション」 
+	 <span style="font-weight: normal;">- 表示されているホットスポットをクリックするか選択解除するとアクションが実行されます。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="font-weight: bold;">「カーソルが触れた時に」 
+	 <span style="font-weight: normal;">- ホットスポットエリアにマウスカーソルが乗ると、次のアクションが実行されます。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="margin-left: 0px;"><span 
+	 style="font-weight: bold;">「選択時に」</span> 
+	 <span style="font-weight: normal;">- ホットスポットが選択されると、次のアクションが実行されます。</span></p></li>
+	<li><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">「選択解除時に」</span> - ホットスポットがすでに選択された状態で、もう一度クリックして選択解除すると、次のアクションが実行されます。</p></li>
+	<li><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">「カーソルが離れた時に」</span> - ホットスポットエリアからマウスカーソルが離れると、次のアクションが実行されます。</p></li>
+	<li><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;"><span 
+	 style="font-weight: bold;">「ドラッグした時に」</span> - ホットスポットエリアをドラッグした時に、次のアクションが実行されます。</p></li>
+	<li><p class="MsoNormal" 
+															 style="margin-left: 0px; 
+															 font-weight: normal;">上記5つの項目すべてで、以下のアクションが設定できます。</p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「移動<span 
+	 style="font-family: Arial, sans-serif;">」</span>&#160;<span style="font-weight: normal;">- 
+	 ラベルに移動します。</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-family: Arial, sans-serif; font-size: 12pt;">「呼び出し」</span>&#160;<span 
+	 style="font-weight: normal;">- 共通イベントを呼び出します。</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「シーンを呼び出し」&#160;<span 
+	 style="font-weight: normal;">- 「<a href="SceneCommand.htm#Call_Scene">シーンを呼び出し</a>」と同じ方法でシーンを呼び出します。</span></p></li>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;"><span 
+	 style="font-family: Arial, sans-serif; font-size: 12pt;">「値をバインド」</span><span 
+	 style="font-weight: normal;">&#160;- 選択した数値変数に任意の数値を保存します。その後、指定したラベルに移動します。</span></p></li>
+	<ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「保存先」<span 
+		 style="font-weight: normal;">&#160;- 保存先を設定します。</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「ラベルに移動」<span 
+		 style="font-weight: normal;">&#160;- 移動先のラベルを指定します。</span></p></li>
+	</ul>
+	<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「バインド」<span 
+	 style="font-weight: normal;">&#160;- 選択／非選択ステータスを、指定したスイッチ変数に保存します。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「カーソルが触れた時に」 
+		 <span style="font-weight: normal;">- ホットスポットエリアにマウスカーソルが乗ると、スイッチをオンにします。</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「選択時に」 
+		 <span style="font-weight: normal;">- ホットスポットが選択されるとスイッチをオンにします。</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「選択解除時に」 
+		 <span style="font-weight: normal;">- ホットスポットが選択解除されるとスイッチをオフにします。</span></p></li>
+		<li style="font-weight: bold;"><p class="MsoNormal" style="margin-left: 0px;">「カーソルが離れた時に」 
+		 <span style="font-weight: normal;">- ホットスポットエリアからマウスカーソルが離れるとスイッチをオフにします。</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Hotspot_State" id="Change_Hotspot_State"></a>「ホットスポットの状態を変更」</p>
+<p style="font-family: Arial, sans-serif;">ホットスポットの状態を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 状態を変更するホットスポットのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「選択」</span> - ホットスポットの「選択」ステータスのオン／オフを切り替えます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「有効」</span> - ホットスポットを有効／無効化します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Hotspot" id="Erase_Hotspot"></a>「ホットスポットを消去」</p>
+<p style="font-family: Arial, sans-serif;">シーンからホットスポットを消去します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 消去するピクチャーのインデックス（ID）を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Picture_Defaults" id="Picture_Defaults"></a>「ピクチャーの既定」</p>
+<p style="font-family: Arial, sans-serif;">ピクチャーコマンドの既定値を上書きします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場時間」</span>&#160;- 
+	 登場アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;- 
+	 退場アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「登場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「アニメーション」<span 
+	 style="font-weight: normal;">&#160;- 登場時のアニメーションを設定します。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「退場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 退場時のアニメーションを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span> - ピクチャーのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Z オーダー」<span 
+	 style="font-weight: normal;">&#160;- ピクチャーの表示順を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「モーションブラー」</span> - <br />
+	「はい」に設定するとモーションブラーが適用されます。「いいえ」に設定するとオフになります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「発生間隔」</span> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「消滅速度」</span> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「不透明度」</span> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+	</ul></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>イメージマップとホットスポットのチュートリアル</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > UIシリーズ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">イメージマップとホットスポットのチュートリアル</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">イ</span>ベント付きUIの項目に進む前に、<a href="Picture.htm#Show_Image_Map">イメージマップ</a>と<a 
+	 href="Picture.htm#Add_Hotspot">ホットスポット</a>について理解しておきましょう。オリジナルのカスタムGUIを作成することができます。</p>
+<p>&#160;</p>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"ImageMapHotspotTutorial.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="ImageMapHotspotTutorial.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script></p>
+<p style="text-align: center;">&#160;</p>
+<p style="text-align: center;">&#160;</p>
+<p class="Sub_Heading">イメージマップについて</p>
+<p><a href="Picture.htm#Show_Image_Map">イメージマップ</a>とは、<a href="Picture.htm#Add_Hotspot">ホットスポット</a>と呼ばれるクリック可能なエリアを持つイメージのことです。ユーザーがクリックすると設定に応じてトリガーされます。各コマンドの機能についてはリンク先のページを参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">グラフィックの準備</p>
+<p>イメージマップの設定では、インスタンスを2つ用意する必要があります。その際、<span style="font-weight: bold;">両方のイメージは必ず同じサイズである必要があります。</span></p>
+<p>&#160;</p>
+<p><img src="ImageMapHotspotTutorial_en.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">ベース</b> 
+	 - このイメージは、イメージマップの「待機」状態として使用されます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">マウスオーバー</span> 
+	 - このイメージは、イメージマップの「アクティベート」状態として使用されます。つまり、<a href="Picture.htm#Add_Hotspot">ホットスポット</a>の1つにマウスオーバーまたはクリックした際に表示されるイメージです。</p></li>
+</ul>
+<p>&#160;</p>
+<p>以上ができたら、<a href="Importing_Resources.htm">ゲームにイメージをインポートしましょう</a>。イメージは、次のように、ピクチャー用のフォルダーに入れておけばいいでしょう。</p>
+<p>&#160;</p>
+<p><img src="ImageMapTut2.jpg" alt="" style=" border:none; width:100%; max-width:566px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">イメージマップの設定</p>
+<p>リソースの準備ができたので、これらを「シーンコンテンツ」に追加しましょう！</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>新しいシーンを作成します。</li>
+	<li>「<img src="PicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />ピクチャー」 &rarr;「イメージマップを表示」の順にクリックします。</li>
+</ul>
+<p style="text-align: center; font-weight: bold;">&#160;</p>
+<p style="text-align: center; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li>前述のように、イメージをそれぞれベースとマウスオーバーの場所に置きます。</li>
+	<li><span style="font-weight: bold;">任意の設定：</span><span>矢印をクリックして「</span><span 
+	 style="font-weight: bold;">アニメーション</span>」&rarr;「ブレンド」の順に選択すると、イメージマップがフェードインするようにできます。</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Setting_up_the_Hotspots" id="Setting_up_the_Hotspots"></a>ホットスポットの設定</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">ホットスポット</span>のボタンをクリックします。</li>
+</ul>
+<p style="margin-left: 40px;"><span style="font-weight: bold;"><img src="ImageMapTut1.jpg" alt="" style=" border:none; width:100%; max-width:914px;" border="0" /></span></p>
+<ul style="list-style: disc;">
+	<li><span>ウィンドウが表示されるので、「</span><span style="font-weight: bold;">ホットスポットを追加</span><span>」をクリックします。小さなウィンドウが表示されます。</span>背景が暗すぎる時のために、ホットスポットは常に左上に現れます。<br />
+	<img src="ImageMapTut3.jpg" alt="" style=" border:none; width:100%; max-width:260px;" border="0" /><br />
+	</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>これでホットスポットの設定ができました。その後、<span>ボックスを</span><span style="font-weight: bold;">ダブルクリック</span><span>または</span><span 
+	 style="font-weight: bold;">右クリック</span><span>から</span><span style="font-weight: bold;">&rarr;</span><span>「</span><span 
+	 style="font-weight: bold;">プロパティ</span><span>」を選択します。</span>「<span 
+	 style="font-weight: bold;">ホットスポットのプロパティ</span>」という小さなウィンドウが表示されます。この手順を説明するビデオがあるので、参考にしてください。<br />
+	</li>
+</ul>
+<p style="text-align: center;"><script>
+	if(supports_mp4_video()) 
+		document.write("<video  controls=\"controls\"    style=\"border: none;; max-width: 100%\"><source src=\"ImageMapHotspotTutorial2.mp4\" type=\"video/mp4\" />");
+</script><object type="video/quicktime" data="ImageMapHotspotTutorial2.mp4" style="border: none;" height="300px" width="400px"><param name="autoplay" value="false" /><param name="autostart" value="false" /><param name="ShowControls" value="1" /><param name="controller" value="true" /></object><script>
+if(supports_mp4_video()) document.write("</video>");</script><br />
+</p>
+<ul style="list-style: disc;">
+	<li><p>「<span style="font-weight: bold;">移動</span>」というボタンをクリックして、ラベルを設定します。ここではそれぞれ「ask」（誘う）と「leave」（去る）にしました。次のイメージを参考にしてください。<br />
+	<br />
+	<img src="ImageMapTut4.jpg" alt="" style=" border:none; width:100%; max-width:320px;" border="0" /><br />
+	</p></li>
+	<li><p>これを繰り返し、すべての選択肢にホットスポットを設定します。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンの設定</p>
+<p>今度は、ホットスポットへの応答を設定します。通常は、次のイメージのような設定になるはずです。</p>
+<p>&#160;</p>
+<p><img src="ImageMapTut5.jpg" alt="" style=" border:none; width:100%; max-width:979px;" border="0" /><br />
+</p>
+<ul style="list-style: disc;">
+	<li>「<a href="Picture.htm#Show_Image_Map">イメージマップ</a>」の後、「<a href="Basic.htm#Label">ラベル</a>」の前に、「<a 
+	 href="Basic.htm#Idle">待機</a>」コマンドを追加する必要があります。これにより、正しいラベルが実行された後、選択する前にラベルがトリガーされることや、アクティベートされるべきではないラベルが実行されてしまうことを防止します。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>特に応答がまだ実行されている最中など、ユーザーが再びホットスポットをトリガーしてしまう事態を防ぐため、<a href="Picture.htm#Erase_Image_Map">イメージマップを削除.</a>する必要があります。ただし、必ず背景イメージを追加するようにしましょう。そうしなければ、ユーザーにはただ真っ暗な画面が表示されてしまいます。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>ではイメージマップに応答を入力してください。以下の設定を参考にしてください。<br />
+	<br />
+	<img src="ImageMapTut6.jpg" alt="" style=" border:none; width:100%; max-width:979px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>以上です！これで、いよいよイベント付きUIに取り組む準備ができました。</p>
+<p style="text-align: center;"><img src="Metisnotes8_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p style="text-align: center;">&#160;</p>
+</body>
+</html>

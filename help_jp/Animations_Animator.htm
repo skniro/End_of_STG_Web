@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; VN Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>アニメーション</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_2";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > VNエンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">アニメーション</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ア</span>ニメーションについては、「<a href="Animation_Basics.htm">アニメーションの基本</a>」の項もご確認ください。VN 
+ Maker にはアニメーションシステムが用意されていますので、ゲームオブジェクトを簡単にアニメーション表示することができます。ゲーム内ユーザーインターフェイスでアニメーションを使用したい場合は、 
+ <a href="IGUI_Getting_Started.htm">ゲーム内ユーザーインターフェイスドキュメント</a>の 「<a href="Example__Animations.htm">例: 
+ アニメーション</a>」の項をお読みください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">Animator コンポーネント</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV では、 gs.Component_Animator コンポーネントはアニメーションに関する重要なコンポーネントの一つです。多くのゲームオブジェクトは、既定で 
+ animator コンポーネントを備えており、 animator プロパティから簡単にアクセスできます。早速試してみましょう。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new image object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject = new ui.Object_Image()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set name of image to display
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.image = &quot;diamond-large-on&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set position of the image on screen
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.dstRect.x = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.dstRect.y = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the anchor-point to the center of the object so that
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# rotation goes around the center. 
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.anchor.set(0.5, 0.5)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the animator component to the image object with ID &quot;animator&quot;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.addComponent(new gs.Component_Animator(), &quot;animator&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the image object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@imageObject.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the image object to the scene
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addObject(@imageObject)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the diamond image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/diamond-large-on&quot;)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Start the scene. Called once after scene-transition is done and the scene is ready
+&#160;&#160;&#160;&#160;* to start.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;start: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Get the animator-component by it&amp;apos;s ID.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;animator = @imageObject.findComponentById(&quot;animator&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start a move-to animation to move the object to (500, 500) on screen
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# in 100 frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;animator.moveTo(500, 500, 100)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start a rotate animation to rotate the object clock-wise with 10 degree
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# per frame for 100 frames.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;animator.rotate(0, 10, 100)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>まず image オブジェクトを作成し、そこに animator コンポーネントを追加します。このコンポーネントは image オブジェクトに対して様々な種類のアニメーションを実行可能にします。 
+ </p>
+<p>ここでは、 addComponent メソッドの 2 つ目のパラメータを使用し、後でコンポーネントに容易にアクセスできるよう ID を追加しています。 
+ ui.Object_Image はクイックアクセスのための animator プロパティを定義しないためです。</p>
+<p>&#160;</p>
+<p>また、ここでは 「start」 と呼ばれる新しいメソッドを実装しています。 これはシーンのトランジションが完了し、シーンの準備ができたら自動的に呼び出されます。つまり、image 
+ オブジェクトに何らかのアニメーションを開始するのに最適な場所です。findComponentById メソッドを使用して、animator 
+ コンポーネントにアクセスし、image オブジェクトでの回転や移動のアニメーションを実行しています。ここでゲームを起動すると、白いダイアモンドが画面上を移動しながら回転するのが表示されるはずです。</p>
+<p>&#160;</p>
+<p>もっと他のアニメーションも可能です。 詳しくは gs.Component_Animator と <a href="Game_Script_API_Reference.htm">ゲームスクリプト 
+ API レファレンス</a> をご確認ください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">アニメーションシステムを拡張する</p>
+<p>&#160;</p>
+<p>animator コンポーネントは、既定で数多くの種類のアニメーションを提供しています。しかし、それだけでは足りないかもしれません。 今回は独自のアニメーションシステムを一から作成するのではなく、既定のシステムを少し拡張して、アニメーションの種類をカスタマイズしてみましょう。スクリプトエディタの 
+ Components &gt; Animation フォルダーを見てみましょう。このフォルダーにはすべてのアニメーションコンポーネントが格納されています。したがって各種のアニメーションは、必要に応じてゲームオブジェクトに追加された独自のコンポーネントです。例えば、myObject.animator.rotate 
+ を呼び出すと、 gs.Component_RotateAnimation がゲームオブジェクトに追加されて実際の回転を処理します。 </p>
+<p>&#160;</p>
+<p>新しいアニメーションの種類を追加するため、 「Component_MyCustomAnimation」 というスクリプトを 「Animation」 
+ フォルダーに追加します。 内容は次の通リです。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_MyCustomAnimation
+#
+# &#160;&#160;Your name here
+#
+# ===================================================================
+class Component_MyCustomAnimation extends gs.Component_Animation
+&#160;&#160;&#160;&#160;# A custom animation type.
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create easing-object to animate with different easing-types
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@easing = new gs.Easing()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Callback function which needs to be called if you
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@callback = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Updates our custom-animation.
+&#160;&#160;&#160;&#160;*
+&#160;&#160;&#160;&#160;* @method update
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;update: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# If the easing-object is not running, the animation is not running/done so we
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# can abort here.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if not @easing.isRunning then return
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the easing-object
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@easing.updateValue()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Get current value from the easing-object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.angle = @easing.value
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# If easing-object is no longer running after update-call and if
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# it is not an endless animation, we have to finish.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if not @easing.isRunning and not @easing.isEndless
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Round up the current value to get an integer value.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.angle = Math.round(@object.angle)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Call the callback method if set.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@callback?(@object, this)
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Starts out custom animation.
+&#160;&#160;&#160;&#160;*
+&#160;&#160;&#160;&#160;* @method start
+&#160;&#160;&#160;&#160;* @param {number} duration The duration in frames.
+&#160;&#160;&#160;&#160;* @param {Object} easingType The easing-type.
+&#160;&#160;&#160;&#160;* @param {function} [callback] An optional callback called if the animation is finished. 
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;start: (duration, easingType, callback) -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the easing-type. Use linear-easing by default.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@easing.type = easingType || gs.Easings.EASE_LINEAR[gs.EasingTypes.EASE_IN]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set callback function.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@callback = callback
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# If the duration of the animation is zero or if the game is currently in
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# skip-mode, we have to skip our animation.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;if duration == 0 or GameManager.tempSettings.skip
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the rotation-angle to the end-value immediately.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.angle += 5 * duration
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Call the callback function to finish up.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@callback?(@object, this)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;else
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start the actual animation by providing the current angle and
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the end-value of the angle plus the animation duration.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@easing.startValue(@object.angle, 5 * duration, duration)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_MyCustomAnimation = Component_MyCustomAnimation</code></pre>
+<p>ここで作成しているカスタムアニメーションは、簡単な回転のアニメーションで、指定時間中、ゲームオブジェクトを毎フレーム 5 度だけ回転させる、というものです。実際のアニメーションは 
+ gs.Easing オブジェクトによって処理されます。gs.Easing クラスは、異なる種類のイージングを実行するためのヘルパーです。イージングについての詳細は 
+ <a href="Easing_Effects.htm">イージング効果</a> の項をお読みください。 </p>
+<p>&#160;</p>
+<p>フレーム毎に呼び出される update メソッドでは、easing オブジェクトの value プロパティにアニメーションの現在の値を含んでいます。この例では、現在の回転の角度も含まれます。 
+ これによってゲームオブエジェクトの angle プロパティに値を割り当てるだけで済みます。</p>
+<p>&#160;</p>
+<p>easing オブジェクトは最初に開始する必要があり、 updateValue メソッドは実際のアニメーションを更新するためにフレーム毎に一度呼び出す必要があります。start 
+ メソッドで easing-type を設定し、続いて easing オブジェクトの startValue メソッドを呼び出して次の 3 つの値を渡すことでアニメーションを開始します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>アニメーションさせたいプロパティの現在の値</li>
+	<li>到達したい値</li>
+	<li>アニメーションの再生時間 (フレーム数)</li>
+</ul>
+<p>&#160;</p>
+<p>アニメーションが完了していない限り、 easing オブジェクトの isRunning プロパティは true となります。したがって、このプロパティが 
+ false となった場合は、アニメーションを停止して完了するために callback メソッドを呼び出さねばなりません。</p>
+<p>&#160;</p>
+<p>以上で、このアニメーションコンポーネントは準備完了で、アニメーション表示するゲームオブジェクトを追加できます。カスタムアニメーションを 
+ animator コンポーネント経由でアクセス可能にしたい場合は、このコンポーネントを拡張する必要があります。「Components」 フォルダー内に 
+ 「Component_MyCustomAnimator」 という名前のスクリプトを新規作成し、次のコードを記述します。このスクリプトは Component_Animator 
+ スクリプトの下に追加することが重要です。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_MyCustomAnimator
+#
+# &#160;&#160;Your name here
+#
+# ===================================================================
+class Component_MyCustomAnimator extends gs.Component_Animator
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* An animator extension to add our custom animation.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Rotates the game object clock-wise around its anchor-point with a speed of 5 degree
+&#160;&#160;&#160;&#160;* per frame.
+&#160;&#160;&#160;&#160;*
+&#160;&#160;&#160;&#160;* @method rotateCustom
+&#160;&#160;&#160;&#160;* @param {number} duration The duration in frames.
+&#160;&#160;&#160;&#160;* @param {Object} easingType The easing-type.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;rotateCustom: (duration, easingType) -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create the animation component
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;animation = new gs.Component_MyCustomAnimation()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Add the animation component to the game object.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@object.addComponent(animation)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start our custom animation.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;animation.start(duration, easingType, @callback)
+&#160;&#160;&#160;&#160;
+gs.Component_Animator = Component_MyCustomAnimator</code></pre>
+<p>ご覧の通り、私達のコンポーネントは既定の animator コンポーネントからすべてを継承しますので、新しいコンポーネントはそこに追加するのです。また、 
+ animator コンポーネントを代理人のように考えることもできます。実際の作業は 単独の animation コンポーネントが行います。ここで重要なのは最後の行です。</p>
+<pre>
+<code class="coffee">
+gs.Component_Animator = Component_MyCustomAnimator</code></pre>
+<p>ここでは、古い animator コンポーネントに「パッチを当て」て、 gs.Component_Animator がこれから gs.Component_MyCustomAnimator 
+ を参照し、ゲームエンジンのどこでも gs.Component_MyCustomAnimator が自動的に使用されるようにしています。シーンに戻ると、次のように簡単にカスタムアニメーションを呼び出すことができます。</p>
+<pre>
+<code class="coffee">
+###*
+* Start the scene. Called once after scene-transition is done and the scene is ready
+* to start.
+### &#160;
+start: -&gt;
+&#160;&#160;&#160;&#160;# Get the animator-component by it&amp;apos;s ID.
+&#160;&#160;&#160;&#160;animator = @imageObject.findComponentById(&quot;animator&quot;)
+&#160;&#160;&#160;&#160;# Start a move-to animation to move the object to (500, 500) on screen
+&#160;&#160;&#160;&#160;# in 100 frames.
+&#160;&#160;&#160;&#160;animator.moveTo(500, 500, 100)
+&#160;&#160;&#160;&#160;# Start a rotate animation to rotate the object clock-wise with 10 degree
+&#160;&#160;&#160;&#160;# per frame for 100 frames.
+&#160;&#160;&#160;&#160;animator.rotateCustom(100)</code></pre>
+<p>つまり、gs.Component_Animator にパッチを当てて自動的に gs.Component_MyCustomAnimator 
+ を参照するようにしているので、他には何も変更する必要がありません。そのため、rotateCustom アニメーションを単純に呼び出すだけでいいのです。ここでゲームをテストしてみてください。ゲームオブジェクトがフレーム毎に 
+ 5 度回転するのが確認できるはずですが、今回はカスタムアニメーションで実行されています。</p>
+<p>&#160;</p>
+<p>このカスタムアニメーションはあくまでも例ですので、あまり使いみちがあるものとは言えません。 思いつくアニメーションを自由に実装してみてください。</p>
+</body>
+</html>

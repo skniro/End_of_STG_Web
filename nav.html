@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn" class=" wf-a-otf-futo-go-b101-pr6n-n5-active wf-active">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../project/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>Athena Project</title>
+    <link rel="stylesheet" href="./Content/base.css">
+    <audio id="kitai" autoplay="autoplay" loop preload="auto" playsinline muted
+           src="../project/uploads/2024/01/kitai.mp3">
+    </audio>
+    <script>
+        window.onload = () => {
+            document.getElementById('kitai').muted = false;
+        }
+    </script>
+</head>
+<body class="chrome" style="background:white">
+    <div class="header__inner">
+        <h1 class="header__logo">
+            <img width="107" height="16" src="../project/img/logo2.png" alt="STG">
+        </h1>
+        <p id="headerMenuBtn" class="header__menu is--active"><a href="#" onClick=" javascript: history.go(-1);"><span class="header__menu__icon"><span class="header__menu__icon__bar1"></span><span class="header__menu__icon__bar2"></span><span class="header__menu__icon__bar3"></span></span><span id="headerMenuText" class="header__menu__text"><span style="width: 100%; height: 100%">CLOSE</span></span></a></p>
+        <div id="headerNav" class="header__nav is--show">
+            <div id="haederNavCover" class="header__nav__cover" style="transform: matrix(0, 0, 0, 1, 0, 0);"></div>
+            <div id="headerNavInner" class="header__nav__inner">
+                <ul id="headerNavList" class="header__nav__list" style="">
+                    <li><a href="./index.html" class="insite"><span>INDEX</span></a></li>
+                    <li><a href="./project.html" class="insite"><span>PROJECT</span></a></li>
+                    <li><a href="./amWiki/index.html?file=home-首页" class="insite"><span>DOCS</span></a></li>
+                    <li><a href="../music/character.htm" class="insite"><span>MUSIC</span></a></li>
+                    <li><a href="./About.html" class="insite"><span>CAST/STAFF</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

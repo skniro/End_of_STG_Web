@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc21.js\"  name=\"スクリプトに関するドキュメンテーション\"><item name=\"はじめに\" url=\"GameScript_Getting_Started.htm\" /><item name=\"APIリファレンス\" url=\"game_script_doc/index.html\" /><item name=\"外部スクリプトエディタ\" url=\"External_Script_Editor.htm\" /><item name=\"外部ライブラリ\" url=\"External_Libraries.htm\" /></data>";

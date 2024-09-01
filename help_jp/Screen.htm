@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>画面</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_12";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">画面コマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「画面」コマンドでは、ゲーム画面にさまざまな効果を適用します。 
+ </p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Screen_Effect" id="Screen_Effect"></a>「画面効果」</p>
+<p style="font-family: Arial, sans-serif;">画面に効果を適用します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - 画面に適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - シーンを不規則にぐらつかせます。ループが無効になっている場合にのみ機能します。</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「方向」</span> - ぐらつきの方向を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「垂直」</span>&#160;- ぐらつきを垂直方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「水平」</span>&#160;- ぐらつきを水平方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「両方」</span>&#160;- ぐらつきを垂直水平の両方向に設定します。</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきのアニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- 画面にブラーを適用します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ブラーの大きさを設定します。値が大きくなるほど、画面は不鮮明になります。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- ブラーを適用するアニメーションの描写時間をミリ秒単位で設定します。これにより、滑らかににブラーを適用することができます。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセレート」</span>&#160;- 画面をピクセル／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「幅」</span>&#160;- ブロック／ピクセルの幅を設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「高さ」</span>&#160;- ブロック／ピクセルの高さを設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。画面をスムーズにピクセル化させる際に使用します。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「Z オーダー」</span>&#160;- 
+	 Zレベルを設定することで、効果の大きさを調整できます。既定では、背景やキャラクターなど、非UIのゲーム内オブジェクトにのみ効果が適用され、メッセージボックスやメッセージテキストは対象外となります。「Z オーダー」を変更すると、背景のみに効果を適用したり、メッセージボックスを含む画面全体に影響を与えたりすることができます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Screen" id="Tint_Screen"></a>「画面を色付け」</p>
+<p style="font-family: Arial, sans-serif;">画面全体の色調を変更します。ログやメッセージウィンドウ、画像には効果はありません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色調」</span> 
+	 - 色調コントローラーを用いて画面全体の色調を変更します。「赤」「緑」「青」の色調（-255～255）を調整することが可能です。<br />
+	グレイスケールフィルターを強さを設定する際は「灰（0～255）」を調整します。値が大きくなるほど、色の全体的な強度が高まります。<br />
+	色調コントローラーの下部にある「通常」「ダーク」「セピア」「モーニング」「ナイト」のボタンを押すと、<br />
+	それぞれの名称で表された色調の値をすぐに適用できます。「通常」ボタンは元の色調を復元します。ウィンドウ上部のプレビューエリアで色調の変化を確認できます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 色調変化アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 色調変化のアニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Flash_Screen" id="Flash_Screen"></a>「画面を点滅」</p>
+<p style="font-family: Arial, sans-serif;">指定した色で瞬時に画面全体を覆い、徐々に元の色に戻していきます。これにより、光の点滅などを表現できます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色」</span> 
+	 - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、点滅する際の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 点滅アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 点滅アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Screen" id="Shake_Screen"></a>「画面を揺らす」</p>
+<p style="font-family: Arial, sans-serif;">画面を振動させます。ショックや衝撃を表現するシーンで役立ちます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲 X」</span> 
+	 - 水平方向の動作を設定します。画面は、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「範囲 Y」<span 
+	 style="font-weight: normal;"> - 垂直方向の動作を設定します。画面は、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「速度」<span 
+	 style="font-weight: normal;"> - ピクセルオフセットを設定することで、振動の強度を決定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 画面が振動するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 振動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Pan_Screen" id="Pan_Screen"></a>「画面をパン」</p>
+<p style="font-family: Arial, sans-serif;">画面を移動します。ゲーム内でカメラの移動を演出する際に役立ちます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「X」</span>&#160;- 水平方向の移動距離をピクセル単位で指定します。正の値では左、負の値では右へと移動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「Y」</span> - 垂直方向の移動距離をピクセル単位で指定します。正の値では上、負の値では下へと移動します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - 移動アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「続行」</span>&#160;- 
+	 すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ウエイト」</span>&#160;- 
+	 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Screen" id="Zoom_Screen"></a>「画面を拡大／縮小」</p>
+<p style="font-family: Arial, sans-serif;">画面を拡大／縮小します。ゲーム内でカメラの移動を演出する際に役立ちます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「拡大／縮小 X」</span> - 水平方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「拡大／縮小 Y」</span> - 垂直方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - 画面を拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 画面を拡大／縮小するアニメーションが終了するまでシーンを待機させます。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Screen"></a>「画面を回転」</p>
+<p style="font-family: Arial, sans-serif;">画面を回転させます。ゲーム内でカメラ効果を追加するのに便利です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「方向」</span> - 回転方向（<span style="font-weight: bold;">時計回り</span>または<span 
+	 style="font-weight: bold;">反時計回り</span>）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「速度」 </span>- 回転速度を設定します。数値が高くなるほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - 回転アニメーションの時間を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 回転が終了するまでシーンを待機させます。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Freeze_Screen" id="Freeze_Screen"></a>「画面をフリーズ」</p>
+<p style="font-family: Arial, sans-serif;">あらゆるコマンドが実行できないようになります。シーンは「画面のトランジション」を呼び出すまでフリーズします。</p>
+<p class="Sub_Heading"><a name="Screen_Transition" id="Screen_Transition"></a>「画面のトランジション」</p>
+<p style="font-family: Arial, sans-serif;">シーンの出現方法を変化させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ファイル」</span> 
+	 - 画面に適用するマスクファイルを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「スムーズ」</span> 
+	 -<span style="font-weight: bold;"> </span>マスクの外縁の滑らかさを設定します。<br />
+	以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。<br />
+	<img src="screenvague1.jpg" alt="" style=" border:none; width:100%; max-width:531px;" border="0" /><img src="screenvague3.jpg" alt="" style=" border:none; width:100%; max-width:531px;" border="0" /></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - トランジションの描写時間をミリ秒単位で設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

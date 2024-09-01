@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"ノンリニアの物語\"><item name=\"物語の分岐\" url=\"Preparing_a_Plot_Outline.htm\" /><item name=\"条件選択\" url=\"Conditional_Choices.htm\" /></data>";

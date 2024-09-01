@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>エクステンションマネージャー</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_5";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">エクステンションマネージャー</p>
+</div>
+<p>&#160;</p>
+<p>ラノゲツクールMVでは、強力な拡張システムにより、エディターやゲームエンジンに新しい機能を追加できます。エクステンションのインストール／アンインストールはエクステンションマネージャーを使用して簡単に実行できます。エクステンションによってエディターやゲームエンジンに大きな変化が生じる可能性があるため、エクステンションをインストールする場合は事前にプロジェクトのバックアップを作成することを強くお勧めします。<br />
+</p>
+<p class="Sub_Heading">エクステンションのインストール</p>
+<p>エクステンションマネージャーは、「ツール &rarr; エクステンションマネージャー」から開くことができます。</p>
+<p><img src="ExtensionManager.png" alt="" style=" border:none; width:100%; max-width:834px;" border="0" /></p>
+<p>エクステンションをインストールするには、「インストール」をクリックし、インストールするエクステンションファイル（*.zip）を選択します。本当にインストールするかどうかを確認するメッセージが表示されるのでOKボタンを押し、ライセンス契約を読んで承認します（該当する場合）。インストールに成功したエクステンションは、「エクステンション」リストに表示されます。</p>
+<p>&#160;</p>
+<p>エクステンションを選択すると、次の情報が表示されます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-weight: bold;">「ID」<span style="font-weight: normal;"> 
+	 -</span> <span style="font-weight: normal;">エクステンションの固有IDです。技術的理由により、エクステンションの名前とは別にエクステンションやデベロッパーを一意に識別することが目的です。</span></p></li>
+	<li><p style="font-weight: normal;"><span style="font-weight: bold;">「組織」</span>- 
+	 組織名や会社名</p></li>
+	<li><p style="font-weight: bold;">「名前」 <span style="font-weight: normal;">- 
+	 エクステンションの名前です。</span></p></li>
+	<li><p style="font-weight: bold;">「バージョン」 <span style="font-weight: normal;">- 
+	 エクステンションのバージョンです。デベロッパーのウェブサイトで新しいバージョンが利用可能かどうか確認してください。</span></p></li>
+	<li><p style="font-weight: bold;">「作者」 <span style="font-weight: normal;">- 
+	 エクステンションの作成者／デベロッパーです。</span></p></li>
+	<li><p style="font-weight: bold;">「ウェブサイト」 <span style="font-weight: normal;">- 
+	 作成者／デベロッパーのウェブサイトです。通常、エクステンションの詳細情報が公開されています。</span></p></li>
+	<li><p style="font-weight: bold;">「説明」 <span style="font-weight: normal;">- 
+	 エクステンションによってエディターやゲームエンジンにどのような機能が追加されるかについての詳細情報が含まれます。</span></p></li>
+</ul>
+<p>&#160;</p>
+<p>「ライセンスを表示」ボタンをクリックすると、エクステンションの使用許諾や利用規約を確認できます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">エクステンションの有効化／無効化</p>
+<p>インストールされたエクステンションは、「有効」チェックボックスのチェックを外すことでいつでも無効化できます。エクステンションを無効化すると、エディターやゲームエンジンに生じた変更はすべて削除され、エクステンションによるエディターやゲームへの影響はなくなります。ただし、リソースは削除されず、エクステンションはインストールされたままなので、いつでも再度有効化することができます。エクステンションを有効化／無効化した場合は、ラノゲツクールMVを再起動することをお勧めします。<br />
+</p>
+<p class="Sub_Heading">エクステンションのアンインストール</p>
+<p>エクステンションをアンインストールするには、「アンインストール」ボタンをクリックし、エクステンションのアンインストールを確認するメッセージを承認します。エクステンションをアンインストールするとデータだけでなく、ユーザーによって作成されたエクステンション固有のコンテンツも削除されるので、新しいデータベースカテゴリーを追加したエクステンションをアンインストールすると、作成されたレコードもすべて削除されます。エクステンションをアンインストールした場合は、ラノゲツクールMVを再起動することをお勧めします。<br />
+</p>
+</body>
+</html>

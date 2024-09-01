@@ -1,0 +1,36 @@
+﻿/*
+[name]下界[/name]
+[iconbgcolor]#ae210f[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+
+#body_fixed_bg { width:100%;height:100%;position:fixed;top:0;z-index:-99999;background: #1A0706 url(/web/20211204054440im_/https://www.mcbbs.net/template/mcbbs/style/nether/body_bg_nether.jpg);background-size:cover; }
+#nv .nv_ul { background:#1A0706 url("/web/20211204054440im_/https://www.mcbbs.net/template/mcbbs/style/nether/nv.png") left top no-repeat; }
+#nv .nv_ul li a { border-right: 1px solid #7a2007; border-left: 1px solid #7a2007; text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);}
+#nv .nv_ul li:last-child a{border-right:1px solid #7a2007}
+#nv .nv_ul li a:hover {background:#740f0a; color:#fff;}
+#toptb { background: url(/web/20211204054440im_/https://www.mcbbs.net/template/mcbbs/style/nether/top_bg.png) 0 0 repeat; box-shadow: 1px 1px 5px 1px #00000085; }
+#toptb .light a:hover { color:#913312; }
+#hd .p_pop a:hover { color:#913312; }
+
+/*
+     FILE ARCHIVED ON 05:44:40 Dec 04, 2021 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 07:03:09 May 02, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.656
+  exclusion.robots: 0.068
+  exclusion.robots.policy: 0.059
+  cdx.remote: 0.053
+  esindex: 0.011
+  LoadShardBlock: 52.376 (3)
+  PetaboxLoader3.datanode: 46.34 (4)
+  load_resource: 375.223
+  PetaboxLoader3.resolve: 341.97
+*/

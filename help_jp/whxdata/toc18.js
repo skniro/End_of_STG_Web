@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"スクリプターズ ガイド\" url=\"Scripter_s_Guide.htm\"><item name=\"テストベッドの設定\" url=\"Setup_your_test_bed.htm\" /><book name=\"基本エンジン\" src=\"toc19.js\" /><book name=\"VNエンジン\" src=\"toc20.js\" /></data>";

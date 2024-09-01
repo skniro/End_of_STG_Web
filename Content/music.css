@@ -1,0 +1,585 @@
+@charset "UTF-8";
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* ============================================================================================
+  TOP
+
+  @date 2017-07-12
+  @include _top
+
+  memo: */
+#music-page {
+  border: none;
+  padding-bottom: 50px;
+}
+
+.pagetitle {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  margin-bottom: 113px;
+}
+
+.pagetitle__inner {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+  border: none;
+}
+
+.pagetitle__inner:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.list {
+  position: relative;
+  z-index: 0;
+  width: 980px;
+  margin: 0 auto;
+}
+
+.list__inner {
+  width: 790px;
+  position: relative;
+  zoom: 1;
+  border: none;
+}
+
+.list__inner:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.list__block {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+  border-bottom: #000000 solid 1px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.list__block:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.list__block:last-of-type {
+  border: none;
+  margin-bottom: 90px;
+  padding-bottom: 0;
+}
+
+.list__jk {
+  width: 300px;
+  float: left;
+}
+
+.list__desc {
+  width: 460px;
+  float: right;
+}
+
+.list__desc__title {
+  font-size: 30px;
+  font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+  font-weight: 500;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1em;
+  margin-bottom: 20px;
+}
+
+.list__desc__title span {
+  display: inline;
+  border-bottom: #000000 solid 1px;
+  line-height: 1.7em;
+  padding-bottom: 5px;
+}
+
+.list__desc__staff {
+  font-family: a-otf-gothic-bbb-pr6n, sans-serif, Arial,  "メイリオ", Meiryo;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  letter-spacing: .02em;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+  -webkit-font-feature-settings: "palt" 1;
+          font-feature-settings: "palt" 1;
+}
+
+.list__desc__button {
+  display: block;
+  width: 100%;
+  zoom: 1;
+}
+
+.list__desc__button:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.list__desc__button.pc-only {
+  display: block;
+}
+
+.list__desc__button.sp-only {
+  display: none;
+}
+
+.list__desc__button li {
+  width: 140px;
+  float: left;
+  margin-right: 20px;
+}
+
+.list__desc__button li:last-child {
+  margin-right: 0;
+}
+
+.list__desc__button a {
+  display: block;
+  background-color: #1428ff;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+}
+
+    .list__desc__button span {
+        display: inline-block;
+        transform: translate(0, -2px);
+        position: relative;
+    }
+
+.list__desc__button span:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.list__desc__button .btn--play a {
+  font-size: 22px;
+  letter-spacing: .09em;
+}
+
+.list__desc__button .btn--play span {
+  padding-left: 34px;
+}
+
+    .list__desc__button .btn--play span:before {
+        background: url("../project/img/music/icon_play.png") center center no-repeat;
+        width: 23px;
+        height: 23px;
+        background-size: cover;
+    }
+
+    .list__desc__button .btn--play.is--play span:before {
+        background: url("../project/img/music/icon_stop.png") center center no-repeat;
+        width: 20px;
+        height: 20px;
+    }
+
+.list__desc__button .btn--dist a {
+  font-size: 20px;
+  letter-spacing: .02em;
+}
+
+.list__desc__button .btn--dist span {
+  padding-left: 37px;
+}
+
+    .list__desc__button .btn--dist span:before {
+        background: url("../project/img/music/icon_blank.png") center center no-repeat;
+        width: 24px;
+        height: 25px;
+        background-size: cover;
+    }
+
+.list__desc__button .btn--cd a {
+  font-size: 22px;
+  letter-spacing: .02em;
+}
+
+.list__desc__button .btn--cd span {
+  padding-left: 37px;
+}
+
+.list__desc__button .btn--cd span:before {
+  background: url("../img/music/icon_blank.png") center center no-repeat;
+  width: 24px;
+  height: 25px;
+  background-size: cover;
+}
+
+.detail__back a {
+  width: 125px;
+  height: 125px;
+  border-radius: 125px;
+  border: #1428ff solid 5px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  transition: all .2s;
+}
+
+.detail__back a:hover {
+  background-color: #1428ff;
+}
+
+.detail__back a:hover .detail__back__icon polygon {
+  fill: #ffffff;
+}
+
+.detail__back a:hover .detail__back__text {
+  color: #ffffff;
+}
+
+.detail__back__icon {
+  display: block;
+  vertical-align: top;
+  line-height: 1.0em;
+  padding-top: 31px;
+  margin-bottom: 9px;
+}
+
+.detail__back__icon polygon {
+  transition: all .2s;
+}
+
+.detail__back__text {
+  display: block;
+  vertical-align: top;
+  line-height: 1.0em;
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: #1428ff;
+  transition: all .2s;
+}
+
+@media screen and (max-width: 1024px) {
+  /* ============================================================================================
+  SP TOP
+
+  @date 2017-07-12
+  @include sp/_top
+
+  memo:
+  padding: 70px
+  padding: 18.66667vw
+  @include spimg(width, 346)
+  @mixin =========================================================================================== */
+  #music-page {
+    border: none;
+    padding-bottom: 45px;
+    padding-bottom: 12vw;
+  }
+  .pagetitle {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding-top: 160px;
+    padding-top: 42.66667vw;
+    margin-bottom: 50px;
+    margin-bottom: 13.33333vw;
+  }
+  .pagetitle__inner {
+    width: 84%;
+    margin: 0 auto;
+    position: relative;
+    zoom: 1;
+    border: none;
+  }
+  .pagetitle__inner:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .pagetitle__headline {
+    width: 100%;
+  }
+  .pagetitle__headline img {
+    width: 100%;
+    height: auto;
+  }
+  .list {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .list__inner {
+    width: 84%;
+    margin: 0 auto;
+    position: relative;
+    zoom: 1;
+    border: none;
+  }
+  .list__inner:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .list__block {
+    width: 100%;
+    position: relative;
+    zoom: 1;
+    border-bottom: #000000 solid 1px;
+    border-bottom: #000000 solid 0.26667vw;
+    margin-bottom: 25px;
+    margin-bottom: 6.66667vw;
+    padding-bottom: 25px;
+    padding-bottom: 6.66667vw;
+  }
+  .list__block:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .list__block:last-of-type {
+    border: none;
+    padding-bottom: 50px;
+    padding-bottom: 13.33333vw;
+    padding-bottom: 0;
+  }
+  .list__jk {
+    float: left;
+    width: 140px;
+    width: 37.33333vw;
+  }
+  .list__jk img {
+    width: 100%;
+    height: auto;
+  }
+  .list__desc {
+    width: 165px;
+    width: 44vw;
+    float: right;
+  }
+  .list__desc__title {
+    font-size: 20px;
+    font-size: 5.33333vw;
+    font-family: a-otf-futo-go-b101-pr6n, sans-serif;
+    font-weight: 500;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: .1em;
+    margin-bottom: 15px;
+    margin-bottom: 4vw;
+  }
+  .list__desc__title span {
+    display: inline;
+    border-bottom: #000000 solid 1px;
+    border-bottom: #000000 solid 0.26667vw;
+    line-height: 1.7em;
+    padding-bottom: 2px;
+    padding-bottom: 0.53333vw;
+  }
+  .list__desc__staff {
+    font-family: a-otf-gothic-bbb-pr6n, sans-serif, Arial,  "メイリオ", Meiryo;
+    font-weight: 400;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-size: 3.2vw;
+    letter-spacing: .02em;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+    margin-bottom: 4vw;
+    -webkit-font-feature-settings: "palt" 1;
+            font-feature-settings: "palt" 1;
+  }
+  .list__desc__button {
+    display: block;
+    width: 100%;
+    zoom: 1;
+    clear: both;
+    padding-top: 15px;
+    padding-top: 4vw;
+  }
+  .list__desc__button:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .list__desc__button.pc-only {
+    display: none;
+  }
+  .list__desc__button.sp-only {
+    display: block;
+  }
+  .list__desc__button li {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-bottom: 4vw;
+  }
+  .list__desc__button li:last-child {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .list__desc__button a {
+    display: block;
+    background-color: #1428ff;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    line-height: 10.66667vw;
+  }
+  .list__desc__button span {
+    display: inline-block;
+    transform: translate(0, -1px);
+    transform: translate(0, -0.26667vw);
+    position: relative;
+  }
+  .list__desc__button span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .list__desc__button .btn--play a {
+    font-size: 20px;
+    font-size: 5.33333vw;
+    letter-spacing: .09em;
+  }
+  .list__desc__button .btn--play span {
+    padding-left: 29.5px;
+    padding-left: 7.86667vw;
+  }
+  .list__desc__button .btn--play span:before {
+    background: url("../img/music/icon_play.png") center center no-repeat;
+    width: 18.5px;
+    width: 4.93333vw;
+    width: 18.5px;
+    width: 4.93333vw;
+    background-size: contain;
+  }
+  .list__desc__button .btn--play.is--play span:before {
+    background: url("../img/music/icon_stop.png") center center no-repeat;
+    width: 16px;
+    width: 4.26667vw;
+    width: 16px;
+    width: 4.26667vw;
+    background-size: contain;
+  }
+  .list__desc__button .btn--dist a {
+    font-size: 16.5px;
+    font-size: 4.4vw;
+    letter-spacing: .02em;
+  }
+  .list__desc__button .btn--dist span {
+    padding-left: 30.5px;
+    padding-left: 8.13333vw;
+  }
+  .list__desc__button .btn--dist span:before {
+    background: url("../img/music/icon_blank.png") center center no-repeat;
+    width: 20px;
+    width: 5.33333vw;
+    width: 20px;
+    width: 5.33333vw;
+    background-size: contain;
+  }
+  .list__desc__button .btn--cd a {
+    font-size: 20px;
+    font-size: 5.33333vw;
+    letter-spacing: .02em;
+  }
+  .list__desc__button .btn--cd span {
+    padding-left: 30.5px;
+    padding-left: 8.13333vw;
+  }
+  .list__desc__button .btn--cd span:before {
+    background: url("../img/music/icon_blank.png") center center no-repeat;
+    width: 20px;
+    width: 5.33333vw;
+    width: 20px;
+    width: 5.33333vw;
+    background-size: contain;
+  }
+  .detail__back a {
+    width: 100px;
+    width: 26.66667vw;
+    height: 100px;
+    height: 26.66667vw;
+    border-radius: 200px;
+    border: #1428ff solid 4.5px;
+    border: #1428ff solid 1.2vw;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    transition: none;
+  }
+  .detail__back a:hover {
+    background: none;
+  }
+  .detail__back a:hover .detail__back__icon polygon {
+    fill: #1428ff;
+  }
+  .detail__back a:hover .detail__back__text {
+    color: #1428ff;
+  }
+  .detail__back__icon {
+    display: block;
+    vertical-align: top;
+    line-height: 1.0em;
+    padding-top: 25px;
+    padding-top: 6.66667vw;
+    margin-bottom: 10px;
+    margin-bottom: 2.66667vw;
+  }
+  .detail__back__icon svg {
+    width: 35px;
+    width: 9.33333vw;
+    height: auto;
+  }
+  .detail__back__icon polygon {
+    transition: none;
+  }
+  .detail__back__text {
+    display: block;
+    vertical-align: top;
+    line-height: 1.0em;
+    font-size: 12px;
+    font-size: 3.2vw;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #1428ff;
+    transition: none;
+  }
+}

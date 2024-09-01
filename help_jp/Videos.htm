@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>動画</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_6";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">ムービー</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラノゲツクールMV</span> では、ムービーの読み込みや表示も非常に簡単にできます。同時に複数のムービーを読み込んで表示したり、ムービーに回転や拡大縮小、色付けなどの効果を追加することも可能です。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ムービーを再生する</p>
+<p>&#160;</p>
+<p>ムービーは gs.Video オブジェクトで表され、 gs.ResourceManager.getVideo メソッドを使用して読み込みます。gs.Video 
+ オブジェクト自体が、自身を直接画面に表示することはできません。ムービーを表示するには、 gs.Sprite オブジェクトが必要です。全体の処理は 
+ gs.Bitmap オブジェクトに似ています。次の例は、ムービーを画面に表示します。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new sprite object to show our video on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our video to the sprite to display it on screen
+&#160;&#160;&#160;&#160;@sprite.video = @video
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @video.width) / 2
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @video.height) / 2
+&#160;&#160;&#160;&#160;# Define the portion of the video we want to display on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @video.width, @video.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Start the video playback. Otherwise wew ill only see the first frame
+&#160;&#160;&#160;&#160;# of the video.
+&#160;&#160;&#160;&#160;@video.play()
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the video &quot;fog.webmhd&quot;
+&#160;&#160;&#160;&#160;@video = ResourceManager.getVideo(&quot;Movies/fog.webmhd&quot;)
+&#160;&#160;&#160;&#160;# Enable looping so the video will repeat non-stop.
+&#160;&#160;&#160;&#160;@video.loop = yes
+###*
+* Update the scene&amp;apos;s content.
+### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+updateContent: -&gt;
+&#160;&#160;&#160;&#160;# Update the video rendering.
+&#160;&#160;&#160;&#160;@video.update()</code></pre>
+<p>&#160;</p>
+<p>ここではムービーオブジェクトをスプライトオブジェクトの video プロパティに割り当てています。またはムービーオブジェクトを bitmap プロパティに割り当てることもできます。 
+ 結果は変わりません。ただし、 video プロパティを使うことをお勧めします。</p>
+<p>&#160;</p>
+<p>ムービーの表示に gs.Sprite オブジェクトを使っていますので、sprite が提供するすべての機能と効果を簡単に利用することができるためです。通常のビットマップとの違いは、ムービー表示を更新するためにフレーム毎にムービーの 
+ update メソッドを呼び出す必要があるという点です。update メソッドの呼び出しを停止すると、ムービーの再生はバックグラウンドで続きますが、画面上では静止した状態になります。また、ムービーの読み込み後に再生を開始するため、 
+ play メソッドを呼び出すことが重要です。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">タブレット＆スマートフォン</p>
+<p>&#160;</p>
+<p>Android や iOS デバイス用のゲーム開発をお考えの場合は、ムービーを多用しないことをお勧めします。一部のデバイスでは OpenGL 
+ でのムービー表示にメモリ消費やパフォーマンスの問題があるためです。 </p>
+</body>
+</html>

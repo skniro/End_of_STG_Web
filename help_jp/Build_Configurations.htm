@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ビルド設定</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.4.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > ビルドと起動" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<h2 style="font-family: 'Book Antiqua', serif; margin-bottom: 7pt; 
+		 font-size: 24pt;">ビルド設定</h2>
+	<hr width="60%" align="left" />
+</div>
+<p>&#160;</p>
+<p>既存のビルド設定を変更するまたは新しいビルド設定を作成するには、<a href="The_Menu_Bar.htm">メニューバー</a>から「<a 
+	 href="Application_Preferences.htm">アプリケーションの環境設定</a>」を開いて「ビルド」タブを選択します。</p>
+<p>&#160;</p>
+<p><img src="Build_Configurations.png" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /></p>
+<p>&#160;</p>
+<p>このタブにはすべてのビルド設定が表示されます。各ビルド設定はダブルクリックすると編集できます。</p>
+<p>&#160;</p>
+<p><img src="Build_Configuration.png" alt="" style=" border:none; width:100%; max-width:400px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「名前」</span> - メニューや進捗ウィンドウに表示されるビルド設定の名前です。</li>
+	<li><span style="font-weight: bold;">「ビルドフェーズ」</span> - 連続的に実行されるビルドフェーズのリストです。</li>
+</ul>
+<p>&#160;</p>
+<p>各ビルド設定には、連続的に実行されるフェーズのリストが含まれます。リストが空の場合、ビルド手順はスキップされます。</p>
+<p>&#160;</p>
+<p><img src="Build_Phase.png" alt="" style=" border:none; width:100%; max-width:400px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「名前」</span> - 進捗ウィンドウの詳細セクションに表示されるフェーズの名前です。</li>
+	<li><span style="font-weight: bold;">「コマンドライン」</span> - ラノゲツクールMVの子プロセスを実行するコマンドラインです。次のフェーズは子プロセスが終了してからトリガーされます。子プロセスの標準的な出力ストリームは、進捗ウィンドウのコンソールにリダイレクトされます。</li>
+	<li><span style="font-weight: bold;">「作業フォルダー」</span> - コマンドラインの作業ディレクトリ（CWD）です。空の場合、出力ディレクトリが使用されます。</li>
+</ul>
+<p>&#160;</p>
+<p>各フェーズはコマンドラインを実行し、エクスポートされたゲームデータを指定の方法で処理します。コマンドラインでは、「作業フォルダー」フィールドと同様に、「$(NODE)」のように「$」から始まる変数のセットを使用できます。使用可能な変数とその値の詳細については、下記を参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">変数</p>
+<p>&#160;</p>
+<p>ビルド設定フェーズのコマンドラインや「作業フォルダー」フィールドでは、下記の変数を使用できます。変数は次の形式である必要があります。</p>
+<p>&#160;</p>
+<p style="font-weight: bold;">$(VARIABLE_NAME)</p>
+<p style="font-weight: bold;">&#160;</p>
+<p style="font-weight: bold;"><span style="font-weight: normal;">使用できる変数は次のとおりです。</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">NODE</span> - ラノゲツクールMV内部のNode.js実行ファイルへのパスです。</li>
+	<li><span style="font-weight: bold;">APP_DIR</span> - ラノゲツクールMVのインストールディレクトリへのパスです。</li>
+	<li><span style="font-weight: bold;">PROJECT_DIR</span> - 現在のプロジェクトフォルダーへのパスです。</li>
+	<li><span style="font-weight: bold;">OUTPUT_DIR</span> - 出力フォルダーへのパスです。</li>
+	<li><span style="font-weight: bold;">PROJECT_NAME</span> - 現在のプロジェクトの名前です。</li>
+	<li><span style="font-weight: bold;">GAME_TITLE</span> - プロジェクトのゲームタイトルです。</li>
+	<li><span style="font-weight: bold;">PACKAGE_ID</span> - プロジェクトの環境設定に設定できるプロジェクトのパッケージIDです。</li>
+	<li><span style="font-weight: bold;">PACKAGE_INFO</span> - パッケージ情報データです。base64エンコーディングされたJSON文字列で、解析すると次の値を含みます。</li>
+	<li><span style="font-weight: bold;">PARAMS</span> - ゲームに関する追加情報を含むパラメータのセットです。base64エンコーディングされたJSON文字列で、解析すると次の値を含みます。</li>
+</ul>
+</body>
+</html>

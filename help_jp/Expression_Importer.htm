@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>表情インポーター</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > データベース" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">表情インポーター</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">表情インポーターを使うと、キャラクターの画像をまとめてインポートしてデータベースエントリーを作成できます。<span 
+	 style="font-family: Arial, sans-serif;">表情インポーターでは、リソース名のパターンを指定して表情の作成方法や保存先のサブフォルダを管理できます。この機能は、表情データベースエントリーの作成に使用できる画像が200枚以上ある場合に便利です。</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">インポーターにアクセスするには、次の順に選択します。<br />
+<span style="font-weight: bold;">「ツール」 &rarr; 「スクリプトエージェント」 &rarr; 「Default」 
+ &rarr;　「表情インポーター」</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="expressionimporter.jpg" alt="" style=" border:none; width:100%; max-width:700px;" border="0" /><br />
+</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「待機ファイルパターン」</span> - キャラクター表情データベース内にある画像を待機アニメーション用に変換するための、画像名のパターンを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「待機アニメーションパターン」</span> - 待機アニメーションのパターンを定義します（例：「0-1-2-1-0」）。ここで指定された順番でアニメーションフレームが作成されます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「トリガー時間」</span> - 待機表情のトリガー時間を設定します。ここでミリ秒単位で指定した時間の範囲内で待機表情がランダムに再生されます。たとえば、「2000 
+	 ms - 4000 ms」に設定すると、最短 2000 msから最長 4000 msの間に待機表情が再生されます。<br />
+	<span style="font-weight: bold;">「会話ファイルパターン」</span> - キャラクター表情データベース内にある画像を会話アニメーション用に変換するための、画像名のパターンを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「速度」</span> - アニメーションのスピードを1%～ 1000%の間で設定します。デフォルト値は「100」です。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「イメージ」</span> - キャラクター表情データベースにインポートするイメージを設定します。事前に 
+	 <span style="font-weight: bold;"><img src="icon_resource_manager.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span> 
+	 リソースマネージャーでインポートされたイメージのみを選択できます。</p></li>
+</ul>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">仕組み</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">たとえばファイル名が「WillowUniform_Angry」（ウィローユニフォーム＿怒り）の場合、「<span 
+	 style="font-style: italic;">{フォルダ1}{フォルダ2}_{表情}</span>」というパターンを使用します。これにより、データベースに次のような形式で新しいエントリーが作成されます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Willow」（ウィロー）</p>
+<p style="font-family: Arial, sans-serif;">-<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Uniform」（ユニフォーム）</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span>--<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Angry」（怒り）</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">または、次のような名前のアニメーションファイルがあったとします。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「WillowUniform_Angry_Idle_1」（ウィローユニフォーム_怒り_待機_1）</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「WillowUniform_Angry_Idle_2」（ウィローユニフォーム_怒り_待機_2）</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「WillowUniform_Angry_Idle_3」（ウィローユニフォーム_怒り_待機_3）</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">この場合は、「<span 
+	 style="font-style: italic;">{フォルダ1}{フォルダ2}_{表情}_待機_{フレーム番号}</span>」というパターンを使用します。これにより次のようなエントリーが自動的に作成されます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Willow」（ウィロー）</p>
+<p style="font-family: Arial, sans-serif;">-<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Uniform」（ユニフォーム）</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">--<img src="arrow.png" alt="" style=" border:none; width:100%; max-width:9px;" border="0" /><img src="icon_folder_closed.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />「Angry」（怒り） &rarr; 3ファイルの待機フレームがすべて含まれます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">アニメーションパターン（例：「0-1-2-1-0」）を設定して指定の順番で待機フレームを自動的に作成することもできます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「待機ファイルパターン」ボックスと<br />
+「会話ファイルパターン」 ボックス（該当する場合）にチェックが入っていることを確認してください。<br />
+<span style="font-weight: normal;">チェックが入っていないとインポーターは機能しません。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">アニメーションフレームのない表情の場合：</span>パターンから「<span 
+	 style="font-style: italic;">_{フレーム番号}</span>」 を削除します。</p>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">使用方法</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">ここでは簡単な例としてデフォルトの設定を使用します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-style: italic;">{フォルダ1}{フォルダ2}_{表情}_{フレーム番号}</span>」のパターンに従って画像のファイル名を設定します。画像は事前に 
+	 <span style="font-weight: bold;"><img src="icon_resource_manager.png" alt="" style=" border:none; max-width:16px; width:100%;" border="0" /></span> 
+	 リソースマネージャーでインポートされている必要があります。<br />
+	<img src="expressionimporter_1.jpg" alt="" style=" border:none; width:100%; max-width:557px;" border="0" /></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">インポーターにアクセスするには、次の順に選択します。<br />
+	「ツール」 &#160;&rarr; 「スクリプトエージェント」 &rarr; 「Default」 &rarr; 「表情インポーター」</p></li>
+	<li style="margin-left: -20px;"><p>「待機ファイルパターン」にチェックが入っていない場合はチェックを入れます。<br />
+	<img src="expressionimporter_2.jpg" alt="" style=" border:none; width:100%; max-width:341px;" border="0" /></p></li>
+	<li style="margin-left: -20px;"><p>「イメージ」ボックスをクリックし、キャラクターの表情のデータベースに設定する画像を選択します。<br />
+	Shiftキー<span style="font-family: Arial, sans-serif;">（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />）を押したまま選択すると複数の画像を選択できます。</span><br />
+	<img src="expressionimporter_3.jpg" alt="" style=" border:none; width:100%; max-width:876px;" border="0" /></p></li>
+	<li style="margin-left: -20px;"><p>ウィンドウが次の状態になっていることを確認し、「OK」をクリックします。<br />
+	<img src="expressionimporter_4.jpg" alt="" style=" border:none; width:100%; max-width:700px;" border="0" /></p></li>
+	<li style="margin-left: -20px;">次の画像が表示されたら「OK」をクリックします。<br />
+	<img src="expressionimporter_5.jpg" alt="" style=" border:none; width:100%; max-width:480px;" border="0" /></li>
+	<li style="margin-left: -20px;">データベースを開き、<span style="font-family: Arial, sans-serif; 
+													 font-weight: bold;"><img src="icon_database_expressions.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /></span><span 
+	 style="font-family: Arial, sans-serif;"> 「キャラクターの表情」を確認します。キャラクターの表情がインポートされています。</span></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 0px;"><img src="expressionimporter_6.jpg" alt="" style=" border:none; width:100%; max-width:774px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

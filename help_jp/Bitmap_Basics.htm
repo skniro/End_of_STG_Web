@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ビットマップの基本</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_3";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">ビットマップの基本</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">本</span>項では、ビットマップについてもう少し学び、また画面にテキストを表示する方法についてもみていきます。</p>
+<p>&#160;</p>
+<p>以前の項でも学びましたが、ビットマップオブジェクトは、単にイメージデータを保持しているだけで、画面に自身を表示する方法についての知識は持っていません。しかし、我々は 
+ draw や fill メソッドを使ってイメージデータを操作し、色のついた形状を描画したり、その上に他のビットマップやテキストを表示させることができます。ビットマップオブジェクトを</p>
+<p>その上に自由に描くことができる 1 枚の紙のようなものとして想像してみてください。もちろん紙はそこからはみ出して描くことはできませんが、それはビットマップも同じです。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シンプルな形状を描画する</p>
+<p>&#160;</p>
+<p>まずはメモリ内ビットマップを作成し、非常にシンプルなところから始めます。メモリ内ビットマップとはディスクから読み込まれていないビットマップという意味です。 
+ サイズは 400 x 400 ピクセルで色の付いた 2 つの正方形を重ねて表示します。</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new in-memory bitmap
+&#160;&#160;&#160;&#160;@bitmap = new gs.Bitmap(400, 400)
+&#160;&#160;&#160;&#160;# Draw a red square at the top-left of the bitmap with a size of 250x250 pixels.
+&#160;&#160;&#160;&#160;@bitmap.fillRect(0, 0, 250, 250, new gs.Color(255, 0, 0))
+&#160;&#160;&#160;&#160;# Draw a blue square starting from pixel 150, 150 with a size of 250x250 pixels.
+&#160;&#160;&#160;&#160;@bitmap.fillRect(150, 150, 250, 250, new gs.Color(0, 0, 255))
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a new sprite object to show our bitmap on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our bitmap to the sprite to display it on screen
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @bitmap.width) / 2
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @bitmap.height) / 2
+&#160;&#160;&#160;&#160;# Define the portion of the bitmap we want to display on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# We don&amp;apos;t need to do anything here since our bitmap is created in memory and not
+&#160;&#160;&#160;&#160;# loaded from disk this time.</code></pre>
+<p>&#160;</p>
+<p>prepareVisual メソッドを変更してメモリ内ビットマップを作成し、続いてスプライトを作成してビットマップを画面に表示します。 
+ 「<a href="Display_a_Picture.htm">ピクチャーを表示する</a>」 の項で作業したのと同じです。今回は何かを読み込んだりゲームデータを用意したりする必要がないので、 
+ prepareData は空にしておきます。 </p>
+<p>&#160;</p>
+<p>この時点でゲームを開始すると、画面の中央に 2 つの色の付いた正方形が重なって表示されます。</p>
+<p>&#160;</p>
+<p><img src="image26.gif" alt="" style=" border:none; max-width:507px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">テキストを描画する</p>
+<p>&#160;</p>
+<p>次に少しおもしろいことをやってみましょう。ビットマップ上にテキストを描画します！</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new in-memory bitmap
+&#160;&#160;&#160;&#160;@bitmap = new gs.Bitmap(400, 400)
+&#160;&#160;&#160;&#160;# Draw a red square at the top-left of the bitmap with a size of 250x250 pixels.
+&#160;&#160;&#160;&#160;@bitmap.fillRect(0, 0, 250, 250, new gs.Color(255, 0, 0))
+&#160;&#160;&#160;&#160;# Draw a blue square starting from pixel 150, 150 with a size of 250x250 pixels.
+&#160;&#160;&#160;&#160;@bitmap.fillRect(150, 150, 250, 250, new gs.Color(0, 0, 255))
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set &quot;Time New Roman&quot; as font family
+&#160;&#160;&#160;&#160;@bitmap.font.name = &quot;Times New Roman&quot;
+&#160;&#160;&#160;&#160;# Set font size to 32 pixel.
+&#160;&#160;&#160;&#160;@bitmap.font.size = 32
+&#160;&#160;&#160;&#160;# Set a default black border
+&#160;&#160;&#160;&#160;@bitmap.font.border = yes
+&#160;&#160;&#160;&#160;# Set italic style
+&#160;&#160;&#160;&#160;@bitmap.font.italic = yes
+&#160;&#160;&#160;&#160;# Draw the text &quot;VN Maker MV!&quot; at the center of the bitmap.
+&#160;&#160;&#160;&#160;@bitmap.drawText(0, 0, 400, 400, &quot;VN Maker MV!&quot;, 1, 1)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a new sprite object to show our bitmap on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our bitmap to the sprite to display it on screen
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @bitmap.width) / 2
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @bitmap.height) / 2
+&#160;&#160;&#160;&#160;# Define the portion of the bitmap we want to display on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()</code></pre>
+<p>&#160;</p>
+<p>上の正方形の例から変更したのはこの部分だけです。</p>
+<pre>
+<code class="coffee">
+# Set &quot;Time New Roman&quot; as font family
+@bitmap.font.name = &quot;Times New Roman&quot;
+# Set font size to 32 pixel.
+@bitmap.font.size = 32
+# Set a default black border
+@bitmap.font.border = yes
+# Set italic style
+@bitmap.font.italic = yes
+# Draw the text &quot;VN Maker MV!&quot; at the center of the bitmap.
+@bitmap.drawText(0, 0, 400, 400, &quot;VN Maker MV!&quot;, gs.TextAlignment.CENTER, gs.TextAlignment.CENTER)</code></pre>
+<p>各ビットマップオブジェクトには、それぞれの gs.Font オブジェクトがあり、 font プロパティからアクセスできます。したがって共通のフォントプロパティを設定することにより、フォントファミリーやサイズ、スタイルなどを簡単に指定できます。 
+ </p>
+<p>&#160;</p>
+<p>drawText メソッドを使うと、ビットマップ上にテキストを描画することができます。テキストをビットマップ上のどこに描画したいのか、それを矩形領域で指定します。この領域はテキストを整列するためにも使用され、ここでは 
+ gs.TextAlignment.CENTER というオプションパラメータを 2 つ使って水平方向、垂直方向の位置を指定しています。矩形領域のサイズはビットマップのサイズと同じ 
+ 400 x 400 ピクセルですので、テキストはビットマップの中央に現れます。</p>
+<p>&#160;</p>
+<p><img src="image28.gif" alt="" style=" border:none; max-width:457px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>初心者の方にとっては最初は少々複雑に感じるかもしれません。そういう時は、実際に自分でいろいろ試してみてください。例えば、最後の 2 つのパラメータを削除したらどうなるでしょう？ 
+ 矩形領域の X 座標/Y 座標を変更したらどうなるでしょうか？ご不明な点がありましたらフォーラムでお尋ねください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ビットマップを描画する</p>
+<p>&#160;</p>
+<p>上の 2 例では、形状やテキストを描画しましたが、ビットマップの上に別のビットマップを描画することもできます。次の例では、イメージアイコンとその隣にテキストを表示し、アイテムメニューのようなものを描画します。</p>
+<pre>
+<code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &#160;
+prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;# Create a new in-memory bitmap with 400 pixels width and
+&#160;&#160;&#160;&#160;# the height of the diamond icon bitmap.
+&#160;&#160;&#160;&#160;@bitmap = new gs.Bitmap(400, @diamondBitmap.height)
+&#160;&#160;&#160;&#160;# Draws the diamond bitmap on our in-memory bitmap at the left side (0, 0).
+&#160;&#160;&#160;&#160;@bitmap.blt(0, 0, @diamondBitmap, @diamondBitmap.bounds)
+&#160;&#160;&#160;&#160;# Set &quot;Time New Roman&quot; as font family
+&#160;&#160;&#160;&#160;@bitmap.font.name = &quot;Times New Roman&quot;
+&#160;&#160;&#160;&#160;# Set font size to 32 pixel.
+&#160;&#160;&#160;&#160;@bitmap.font.size = 32
+&#160;&#160;&#160;&#160;# Set a default black border
+&#160;&#160;&#160;&#160;@bitmap.font.border = yes
+&#160;&#160;&#160;&#160;# Set italic style
+&#160;&#160;&#160;&#160;@bitmap.font.italic = yes
+&#160;&#160;&#160;&#160;# Draw the text &quot;A diamond!&quot; next to the diamond icon. We set the x-coordinate to the 
+&#160;&#160;&#160;&#160;# width of the diamond-icon to let the text appear next to the diamond. We add 10 pixel
+&#160;&#160;&#160;&#160;# extra space to make it look more nice.
+&#160;&#160;&#160;&#160;@bitmap.drawText(@diamondBitmap.width + 10, 0, @bitmap.width, @bitmap.height, &quot;A diamond!&quot;)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a new sprite object to show our bitmap on screen.
+&#160;&#160;&#160;&#160;@sprite = new gs.Sprite(Graphics.viewport)
+&#160;&#160;&#160;&#160;# Assign our bitmap to the sprite to display it on screen
+&#160;&#160;&#160;&#160;@sprite.bitmap = @bitmap
+&#160;&#160;&#160;&#160;# Setup the position on screen. We make it centered.
+&#160;&#160;&#160;&#160;@sprite.x = (Graphics.width - @bitmap.width) / 2
+&#160;&#160;&#160;&#160;@sprite.y = (Graphics.height - @bitmap.height) / 2
+&#160;&#160;&#160;&#160;# Define the portion of the bitmap we want to display on screen.
+&#160;&#160;&#160;&#160;@sprite.srcRect = new gs.Rect(0, 0, @bitmap.width, @bitmap.height)
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&#160;&#160;&#160;&#160;# Load the diamond icon image
+&#160;&#160;&#160;&#160;@diamondBitmap = ResourceManager.getBitmap(&quot;Graphics/Pictures/diamond-large-on&quot;)</code></pre>
+<p>例を見るとわかるように、blt メソッドを使うとビットマップの上に別のビットマップを表示できます。ここでは、読み込まれたダイアモンドのアイコンをビットマップの左側に描画しています。次の手順で、「A 
+ diamond!」というテキストをアイコンの隣に描画しています。</p>
+<p>&#160;</p>
+<p><img src="image29.gif" alt="" style=" border:none; max-width:231px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>これもよくわからない場合は、習うより慣れろです。 ご自分でいろいろ試してみてください。ベーシックエンジンのドキュメントには、 gs.Bitmap 
+ や gs.Font の他のメソッドが解説されていますので、参考にしてください。</p>
+</body>
+</html>

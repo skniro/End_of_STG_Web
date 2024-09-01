@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>条件</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > 基礎を学ぶ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">条件</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">条</span>件は、最も便利なコマンドの1つです。条件を使えば、イベントをトリガーする目標やルールを設定することができます。「シーンコンテンツ」のフォーマットでは、次のようになります。</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_16-54-04.jpg" alt="" style=" border:none; width:100%; max-width:809px;" border="0" /><br />
+<br />
+現時点でまだよくわからなくても大丈夫です！これらがどのような構造をしているかを理解するため、フローチャートに関する記事を参照することをおすすめします。</p>
+<p>&#160;</p>
+<p>自分のフローチャートを作成する場合、無料のソフトウェアを利用することもできます。</p>
+<p>&#160;</p>
+<p><a href="Basic.htm#Condition">条件</a>を理解するには、<a href="Learning_about_Switches.htm">前提となるレッスン</a>を理解する必要があります。必ず読んでおくようにしましょう！</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p style="text-align: center;"><img src="Metisnotes7_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">例1：シンプルなカウンター</p>
+<p>このチュートリアルでは、簡単な条件コマンドの使い方の例を作ります。まずはこちらのフローチャートを見てください。</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_14-20-32.jpg" alt="" style=" border:none; width:100%; max-width:475px;" border="0" /></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>このフローチャートのロジックは、カウンターが「6」の場合プロセスが終了することを示しています。それ以外の場合、カウンターに「1」をプラスして、再度チェックします。</p>
+<p>&#160;</p>
+<p>これを「ラノゲツクールMV」のフォーマットに当てはめると、次のようになります。</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_14-33-57.jpg" alt="" style=" border:none; width:100%; max-width:938px;" border="0" /></p>
+<p>&#160;</p>
+<p>簡単に内容を説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>今回の例では、<span style="font-weight: bold;"><a href="Basic.htm#Number_Variable">ローカル数値変数</a></span>を使いました。これは、変数がゲームの他の部分では一切使われないからです。このシーン固有の変数ということです。</li>
+	<li>「<span style="font-weight: bold;">メッセージボックスの表示設定</span><span>」コマンドを追加し、「表示」を「はい」に設定しました。</span>そうすることで「メッセージを表示」コマンドを使って<a 
+	 href="Message.htm#Text_Codes">テキストコード</a>（{LN:1}）の助けを借りて利用している変数の値を示すことができます。 
+	 これは「<span style="font-weight: bold;"><a href="Basic.htm#Else">その他</a></span>」コマンドの下にあります。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>変数に値を追加した後、ここにに戻る条件を付けたいので、「start」という<span style="font-weight: bold;">ラベル</span>を作りました。</li>
+	<li>「<a href="Basic.htm#Comment" style="font-weight: bold;">コメント</a>」はエンジンに無視されるコマンドで、開発者向けのリマインダーとしてのみ機能します。どんどん使いましょう！</li>
+</ul>
+<p>&#160;</p>
+<p>プレイテストをすると、数字が5までカウントされるのが確認できるはずです。これでシンプルなカウンターができました！</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Example__2:_Creating_a_Treasure_Chest" 
+							 id="Example__2:_Creating_a_Treasure_Chest"></a>例2：宝箱の作成</p>
+<p>宝箱を開けるかどうかをチェックできる小さなテキストプロンプトを作成します。すでに箱を開けている場合、異なる応答を返すようにするわけです。</p>
+<p>&#160;</p>
+<p>簡潔なフローチャートで、この仕組みを説明します。</p>
+<p>&#160;</p>
+<p><img src="2017-01-30_13-58-33.jpg" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&#160;</p>
+<p>少し複雑に見えますが、実は1つ目の例とまったく同じことです！唯一の違いは、ここでは異なる結果を導く選択肢を用いるため「分岐」があるということです。</p>
+<p>&#160;</p>
+<p>これを「ラノゲツクールMV」のフォーマットに当てはめると、次のようになります。</p>
+<p><br />
+<img src="2017-01-30_13-21-36.jpg" alt="" style=" border:none; width:100%; max-width:998px;" border="0" /></p>
+<p>&#160;</p>
+<p>簡単に内容を説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>今回の例では、<span style="font-weight: bold;"><a href="Basic.htm#Switch">ローカルスイッチ</a></span>を使いました。これは、スイッチがゲームの他の部分では一切使われないからです。このシーン固有のスイッチということです。</li>
+	<li>「<span style="font-weight: bold;">ItemGet</span><span>」という</span><span 
+	 style="font-weight: bold;">ラベル</span><span>は、プレイヤーが宝箱を確認しようと決めた場合の結果を示します。ここで条件を設定したり、プレイヤーがまだフックショットを入手していない場合にスイッチをオンしたりできます。</span></li>
+</ul>
+<ul style="list-style: disc;">
+	<li><p>「<span style="font-weight: bold;">Ignored</span>」という<span style="font-weight: bold;">ラベル</span>は、プレイヤーが宝箱を開けないと決めた場合の結果を示しています。</p></li>
+</ul>
+<p>&#160;</p>
+<p>これらの例からわかるように、条件には説明しきれないほど多くの応用が効きます。ゲームを自由自在にカスタマイズしようと思うなら、避けては通れない重要な機能です。</p>
+<p>&#160;</p>
+<p>例として、「<a href="Conditional_Choices.htm">条件選択</a>」のページに特定のシナリオでのみ表示または非表示となる選択肢を紹介するチュートリアルを用意しています。</p>
+<p>&#160;</p>
+</body>
+</html>

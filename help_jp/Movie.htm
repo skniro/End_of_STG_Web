@@ -1,0 +1,562 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ムービー</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">ムービーコマンド</p>
+</div>
+<p>&#160;</p>
+<p>ゲーム内でムービーを再生することで、映画のような体験を演出したり、シーンを盛り上げる効果を描写したりできます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Play_Movie" id="Play_Movie"></a>「ムービーを再生」</p>
+<p class="MsoNormal">ムービーを再生します。このコマンドでムービーを再生すると、ムービーが再生し終わるか、スキップされるまでゲームは一時停止されます。<br />
+ゲームの設定でムービーのスキップが有効になっている場合は、画面をクリックするとムービーがスキップされます。<br />
+ムービーは画面解像度に基づいてサイズ調整されます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><span style="font-weight: bold;">「ファイル」</span> 
+	 - 「Movies」フォルダ内にあるムービーを選択します。</li>
+	<li style="margin-left: -20px;"><p><span style="font-weight: bold;">「音量」</span> 
+	 - 再生するムービーの音量を設定します。</p></li>
+	<li style="margin-left: -20px;"><p><span style="font-weight: bold;">「倍速」</span>&#160;- 
+	 ムービーの再生速度を設定します。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Movie" id="Show_Movie"></a>「ムービーを表示」</p>
+<p class="MsoNormal">ムービーを画像のように画面上に表示させ、後に続くコマンドを実行できるようにします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - ムービーのインデックス（ID）です。レイヤーの順番を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「ファイル」 <span 
+	 style="font-weight: normal;">- 「Movies」フォルダ内にあるムービーを選択します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;"><span style="font-weight: normal;"><b 
+	 style="mso-bidi-font-weight: normal;">「位置」</b></span> <span style="font-weight: normal;">- 
+	 ムービーのターゲット位置を設定します。</span></p></li>
+	<li><b style="mso-bidi-font-weight: normal;">「定義済み」</b> 
+	 - 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><b style="mso-bidi-font-weight: normal;">「計算済み」</b> 
+	 - 座標でターゲット位置を指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 表示アニメーションの時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 表示アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - ムービーの表示方法に影響するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- ムービーの動作を設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からムービーを登場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてムービーをフェードイン／フェードアウトさせます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「マスキング」<span 
+		 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてムービーをフェードインさせます。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「スムーズ」<span 
+			 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</span></p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; margin-left: 40px;"><img src="vague0.gif" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /><img src="vague255.gif" alt="" style=" border:none; width:100%; max-width:500px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「表示」 <span 
+	 style="font-weight: normal;">- ムービーの表示順とアンカーを指定することができます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「アンカー」<span 
+	 style="font-weight: normal;"> -</span> <span style="font-weight: normal;">ムービーのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Zオーダー」<span 
+	 style="font-weight: normal;">&#160;-</span> <span style="font-weight: normal;">ムービーの表示順を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ブレンドモード」 
+	 <span style="font-weight: normal;">- ムービーを表示させる際に使用するブレンドの種類を設定します。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「通常」<span 
+		 style="font-weight: normal;">&#160;- 標準のブレンドモードです。色を混ぜることなく、ムービーをシンプルに画面上に表示します。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「加算」</span>&#160;- 表示するムービーをより明るくします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「減算」&#160;- 
+		 表示するピクチャーをより暗くします。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビューポート」</span>&#160;- ムービーに割り当てられるビューポートです。ビューポートの設定次第で、ムービーがカメラの移動や画面効果に影響を受けるかどうかが決まります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーン」</span> - ムービーをシーンビューポートに割り当て、シーンに属するオブジェクトのように動作させます。そのため、カメラの移動や画面効果に影響を受けます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - ムービーをユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br>そのため、カメラの移動や画面効果に影響を受けません。</p></li>
+	</ul></li>
+	<li style="list-style: none; display: inline;"><p style="font-family: Arial, sans-serif; 
+														 font-weight: bold;">&#160;</p></li>
+</ul>
+<p class="Sub_Heading"><a name="Blend_Movie" id="Blend_Movie"></a>「ムービーをブレンド」</p>
+<p style="font-family: Arial, sans-serif;">指定した不透明度までムービーをブレンドします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- ブレンドするムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「不透明度」</span> - 不透明度を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> ブレンドアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ブレンドが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Movie" id="Zoom_Movie"></a>「ムービーを拡大／縮小」</p>
+<p class="MsoNormal">ムービーを拡大／縮小します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」 
+	 </span>- 拡大／縮小するムービーのインデックス（ID）を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「拡大／縮小 X」</span> 
+	 - 水平方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「拡大／縮小 Y」</span> 
+	 - 垂直方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - ムービーを拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ズームアニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">「効果」<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;"> - ムービーの出現方法を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Move_Movie" id="Move_Movie"></a>「ムービーを移動」</p>
+<p style="font-family: Arial, sans-serif;">ムービーの位置を移動します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 移動するムービーのインデックス（ID）を指定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;"><span style="font-weight: normal;"><b 
+	 style="mso-bidi-font-weight: normal;">「位置」</b></span> <span style="font-weight: normal;">- 
+	 ムービーのターゲット位置を設定します。</span></p></li>
+	<li><b style="mso-bidi-font-weight: normal;">「定義済み」</b> 
+	 - 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><b style="mso-bidi-font-weight: normal;">「計算済み」</b> 
+	 - 座標でターゲット位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 移動アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Motion_Blur" id="Movie_Motion_Blur"></a>「ムービーのモーションブラー」</p>
+<p style="font-family: Arial, sans-serif;">ムービーにモーションブラーを適用します。このコマンドは、「ムービーを移動」や「ムービーをパスに沿って移動」といった、ムービーを移動させるコマンドの上位に設定しなければ効果はありません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- モーションブラーを適用するムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーションブラー」</span> 
+	 -「はい」に設定するとモーションブラーを適用し、「いいえ」に設定するとオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「発生間隔」</span> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「消滅速度」</span> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「不透明度」</span> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Movie_Along_Path" id="Move_Movie_Along_Path"></a>「ムービーをパスに沿って移動」</p>
+<p style="font-family: Arial, sans-serif;">ポイントと曲線を使用してムービーを動かすことのできる、カスタムパスを作成します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> - パスに沿って移動するムービーのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パス」</span> - 曲線でパスを定義するパスエディターを開きます。右クリックでモーションポイントの追加・削除ができます。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Sの円</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの開始点です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">緑の円</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーション内のポイントです。このポイントを使うことで、より動的なモーションを作成することができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">黄色の円</span>（<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />） はモーションの曲線を調整します。緑の円（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）をクリックすると、そのパスのモーションも同様に調整が可能です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Eの円</span>（<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終了点です。</p></li>
+	</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「垂直方向に鏡像反転」 </span>- 曲線を垂直に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「水平方向に鏡像反転」</span> - 曲線を水平に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「90度回転」</span> - 曲線を90度回転させます。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「効果」</span> - ムービーがパスに従って移動する際			に、一定の間隔で効果音を再生します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ループ」</span> - パスを繰り返し移動させることができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「なし」</span> - ループをオフにします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「通常」</span> - パスを終了点からループします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「反転」</span> - パスを終了点から反対方向にループします。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - モーションの移動時間をミリ秒単位で設定します。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ウエイト」</span>&#160;- モーションが終了するまでシーンを待機させます。</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Movie" id="Rotate_Movie"></a>「ムービーを回転」</p>
+<p style="font-family: Arial, sans-serif;">指定した速度や方向でムービーを回転させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 回転させるムービーのインデックス（ID）を設定します。</span></p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「方向」</span> 
+	 - 回転方向（時計回り／反時計回り）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - 回転速度を設定します。数値が高いほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 回転アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 回転アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Tint_Movie" id="Tint_Movie"></a>「ムービーを色付け」</p>
+<p style="font-family: Arial, sans-serif;">現在表示されているムービーの色調を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 色調を変更するムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色調」</span> 
+	 - 色調コントローラーを用いてムービーの色調を変更します。「赤」「緑」「青」の色調（-255～255）を調整することが可能です。<br />
+	グレイスケールフィルターを強さを設定する際は「灰（0～255）」を調整します。値が大きくなるほど、色の全体的な強度が高まります。<br />
+	色調コントローラーの下部にある「通常」「ダーク」「セピア」「モーニング」「ナイト」のボタンを押すと、<br />
+	それぞれの名称で表された色調の値をすぐに適用できます。「通常」ボタンは元の色調を復元します。ウィンドウ上部のプレビューエリアで色調の変化を確認できます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 色調変化アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 色調変化のアニメーションが完了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Flash_Movie" id="Flash_Movie"></a>「ムービーを点滅」</p>
+<p style="font-family: Arial, sans-serif;">指定した色で瞬時にムービー全体を覆い、徐々に元の色に戻していきます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 点滅させるムービーのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「色」</span> 
+	 - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、点滅する際の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 点滅アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span> - 点滅アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Crop_Movie" id="Crop_Movie"></a>「ムービーをトリミング」</p>
+<p style="font-family: Arial, sans-serif;">ムービーのウィンドウを調整することで、元のムービーファイルを直接編集することなく、自由にムービーを表示させることができます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- トリミングするムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><b style="mso-bidi-font-weight: normal;">「X」</b> 
+	 - トリミングを開始する場所を、ムービーの左（または右）から、Xに設定した数値（ピクセル）まで移動した地点に設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「Y」</b> 
+	 - <span style="font-family: Arial, sans-serif;">トリミングを開始する場所を、ムービーの上（または下）から、Yに設定した数値（ピクセル）まで移動した地点に設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「幅」</b> 
+	 - 「X」で設定した地点から始まるウィンドウの幅を設定し、その部分をトリミングします。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><b style="mso-bidi-font-weight: normal;">「高さ」</b> 
+	 - 「Y」で設定した地点から始まるウィンドウの高さを設定し、その部分をトリミングします。</p></li>
+</ul>
+<p class="MsoNormal">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Movie" id="Mask_Movie"></a>「ムービーをマスク」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif;">ムービーにマスクを適用します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「数」 
+	 <span style="font-weight: normal;">- マスキングするムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「ファイル」 
+	 <span style="font-weight: normal;">- ムービーに適用するマスクファイルの種類を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクチャー」</span> - 「Graphics/Masks」フォルダから、使用するマスク画像を選択します。</p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「ムービー」<span 
+	 style="font-weight: normal;">&#160;- マスクとして使用するムービーを選択します。.webm形式のムービーをあらかじめ「Movies」にインポートしておく必要があります。<br />
+	設定したムービーファイルに色彩情報が格納されている場合であっても、赤のカラーチャンネルしか使用されません。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: bold;">「種類」 </span><span style="font-family: Arial, sans-serif; 
+											 font-weight: normal;">- マスキングの種類を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「静的」&#160;</span>- アルファチャンネルマスクを重ねます。<br />
+	<img src="maskmoviestatic.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「オフセット-X」&#160;</span>- 設定した値に応じて、マスキングが左右に移動します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「オフセット-Y」&#160;</span>- 設定した値に応じて、マスキングが上下に移動します。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「動的」</span>&#160;- マスキングで、ムービーの特定の部分を描写します。<br />
+	<img src="maskmoviedynamic.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「値」</span>&#160;- 「0」～「255」で任意の値（ピクセル）を設定することで、マスキングが表示される部分を調整できます。「0」の場合、マスキングは一切描写されません。値が大きくなればなるほど、マスキングの描写範囲が広くなります。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「スムーズ」</span>&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold; margin-left: 0px;">&#160;<img src="maskmovie0.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /><img src="maskmovie255.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - マスキングアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- すぐにシーンを続行します。</span></p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- マスキングアニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Movie" id="Erase_Movie"></a>「ムービーを消去」</p>
+<p style="font-family: Arial, sans-serif;">シーンに表示されているムービーを消去します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 画面から削除するムービーのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - ムービーが画面から消えるアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 消去アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アニメーション」</span>&#160;- 
+	 ムービーの消去アニメーションを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下へとムービーを撤去します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてムービーをフェードアウトさせます。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「マスキング」<span 
+	 style="font-weight: normal;"> - 「Graphics/Masks」フォルダにあるマスク画像を用いてムービーをフェードアウトさせます。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「スムーズ」<span 
+		 style="font-weight: normal;">&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</span></p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;"><img src="erasemovievague0.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /><img src="erasemovievague255.gif" alt="" style=" border:none; width:100%; max-width:591px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Effect" id="Movie_Effect"></a>「ムービー効果」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">ムービーに効果を適用します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - ムービーに適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - ムービーを不規則にぐらつかせます。ループが無効になっている場合にのみ機能します。</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「方向」<span 
+		 style="font-weight: normal;"> - ぐらつきの方向を設定します。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「垂直」</span>&#160;- ぐらつきを垂直方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「水平」</span>&#160;- ぐらつきを水平方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「両方」</span>&#160;- ぐらつきを垂直水平の両方向に設定します。</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきのアニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- ムービーには効果がありません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセル化」</span>&#160;- ムービーをピクセル／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「幅」</span>&#160;- ブロック／ピクセルの幅を設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「高さ」</span>&#160;- ブロック／ピクセルの高さを設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。ムービーをスムーズにピクセル化させる際に使用します。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Movie_Defaults" id="Movie_Defaults"></a>「ムービーの既定」</p>
+<p style="font-family: Arial, sans-serif;">ムービーコマンドの既定値を上書きします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「登場時間」</span>&#160;- 出現アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;- 
+	 消失アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場効果」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 出現時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場効果」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 消失時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span> - ムービーのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Zオーダー」<span 
+	 style="font-weight: normal;">&#160;- ムービーの表示順を設定します。</span></p></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span>「</span><span 
+	 style="font-weight: bold;">モーションブラー</span>」- 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">スポーン時間</span><span>」</span>- 新規コピーが作成された後のフレーム数。既定では2。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">ディゾルブ速度</span>」- スポーンしたコピーが消える速度。具体的には、フレームごとにコピーの不透明度が落ちます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">不透明度</span>」- スポーン時のコピーの不透明度。既定では100。<br />
+		例えば、ディゾルブ速度が2の場合、50ミリ秒、アニメーションが動く際の意図しない残像や粒子は完全になくなります。</p></li>
+	</ul></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

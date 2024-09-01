@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc2.js\"  name=\"ビルドと起動\"><item name=\"はじめに\" url=\"Getting_Started.htm\" /><item name=\"ビルド設定\" url=\"Build_Configurations.htm\" /><item name=\"起動設定\" url=\"Run_Configurations.htm\" /><item name=\"環境変数\" url=\"Environment_Variables.htm\" /><item name=\"ゲームテスト\" url=\"Game_Test.htm\" /></data>";

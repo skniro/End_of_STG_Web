@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：新しいデータベースカテゴリーの追加</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに > 実例" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：新しいデータベースカテゴリーの追加</p>
+</div>
+<p><br />
+次の例では、エディターのデータベースに新たなカテゴリーを追加しようとしています。そのためにはまず、「表示」 &rarr; 「エクステンション」を開きます。</p>
+<p>&#160;</p>
+<p>次に、「Data Record Views」フォルダーを右クリックし、「新規」 &rarr; 「データレコードビュー」を選択して新しいカテゴリー用に新しいビューを作成します。</p>
+<p>ビジュアルノベル作品の中で、トランプを使った簡単なカードゲームを作成したいので、このビューには「Cards」と名付けます。この中にはすでに、次のような基本的なJSONが含まれています。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;category&quot;: &quot;cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;descriptor&quot;: {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: 
+ &quot;Cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sections&quot;: 
+ []</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>それぞれの項目について、順番に見ていきましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">category</p></li>
+</ul>
+<p>カテゴリーのバックエンドフィールドの名前。キャメルケース表記による独自の名前を付けてください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">descriptor</p></li>
+</ul>
+<p>カテゴリーの各レコードに使用されたビューに関する詳細が含まれます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">descriptor.name</p></li>
+</ul>
+<p>データベースのカテゴリーリストで表示される名前。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">descriptor.attribute</p></li>
+</ul>
+<p>レコードを格納するのに使用されるバックエンドの属性名。この名前は、スクリプトを経由してデータレコードにアクセスする際に使用されます。</p>
+<p>キャメルケース表記による独自の名前を付けてください。ほとんどの場合、カテゴリーフィールドと同じになります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">descriptor.sections</p></li>
+</ul>
+<p>UIに使用されるすべてのセクションが含まれます。</p>
+<p>&#160;</p>
+<p>まずは、ゲームの中でカードを説明するのに、どういったデータを格納する必要があるか考えてみましょう。セクションは2つ作成します。</p>
+<p>1つは名前や説明といった一般的なデータのため、もう1つはイメージのためのセクションです。そこで、JSONは次のようになります。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;category&quot;: &quot;cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;descriptor&quot;: {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: 
+ &quot;Cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;cards&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sections&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: 
+ &quot;General&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;items&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;name&quot;: 
+ &quot;Graphic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;items&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>ご覧のように、前述の2つのセクションが追加されています。各セクションにはユーザーに表示される名前と、ユーザーがビューとインタラクトできるようにするアイテムのリストがあります。</p>
+<p>&#160;</p>
+<p>まずは最初のセクション「General」から始めましょう。この例では、カード名用にテキストフィールドを1つと、カードの説明用にマルチラインのテキストエリアを1つ、</p>
+<p>ユーザーに対しそれぞれのフィールドを説明するラベルを2つ追加すればいいだけです。次のコードを参照してください。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;General&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;items&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSLabel&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: 
+ &quot;Name:&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;group&quot;: 
+ &quot;labels&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSTextField&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;name&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [1, 0]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSLabel&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: 
+ &quot;Description:&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 1]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSTextField&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;multiline&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;description&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;defaultValue&quot;: 
+ &quot;Enter description here...&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 2, -1, 100]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>セクションに4つのアイテムを追加しました。各アイテムのフィールドについて詳しく見ていきましょう。各アイテムには、各アイテムタイプが使用できる全般的なフィールドの他、</p>
+<p>タイプに特化したフィールドがいくつかあることがあります。この例で使用されている全般的なフィールドから説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type（必須）</p></li>
+</ul>
+<p>ラベル、テキストフィールド、チェックボックスなど、アイテムのタイプを示します。これは必ずなくてはなりません。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">attribute</p></li>
+</ul>
+<p>アイテムがそのデータを格納するバックエンドのJavaScript属性名。この名前を使用して、スクリプトを介してデータにアクセスすることができます。</p>
+<p>コリジョンを避けるため、名前はビュー固有のものでなくてはなりません。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">frame（必須）</p></li>
+</ul>
+<p>最初の2つの値は位置を示し、他の2つはアイテムのサイズを示しています。ほとんどのアイテムの場合、サイズは自動的に算出されますが、マルチラインのテキスト項目やテーブルなど、</p>
+<p>一部のアイテムについては、少なくとも高さを指定しなくてはならないものもあります。また、値に-1を使用して、値が自動的に計算されなくてはならないことを示すこともできます。</p>
+<p>フレームはすべてのアイテムについてなくてはならず、少なくともXとYの値が必要です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">defaultValue</p></li>
+</ul>
+<p>ここでは、新しいレコードが作成され、読み込む既存のデータがない場合に使用される、デフォルトの値を定義できます。</p>
+<p>&#160;</p>
+<p>今度は、例で使用されているアイテムに特化した項目について説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">group</p></li>
+</ul>
+<p>ラベルをラベルグループに割り当てます。このラベルグループは、ラベルのテキストや同じグループ内の他のラベルのテキストによって、正しくフィットするよう自動的にラベルのサイズを変更します。</p>
+<p>例えば、次のように複数のラベルが互いの下にある場合を見てください。</p>
+<p>&#160;</p>
+<p><span class="Code">Label 1: &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&lt;Text-Field&gt;</span></p>
+<p><span class="Code">Other Label 2: &#160;&#160;&lt;Text-Field&gt;</span></p>
+<p><span class="Code">Another Label 3: &lt;Text-Field&gt;</span></p>
+<p>&#160;</p>
+<p>次のようにレイアウトが崩れるのを避けるため、最も値の高い幅を持つラベルに従い、すべてのラベルの幅を等しくしたいと考えるでしょう。</p>
+<p>&#160;</p>
+<p><span class="Code">Label 1: &lt;Text-Field&gt;</span></p>
+<p><span class="Code">Other Label 2: &lt;Text-Field&gt;</span></p>
+<p><span class="Code">Another Label 3: &lt;Text-Field&gt;</span></p>
+<p>&#160;</p>
+<p>異なるレイアウトタイプを使用してこの問題を解決することもできますが、今回のチュートリアルでは割愛します。</p>
+<p>異なるレイアウトタイプについて詳しくは、<a href="plugin_doc/index.html">プラグインAPIリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">multiline</p></li>
+</ul>
+<p>マルチラインのテキストフィールドを追加したいということを示します。その場合、テキストフィールドの高さの値を指定する必要があります。この例では、高さが100pxになっています。</p>
+<p>&#160;</p>
+<p>最初のセクションの設定ができたら、「プレビュー」ボタンを押してビューのインタラクティブなプレビューを見ることができます。そこで各要素が正しく表示されているか確認します。</p>
+<p>「データレコードビュー」のプレビューを閉じるには、もう一度「プレビュー」ボタンを押してください。</p>
+<p>&#160;</p>
+<p>さて、次に進みましょう。カードイメージのセクションを実装します。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;name&quot;: &quot;Graphic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;items&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;GSImageView&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;attribute&quot;: 
+ &quot;graphic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;folder&quot;: 
+ &quot;Graphics/Pictures&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, 300, 450]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>ここではユーザーにグラフィックを選択させ、同時にプレビューを表示できる「GSImageView 」を使用します。カードのイメージサイズと完全に一致する300x400サイズを採用します。</p>
+<p>フィールドを見てみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">folder</p></li>
+</ul>
+<p>イメージを選択するフォルダー。今回は、「Graphics/Pictures」フォルダーからピクチャーを使用します。</p>
+<p>&#160;</p>
+<p>以上、これで完了です！それではプロジェクトを保存して、「ラノゲツクールMV」を再起動して変更点を確認しましょう。データベースを開くと、新しいカテゴリー「Cards」があるはずです。</p>
+<p>このカテゴリーを使って、ゲーム用のカードのそれぞれ異なるタイプを作成できるようになりました。</p>
+<p>&#160;</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;"><span>スクリプトを介したデータへのアクセス</span></p>
+<hr width="60%" align="left" />
+<p>スクリプトではRecordManageクラスを使用してデータベースにアクセスします。RecordManagerは自動的に、「データレコードビュー」のカテゴリーまたは属性フィールドで</p>
+<p>指定した名前のプロパティを取得します。カードへのアクセス方法は、次の通りです。</p>
+<p>&#160;</p>
+<p><span class="Code">cards = RecordManager.cards</span></p>
+<p><span class="Code">for card in cards</span></p>
+<p><span class="Code">&#160;&#160;if card?</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log(&quot;Name: #{card.name}&quot;)</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log(&quot;Description: 
+ #{card.description}&quot;)</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;console.log(&quot;Image: 
+ #{card.graphic?.name}&quot;)</span></p>
+</body>
+</html>

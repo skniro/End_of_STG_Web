@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>リストコマンド</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">リストコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">リストは、数値やテキストなど複数の変数を保存することができ、その中身を「リスト項目」と呼びます。</p>
+<p style="font-family: Arial, sans-serif;">リストの値は最初「0」になっていますが、さまざまなリストコマンドを使用することで、リストの値を自由に追加／削除することができます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">たとえば、1枚の紙に次のようなリストがあるとします。</span></p>
+<p style="font-family: Arial, sans-serif;">1．リンゴ</p>
+<p style="font-family: Arial, sans-serif;">2．バナナ</p>
+<p style="font-family: Arial, sans-serif;">3．オレンジ</p>
+<p style="font-family: Arial, sans-serif;">4．パイナップル</p>
+<p style="font-family: Arial, sans-serif;">5．チョコレート</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">買い物メモのような項目が5つあり、各リスト項目は固有の番号を持っています。たとえば、「バナナ」は「2」です。</p>
+<p style="font-family: Arial, sans-serif;">ラノゲツクールMVのリストもこれと同様ですが、唯一異なる点は、番号が必ず「0」から始まる点です。上記のリストは、ラノゲツクールMVでは次のようになります。</p>
+<p style="font-family: Arial, sans-serif;">0．リンゴ</p>
+<p style="font-family: Arial, sans-serif;">1．バナナ</p>
+<p style="font-family: Arial, sans-serif;">2．オレンジ</p>
+<p style="font-family: Arial, sans-serif;">3．パイナップル</p>
+<p style="font-family: Arial, sans-serif;">4．チョコレート</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">リストには、いつでも新しい項目を追加したり既存の項目を削除したりできます。<br />
+紙に書かれたリストだと、項目を消したい場合はそこに取り消し線を引きますが、ラノゲツクールMVではその項目が完全に削除され、リスト項目の番号は自動的に修正されます。<br />
+たとえば上記リストから「オレンジ」を削除すると、リストは次のように変化します。</p>
+<p style="font-family: Arial, sans-serif;">0．リンゴ</p>
+<p style="font-family: Arial, sans-serif;">1．バナナ</p>
+<p style="font-family: Arial, sans-serif;">2．パイナップル</p>
+<p style="font-family: Arial, sans-serif;">3．チョコレート</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「パイナップル」の番号が「3」ではなく「2」になっています。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">ラノゲツクールMVのリストでは、「数」「テキスト」「スイッチ」「リスト」と4種類の値を追加できます。<br />
+たとえば、上記のリストにはテキスト値しか含まれていませんが、前述したようにリストにリストを追加し、いわゆる「ネストリスト」を作成することもできます。<br />
+ネストリストは、紙に記入すると次のような形になります。<br />
+</p>
+<p style="font-family: Arial, sans-serif;">0．フルーツ</p>
+<p style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;0．リンゴ</p>
+<p style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;1．バナナ</p>
+<p style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;2．オレンジ</p>
+<p style="font-family: Arial, sans-serif;">1．スイーツ</p>
+<p style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;0．チョコレート</p>
+<p style="font-family: Arial, sans-serif;">&#160;&#160;&#160;&#160;1．ケーキ</p>
+<p style="font-family: Arial, sans-serif;">ネストリストは上級ユーザー向けのトピックです。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Add_to_List" id="Add_to_List"></a>「リストに追加」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">リストに新しい値を追加します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 値を追加するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 追加する値です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span>&#160;- 数値を追加します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を追加します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を追加します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを追加します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Insert_into_List" id="Insert_into_List"></a>「リストに挿入」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストの、指定のインデックス（番号）に新しい値を挿入します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 値を挿入するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インデックス」</span> 
+	 - 値を挿入するリスト内の番号を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 挿入する値です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span>&#160;- 数値を挿入します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を挿入します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を挿入します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを挿入します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Remove_from_List" id="Remove_from_List"></a>「リストから削除」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">リストから、指定した番号の値を削除します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 値を削除するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インデックス」</span> 
+	 - 値を削除するリスト内の番号を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Pop_from_List" id="Pop_from_List"></a>「リストの末尾切り取り」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストの最後の値を切り取り、指定した変数に保存します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 最後の値を切り取るリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 切り取る値を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> &#160;- 数値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを切り取ります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 切り取った値の保存先を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Shift_from_List" id="Shift_from_List"></a>「リストの先頭切り取り」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストの最初の値を切り取り、指定した変数に保存します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 最初の値を切り取るリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 切り取る値を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数値」</span>&#160;- 数値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を切り取ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを切り取ります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 切り取った値の保存先を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Get_from_List" id="Get_from_List"></a>「リストから取得」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストから、指定した番号の値を取得し、別に変数に保存します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 値を取得するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インデックス」</span> 
+	 - 値を取得するリスト内の番号を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 取得する値を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span>&#160;- 数値を取得します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を取得します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を取得します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを取得します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 取得した値の保存先を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Find_in_List" id="Find_in_List"></a>「リストを検索」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストから、指定の値を検索します。検索はフラットに実行されます。つまり、ネストリストは対象に含まれません。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 検索するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 検索する値を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> &#160;- 数値を検索します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を検索します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を検索します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを検索します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インデックスの保存先」</span> 
+	 - 数値変数の保存先を指定します。この数値変数には、検索で一番最初に引っかかった値のリスト番号が入っています。指定した値が検出されなかった場合は「-1」となります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_in_List" id="Set_in_List"></a>「リストに設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">（リストの）指定した番号の値を設定します。指定の番号に値を設定するだけで、新しい項目の値が追加されるわけではありません。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">紙のリストでたとえると、リスト項目の1つを消しゴムで消して、その箇所に別の項目を記入するようなものです。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">リストが短く、指定した番号が存在しない場合（例：「5」を指定したが、リストには3つの項目しかなかった）、必要な長さになるまでリストを引き延ばします。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 値を設定するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「インデックス）</span> 
+	 - 値を設定するリスト内の番号を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「値」</span> 
+	 - 設定する値を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span>&#160;- 数値を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキスト」</span>&#160;- テキスト値を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スイッチ」</span>&#160;- スイッチ値を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span>&#160;- 別のリストを設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Shuffle_List" id="Shuffle_List"></a>「リストをシャッフル」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">トランプをシャッフルする時のように、リスト項目をシャッフルします。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span> - シャッフルするリスト変数を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Sort_List" id="Sort_List"></a>「リストを並べ替え」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">指定したリストの項目を、昇順または降順にソートすることができます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - ソートするリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「順序」</span> 
+	 - ソートの方法を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「昇順」</span>&#160;- 昇順でソートします（例：「オレンジ」「バナナ」「パイナップル「リンゴ」）。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「降順」</span>&#160;- 降順でソートします（例：「リンゴ」「パイナップル」「バナナ」「オレンジ」）。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Clear_List" id="Clear_List"></a>「リストをクリア」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">指定したリストに入っている、全ての要素をクリアします。このコマンドを実行後、リストは空になります。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - クリアするリスト変数を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Length_of_List" id="Length_of_List"></a>「リストの長さ」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したリストの現在の長さを取得し、指定した数値変数に保存します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - 長さを取得するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 長さを格納している数値変数の保存先を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Copy_List" id="Copy_List"></a>「リストをコピー」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">リストをコピーして別のリストに貼り付けます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">紙のリストでたとえると、1枚のリストに書かれている項目すべてを、まったく新しい白紙に書き写すようなものです。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-family: Arial, sans-serif; 
+	 font-weight: normal;">このコマンドを実行すると、オリジナルとコピーの2つの独立したリストが作成されます。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「リスト」</span> - コピーするリスト変数を指定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「コピー先」</span> - コピーしたリストを貼りつけるリスト変数を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Join_List" id="Join_List"></a>「リストをテキストに変換」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">指定したセパレータ（区切り文字）を用いて、すべてのリスト項目を1つのテキストとしてまとめます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「リスト」</span> 
+	 - テキストとして結合するリスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「順序」</span> 
+	 - テキストとして変換する際の順序を指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「普通」</span>&#160;- 「0」の項目番号から順番に並んだテキストとして変換します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「反転」</span>&#160;- そのリスト項目の最後から順番に並んだテキストとして変換します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 結合したリスト項目が格納されたテキスト変数の保存先を指定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_to_List" id="Text_to_List"></a>「テキストをリストに変換」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">コンマやセミコロンなどの指定したセパレータ（区切り文字）を用いて、テキストをリストに変換します。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「テキスト」</span> 
+	 - リストに変換するテキスト変数を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「保存先」</span> 
+	 - 変換したリストの保存先を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「セパレータ」</span><span> 
+	 - テキストをリスト項目として分割・変換する際に使用する文字を設定します。</span></p></li>
+</ul>
+</body>
+</html>

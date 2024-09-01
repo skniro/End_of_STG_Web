@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>トランジションとシーンの変更</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > 基礎を学ぶ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">トランジションとシーンの変更</p>
+</div>
+<p>&#160;</p>
+<p>今度は1つのシーンから次のシーンへ移行する方法について見ていきましょう。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">基本的なシーンの変更</p>
+<p>デフォルトでの基本的なシーンの変更方法は、フェードアウトです。</p>
+<ul style="list-style: disc;">
+	<li>コマンドを追加するには、<span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン 
+	 &rarr; </span><span>「</span><span style="font-weight: bold;"><a href="SceneCommand.htm#Change_Scene">シーンを変更</a></span><span>」に進みます。</span></li>
+	<li>前述のコマンドの「シーン」タブをクリックして、移動先のシーンを選択してください。</li>
+</ul>
+<p>&#160;</p>
+<p style="font-weight: bold; text-align: center;"><img src="Metisnotes010_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<p style="font-weight: bold; text-align: center;">&#160;</p>
+<p class="Sub_Heading">高度なシーンの変更</p>
+<p>基本とは違う少し凝った高度なシーンの変更を行うには、トランジションマスクを使用します。そうすることで、動きをつけてシーンを移行することができます。例えば、シーンに瞬きするような効果をつける場合、瞼のようなトランジションマスクを使用します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>まず、<span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン &rarr;</span><span>「</span><span 
+	 style="font-weight: bold;"><a href="SceneCommand.htm#Change_Transition">トランジションを変更</a></span><span>」コマンドを追加します。各コマンドについて詳しくは、当該のページへのリンクを参照してください。</span></li>
+	<li><span>「トランジションを変更」のすぐ後に、</span><span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン &rarr;</span><span>「</span><span 
+	 style="font-weight: bold;"><a href="SceneCommand.htm#Change_Scene">シーンを変更</a></span><span>」コマンドを追加します。</span></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">まとめ</p>
+<ul style="list-style: disc;">
+	<li><span>「</span><a href="SceneCommand.htm#Change_Scene">シーンを変更</a>」と「<a 
+	 href="SceneCommand.htm#Call_Scene">シーンを呼び出し</a>」は完全に別々のコマンドです。</li>
+	<li><span>「<a href="SceneCommand.htm#Change_Transition" style="font-weight: normal;">トランジションを変更</a>」はグローバルです。シーンの変更で通常のフェードインおよびフェードアウトを使用したい場合、</span><span>別のトランジションの変更を使用して、ファイルを「なし」に設定します。</span></li>
+</ul>
+<ul style="list-style: disc;">
+	<li>もし、BGMが入ったシーンがあって、シーン変更時にBGMを止めたい場合、<span>「シーンを変更</span>」の前に、手動で<span 
+	 style="font-weight: bold;"><img src="AudioCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />オーディオ再生 &rarr;</span><span>「</span><span 
+	 style="font-weight: bold;"><a href="Audio_Playback.htm#Stop_Music">音楽を停止</a></span><span>」コマンドを追加します。</span></li>
+</ul>
+</body>
+</html>

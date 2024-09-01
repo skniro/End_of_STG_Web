@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>一括編集</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1_2";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">一括編集</p>
+</div>
+<?rh-region_end ?>
+<p style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;"><img src="13.jpg" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p>
+<p style="font-family: 'Book Antiqua', serif; font-weight: bold; font-size: 18pt;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「一括編集」は<span>チャプター</span><span>やシーン内の特定のコマンドを一括で変更できるメニューです。プログラミングの経験があるユーザーであれば、さらに多くの操作ができます。.</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「コマンド」</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;"><span style="font-weight: normal;">任意のシーンコマンドを選択して変更できます。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="SubSubHeading">「数値フィールド」</p>
+<p style="font-family: Arial, sans-serif;">コマンドの数値フィールド（「待機」など）を変更します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「設定」 
+	 </span>- 現在の値を上書きします。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「増加」</span> 
+	 - 現在の値を増やします。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「減少」</span> 
+	 - 現在の値を減らします。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading">「テキストフィールド」</p>
+<p style="font-family: Arial, sans-serif;">コマンドのテキストフィールド（「メッセージを表示」など）を変更します。デフォルトの言語設定のみが対象です。<span 
+	 style="font-family: Arial, sans-serif;">翻訳を編集するには「言語設定」タブを使用する必要があります。</span></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「設定」</span>&#160;- 
+	 現在の内容を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「追加」</span>&#160;- 
+	 コマンドの現在の内容の最後に追加します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「削除」</span>&#160;- 
+	 入力されたキーワードを検索して削除します。</p></li>
+</ul>
+<p>&#160;</p>
+<p class="SubSubHeading"><span>「スクリプト」</span></p>
+<p>プログラミングを使用し、「正規表現」など、詳細な条件や置換を指定のコマンドに作成できます。内部では、スクリプトコードを含んだJavaScript関数が作成されます。</p>
+<p>&#160;</p>
+<p style="font-family: 'Courier New', monospace;">function(command) { Your 
+ Code is inserted here }</p>
+<p>&#160;</p>
+<p>関数は現在のコマンドをパラメータとして取得するため、ローカルの「command」変数を使用してスクリプト内のコマンドを確認および変更できます。詳細やコマンドのデータ構造については、ラノゲツクールMVのドキュメント「データ形式」を参照してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">「条件」</p>
+<p>一括編集の条件を設定します。</p>
+<p>&#160;</p>
+</body>
+</html>

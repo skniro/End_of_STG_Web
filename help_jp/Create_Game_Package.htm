@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ゲームパッケージを作成</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_4";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">ゲームパッケージを作成</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">完成したゲームは、世界中にいるユーザーとシェアすることができます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="CreateGamePackage.png" alt="" style=" border:none; width:100%; max-width:550px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">「全般」</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ゲームタイトル」</span> 
+	 - ゲームのタイトルです。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「出力フォルダー」</span> 
+	 - パッケージが保存されるフォルダーです。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「プラットフォーム」</span> 
+	 - ゲームをエクスポートするターゲットプラットフォームです。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「アーキテクチャ」</span> 
+	 - &#160;指定のコンピュータアーキテクチャでゲームパッケージを作成します。この設定はWebプラットフォームやモバイルプラットフォームでは無視されます。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「自動全画面」</span> 
+	 - チェックを入れると、ゲームはフルスクリーンで開始されます。この設定はWebプラットフォームやモバイルプラットフォームでは無視されます。.</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「コンテンツを暗号化」</span> 
+	 - チェックを入れると、ゲームのコンテンツが暗号化されます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading">ゲームパッケージの構造</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">作成されたゲームパッケージは指定の場所に配置されます。ゲームパッケージのファイル構造は、選択したプラットフォームによって異なります。パッケージ構造をコントロールするには「<a 
+	 href="Getting_Started.htm">ビルドと起動</a>」セクションにチェックを入れます。次の例は、デフォルトのWIndowsパッケージのファイル構造です。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="image63.gif" alt="" style=" border:none; width:100%; max-width:144px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">ゲームはGame.exeファイルを実行して開始できます。.dat、.dll、.bin、.pakについては詳細を把握する必要はありません。これらは、WindowsでラノゲツクールMVをプレイするのに使用されるランタイム（NW.js）の一部です。ここで重要なのは、自身が作ったゲームを周りに広める際には、これらすべてをまとめて提供しなければならない、ということです。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">以下に他のファイルの概要を示します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「Game.exe」</p>
+<p style="font-family: Arial, sans-serif;">このファイルを実行するとゲームをプレイできます。ただし、このファイルはゲームデータを保存せず、ランタイムを実行するだけです。ゲームを提供する際はフォルダー内のすべてのファイルをまとめて提供する必要があります。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「index.html」</p>
+<p style="font-family: Arial, sans-serif;">ゲームの開始ポイントです。ラノゲツクールMVはサポート対象のすべてのプラットフォームでHTML5技術を使用するため、HTMLファイルになっています。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「package.json」</p>
+<p style="font-family: Arial, sans-serif;">固有のファイル、Windows、Linux、またはMac 
+ OS Xのパッケージです。このファイルは通常は操作する必要がなく、NW.jsランタイムに特殊な設定を行う場合などに使用します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「icon.png」</p>
+<p style="font-family: Arial, sans-serif;">ゲームウィンドウに使用されるアイコンです。Game.exe/Game.app.のアイコンには影響しません。これらのアイコンを編集するには、Windowsの場合、Resource 
+ Hackerなどのツールを使用してアイコンを希望のものと置き換えます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「signature」</p>
+<p style="font-family: Arial, sans-serif;">ゲームを公開する場合に重要なファイルです。ラノゲツクールMVでは、すべてのゲームにデジタル署名が使用されます。この署名は、ゲームがラノゲツクールMVの適法なバージョンで作成されていること、さらにゲームが改変またはハッキングされていないことを証明するためのものです。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「data」</p>
+<p style="font-family: Arial, sans-serif;">ゲームのすべてのデータを含みます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「resources」</p>
+<p style="font-family: Arial, sans-serif;">ゲームのすべてのリソースを含みます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>イベント付きタイトル画面</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.6.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > UIシリーズ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">イベント付きタイトル画面</p>
+</div>
+<p>&#160;</p>
+<p>ついにここまでやってきました。そろそろオリジナルのカスタムタイトル画面の作成に取り掛かりましょう！「ラノゲツクールMV」では、<a href="In-Game_UI.htm">JSON</a>形式の扱いに不安がある方のために独自のUIにイベントを付けられるツールを用意しています。今回のチュートリアルでは<a 
+	 href="Picture.htm#Show_Image_Map">イメージマップ</a>を使います。必ず予め「<a href="Imagemap_Tutorial.htm">イメージマップとホットスポットのチュートリアル</a>」を一読しておいてください！このチュートリアルでは特に、イベント付きタイトル画面と既定のオプションの作成方法について説明します。<span 
+	 style="font-weight: bold;">他のUIすべてにイベントを付けたい方のために、サンプルプロジェクトも用意されています。</span></p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">グラフィックの準備</p>
+<p>タイトル画面用に2つのインスタンスを用意する必要があります。いつものように、両方のイメージが同じサイズでなくてはならないということを覚えておくことが重要です。以下のイメージを参考にしてください。</p>
+<p>&#160;</p>
+<p><img src="title_selected.jpg" alt="" style=" border:none; width:100%; max-width:640px;" border="0" /></p>
+<p>&#160;</p>
+<p>それができたら<a href="Importing_Resources.htm">ゲームにイメージをインポートしましょう</a>！ファイル名の末尾に「filename_ground」や「filename_hover」などを付けることを強くおすすめします。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンの設定</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><a href="Imagemap_Tutorial.htm#Setting_up_the_Hotspots">まず各選択肢用にホットスポットを作成します</a>。</li>
+	<li>その後、<img src="SystemCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span 
+	 style="font-weight: bold;">システム &rarr; </span><span>「</span><span style="font-weight: bold;">UI 
+	 アクセス</span><span>」の順に選択して追加し、「セーブメニュー」と「バックログ」を「いいえ」に設定します。</span><br />
+	<br />
+	<img src="2017-02-01_22-12-57.jpg" alt="" style=" border:none; width:100%; max-width:747px;" border="0" /><br />
+	<br />
+	この設定は、タイトル画面に他のメニューオプションが表示されないようにするためです。</li>
+	<li><span><img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /></span><span 
+	 style="font-weight: bold;">基本 &rarr; </span><span>「</span><span style="font-weight: bold;">ラベル</span><span>」でコマンドから名を取ったラベルをたくさん作り、各ラベルの最後に</span><img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span 
+	 style="font-weight: bold;">基本 &rarr; </span><span>「</span><span style="font-weight: bold;">待機</span><span>」を置きます。</span>これは、選択肢を選んだ時に他のラベルを発動しないようにするために必要なコマンドです。次のイメージを参照してください。<br />
+	<br />
+	<img src="2017-02-01_22-15-17.jpg" alt="" style=" border:none; width:100%; max-width:781px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">ニューゲームまたはスタートの設定</p>
+<p>このセクションでは、ゲームの「ニューゲーム」の設定方法について説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>まず、少なくとも2つの<img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span style="font-weight: bold;">基本 
+	 &rarr; </span>「<span style="font-weight: bold;">変数をリセット</span>」が必要になります。これらの範囲をそれぞれ「すべてのローカル」と「グローバル」に、種類やターゲットは「すべて」に設定します。これは、ユーザーがリスタートしてタイトル画面に戻った場合、<span>タイトル画面にはイベントが付いているので、「ニューゲーム」が選択された際にすべてのデータをリスタートする必要があるためです。</span></li>
+</ul>
+<ul style="list-style: disc;">
+	<li>「セーブメニュー」、「メニュー」、「バックログ」を「はい」にリセットする「UI アクセス」のインスタンスがもう1つ必要です。</li>
+	<li><span>ゲームを開始するシーンに</span><span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン &rarr; 
+	 </span><span>「</span><span style="font-weight: bold;">シーンを変更</span><span>」を追加します。イメージ、動画、テキストのいずれかを使用している場合、</span>必ず「<span 
+	 style="font-weight: bold;">ピクチャーを消去</span>」、<span style="font-variant-ligatures: normal; 
+														 font-variant-caps: normal; 
+														 orphans: 2; widows: 2; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff; 
+														 text-decoration-style: initial; 
+														 text-decoration-color: initial; 
+														 display: inline	 ! important ; 
+														 float: none;">「</span><span 
+	 style="font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none; font-weight: bold;">ムービーを消去</span><span style="font-variant-ligatures: normal; 
+														 font-variant-caps: normal; 
+														 orphans: 2; widows: 2; 
+														 -webkit-text-stroke-width: 0px; 
+														 background-color: #ffffff; 
+														 text-decoration-style: initial; 
+														 text-decoration-color: initial; 
+														 display: inline	 ! important ; 
+														 float: none;">」、「</span><span 
+	 style="font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none; font-weight: bold;">テキストを消去</span>」を「はい」に設定してください。これができたら、ラベルは次のイメージのように設定されているはずです。<br />
+	<br />
+	<img src="2017-02-01_22-21-17.jpg" alt="" style=" border:none; width:100%; max-width:748px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">ロード画面、設定メニュー、CGギャラリー、終了の設定</p>
+<p>ロード画面を設定する方法はいくつか<span style="font-size: 12pt;">あります。ロード画面をシーンとして作っている場合、「シーンを変更」を使ってそのシーンに導きましょう。ただしデフォルトのメニューを使いたい場合は、「</span><a 
+	 href="SceneCommand.htm#Switch_Layout"><span style="font-size: 12pt;">レイアウトに切り替え</span></a><span 
+	 style="font-size: 12pt; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none;">」を使用します。すべての使用可能な名前については、「</span><span style="font-size: 12pt;"><a 
+	 href="Switch_to_Layout_Reference_List.htm" style="font-size: 12pt;">レイアウトに切り替えのリファレンス一覧</a>」を参照してください。</span><span 
+	 style="font-size: 12pt;">以下は、順を追って説明したガイドです。</span></p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン &rarr; 
+	 「</span><span><a href="SceneCommand.htm#Switch_Layout">レイアウトに切り替え</a>」を追加して、「</span><span 
+	 style="font-weight: bold;">loadMenuLayout</span><span>」と入力します。</span></li>
+	<li>必ず「<span style="font-weight: bold;">前を保存</span><span>」</span><span 
+	 style="font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none;">を「はい</span>」に設定します。次のイメージを参照してください。<br />
+	<br />
+	<img src="2017-02-01_22-44-11.jpg" alt="" style=" border:none; width:100%; max-width:748px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>手順はロード画面の時と同じです。異なるのは「レイアウトに切り替え」で入力するテキストのみです。</p>
+<ul style="list-style: disc;">
+	<li><span style="font-variant-ligatures: normal; font-variant-caps: normal; 
+				 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+				 background-color: #ffffff; text-decoration-style: initial; 
+				 text-decoration-color: initial; display: inline	 ! important ; 
+				 float: none;">設定メニューの場合、「</span><span style="font-weight: bold;">settingsMenuLayout</span><span>」と入力します。</span></li>
+	<li><span>ギャラリーの場合、「</span><span style="font-weight: bold;">cgGalleryLayout</span><span>」と入力します。</span></li>
+</ul>
+<p>最後に、終了の選択肢では<span style="font-weight: bold;"><img src="SceneCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />シーン &rarr; 
+ </span>「<span style="font-weight: bold;">シーンを変更</span>」で「なし」を設定すればいいだけです。</p>
+<p>&#160;</p>
+<p>最終的な設定は次のイメージのようになっているはずです。</p>
+<p>&#160;</p>
+<p><img src="2017-02-01_22-53-24.jpg" alt="" style=" border:none; width:100%; max-width:822px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>最後の手順として、シーンのコンテクストメニューで、「<span style="font-weight: bold;">イントロシーンに設定</span><span>」にしましょう。これにより、言語選択とタイトル画面を完全にスキップします。</span></li>
+</ul>
+<p>&#160;</p>
+<p>おめでとうございます！これでイベント付きタイトル画面の作成が完了しました！</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<div style="width: 100%; position: relative;" id="footer">
+	<p>&#160;</p>
+</div>
+</body>
+</html>

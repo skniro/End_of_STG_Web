@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>インストールスクリプトとアンインストールスクリプト</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">インストールスクリプトとアンインストールスクリプト</p>
+</div>
+<p><br />
+プラグインのインストールやアンインストールを確実にコントロールできるように、「ラノゲツクールMV」ではインストールスクリプトおよびアンインストールスクリプトをサポートしています。</p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">インストールスクリプト</p>
+<p>インストールスクリプトにより、エクステンションをインストールする最中に既存のドキュメントを修正することができます。<br />
+この機能は、エクステンションをアップデートすることができ、古いバージョンのエクステンションから既存のデータを移行させる必要がある場合などに便利です。 
+ </p>
+<p>&#160;</p>
+<p>インストールスクリプトを作成するには、エクステンションエディタを開き、「スクリプト」フォルダーで右クリックをします。</p>
+<p>コンテキストメニューで「新規」 &rarr; 「JavaScript File」を選択して新しいスクリプトを作成します。</p>
+<p>また、より高度な操作として「Objective-J File」を選択することもで<span style="font-size: 12pt;">きます。<br />
+その後は、</span><span style="font-variant-ligatures: normal; font-variant-caps: normal; 
+					 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; 
+					 background-color: #ffffff; text-decoration-style: initial; 
+					 text-decoration-color: initial; display: inline	 ! important ; 
+					 float: none; font-size: 12pt;">Extension Composer（エクステンションコンポーザー）で次の形式に従ったスクリプトを選択できます。</span></p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;migrate: function(uid, document, 
+ version, extension ) {</span></p>
+<p><span class="Code">&#160;&#160;// Modify &quot;document&quot; if necessary</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>上記のように、インストールスクリプトが定義されると、移行機能を含むオブジェクトを返す必要があります。その機能は次の4つの引数を取ります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">uid - 
+	 文字列</p></li>
+</ul>
+<p>現在処理中のドキュメントのUID</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">document 
+	 - オブジェクト</p></li>
+</ul>
+<p>現在処理中のドキュメントのデータ（アイテム）</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">version 
+	 - 文字列</p></li>
+</ul>
+<p>現在インストールされているエクステンションの以前のバージョン。エクステンションに以前のバージョンがない場合、これは&lt;b&gt;null&lt;/b&gt;です。</p>
+<p style="font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">extension</p></li>
+</ul>
+<p>エクステンションのデータ（アイテム）：{ name, id, version, author, website, description, 
+ license, installScript(UID), uninstallScript(UID), active }</p>
+<p>&#160;</p>
+<p>移行機能は、「data_record」と「vn.scene」のタイプのドキュメント上でのみ実行されます。ドキュメントが変更された場合、応答は&lt;b&gt;true&lt;/b&gt;である必要があります。</p>
+<p>trueでない場合、変更は保存されません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>アンインストールスクリプト</span></p>
+<p>アンインストールスクリプトにより、エクステンションがアンインストールされた後に必要に応じてクリーンアップコードを実行できます。</p>
+<p>アンインストールスクリプトを作成するには、「エクステンション」を開き、「スクリプト」フォルダーで右クリックをします。</p>
+<p>コンテキストメニューで「新規」 &rarr; 「JavaScript ファイル」を選択して新しいスクリプトを作成します。</p>
+<p>また、より高度な操作として「Objective-J ファイル」を選択することもで<span style="font-size: 12pt;">きます。その後は、</span><span 
+	 style="font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none; font-size: 12pt;">エクステンションコンポーザーで次の形式に従ったスクリプトを選択できます。</span></p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;cleanUp: function(uid, document, 
+ version, extension ) {</span></p>
+<p><span class="Code">&#160;&#160;// Modify &quot;document&quot; if necessary</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>上記のように、アンインストールスクリプトが定義されると、クリーンアップ機能を含むオブジェクトを返す必要があります。その機能は次の4つの引数を取ります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">uid - 
+	 文字数</p></li>
+</ul>
+<p>現在処理中のドキュメントのUID</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">document 
+	 - オブジェクト</p></li>
+</ul>
+<p>現在処理中のドキュメントのデータ（アイテム）</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">version 
+	 - 文字列</p></li>
+</ul>
+<p>現在インストールされているエクステンションの現在のバージョン</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">extension</p></li>
+</ul>
+<p>エクステンションのデータ（アイテム）：{ name, id, version, author, website, description, 
+ license, installScript(UID), uninstallScript(UID), active }</p>
+<p>&#160;</p>
+<p>クリーンアップ機能は「data_record」と「vn.scene」のタイプのドキュメント上でのみ実行されます。ドキュメントが変更された場合、応答は&lt;b&gt;true&lt;/b&gt;である必要があります。</p>
+<p>trueでない場合、変更は保存されません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>リソースのインストール</span></p>
+<p>エクステンションは、エクステンションを使用するのに必要なリソースのみをエラーなくインストールするものでなくてはならず、リソースパッケージに類するものとして誤用されるべきではありません。</p>
+<p>グラフィックとオーディオリソースのためにサイズが大きくなってしまったエクステンションは、エクステンションマネージャーでは処理されません。</p>
+<p>&#160;</p>
+<p>エクステンションによってリソースをインストールするには、まずエクステンションコンポーザーでエクスポートする必要があります。エクステンションはzipフォルダーなので簡単に展開できます。</p>
+<p>次に、エクステンションのルート内で「resources」と名付けた新しいフォルダーを作成します。そのフォルダーに、インストールしたいすべてのリソースをコピーしてください。</p>
+<p>正しいメインのディレクトリ（例えばインストールしたいすべてのキャラクターグラフィックを含む「resources/Graphics/Characters」など）にそれらを入れる必要があります。</p>
+<p>ロジカルサブフォルダーをインストールターゲットとして指定することはできません。</p>
+<p>&#160;</p>
+<p><img src="InstallResources.png" alt="" style=" border:none; width:100%; max-width:399px;" border="0" /></p>
+<p>&#160;</p>
+<p>インストールするリソースをすべて追加したら、エクステンションフォルダーを再度圧縮すれば完了です。<br />
+エクステンションがアンインストールされる場合、エクステンションによってインストールされたすべてのリソースは削除されます。</p>
+</body>
+</html>

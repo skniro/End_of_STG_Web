@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc.js\"  name=\"ライセンスとクレジット\"><item name=\"エンドユーザーライセンス契約\" url=\"End_User_License_Agreement.htm\" /><item name=\"StARのエンドユーザーライセンス契約\" url=\"StAR_End_User_License_Agreement.htm\" /><item name=\"ライブラリーライセンス\" url=\"Registered_Trademarks.htm\" /><item name=\"クレジット\" url=\"Staff_Credits.htm\" /></data>";

@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"カメラの動き\"><item name=\"パララックススクロール\" url=\"Parallax_Scrolling.htm\" /><item name=\"カメラのチュートリアル\" url=\"Camera_Tutorial.htm\" /></data>";

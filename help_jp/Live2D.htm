@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Live2Dコマンド</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">Live2Dコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">Live2Dコマンドでは、Live2Dモデルをスクリーンに登場させます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><span style="font-family: 'Book Antiqua', serif;">重要事項</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<a href="Character.htm">キャラクター</a>」コマンドの「キャラクターを移動」「キャラクターをパスに沿って移動」「キャラクターを拡大／縮小」「キャラクターを揺らす」「キャラクターをブレンド」なども、Live2Dモデルの動作に影響します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Join_Scene" id="Live2D_Join_Scene"></a>「Live2D シーンに登場」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Live2Dキャラクターをシーンに登場させます。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - シーンに登場させるキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モデル」</span> 
+	 - 使用するLive2Dモデルを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - Live2Dキャラクターの位置です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム 
+	 &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「直接」<span 
+	 style="font-weight: normal;"> - グラフィックエディターを使用してターゲット位置を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> 
+	 - 座標でターゲット位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「時間」<span 
+	 style="font-weight: normal;"> - 登場アニメーションの時間をミリ秒単位で設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 登場アニメーションが終了するまでシーンを待機させます。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果</span><span 
+	 style="font-weight: bold;">」</span>&#160;- キャラクターの出現方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「モーションブラー」<span 
+	 style="font-weight: normal;"> - 「はい」に設定するとモーションブラーを適用し、「いいえ」に設定するとオフにします。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「発生間隔」<span 
+		 style="font-weight: normal;"> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</span></p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「消滅速度」<span 
+		 style="font-weight: normal;"> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「不透明度」<span 
+		 style="font-weight: normal;"> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示</span><span 
+	 style="font-weight: bold;">」</span> - Live2Dキャラクターの表示順とアンカーを指定することができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span> - Live2Dキャラクターのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「Z オーダー」</span>&#160;- Live2Dキャラクターの表示順を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビューポート」</span>&#160;- Live2Dキャラクターに割り当てられるビューポートです。ビューポートの設定次第で、Live2Dキャラクターがカメラの移動や画面効果に影響を受けるかどうかが決まります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーン」</span> - Live2Dキャラクターをシーンビューポートに割り当て、シーンに属するオブジェクトのように動作させます。そのため、カメラの移動や画面効果に影響を受けます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - Live2Dキャラクターをユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br>そのため、カメラの移動や画面効果に影響を受けません。
+</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Exit_Scene" id="Live2D_Exit_Scene"></a>「Live2D シーンから退場」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Live2Dキャラクターをシーンから削除します。</span></p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - シーンから削除するLive2Dキャラクターを選択します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - 退場アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 退場アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - Live2Dキャラクターの退場方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- Live2Dキャラクターの退場アニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下へとLive2Dキャラクターを退場させます。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてLive2Dキャラクターをフェードアウトさせます。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「マスキング」</span>&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてLive2Dキャラクターをフェードアウトさせます。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「スムーズ」</span>&#160;- マスクの外縁の滑らかさを設定します。</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Motion" id="Live2D_Motion"></a>「Live2D モーション」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Live2Dキャラクターのモーションを設定します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - モーションを設定するLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーション」</span> 
+	 - 設定するモーションを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ループ」</span> 
+	 - モーションを繰り返すかどうかを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「フェードイン」</span> 
+	 - モーションをフェードインさせます。ミリ秒単位で設定でき、「0」にするとモーションはすぐに描写されます。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- モーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Motion_Group" id="Live2D_Motion_Group"></a>「Live2D モーショングループ」</p>
+<p style="font-family: Arial, sans-serif;">Live2Dキャラクターにモーショングループを設定します。モーショングループとは、Live2Dファイルに設定されているモーションセットのことで、ランダムまたは順番通りに再生することができます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - モーショングループを適用するLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーショングループ」</span> 
+	 - 適用するモーショングループを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ループ」</span> 
+	 - モーショングループを繰り返すかどうかを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「フェードイン」</span> 
+	 - モーションをフェードインさせます。ミリ秒単位で設定でき、「0」にするとモーションはすぐに描写されます。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- モーショングループが終了するまでシーンを待機させます。</p></li></ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Expression" id="Live2D_Expression"></a>「Live2D 表情」</p>
+<p style="font-family: Arial, sans-serif;">Live2Dキャラクターの表情を設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - 表情を変更するLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表情」</span> 
+	 - 適用する表情を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「フェードイン」</span> 
+	 - 表情をフェードインさせます。ミリ秒単位で設定でき、「0」にすると表情はすぐに描写されます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Move" id="Live2D_Move"></a>「Live2D 移動」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Live2Dキャラクターを、スクリーン上の指定した位置に移動させます。 
+ </span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「キャラクター」</span> 
+	 - 移動させるLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モデル」</span> 
+	 - Live2Dモデルを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - Live2Dキャラクターの立ち位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用してターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> - 座標でターゲット位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 移動アニメーションの時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Parameter" id="Live2D_Parameter"></a>「Live2D パラメータ」</p>
+<p style="font-family: Arial, sans-serif;">Live2Dキャラクターのモデルパラメータを指定の値で設定したり、アニメーション化させたりできます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - アニメーション化させるLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「パラメータ」</span> - 設定／アニメーション化するためのパラメータを設定します。「PARAM_ANGLE_X」や「PARAM_EYE_L_OPEN」といった、Live2Dモデルに有効なパラメータである必要があります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「値」</span> - 必要な値を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「続行」</span>&#160;- 
+	 シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「ウエイト」</span>&#160;- 
+	 アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Settings" id="Live2D_Settings"></a>「Live2D 設定」</p>
+<p style="font-family: Arial, sans-serif;">デフォルトの待機アニメーションやまばたきなど、Live2Dキャラクターの設定を変更できます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - 設定を変更するLive2Dキャラクターを選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「呼吸の度合い」</span> - 呼吸アニメーションのレベルを「0.0%」～「100.0%」の範囲で指定します。「0.0%」と指定すると、呼吸アニメーションは無効になります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「待機の度合い」</span> - 待機アニメーションのレベルを「0.0%」～「100.0%」の範囲で指定します。「0.0%」と指定すると、待機アニメーションは無効になります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「リップシンク感度」</span> - パーセンテージが高いほど、再生される音声に反応してキャラクターの口が動くようになります。「0.0%」にするとリップシンクは無効になります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「まばたき」</span> - まばたきを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「有効」</span> 
+	 - まばたきのデフォルトアニメーションを有効／無効にします。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「インターバル」</span> 
+	 - まばたきを行う間隔の最大値をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「目を閉じたモーション」</span> 
+	 - 目をつぶっている時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「目を閉じるモーション」</span>&#160;- 
+	 目を閉じるアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「目を開くモーション」</span>&#160;- 
+	 目を開けるアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Live2D_Defaults" id="Live2D_Defaults"></a>「Live2D 既定」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">Live2Dコマンドの既定値を上書きします。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「登場時間」</span>&#160;- 出現アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;- 
+	 退場アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場効果」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 出現時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場効果」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 退場時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Z オーダー」<span 
+	 style="font-weight: normal;">&#160;- Live2Dキャラクターの表示順を設定します。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

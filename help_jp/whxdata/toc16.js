@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"ミニゲーム\" url=\"Mini_Games.htm\"><item name=\"ブラックジャック\" url=\"Black_Jack.htm\" /></data>";

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>カスタムコントロール</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.2.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > エクステンションに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">カスタムコントロール</p>
+</div>
+<p><br />
+データベースカテゴリーやカスタムビュー、カスタムウィンドウを作成できるように、ラノゲツクールMVでは、ボタン、チェックボックス、テキストフィールド、テーブルなど、</p>
+<p>パワフルなUIコントロールの標準的なセットを用意しています。しかしながら、大規模であったり、非常に限定的なエクステンションを開発している場合、独自のUIコントロールを作成し、</p>
+<p>ユーザーにとってより使いやすく、より効率的なエクステンションにしたほうがよい場合があります。</p>
+<p>&#160;</p>
+<p>ラノゲツクールMVでは、<a href="http://www.cappuccino-project.org/learn/objective-j.html">Objective-J</a>ファイルや、<a 
+	 href="http://www.cappuccino-project.org">Cappuccino</a>と「ラノゲツクールMV」のObjective-J 
+ APIを組み合わせるなどして、カスタムUIコントロールを開発することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">例：スライダーコントロール</p>
+<p>新しいカスタムUIコントロールを作成するには、新しいObjective-Jファイルを作成します。Objective-Jファイルの名前は<span 
+	 style="font-weight: bold;">必ず</span>、クラス定義の名前と一致している必要があります。</p>
+<p>「エクステンション」 &rarr; 「Scripts」 &rarr; 「Custom Controls」から、「EXSliderItemView」の例を参照することができます。</p>
+<p>これはデフォルトでラノゲツクールMVとともにシップされています。この例のスライダーコントロールの実装方法を参考にしてください。</p>
+<p>&#160;</p>
+<p>わからないことがあれば、当社のフォーラムをどうぞご利用ください！</p>
+</body>
+</html>

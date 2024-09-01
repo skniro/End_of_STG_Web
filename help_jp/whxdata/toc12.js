@@ -1,0 +1,1 @@
+gXMLBuffer ="<?xml version=\"1.0\" encoding=\"utf-8\" ?><data  src=\"toc11.js\"  name=\"キャラクター\"><item name=\"キャラクターと表情の追加\" url=\"Adding_Characters.htm\" /></data>";

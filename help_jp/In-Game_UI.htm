@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>ゲーム内ユーザーインターフェイス</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ 
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > VNエンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+
+<p class="Topic_Heading">ゲーム内ユーザーインターフェイス</p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">ご注意:</span> 本項はゲーム内ユーザーインターフェイスの作り方や既存のインターフェイスの変更方法をご説明するものではありません。それらについてのチュートリアルは <a href="IGUI_Getting_Started.htm">IGUI Getting Started</a> ガイドや <a href="Beginner_s_Guide.htm">Beginner&apos;s Guide</a> をお読みください。</p>
+<p>&#160;</p>
+<p>本項では、ラノゲツクールMV のゲーム内ユーザーインターフェイスがどのように構築されているか技術的な側面から確認し、より深い部分での変更に必要な情報を提供します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">UI オブジェクト</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV のゲーム内ユーザーインターフェイスは、 テキストラベルを表示する ui.Object_Text、イメージを表示する ui.Object_Image、フレームを表示する ui.Object_Frame などといった ui.xxxx のゲームオブジェクトの集合体です。また、 ui.Object_StackLayout や ui.Object_GridLayout のようなレイアウトオブジェクトも含まれます。それらのレイアウトオブジェクトは、ピクセル座標を使わずに画面上に UI 要素を簡単に配置するために使用されます。 </p>
+<p>&#160;</p>
+<p>UI ゲームオブジェクトは非常に基本的なオブジェクトで、 ui.Object_Button オブジェクトとかそういうものはありません。ラノゲツクールMV の UI システムは、基本的な UI 要素を組み合わせて高度な要素を作成するように設計されています。例えば、ボタンなら、 ui.Object_Image と ui.Object_Text と組み合わせて作ります。もちろん自分でカスタム UI オブジェクトやカスタム UI コンポーネントを作成することも可能です。既定の UI オブジェクトは、 Objects &gt; UI フォルダーに、UI コンポーネントは Components &gt; UI フォルダーにそれぞれ格納されています。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">JSON レイアウト、テンプレートおよびスタイル</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV では、既定のゲーム内ユーザーインターフェイスは、コード内で UI オブジェクトを直接処理するのではなく、 JSON レイアウト、スタイルおよびテンプレートを使用して作成されています。JSON ベースのレイアウトと追加システムはベーシックなゲーム内ユーザーインターフェイスシステムの上に構築されています。この背景には、使いやすい JASON descriptions を使ってゲーム内ユーザーインターフェイスをより簡単に作成する狙いがあります。JSON structure は ui.UIManager クラスによってパース、処理され、 JSON structure の情報をベースに必要な UI オブジェクトをすべて構築します。</p>
+<p>&#160;</p>
+<p>それにより、プログラミングと格闘する必要はなくなり、初心者でもウェブサイトをデザインするような感覚でゲーム内ユーザーインターフェイスを簡単に変更できるようになります。ほとんどの場合、プログラミングなしですべてのゲーム内ユーザーインターフェイスを変更可能です。プログラミングが必要になるのは、機能を追加したり、動きを大幅に変更する場合のみになるでしょう。</p>
+<p>&#160;</p>
+<p>すべてのレイアウト、テンプレートおよびスタイルはスクリプトエディタの 「Layouts」 フォルダー内に格納されます。デザインの変更は、 Layout_XXX スクリプトや Template_XXX スクリプトの編集で簡単に実現できます。フォントや色、アニメーションの変更は、 Style_Default スクリプトを編集します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">UIManager クラス</p>
+<p>&#160;</p>
+<p>UIManager クラスは JSON レイアウト、テンプレートおよびスタイルのパースと処理を助けます。必要な UI オブジェクトを構築し、それらに必要なコンポーネントを追加して適切なスタイルを適用します。これはすでに「<a href="Example__Movable_Character.htm">例: 移動可能なキャラクター</a>」の項で既に確認しています。その例では最初に  ui.Object_Text を直接使用し、その後 JSON レイアウトに移ってキャラクター情報表示を作成しています。また  UIManager.createFromDescript メソッドを使用してパースされた JSON description からレイアウトを作成しています。</p>
+<p>&#160;</p>
+<p>UIManager には様々な種類のメソッドがあります。自由にお試しいただき、オリジナルの UI オブジェクトを作成してみてください。ご不明な点はフォーラムでお尋ねください。<a href="IGUI_Getting_Started.htm">ゲーム内ユーザーインターフェイスのドキュメント</a> もお読みください。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

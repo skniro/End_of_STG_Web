@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：コンポーネントの使用</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_8";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：コンポーネントの使用</p>
+</div>
+<p>&#160;</p>
+<p>コンポーネントは、特殊なロジックを追加することでコントロールすることができます。既存のコンポーネントを追加することも、独自のものを書き込むこともできます</p>
+<p>エンティティコンポーネントシステムに詳しいユーザーであれば、コンポーネントについての説明は不要でしょう。</p>
+<p>&#160;</p>
+<p>次の例を見てください。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.StackLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;</span><span class="Code" 
+															 style="font-weight: bold;">&quot;components&quot;: 
+ [{ &quot;id&quot;: &quot;numberInput&quot;, &quot;type&quot;: &quot;Component_NumberInput&quot;, 
+ &quot;params&quot;: { &quot;digits&quot;: ($ -&gt; $tempFields.digits) 
+ } }]</span><span class="Code">,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;sizeToFit&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;id&quot;: &quot;numberField&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;zIndex&quot;: 10,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;alignmentX&quot;: &quot;center&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;frame&quot;: [12, 50],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;dataField&quot;: $ 
+ -&gt; $tempFields.digits</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;template&quot;: {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [5, 5, 5, 5],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sizeToFit&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;controls&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;image&quot;: 
+ &quot;entrybox&quot;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Text&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;sizeToFit&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;alignmentX&quot;: 
+ &quot;center&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;alignmentY&quot;: 
+ &quot;center&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;numberInputEntryText&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;text&quot;: 
+ &quot;0&quot;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">}</span></p>
+<p>この例では、「NewGame」でテキストコントロールを定義し、さらにアクションを割り当てています。しかし、テキストコントロールがデフォルトでオンクリックアクションをサポートしていない問題があります。<br />
+最初にコンポーネントプロパティを使用してこの種の動作を追加する必要があります。このプロパティにより、コントロールに複数のコンポーネントを追加できます。<br />
+例では、1つのコンポーネントタイプ「Component_HotspotBehavio」を追加します。このコンポーネントにより、テキストコントロールはオンクリックアクションをサポートするようになり、<br />
+クリックでニューゲームを開始できるようになります。</p>
+<p>&#160;</p>
+<p>スクリプトエディターの「コンポーネント」フォルダを確認すると、「gs.Component_HotspotBehavior」という名前のコンポーネントクラスがあります。<br />
+これは、使用したタイププロパティが追加するコンポーネントのクラス名を参照していることが理由です。コンポーネントには、デフォルトでgsモジュールの一部が必要ですが、<br />
+モジュールプロパティで別のモジュールを指定することもできます。固有のカスタムコンポーネントを追加するには、クラス名を使用し、gsモジュールの一部として定義するか、固有のモジュールを指定します（推奨）。<br />
+</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>独自のコンポーネントを書き込む</span></p>
+<p>前述の例では、既存のコンポーネントを追加してテキストコントロールにオンクリックアクションを実行させる方法を確認しました。<br />
+次の例では、独自のカスタムコンポーネントを書き込んでコントロールに新しい動作を追加します。</p>
+<p>&#160;</p>
+<p><span class="Code">class Component_MyCustomBehavior extends gs.Component</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;constructor: (params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# 
+ Create your component from optional params-object.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;setup: -&gt;</span></p>
+<p style="margin-left: 80px;"><span class="Code"># Setup your component, 
+ the object-reference has been set to the control-object.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;update: -&gt;</span></p>
+<p style="margin-left: 80px;"><span class="Code"># Implement your update 
+ code if necessary.</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;action_method1: (sender, 
+ params) -&gt;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# 
+ Implement action logic here</span></p>
+<p><span class="Code">gs.Component_MyCustomBehavior = Component_MyCustomBehavior</span></p>
+<p>&#160;</p>
+<p>上記の例は、独自のカスタムコンポーネントのテンプレートとして使用できます。独自のコンポーネントを使用するには次のように書き込みます。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;components&quot;: [{ &quot;id&quot;: &quot;custom_component&quot;, 
+ &quot;type&quot;: &quot;Component_MyCustomBehavior&quot;, &quot;params&quot;: 
+ { &quot;param1&quot;: &quot;Hello&quot; } }]</span></p>
+<p>&#160;</p>
+<p>また、オプションとして、IDプロパティを使用すると、コンポーネントをアクションターゲットとして指定し、例6にあるようにコンポーネントでアクションを呼び出すことができます。<br />
+同様にオプションですが、パラメータプロパティを使用するとパラメータをコンポーネントのコンストラクターにパスできます。</p>
+<p>&#160;</p>
+<p>より高度な例については、gs.Component_NumberInputコンポーネントを参照してください。</p>
+</body>
+</html>

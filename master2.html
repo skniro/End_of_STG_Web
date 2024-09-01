@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <footer id="footer" class="footer">
+        <div class="footer__inner">
+            <p class="footer__logo">
+                <a href="../index.html" class="insite">
+                    <img src="../project/img/logo.png" width="190" height="65" alt="STG">
+                </a>
+            </p>
+            <div class="footer__nav">
+                <div class="footer__nav__block">
+                    <p><a href="../index.html" class="insite"><span>INDEX</span></a></p>
+                    <p><a href="../project.html" class="insite"><span>PROJECT</span></a></p>
+                    <p><a href="../amWiki/index.html?file=home-首页" class="insite"><span>DOCS</span></a></p>
+                    <p><a href="../music/character.htm" class="insite"><span>MUSIC</span></a></p>
+                </div>
+                <div class="footer__nav__block">
+                    <p><a href="../About.html" class="insite"><span>CAST/STAFF</span></a></p>
+                </div>
+            </div>
+            <p class="footer__copyright">
+                © 2024 STG Media Group<br>Project Athena & Project Venus
+            </p>
+        </div>
+        <audio id="kitai" autoplay="autoplay" loop preload="auto" playsinline muted
+               src="../project/uploads/2024/01/kitai.mp3">
+        </audio>
+        <script>
+            window.onload = () => {
+                document.getElementById('kitai').muted = false;
+            }
+        </script>
+    </footer>
+</body>
+</html>

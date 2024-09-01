@@ -1,0 +1,2089 @@
+<!DOCTYPE html><html><head>
+    <script src="../assets/jquery-3.6.0.min.js"></script>
+    <meta charset="utf-8">
+    <title>[1.18.2-1.2.5][工业][匠魂][暮色]STG工业多模组整合（客户端和服务端）[Forge].md</title>
+    <style>
+        .table-condensed > thead > tr > th, .table-condensed > thead > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > tfoot > tr > td {
+            padding: 5px
+        }
+
+        .table-bordered, .table-bordered > thead > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td {
+            border: 1px solid #ddd
+        }
+
+            .table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+                border-bottom-width: 2px
+            }
+
+        .table-striped > tbody > tr:nth-child(odd) > td, .table-striped > tbody > tr:nth-child(odd) > th {
+            background-color: #f9f9f9
+        }
+
+        .table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {
+            background-color: #f5f5f5
+        }
+
+        table col[class*="col-"] {
+            position: static;
+            float: none;
+            display: table-column
+        }
+
+        table td[class*="col-"], table th[class*="col-"] {
+            position: static;
+            float: none;
+            display: table-cell
+        }
+        #stg2020-3 {
+            width: 100%;
+            height: 540px;
+            border-radius: 6px;
+        }
+
+
+    </style>
+</head>
+                     <body class="ms-Fabric" dir="ltr" style="background-color: white;">
+                         <div id="new-header">
+                             <script>
+                                 $("#new-header").load("../master.html");
+
+                             </script>
+                         </div>
+                         <article id="project-page" class="container">
+                             <div>
+                                 <div class="row align-items-center">
+                                     <div class="ms-Grid-col ms-sm10 ms-md10 ms-lg10">
+                                         <div class="text" style=" text-align:center;">
+                                             <div class="jumbotron ms-scaleDownIn100">
+                                                 <h1 class="code-line" data-line-start="0" data-line-end="1"><a id="1182125STGForge_0"></a>[1.18.2-1.2.5][工业][匠魂][暮色]STG工业多模组整合（客户端和服务端）[Forge]</h1>
+                                                 <table class="table table-striped table-bordered">
+                                                     <thead>
+                                                         <tr>
+                                                             <th>中文名称</th>
+                                                             <th>STG工业多版本多模组整合（包含客户端和服务端）【Forge】</th>
+                                                         </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                         <tr>
+                                                             <td>适用版本:</td>
+                                                             <td>1.17.1 1.16.5 1.16.1 1.16 1.15.2 1.12.2 1.11.2 1.10.2 1.9.4 1.8.9 1.7.10 1.6.4及以下</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>包含内容:</td>
+                                                             <td>包含科技，魔法，装饰，农业等众多mod</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>语言支持:</td>
+                                                             <td>繁體/正體中文 简体中文 English</td>
+                                                         </tr>
+                                                         <tr>
+                                                             <td>下载地址:</td>
+                                                             <td><a href="https://pan.baidu.com/s/16xFrPl--AzCbw43I2UqQgA#list/path=%2F">https://pan.baidu.com/s/16xFrPl–AzCbw43I2UqQgA#list/path=%2F</a></td>
+                                                         </tr>
+                                                     </tbody>
+                                                 </table>
+                                                 <h4 class="code-line" data-line-start="8" data-line-end="9"><a id="STGhttpsjqqqcom_wv1027kQGBvf49u_8"></a>STG工业整合交流群：<a href="https://jq.qq.com/?_wv=1027&amp;k=QGBvf49u">链接</a></h4>
+                                                 <h6 class="code-line" data-line-start="9" data-line-end="10"><a id="117X_9"></a>短期支持版本1.17.X</h6>
+                                                 <h6 class="code-line" data-line-start="10" data-line-end="11"><a id="116X1122_10"></a>长期支持版本为1.16.X，1.12.2</h6>
+                                                 <h6 class="code-line" data-line-start="11" data-line-end="12"><a id="1710RE_11"></a>低活动性版本为1.7.10RE</h6>
+                                                 <h6 class="code-line" data-line-start="12" data-line-end="13"><a id="12516418911121152Bug_12"></a>1.2.5，1.6.4，1.8.9-1.11.2，1.15.2版本暂无继续新内容更新计划，仅接收Bug反馈</h6>
+                                                 <h6 class="code-line" data-line-start="13" data-line-end="14"><a id="17101122_1165__13"></a>1.7.10,1.12.2 ,1.16.5提供服务端 暂无版本服务端制作中</h6>
+                                                 <h6 class="code-line" data-line-start="14" data-line-end="15"><a id="Bug_14"></a>Bug反馈地址</h6>
+                                                 <h6 class="code-line" data-line-start="15" data-line-end="16"><a id="Issues__skniroSTTModX_githubcom_15"></a>Issues · skniro/STT-Mod-X (<a href="https://github.com">github.com</a>)</h6>
+                                                 <h4 class="code-line" data-line-start="19" data-line-end="20"><a id="_19"></a>声明</h4>
+                                                 <p class="has-line-data" data-line-start="20" data-line-end="22">
+                                                     首先感谢mod作者以及服务端的作者们。<br>
+                                                     本整合包属于团队自制，转载请注明出处，严禁倒卖，也请您不要相信倒卖者，本贴仅在mcbbs发布，盗用后果自负
+                                                 </p>
+                                                 <h4 class="code-line" data-line-start="23" data-line-end="24"><a id="_23"></a>介绍</h4>
+                                                 <p class="has-line-data" data-line-start="25" data-line-end="27">
+                                                     开服条件：只需一核1G即可畅快游玩（亲测）<br>
+                                                     玩家电脑配置：只要不是太渣的都可以带动，此整合包以将优化做到能力范围内的极致，但建议渣机需把粒子效果调为最小，否则下雨的时候会让你感到崩溃
+                                                 </p>
+                                                 <p>【STG三周年/4K】STG新版官方网站</p>
+                                                 <iframe id="stg2020-3" src="//player.bilibili.com/player.html?cid=274262391&aid=928424590&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width=100% height=100%></iframe>
+                                                 <h4 class="code-line" data-line-start="28" data-line-end="29"><a id="_28"></a>最低&amp;推荐配置</h4>
+                                                 <p class="has-line-data" data-line-start="29" data-line-end="30">
+                                                     <details>
+                                                         <summary>展开/收起</summary>
+                                                         <table class="table table-striped table-bordered">
+                                                             <thead>
+                                                                 <tr>
+                                                                     <th>最低配置要求</th>
+                                                                     <th></th>
+                                                                 </tr>
+                                                             </thead>
+                                                             <tbody>
+                                                                 <tr>
+                                                                     <td>需要</td>
+                                                                     <td>64位处理器和操作系统</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>操作系统:</td>
+                                                                     <td>Windows® 7 or later</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>JAVA:</td>
+                                                                     <td>1.8.0（JAVA8）</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>处理器:</td>
+                                                                     <td>Intel Core2 Duo or better</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>内存:</td>
+                                                                     <td>4 GB RAM</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>显卡:</td>
+                                                                     <td>DirectX9/OpenGL capable GPU</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>网络</td>
+                                                                     <td>无要求</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>存储空间</td>
+                                                                     <td>需要 2 GB可用空间</td>
+                                                                 </tr>
+                                                             </tbody>
+                                                         </table>
+                                                         <table class="table table-striped table-bordered">
+                                                             <thead>
+                                                                 <tr>
+                                                                     <th>推荐配置要求</th>
+                                                                     <th></th>
+                                                                 </tr>
+                                                             </thead>
+                                                             <tbody>
+                                                                 <tr>
+                                                                     <td>需要</td>
+                                                                     <td>64 位处理器和操作系统</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>操作系统:</td>
+                                                                     <td>Windows® 7 or later</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>JAVA:</td>
+                                                                     <td>1.8.0.251（JAVA8 251）</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>处理器:</td>
+                                                                     <td>Intel® Core™ i7-4790K 4.00GHz or equivalent</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>内存:</td>
+                                                                     <td>8 GB RAM</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>显卡:</td>
+                                                                     <td>NVIDIA GeForce GTX970 or equivalent</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>网络</td>
+                                                                     <td>无要求</td>
+                                                                 </tr>
+                                                                 <tr>
+                                                                     <td>存储空间</td>
+                                                                     <td>需要 2 GB SSD可用空间</td>
+                                                                 </tr>
+                                                             </tbody>
+                                                         </table>
+                                                         <p class="has-line-data" data-line-start="51" data-line-end="52">
+                                                     </details>
+                                                 </p>
+                                                 <h4 class="code-line" data-line-start="53" data-line-end="54"><a id="_53"></a>整合包特色</h4>
+                                                 <p class="has-line-data" data-line-start="54" data-line-end="59">
+                                                     1.无任务书，玩家可以自由发挥<br>
+                                                     2.优化矿工体验，整合包中包含基岩矿簇，可在基岩层寻找大量超级矿<br>
+                                                     3.专为众位肝帝设计，你会发现短时间内无论如何都完结不了<br>
+                                                     4.自动化狂魔的福音，本整合包几乎所有mod都可以联络到一起<br>
+                                                     5.主流版本提供服务端，方便与小伙伴一同游玩。
+                                                 </p>
+                                                 <h4 class="code-line" data-line-start="60" data-line-end="61"><a id="mod_60"></a>客户端mod列表</h4>
+                                                 <p class="has-line-data" data-line-start="61" data-line-end="62">高级太阳能</p>
+                                                 <h5 class="code-line" data-line-start="62" data-line-end="63"><a id="17101112_62"></a>1.7.10-1.11.2</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <table class="table table-striped table-bordered">
+                                                         <thead>
+                                                             <tr>
+                                                                 <th>Mod列表</th>
+                                                             </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                             <tr>
+                                                                 <td>工业2实验版</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>暮色森林</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>遗迹生成</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>1.7.10砍树MOD本体</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AgriCraft农业工艺</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AOBD浆果矿物</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AppleCore苹果核</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>bdlib基因工业前置</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>BiblioCraft展示架</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>BiblioWoods展示架拓展</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>buildcraft-compat建筑时代兼容前置</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>buildcraft建筑时代</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Chisel凿子</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CodeChickenCoreNEI前置</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CoFHCore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CoFHLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>cookingbook烹饪书</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CustomSteve</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>EnderCore末影接口核心</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>EnderIOAddons末影接口扩展</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>EnderIO末影接口</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>EnderStorage末影储存</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>fastcraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ironchest更多箱子</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>journeymap旅行地图</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>MrCrayfishFurnitureMod家具</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>NEIIntegrationNEI拓展</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>netherportalfix-下界传送机制修复</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>NoMobSpawningOnTrees</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>NtEnoughItemsNEI</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>OptiFine</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Pam’s HarvestCraft潘马斯工艺</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>sao**美化</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>SimplyJetpacks简易飞行背包</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Translocator 高级传送器</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>UniDict矿辞统一</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Waila</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>WailaHarvestability挖掘公举及等级</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>WAILAPlugins 挖掘公举及等级</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Wawla高亮显示</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>拔刀剑</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>加速火把</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>矿物甘蔗</td>
+                                                             </tr>
+                                                         </tbody>
+                                                     </table>
+                                                 </details>
+                                                 <h5 class="code-line" data-line-start="109" data-line-end="110"><a id="1122_109"></a>1.12.2</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <table class="table table-striped table-bordered">
+                                                         <thead>
+                                                             <tr>
+                                                                 <th>MOD列表</th>
+                                                             </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                             <tr>
+                                                                 <td>【AI改进】AIImprovements</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【BC】buildcraft-all</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CB】懒人厨房CookingForBlockheads</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CTM】连接材质CTM</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【FR】林业forestry</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【IC2】工业时代2industrialcraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【JEI】JEI物品管理器jei</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【AE2】应用能源2appliedenergistics2</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【CCL】CodeChickenLib-CodeChickenLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【NEI】NEI物品管理器-NotEnoughItems</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【地狱传送修复】NetherPortalFix</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【防止怪物树上生成】NoMobSpawningOnTrees</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【高亮显示】Hwyla</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【高亮显示】WailaHarvestability-mc</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【合成冲突消除】NoMoreRecipeConflict</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【基岩矿簇】Bedrock+Ores-MC</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【加速火把】torcherino</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【家具】furniture</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【静谧四季】SereneSeason</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【潘马斯农场】Pam’s+HarvestCraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【泡沫修复】foamfix</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【前置】bspkrsCore-universal</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【前置】Baubles</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【前置】Forgelin</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【前置】Placebo</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【前置】WanionLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【伤害显示】torohealth</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【一键砍树】【1.12】TreeCapitator-client</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【遗迹】Ruins</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【优化】BetterFps</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【照明优化】phosphor</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Macaw的吊桥】mcw-bridges</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【R键整理】InventoryTweaks</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【UD】矿辞统一UniDict</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【VF】原版修复VanillaFix</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【YUNG的矿井优化】BetterMineshaftsForge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【茶风·纪事】TeaStory</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【超级矿石】superores</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高级太阳能】Advanced+Solar+Panels</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示】Wawla</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示】Wawla</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【更多箱子】ironchest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【更好的燃烧机制】BetterBurning</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【旅行地图】journeymap</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【魔法使】mahoutsukai</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【暮色森林】twilightforest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【耐久显示】DurabilityViewer</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【帕秋莉手册】Patchouli</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】ChickenASM</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】CreativeCore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】VexView_ForgeMod</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【熔炉性能优化】FastFurnace</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【神化】Apotheosis</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【时装工坊】Armourers-Workshop</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【收藏馆】BiblioCraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【舒适用品】comforts</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【新版内容】future-mc</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【凿子】Chisel-MC</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【增加id上限】NotEnoughIDs</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【镇守府】ChinjufuMod</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【植物科技2】planttech</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【植物魔法】Botania</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【自然音效】AmbientSounds</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AcademyCraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Decoration][女仆]LittleMaidReengaged</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Decoration][女仆附属]LittleMaidAppendPack</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][热力基本]ThermalFoundation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][旅行者背包]TravelersBackpack</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][热力膨胀5]ThermalExpansionuniversal</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][热动力学]ThermalDynamics</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][热力革新]ThermalInnovation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][热力农业]ThermalCultivation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][IW]工业线缆IndustrialWires</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][IE]沉浸工程ImmersiveEngineering</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][匠魂2]TConstruct</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Agriculture][更多动物]betteranimalsplus</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][铁路]railcraft</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[Technology][METS]更多电力装置MoreElectricTools</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]obfuscate</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[旧版攻击]BetterHurtTimer</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CoffeeWorkshop</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[新版声音]ASMC</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[水域更新]aquaticodyssey</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[调试棒]debugstick</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[新版内容]CC(FG1.12.2)</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[村民与掠夺者更新]Village and Pillage and Pillage and Village</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]EnderCore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]CoFHCore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]RedstoneFlux</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]CoFHWorld</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]Mantle</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[前置]LMLibrary</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>[新版动作]ido</td>
+                                                             </tr>
+                                                         </tbody>
+                                                     </table>
+                                                 </details>
+                                                 <h4 class="code-line" data-line-start="206" data-line-end="207"><a id="1152_206"></a>1.15.2</h4>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <table class="table table-striped table-bordered">
+                                                         <thead>
+                                                             <tr>
+                                                                 <th>Mod列表</th>
+                                                             </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                             <tr>
+                                                                 <td>【AE2】应用能源2appliedenergistics</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【AI改进】AI-Improvements</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CB】懒人厨房CookingForBlockheads</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CCL】CodeChickenLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CTM】连接材质CTM</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【JEI】JEI物品管理器jei</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Latest】【优化】lithium</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Macaw的吊桥】mcw-bridges</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Mek】通用机械Mekanism</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekA】通用机械附加MekanismAdditions</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekG】通用机械发电机MekanismGenerators</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekT】通用机械工具MekanismTools</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【R键整理】inventorysorter</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【YUNG的矿井优化】BetterMineshaftsForge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【地狱传送修复】NetherPortalFix</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示】Hwyla-forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示】WailaHarvestability</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示】WAWLA</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【高亮显示前置】Bookshelf</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【更多箱子】ironchest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【更好的燃烧机制】BetterBurning</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【工业重生】Industrial-Reborn</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【工作台性能优化】FastWorkbench</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【合成冲突消除】polymorph-FORGE</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【加速火把】torcherino</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【家具】furniture</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【静谧四季】SereneSeasons</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【矿石兼容】JAOPC</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【旅行地图】journeymap</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【魔法使】mahoutsukai</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【暮色森林】twilightforest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【耐久显示】DurabilityViewer</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【帕秋莉手册】Patchouli</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【潘马斯农场2食物】pamhc2foodcore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【潘马斯农场2植物】pamhc2trees</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【潘马斯农场2作物】pamhc2crops</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】curios-FORGE</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】MixinBootstrap</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【前置】Placebo</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【熔炉性能优化】FastFurnace</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【神化】Apotheosis</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【舒适用品】comforts-FORGE</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【遗迹】Ruins</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【照明优化】phosphor-forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【植物科技2】planttech</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【植物魔法】Botania</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【自然音效】AmbientSounds</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ChinjufuMod</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>TravelersBackpack</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_expansion</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_cultivation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_innovation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>cofh_core</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ImmersiveEngineering</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>create-mc</td>
+                                                             </tr>
+                                                         </tbody>
+                                                     </table>
+                                                 </details>
+                                                 <h4 class="code-line" data-line-start="266" data-line-end="267"><a id="1165_266"></a>1.16.5</h4>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <table class="table table-striped table-bordered">
+                                                         <thead>
+                                                             <tr>
+                                                                 <th>Mod列表</th>
+                                                             </tr>
+                                                         </thead>
+                                                         <tbody>
+                                                             <tr>
+                                                                 <td>【AI改进】AI-Improvements</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>alltheores</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AmbientSounds</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Apotheosis</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>AutoRegLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>BetterMineshafts-Forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Bookshelf</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Botania</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ClassicCombat</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CodeChickenLib</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>cofh_core</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>comforts-forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CB】懒人厨房CookingForBlockheads</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>CreativeCore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【CTM】连接材质CTM</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>curios-forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>durabilityviewer</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>FallingTree-Forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>FastWorkbench</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>furniture</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Hwyla-forge</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ImmersiveEngineering</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>inventorysorter</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ironchest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>JAOPCA</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【JEI】JEI物品管理器jei</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>jeiintegration</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>journeymap</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>JustEnoughCharacters</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>JustEnoughResources</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>LMML</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>LMRB</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>mahoutsukai</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Mantle</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Macaw的吊桥】mcw-bridges</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【Mek】通用机械Mekanism</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekA】通用机械附加MekanismAdditions</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekG】通用机械发电机MekanismGenerators</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>【MekT】通用机械工具MekanismTools</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>NetherPortalFix</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>pamhc2crops</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>pamhc2foodcore</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>pamhc2foodextended</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>pamhc2trees</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Patchouli</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Placebo</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>planttech</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>polymorph</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>ProgressiveBosses</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Quark</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>randompatches</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>SereneSeasons</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>TConstruct</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_cultivation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_expansion</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_foundation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>thermal_innovation</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>torcherino</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>TravelersBackpack</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>twilightforest</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>WailaHarvestability</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>WAWLA</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>YungsApi</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>chiselsandbits</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Aquaculture</td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td>Industrial-Reborn</td>
+                                                             </tr>
+                                                         </tbody>
+                                                     </table>
+                                                 </details>
+                                                 <h4 class="code-line" data-line-start="335" data-line-end="336"><a id="_335"></a>更新日志</h4>
+                                                 <h4 class="code-line" data-line-start="336" data-line-end="337"><a id="1710_336"></a>#1.7.10版本</h4>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="337" data-line-end="345">
+                                                         2017/2/14-00:00 1.7.10-[Releases]1.0-Forge10.13.4.1558-1.7.10 [Build-0010]<br>
+                                                         基础部分完成<br>
+                                                         在1.7.10 Forge1558版本稳定运行，正式发行<br>
+                                                         第一个正式版<br>
+                                                         2018/5/10-00:00 1.7.10-[Releases]2.0 X OptiFine-Forge10.13.4.1614-1.7.10 [Build-0200]<br>
+                                                         加入更多优化mod<br>
+                                                         精简大量mod<br>
+                                                         加入部分mod
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="346" data-line-end="353">
+                                                         2018-7-10-00:00 1.7.10-[Releases]2.2X.0-Forge10.13.4.1614-1.7.10 [Build-0400]<br>
+                                                         删除<br>
+                                                         【本体】RTM1.7.10.35_Forge10.13.4.1558.zip<br>
+                                                         【前置】NGTLib1.7.10.27_Forge10.13.4.1558.zip<br>
+                                                         两个mod<br>
+                                                         添加更多自定义史蒂夫模型<br>
+                                                         加入RC,TC,CraftGuide三个mod
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="354" data-line-end="357">
+                                                         2018-7-12-00:00 1.7.10-[Releases]2.3X.0-Forge10.13.4.1614-1.7.10 [Build-0531]<br>
+                                                         开始了关于1.8.9 1.10.2 1.12.2的版本构建<br>
+                                                         1.7.10版本加入星系，星系扩展，虚无世界2，中文输入修复共6个mod
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="358" data-line-end="362">
+                                                         2018-7-16-00:00 1.7.10-[Releases]2.4X.0-Forge10.13.4.1614-1.7.10 [Build-0741]<br>
+                                                         1.7.10版本添加MB_Battlegear2-Bullseye-1.0.8.3 mod<br>
+                                                         1.8.9版本计划停止<br>
+                                                         删除虚无世界2
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="363" data-line-end="370">
+                                                         2020-7-26-00:00 1.7.10-[Releases]1.7.10RE-2.5.926-Forge10.13.4.1614-1.7.10[Build-1320]<br>
+                                                         更新大量mod版本<br>
+                                                         添加了<br>
+                                                         [AC]AcademyCraft-1.0.7.jar<br>
+                                                         [FR]林业forestry_1.7.10-4.2.16.64.jar<br>
+                                                         NotEnoughIDs-1.4.3.4.jar<br>
+                                                         [合成冲突消除]NoMoreRecipeConflict-0.3(1.7.10).jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="371" data-line-end="374">
+                                                         2021-3-7-20:28 1.7.10-[Releases]1.7.10RE-2.5.1023.sv-Forge10.13.4.1614-1.7.10[Build-1403]<br>
+                                                         仅服务端更新<br>
+                                                         重要！！修复服务器无法启动的bug
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="375" data-line-end="388">
+                                                         2021-3-28-22:07 1.7.10-[Releases]1.7.10RE-2.5.1103/.sv-Forge10.13.4.1614-1.7.10[Build-20025]<br>
+                                                         加入了<br>
+                                                         Baubles-1.7.10-1.0.1.10<br>
+                                                         littleMaidMobX-1.7.x_0.1.1<br>
+                                                         TConstruct-1.7.10-1.8.8.build991<br>
+                                                         ImmersiveEngineering-0.7.7<br>
+                                                         Botania+r1.8-249<br>
+                                                         BetterBurning-1.7.10-0.4.2<br>
+                                                         Aquaculture-1.7.10-1.2.6.21<br>
+                                                         AIImprovements-1.7.10-0.0.1b19-dev<br>
+                                                         ThermalFoundation-[1.7.10]1.2.6-118<br>
+                                                         ThermalExpansion-[1.7.10]4.1.5-248<br>
+                                                         ThermalDynamics-[1.7.10]1.2.1-172
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="389" data-line-end="394">
+                                                         2021-12-12 1.7.10-1.7.10RE-2.5.2000[Build-22103]<br>
+                                                         重要！！<br>
+                                                         修复CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.4.212<br>
+                                                         更新PLC至2.2.7
+                                                     </p>
+                                                 </details>
+                                                 <h5 class="code-line" data-line-start="394" data-line-end="395"><a id="112_394"></a>1.12版本</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="395" data-line-end="403">
+                                                         2018-8-5-00:00 1.12.2-[Releases]1.12.2-1.0.317- Forge1.12.2-14.23.2.2611 [Build-3122]<br>
+                                                         1.7.10版本停止更新<br>
+                                                         1.10.2计划取消<br>
+                                                         更新至1.12.2 forge2611版本,添加sponge的管理插件<br>
+                                                         删去部分mod<br>
+                                                         不兼容1.7.10存档<br>
+                                                         基于1.7.10 2.4X.4的技术规格构建<br>
+                                                         1.12.2第一个正式版
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="404" data-line-end="410">
+                                                         2019-6-1-20:00 1.12.2-[Releases] 1.12.2-2.0.920- Forge1.12.2-14.23.5.2825 [Build-4123]<br>
+                                                         加强稳定性<br>
+                                                         加入AC,RC等mod<br>
+                                                         完善游戏管理机制<br>
+                                                         完善游戏平衡<br>
+                                                         IC-AC-BC机制形成
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="411" data-line-end="449">
+                                                         2019-11-30-19:51 1.12.2-[Releases]1.12.2-2.1.1339-Forge1.12.2-14.23.5.2847 [Build-5037]<br>
+                                                         服务端<br>
+                                                         更新了核心版本<br>
+                                                         修正部分bug<br>
+                                                         服务端&amp;客户端<br>
+                                                         删除，添加并更新部分MOD<br>
+                                                         删除了<br>
+                                                         bdlib-1.14.3.12-mc1.12.2.jar<br>
+                                                         Decocraft-2.6.0_1.12.2.jar<br>
+                                                         EnderCore-1.12.2-0.5.57.jar<br>
+                                                         EnderIO-1.12.2-5.0.44.jar<br>
+                                                         EnderStorage-1.12.2-2.4.5.135-universal.jar<br>
+                                                         ForgeMultipart-1.12.2-2.4.2.58-universal.jar<br>
+                                                         infinitylib-1.12.0.jar<br>
+                                                         railcraft-12.0.0.jar<br>
+                                                         PTRLib-1.0.2.jar<br>
+                                                         加入了<br>
+                                                         [FR]林业forestry_1.12.2-5.8.2.387.jar<br>
+                                                         更新了<br>
+                                                         [AC]AcademyCraft-1.1.2.jar<br>
+                                                         [BC]buildcraft-all-7.99.24.3.jar<br>
+                                                         [CB]懒人厨房CookingForBlockheads_1.12.2-6.4.71.jar<br>
+                                                         [CCL]CodeChickenLib-CodeChickenLib-1.12.2-3.2.3.358-universal.jar<br>
+                                                         [CTM]连接材质CTM-MC1.12.2-1.0.1.30.jar<br>
+                                                         [IC2]工业时代2industrialcraft-2-2.8.170-ex112.jar<br>
+                                                         [JEI]JEI物品管理器-jei_1.12.2-4.15.0.291.jar<br>
+                                                         [NEI]NEI物品管理器-NotEnoughItems-1.12.2-2.4.3.245-universal.jar<br>
+                                                         [UD]矿辞统一UniDict-1.12.2-2.9.3.jar<br>
+                                                         [高级太阳能]Advanced+Solar+Panels-4.3.0.jar<br>
+                                                         [高亮显示]Wawla-1.12.2-2.5.273.jar<br>
+                                                         [更多箱子]ironchest-1.12.2-7.0.72.847.jar<br>
+                                                         [基岩矿簇]Bedrock+Ores-MC1.12-1.2.7.42.jar<br>
+                                                         [加速火把]torcherino-7.6.jar<br>
+                                                         [暮色森林]twilightforest-1.12.2-3.10.1013-universal.jar<br>
+                                                         [潘马斯农场]Pam’s+HarvestCraft+1.12.2zf.jar<br>
+                                                         [泡沫修复]foamfix-0.10.9-1.12.2.jar<br>
+                                                         [凿子]Chisel-MC1.12.2-1.0.1.44.jar<br>
+                                                         WanionLib-1.12.2-2.4.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="450" data-line-end="466">
+                                                         2020-1-19-19:51 1.12.2-[Releases]1.12.2-3.1.2940-Forge1.12.2-14.23.5.2847 [Build-9130]<br>
+                                                         本次更新插件部分有部分bug请腐竹慎重更新<br>
+                                                         更新内容，服务端加入<br>
+                                                         VexView Ver 2.4<br>
+                                                         客户端更新<br>
+                                                         [高清修复]OptiFine_1.12.2_HD_U_F5.jar<br>
+                                                         客户端&amp;服务端加入<br>
+                                                         [R键整理]InventoryTweaks-1.63.jar<br>
+                                                         [材质修复]TexFix+V-1.12-4.0.jar<br>
+                                                         [光照优化]phosphor-1.12.2-0.2.6+build50-universal.jar<br>
+                                                         [合成冲突消除]NoMoreRecipeConflict-0.13(1.12.2).jar<br>
+                                                         [静谧四季]SereneSeasons-1.12.2-1.2.18-universal.jar<br>
+                                                         [伤害显示]torohealth-1.12-11.jar<br>
+                                                         [镇守府]ChinjufuMod[1.12.2]3.2.2.jar<br>
+                                                         [自然音效]AmbientSounds_v3.0.9_mc1.12.2.jar<br>
+                                                         启动建立1.15.2，1.16版本的计划
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="467" data-line-end="494">
+                                                         2020-7-21-00:00 1.12.2-[Releases]1.12.2-3.2.4102-Forge1.12.2-14.23.5.2854 [Build-9937]<br>
+                                                         更新Forge到Forge1.12.2-14.23.5.2854<br>
+                                                         更新众多mod<br>
+                                                         加入<br>
+                                                         [植物魔法]Botania+r1.10-363.jar<br>
+                                                         [植物科技2]planttech2-1.0.9.jar<br>
+                                                         [Mek]通用机械Mekanism-1.12.2-9.8.3.390.jar<br>
+                                                         [MekG]通用机械发电机MekanismGenerators-1.12.2-9.8.3.390.jar<br>
+                                                         [MekT]通用机械工具MekanismTools-1.12.2-9.8.3.390.jar<br>
+                                                         [VF]原版修复VanillaFix-1.0.10-150.jar<br>
+                                                         [YUNG的矿井优化]BetterMineshaftsForge-1.12.2-1.3.jar<br>
+                                                         [魔法使]mahoutsukai-1.12.2-v1.19.10.jar<br>
+                                                         [耐久显示]DurabilityViewer-1.12-forge14.21.1.2387-1.6.jar<br>
+                                                         [帕秋莉手册]Patchouli-1.0-20.jar<br>
+                                                         [前置]Baubles-1.12-1.5.2.jar<br>
+                                                         [前置]Forgelin-1.8.4.jar<br>
+                                                         [前置]CreativeCore_v1.10.16_mc1.12.2.jar<br>
+                                                         [前置]Forgelin-1.8.4.jar<br>
+                                                         [熔炉性能优化]FastFurnace-1.12.2-1.3.1.jar<br>
+                                                         [神化]Apotheosis-1.12.2-1.12.5.jar<br>
+                                                         [时装工坊]Armourers-Workshop-1.12.2-0.50.3.jar<br>
+                                                         [舒适用品]comforts-1.12.2-1.4.1.3.jar<br>
+                                                         [AI改进]AIImprovements-1.12-0.0.1b3.jar<br>
+                                                         [AE2]应用能源2appliedenergistics2-rv6-stable-7-1.12.2.jar<br>
+                                                         删除了<br>
+                                                         [高级太阳能]Advanced+Solar+Panels-4.3.0.jar<br>
+                                                         [材质修复]TexFix+V-1.12-4.0.jar.txt
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="497" data-line-end="505">
+                                                         2020-7-21-00:00 1.12.2-[Releases]1.12.2-3.2.4312-Forge1.12.2-14.23.5.2854 [Build-10302]<br>
+                                                         此版本为一个bug紧急修复版本<br>
+                                                         重新添加因兼容性问题删除的（问题已修复）<br>
+                                                         [高级太阳能]Advanced+Solar+Panels-4.3.0.1.jar<br>
+                                                         回滚[镇守府]ChinjufuMod[1.12.2]5.3.1.jar到[镇守府]ChinjufuMod[1.12.2]3.2.2.jar<br>
+                                                         因作者修改了物品id无法与旧版存档兼容<br>
+                                                         重启1.7.10RE，1.8.9版本，1.10.2版本的计划<br>
+                                                         启动建立1.9.4，1.11.2版本的计划
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="506" data-line-end="515">
+                                                         2020-8-12-00:00 1.12.2-[Releases]1.12.2-3.3.4703-Forge1.12.2-14.23.5.2854 [Build-10628]<br>
+                                                         删除<br>
+                                                         [Mek]通用机械Mekanism-1.12.2-9.8.3.390.jar<br>
+                                                         [MekG]通用机械发电机MekanismGenerators-1.12.2-9.8.3.390.jar<br>
+                                                         [MekT]通用机械工具MekanismTools-1.12.2-9.8.3.390.jar<br>
+                                                         加入<br>
+                                                         FutureVersions+v1.3.0.2.jar<br>
+                                                         [茶风·纪事] TeaStory-3.3.3-B33.418-1.12.2.jar<br>
+                                                         更新了部分mod
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="516" data-line-end="529">
+                                                         2020-8-16-00:00 1.12.2-[Releases]1.12.2-3.4.13-Forge1.12.2-14.23.5.2854 [Build-11028]<br>
+                                                         加入<br>
+                                                         [JEI村民交易查看]jeivillagers-1.12-1.0.2.jar<br>
+                                                         [JEI扩展]jeibees-0.9.0.5-mc1.12.2.jar<br>
+                                                         [JEI扩展]jeiintegration_1.12.2-1.6.0.jar<br>
+                                                         [JEI扩展]jetif-1.12.2-1.5.2.jar<br>
+                                                         [JEI扩展]just-enough-harvestcraft-1.12.2-1.7.2.jar<br>
+                                                         [JEI扩展]JustEnoughResources-1.12.2-0.9.2.60.jar<br>
+                                                         [潮涌][优化]Surge-1.12.2-2.0.77.jar<br>
+                                                         [旧版攻击]SwordBlockingCombat-v1.2.2-1.12.2.jar<br>
+                                                         [通用拼音搜索]JustEnoughCharacters-1.12.0-3.4.7.jar<br>
+                                                         更新了<br>
+                                                         [前置]VexView_ForgeMod_1.12±2.6.10.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="530" data-line-end="569">
+                                                         2021-2-14-00:00 1.12.2-[Releases]1.12.2-3.5.3/3.5.3.sv-Forge1.12.2-14.23.5.2855 [Build-11701]<br>
+                                                         更新forge<br>
+                                                         加入了<br>
+                                                         [Decoration][女仆]LittleMaidReengaged_FirisPatch-9.3.3.fp.053.jar<br>
+                                                         [Decoration][女仆附属]LittleMaidAppendPack-2.0.0.jar<br>
+                                                         [Technology][热力基本]ThermalFoundation-1.12.2-2.6.7.1-universal.jar<br>
+                                                         [Technology][旅行者背包]TravelersBackpack-1.12.2-1.0.34.jar<br>
+                                                         [Technology][热力膨胀5]ThermalExpansion-1.12.2-5.5.7.1-universal<br>
+                                                         [Technology][热动力学]ThermalDynamics-1.12.2-2.5.6.1-universal<br>
+                                                         [Technology][热力革新]ThermalInnovation-1.12.2-0.3.6.1-universal<br>
+                                                         [Technology][热力农业]ThermalCultivation-1.12.2-0.3.6.1-universal<br>
+                                                         [Technology][IW]工业线缆IndustrialWires-1.7-36<br>
+                                                         [Technology][IE]沉浸工程ImmersiveEngineering-0.12-98<br>
+                                                         [Technology][匠魂2]TConstruct-1.12.2-2.13.0.183<br>
+                                                         [Agriculture][更多动物]betteranimalsplus-1.12.2-9.0.1<br>
+                                                         [Technology][铁路]railcraft-12.0.0<br>
+                                                         [Technology][METS]更多电力装置MoreElectricTools.v1.632<br>
+                                                         [前置]obfuscate-0.4.2-1.12.2s<br>
+                                                         [旧版攻击]BetterHurtTimer-1.12.2-1.5.0.1<br>
+                                                         CoffeeWorkshop_V1.2.7_MC1.12.2<br>
+                                                         [新版声音]ASMC-1.12.2-1.0.2<br>
+                                                         [水域更新]aquaticodyssey-2.4.1<br>
+                                                         [调试棒]debugstick-1.2<br>
+                                                         [新版内容]CC(FG1.12.2)+1.0.9<br>
+                                                         [村民与掠夺者更新]Village and Pillage and Pillage and Village v1.2<br>
+                                                         [前置]EnderCore-1.12.2-0.5.76<br>
+                                                         [前置]CoFHCore-1.12.2-4.6.6.1-universal<br>
+                                                         [前置]RedstoneFlux-1.12-2.1.1.1-universal<br>
+                                                         [前置]CoFHWorld-1.12.2-1.4.0.1-universal<br>
+                                                         [前置]Mantle-1.12-1.3.3.55<br>
+                                                         [前置]LMLibrary-1.1.2<br>
+                                                         [新版动作]ido-1.12.2-2.0.0-B<br>
+                                                         更新了<br>
+                                                         [高清修复]OptiFine-1.12.2_HD_U_G5.jar<br>
+                                                         删除了<br>
+                                                         [更好的战斗]BetterCombat-1.12.2-1.5.6<br>
+                                                         [潮涌][优化]Surge-1.12.2-2.0.77<br>
+                                                         [VF]原版修复VanillaFix-1.0.10-150<br>
+                                                         FutureVersions+v1.3.0.2
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="570" data-line-end="599">
+                                                         2021-3-28-20:30 1.12.2-[Releases]1.12.2-3.5.37/3.5.37.sv-Forge1.12.2-14.23.5.2855 [Build-12012]<br>
+                                                         更新启动器 支持微软登录<br>
+                                                         加入了<br>
+                                                         [Decoration]absentbydesign-1.12.2-1.0.3<br>
+                                                         [Decoration][真实的世界]realworld-1.12.2-1.18<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-integration<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-mechanical<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-lighting<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-fabrication<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-compat<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-world<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-Base<br>
+                                                         [Magic][VC]虚空工艺VoidCraft-1.12-0.26.10<br>
+                                                         [Decoration][Macaw的栏杆]mcw-fences-1.0.0-mc1.12.2<br>
+                                                         [Decoration][Macaw的家具]mcw-furnitures-1.0.0-mc1.12.2<br>
+                                                         [Decoration][Macaw的门]mcw-doors-1.0.0-mc1.12.2<br>
+                                                         [Decoration][Macaw的窗户]mcw-windows-1.0.0-mc1.12.2<br>
+                                                         [Agriculture][水产养殖2]Aquaculture-1.12.2-1.6.8<br>
+                                                         插件<br>
+                                                         [Bug修复]PlayerPoints-RcVersionV1.1.jar<br>
+                                                         [摆摊]PlayerStall-1.7-1.14-1.2.7<br>
+                                                         [单挑]Dantiao-2.2.1<br>
+                                                         [皮肤显示]SkinsRestorer13.8.8<br>
+                                                         [区域音乐]AreaMusic1.13-1.15.2-1.0.1<br>
+                                                         [更好的睡眠]BetterSleeping<br>
+                                                         [全息显示]HolographicDisplays<br>
+                                                         [玩家称号]PlayerTitle-2.1.7<br>
+                                                         更新了<br>
+                                                         Magic][魔法使]mahoutsukai-1.12.2-v1.19.40
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="600" data-line-end="629">
+                                                         2021-6-14-12:30 1.12.2-[Releases]1.12.2-3.5.54/3.5.54.sv-Forge1.12.2-14.23.5.2855 [Build-22004]<br>
+                                                         包含java16（仅客户端）<br>
+                                                         更新了<br>
+                                                         amadeus.unicorn-2.0.0-internal-SNAPSHOT.jar（J16兼容组件）（仅客户端）<br>
+                                                         [Decoration]【时装工坊】Armourers-Workshop-1.12.2-0.51.0<br>
+                                                         加入了<br>
+                                                         [Agriculture]【神农科技】resynth-1.12.2-1.3.9<br>
+                                                         [Decoration]【动物谷】animania-1.12.2-base-2.0.3.28<br>
+                                                         [Agriculture]【料理工艺】Cuisine-0.5.22-build929<br>
+                                                         [Decoration]【[FCB]平滑色块】flatcoloredblocks-mc1.12-6.8<br>
+                                                         [Decoration]【中式工坊】ChineseWorkshop-1.12.2_1.2.6<br>
+                                                         [Decoration]【樱】Sakura-1.0.7-1.12.2<br>
+                                                         [Decoration]【栅栏和围墙】customfence-1-12_1.1<br>
+                                                         [Decoration]【额外的灯】additional_lights-1.12.2-1.2.1<br>
+                                                         【玉】Jade-0.1.0<br>
+                                                         【前置】CraftStudioAPI-universal-1.0.1.95-mc1.12-alpha<br>
+                                                         【前置】MMLib-2.3.0<br>
+                                                         【前置】Kiwi-1.12.2-0.5.3.32<br>
+                                                         【前置】collective-1.12.2-2.26<br>
+                                                         【下车】dismountentity_1.12.2-1.4<br>
+                                                         删除了<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-integration<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-mechanical<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-lighting<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-fabrication<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-compat<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-world<br>
+                                                         [Technology][PR]红石计划]ProjectRed-1.12.2-4.9.4.120-Base<br>
+                                                         [前置]ForgeMultipart-1.12.2-2.6.2.83-universal
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="630" data-line-end="640">
+                                                         2021-8-5-12:30 1.12.2-[Releases]1.12.2-3.6.0/3.6.0.sv-Forge1.12.2-14.23.5.2855J16 [Build-22005]<br>
+                                                         remove<br>
+                                                         [水域更新]aquaticodyssey-2.4.1.jar<br>
+                                                         [BOP]超多生物群系BiomesOPlenty-1.12.2-7.0.1.2444-universal.jar<br>
+                                                         updata<br>
+                                                         java16.0.2+7(Client)<br>
+                                                         CatServer-210420-universal.jar(Server)<br>
+                                                         add<br>
+                                                         ore_reeds_1.12.2-1.0.3<br>
+                                                         Ore+Canes+Mod+(v.1.4.2).jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="641" data-line-end="652">
+                                                         2021-10-1-19:40 1.12.2-3.7.0/3.7.0.sv [Build-22006]<br>
+                                                         改善性能开销<br>
+                                                         remove<br>
+                                                         [水域更新]aquaticodyssey-2.4.1.jar<br>
+                                                         [BOP]超多生物群系BiomesOPlenty-1.12.2-7.0.1.2444-universal.jar<br>
+                                                         updata<br>
+                                                         CatServer-e157f25-universal.jar (Server)<br>
+                                                         [Magic]【暮色森林】twilightforest-1.12.2-3.11.1021-universal<br>
+                                                         add<br>
+                                                         ore_reeds_1.12.2-1.0.3<br>
+                                                         Ore+Canes+Mod+(v.1.4.2).jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="653" data-line-end="659">
+                                                         2021-12-12 1.12.2-3.7.0[Build-22104]<br>
+                                                         重要！！<br>
+                                                         更新Forge<br>
+                                                         修复CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.4.212<br>
+                                                         更新PLC至2.2.7
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="660" data-line-end="668">
+                                                         2022-2-26 1.12.2-3.7.1[Build-22301]<br>
+                                                         更新HMCL至3.5.218<br>
+                                                         更新PLC至2.2.9<br>
+                                                         updata<br>
+                                                         [Decoration]【收藏馆】BiblioCraft[v2.4.6][MC1.12.2].jar<br>
+                                                         [Decoration]【镇守府】ChinjufuMod[1.12.2]6.1.2.jar<br>
+                                                         CustomMainMenu-MC1.12.2-2.0.9.1 (1)<br>
+                                                         CatServer-a8b73e9-universal
+                                                     </p>
+                                                 </details>
+
+                                                 <h5 class="code-line" data-line-start="669" data-line-end="670"><a id="1891112_669"></a>1.8.9-1.11.2版本</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="670" data-line-end="678">
+                                                         2020-7-26-00:00 1.8.9-1.11.2<br>
+                                                         内容和1.7.10RE版本基本一致<br>
+                                                         融合部分1.12.2版本<br>
+                                                         具体版本号：<br>
+                                                         [Releases]1.8.9-2.6.1520 Build-1705-forge1.8.9-11.15.1.2318<br>
+                                                         [Releases]1.9.4-2.7.2084 Build-2039-forge1.9.4-12.17.0.2051<br>
+                                                         [Releases]1.10.2-2.8.2417 Build-2691-forge1.10.2-12.18.3.2511<br>
+                                                         [Releases]1.11.2-2.9.2803 Build-3012-forge1.11.2-13.20.1.2588
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="679" data-line-end="687">
+                                                         2022-2-26-00:00 1.8.9-1.11.2<br>
+                                                         1.11.2-2.13.10 Build-22307<br>
+                                                         1.10.2-2.12.0 Build-22306<br>
+                                                         1.9.4-2.11.2 Build-22305<br>
+                                                         1.8.9-2.10.1 Build-22304<br>
+                                                         缓解CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.5.218<br>
+                                                         更新PLC至2.2.9
+                                                     </p>
+                                                 </details>
+                                                 <h5 class="code-line" data-line-start="687" data-line-end="688"><a id="1152_687"></a>1.15.2版本</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="688" data-line-end="723">
+                                                         2020/7/9 1.15.2-1.15.2beta-4.0.5023-Forge1.15.2-31.2.31[build-12230]<br>
+                                                         加入了<br>
+                                                         [CB]懒人厨房CookingForBlockheads_1.15.2-8.0.3.jar<br>
+                                                         [CCL]CodeChickenLib-1.15.2-3.3.1.376-universal.jar<br>
+                                                         [CTM]连接材质CTM-MC1.15.2-1.1.0.10.jar<br>
+                                                         [JEI]JEI物品管理器jei-1.15.2-6.0.2.12.jar<br>
+                                                         [R键整理]inventorysorter-1.15.2-17.0.0.jar<br>
+                                                         [Silent的机械装置] SilentMechanisms-1.15.2-0.7.6+57.jar<br>
+                                                         [地狱传送修复]NetherPortalFix_1.15.2-6.0.2.jar<br>
+                                                         [高亮显示]Hwyla-forge-1.10.8-B72_1.15.2.jar<br>
+                                                         [高亮显示]WAWLA-1.15.2-3.0.3.jar<br>
+                                                         [高亮显示前置]Bookshelf-1.15.2-5.6.40.jar<br>
+                                                         [更多箱子]ironchest-1.15.2-10.0.3.jar<br>
+                                                         [工业重生]Industrial-Reborn-1.15.2-0.4.0.jar<br>
+                                                         [合成冲突消除]polymorph-FORGE-1.15.2-0.3<br>
+                                                         [加速火把]torcherino-10.0.1<br>
+                                                         [家具]furniture-7.0.0-pre16-1.15.1<br>
+                                                         [静谧四季]SereneSeasons-1.15.2-3.0.0.72-universal<br>
+                                                         [矿石兼容]JAOPCA-1.15.2-3.2.0.11<br>
+                                                         [旅行地图]journeymap-1.15.2-5.7.0b3<br>
+                                                         [魔法使]mahoutsukai-1.15.2-v1.19.6<br>
+                                                         [暮色森林]twilightforest-1.15.2-4.0.99-universal<br>
+                                                         [耐久显示]DurabilityViewer-1.15.2-forge31.1.30-1.7.1<br>
+                                                         [帕秋莉手册]Patchouli-1.15.2-1.2-35<br>
+                                                         [潘马斯农场2食物]pamhc2foodcore-1.15.2-1.0.5<br>
+                                                         [潘马斯农场2植物]pamhc2trees-1.15.2-1.0.5<br>
+                                                         [潘马斯农场2作物]pamhc2crops-1.15.2-1.0.5<br>
+                                                         [前置] SilentLib-1.15.2-4.6.5+58<br>
+                                                         [前置]curios-FORGE-1.15.2-2.0.2.4<br>
+                                                         [遗迹]Ruins-1.15.2.1<br>
+                                                         [照明优化]phosphor-forge-mc1.15.2-0.5.2+build.4<br>
+                                                         [植物科技2]planttech2-0.02.11±+1.15.2<br>
+                                                         [植物魔法]Botania-r1.15-387<br>
+                                                         [自然音效]AmbientSounds_v3.0.20_mc1.15.2<br>
+                                                         WailaHarvestability-mc1.15.2-1.1.12
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="724" data-line-end="745">
+                                                         2020/7/21 1.15.2-[Releases]1.15.2-4.0.6010-Forge1.15.2-31.2.31[build-13089]<br>
+                                                         加入了<br>
+                                                         [AE2]应用能源2appliedenergistics2-7.0.0-1.15.2-alpha.7.jar<br>
+                                                         [AI改进]AI-Improvements-1.15.2-0.3.0.jar<br>
+                                                         [Latest][优化]lithium-mc1.15.2-forge-0.4.6-rc3-mod.jar<br>
+                                                         [Macaw的吊桥]mcw-bridges-1.0.4fix-mc1.15.2.jar<br>
+                                                         [Mek]通用机械Mekanism-1.15.2-9.10.9.422.jar<br>
+                                                         [MekA]通用机械附加MekanismAdditions-1.15.2-9.10.9.422.jar<br>
+                                                         [MekG]通用机械发电机MekanismGenerators-1.15.2-9.10.9.422.jar<br>
+                                                         [MekT]通用机械工具MekanismTools-1.15.2-9.10.9.422.jar<br>
+                                                         [神化]Apotheosis-1.15.2-3.2.4.jar<br>
+                                                         [舒适用品]comforts-FORGE-1.15.2-2.0.0.3.jar<br>
+                                                         [熔炉性能优化]FastFurnace-1.15.1-3.0.0.jar<br>
+                                                         [前置]Placebo-1.15.2-3.1.0.jar<br>
+                                                         [前置]MixinBootstrap-1.0.3-1.15.2.jar<br>
+                                                         [更好的燃烧机制]BetterBurning-1.15.2-1.3.4.jar<br>
+                                                         [YUNG的矿井优化]BetterMineshaftsForge-1.15.2-1.3.jar<br>
+                                                         [工作台性能优化]FastWorkbench-1.15.2-3.1.1.jar<br>
+                                                         删除了<br>
+                                                         [Silent的机械装置] SilentMechanisms-1.15.2-0.7.6+57.jar<br>
+                                                         [前置] SilentLib-1.15.2-4.6.5+58
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="746" data-line-end="760">
+                                                         2020/8/12 1.15.2-[Releases]1.15.2-4.0.6232 -Forge1.15.2-31.2.31[build-13089]<br>
+                                                         更新了forge<br>
+                                                         删除了<br>
+                                                         暮色森林<br>
+                                                         加入了<br>
+                                                         [高清修复]OptiFine-1.15.2_HD_U_G1_pre30.jar<br>
+                                                         [前置]OptiForge-MC1.15.2-0.1.27.jar<br>
+                                                         [匠魂3]TConstruct-1.15.2-3.0.1.67.jar<br>
+                                                         [夸克]Quark-r2.1-245.jar<br>
+                                                         [未来版本]FutureVersions+v3.0.jar<br>
+                                                         [前置]Mantle-1.15.2-1.5.17.jar<br>
+                                                         [前置]AutoRegLib-1.5-40.jar<br>
+                                                         更新了<br>
+                                                         [魔法使]mahoutsukai-1.15.2-v1.21.6.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="761" data-line-end="771">
+                                                         2020/8/16 1.15.2-[Releases]1.15.2-4.1.3 -Forge1.15.2-31.2.36[build-13903]<br>
+                                                         [JEI扩展]jeiintegration_1.15.2-3.1.1.2.jar<br>
+                                                         [JEI扩展]JustEnoughResources-1.15.2-0.10.1.77.jar<br>
+                                                         [旧版攻击]SwordBlockingCombat-v1.4-1.15.2.jar<br>
+                                                         [前置]MaterialMaster-v1.2-1.15.2.jar<br>
+                                                         [通用拼音搜索]JustEnoughCharacters-1.15.2-4.1.0.jar<br>
+                                                         [凿子]Chisel_DEV-MC1.15.2-0.0.1.12.jar<br>
+                                                         更新了<br>
+                                                         [潘马斯农场2食物]pamhc2foodcore-1.15.2-1.0.9.jar<br>
+                                                         [潘马斯农场2植物]pamhc2trees-1.15.2-1.0.6.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="772" data-line-end="789">
+                                                         2021/2/14 1.15.2-[Releases]1.15.2-4.2.0 Forge1.15.2-31.2.48 [build-15000]<br>
+                                                         加入了<br>
+                                                         ChinjufuMod[1.15.2]5.4.2.jar<br>
+                                                         TravelersBackpack-1.15.2-4.0.8.jar<br>
+                                                         thermal_expansion-1.15.2-0.3.0b.jar<br>
+                                                         thermal_cultivation-1.15.2-0.3.0b.jar<br>
+                                                         thermal_innovation-1.15.2-0.3.0b.jar<br>
+                                                         cofh_core-1.15.2-0.7.0b.jar<br>
+                                                         thermal-1.15.2-0.3.0b.jar<br>
+                                                         ImmersiveEngineering-1.15.2-4.0.0-117.jar<br>
+                                                         create-mc1.15.2_v0.2.4e.jar<br>
+                                                         更新了<br>
+                                                         [潘马斯农场2植物]pamhc2trees-1.15.2-1.0.7.jar<br>
+                                                         [潘马斯农场2食物]pamhc2foodcore-1.15.2-1.1.0.jar<br>
+                                                         Apotheosis-1.15.2-3.3.8.jar<br>
+                                                         appliedenergistics2-7.0.5.jar<br>
+                                                         CookingForBlockheads_1.15.2-8.0.3.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="790" data-line-end="796">
+                                                         2021-12-12 1.15.2-4.3.0[Build-22105]<br>
+                                                         重要！！<br>
+                                                         更新Forge<br>
+                                                         修复CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.4.212<br>
+                                                         更新PLC至2.2.7
+                                                     </p>
+                                                 </details>
+                                                 <h5 class="code-line" data-line-start="797" data-line-end="798"><a id="116X_797"></a>1.16.X版本</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="798" data-line-end="814">
+                                                         2020/7/9 1.16.1-1.16.1alpha-5.0.10240-Fsorge1.16.1-32.0.59Beta[build-15012]<br>
+                                                         加入了<br>
+                                                         [CB]懒人厨房CookingForBlockheads_1.16.1-9.0.0<br>
+                                                         [CTM]连接材质CTM-MC1.16.1-1.1.0.1<br>
+                                                         [JEI]JEI物品管理器jei-1.16.1-7.0.0.6<br>
+                                                         [R键整理]invtweaks-1.16.1-1.0.4<br>
+                                                         [地狱传送修复]NetherPortalFix_1.16.1-7.0.0<br>
+                                                         [高亮显示]Bookshelf-1.16.1-6.0.2<br>
+                                                         [更多箱子]ironchest-1.16.1-11.0.1<br>
+                                                         [工业重生]Industrial-Reborn-1.16.1-0.8.0<br>
+                                                         [旅行地图]Xaeros_Minimap_20.15.3_Forge_1.16.1<br>
+                                                         [魔法使]mahoutsukai-1.16.1-v1.19.10<br>
+                                                         [耐久显示]durabilityViewer-1.16.1-forge32.0.38-1.7.1<br>
+                                                         [帕秋莉手册]Patchouli-1.16-38<br>
+                                                         [潘马斯农场2食物]pamhc2foodcore-1.16.1-1.0.1<br>
+                                                         [前置]curios-FORGE-1.16.1-3.0-beta2
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="815" data-line-end="837">
+                                                         2020/7/21 1.16.1-1.16.1Beta-5.0.11081 -Forge1.16.1-32.0.70Beta[build-16394]<br>
+                                                         更新forge<br>
+                                                         加入了<br>
+                                                         [AI改进]AI-Improvements-1.16.1-0.3.0.jar<br>
+                                                         [Macaw的吊桥]mcw-bridges-1.0.4-mc1.16.1.jar<br>
+                                                         [Mek]通用机械Mekanism-1.16.1-10.0.2.425.jar<br>
+                                                         [MekA]通用机械附加MekanismAdditions-1.16.1-10.0.2.425.jar<br>
+                                                         [MekG]通用机械发电机MekanismGenerators-1.16.1-10.0.2.425.jar<br>
+                                                         [MekT]通用机械工具MekanismTools-1.16.1-10.0.2.425.jar<br>
+                                                         [YUNG的矿井优化]BetterMineshaftsForge-1.16.1-1.3.jar<br>
+                                                         [更好的燃烧机制]BetterBurning-1.16.1-2.0.2.jar<br>
+                                                         [工作台性能优化]FastWorkbench-1.16.1-4.1.1.jar<br>
+                                                         [加速火把]torcherino-11.0.0+1.16.1.jar<br>
+                                                         [林业]Forestry_1.16.1-6.0.0.0.jar<br>
+                                                         [旅行地图]XaerosWorldMap_1.7.4_Forge_1.16.1.jar<br>
+                                                         [暮色森林]twilightforest-1.16.1-4.0.151-universal.jar<br>
+                                                         [前置]MixinBootstrap-1.0.3-1.16.1.jar<br>
+                                                         [前置]Placebo-1.16.1-4.0.1.jar<br>
+                                                         [熔炉性能优化]FastFurnace-1.16.1-4.0.0.jar<br>
+                                                         [舒适用品]comforts-FORGE-1.16.1-3.0.jar<br>
+                                                         删除了<br>
+                                                         [前置]curios-FORGE-1.16.1-3.0-beta2
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="838" data-line-end="855">
+                                                         2020/8/12 1.16.1-TH2-1.16.1Beta-5.0.11281 -Forge1.16.1-32.0.107Beta[build-16394]<br>
+                                                         更新forge<br>
+                                                         加入了<br>
+                                                         [AE2]appliedenergistics2-8.0.0-alpha.2.jar<br>
+                                                         [高亮显示前置]Hwyla-forge-1.10.10-B77_1.16.1.jar<br>
+                                                         [合成冲突消除]polymorph-FORGE-1.16.1-0.11.jar<br>
+                                                         [家具]furniture-7.0.0-pre18-1.16.1.jar<br>
+                                                         [匠魂3]TConstruct-1.16.1-3.0.1.7.jar<br>
+                                                         [夸克]Quark-r2.2-258.jar<br>
+                                                         [前置]AutoRegLib-1.6-43.jar<br>
+                                                         [前置]curios-FORGE-1.16.1-3.0.jar<br>
+                                                         [前置]Mantle-1.16.1-1.6.28.jar<br>
+                                                         [伤害显示]torohealth-1.16.1-forge-2.jar<br>
+                                                         [植物科技2]planttech2-0.02.15.jar<br>
+                                                         [植物魔法]Botania-1.16-397-SNAPSHOT.jar<br>
+                                                         Project_MMO-1.16-3.14.jar<br>
+                                                         更新了部分mod
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="856" data-line-end="931">
+                                                         2021/2/22 1.16.5-5.4.170Forge/Mohist/Arclight Forge-1.16.5-36.0.42[build-20839]<br>
+                                                         更新forge版本<br>
+                                                         加入了<br>
+                                                         alltheores-1.1.20-1.16.4-35.1.13.jar<br>
+                                                         AmbientSounds_v3.1.4_mc1.16.4.jar<br>
+                                                         Apotheosis-1.16.3-4.4.1<br>
+                                                         ClassicCombat-1.16.4-universal.jar<br>
+                                                         CreativeCore_v2.0.10_mc1.16.4.jar<br>
+                                                         FallingTree-Forge-1.16.5-2.10.2.jar<br>
+                                                         ImmersiveEngineering-1.16.5-4.2.1-131.jar<br>
+                                                         jeiintegration_1.16.5-7.0.1.15.jar<br>
+                                                         journeymap-1.16.5-5.7.1b3.jar<br>
+                                                         JustEnoughCharacters-1.16.4-4.1.5.jar<br>
+                                                         JustEnoughResources-1.16.3-0.12.0.100.jar<br>
+                                                         LMML-Forge-1.16.4-2.3.10.jar<br>
+                                                         LMRB-Forge-1.16.4-2.4.1.jar<br>
+                                                         Mantle-1.16.5-1.6.79.jar<br>
+                                                         pamhc2crops-1.16.3-1.0.1<br>
+                                                         pamhc2trees-1.16.3-1.0.0<br>
+                                                         pamhc2foodextended-1.16.3-1.0.1<br>
+                                                         ProgressiveBosses-2.2.0-mc1.16.x<br>
+                                                         randompatches-2.4.4-forge<br>
+                                                         thermal_cultivation-1.16.3-1.1.6<br>
+                                                         thermal_expansion-1.16.3-1.1.6<br>
+                                                         thermal_foundation-1.16.3-1.1.6<br>
+                                                         thermal_innovation-1.16.3-1.1.7<br>
+                                                         SereneSeasons-1.16.5-4.0.1.91-universal<br>
+                                                         TravelersBackpack-1.16.4-5.3.8 (1).jar<br>
+                                                         WailaHarvestability-mc1.16.2-forge-1.1.13.jar<br>
+                                                         WAWLA-1.16.5-8.0.1.jar<br>
+                                                         YungsApi-1.16.4-Forge-4.jar<br>
+                                                         更新了部分mod<br>
+                                                         Quark-r2.4-305<br>
+                                                         torcherino-13.0.3+1.16.3<br>
+                                                         TConstruct-1.16.5-3.0.1.56<br>
+                                                         polymorph-forge-1.16.5-0.24<br>
+                                                         Placebo-1.16.4-4.4.1<br>
+                                                         planttech2-0.02.25<br>
+                                                         twilightforest-1.16.5-4.0.334-universal.jar<br>
+                                                         AutoRegLib-1.6-47.jar<br>
+                                                         AI-Improvements-1.16.2-0.3.0.jar<br>
+                                                         BetterBurning-1.16.5-6.0.2.jar<br>
+                                                         BetterMineshafts-Forge-1.16.4-2.0.1<br>
+                                                         Botania-1.16.4-411.jar<br>
+                                                         Patchouli-1.16.4-50<br>
+                                                         CodeChickenLib-1.16.4-3.5.1.408-universal.jar<br>
+                                                         cofh_core-1.16.3-1.1.6.jar<br>
+                                                         comforts-forge-1.16.4-4.0.1.0.jar<br>
+                                                         Patchouli-1.16.4-50<br>
+                                                         Placebo-1.16.4-4.4.1<br>
+                                                         CookingForBlockheads_1.16.3-9.2.2.jar<br>
+                                                         CTM-MC1.16.1-1.1.2.6 (1).jar<br>
+                                                         pamhc2foodcore-1.16.3-1.0.1<br>
+                                                         curios-forge-1.16.5-4.0.4.0.jar<br>
+                                                         durabilityviewer-1.16.4-forge35.0.7-1.10.jar<br>
+                                                         NetherPortalFix_1.16.3-7.2.1.jar<br>
+                                                         MekanismTools-1.16.5-10.0.21.448<br>
+                                                         MekanismGenerators-1.16.5-10.0.21.448<br>
+                                                         MekanismAdditions-1.16.5-10.0.21.448<br>
+                                                         Mekanism-1.16.5-10.0.21.448<br>
+                                                         mcw-bridges-1.0.5-mc1.16.5-4.jar<br>
+                                                         FastWorkbench-1.16.4-4.5.0.jar<br>
+                                                         mahoutsukai-1.16.5-v1.28.2.jar<br>
+                                                         furniture-7.0.0-pre19-1.16.3.jar<br>
+                                                         Hwyla-forge-1.10.11-B78_1.16.2.jar<br>
+                                                         inventorysorter-1.16.1-18.1.0.jar<br>
+                                                         JAOPCA-1.16.4-3.4.0.4.jar<br>
+                                                         ironchest-1.16.4-11.2.10.jar<br>
+                                                         jei-1.16.4-7.6.1.71.jar<br>
+                                                         删除了<br>
+                                                         [AE2]appliedenergistics2-8.0.0-alpha.2.jar<br>
+                                                         [旅行地图]Xaeros_Minimap_20.16.0.1_Forge_1.16.1<br>
+                                                         [旅行地图]XaerosWorldMap_1.7.4_Forge_1.16.1<br>
+                                                         [林业]Forestry-1.16.1-6.0.0.0.jar<br>
+                                                         [伤害显示]torohealth-1.16.1-forge-2
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="932" data-line-end="939">
+                                                         2021/2/22 1.16.5-5.4.175Forge/Mohist/Arclight Forge-1.16.5-36.0.42[build-20939]<br>
+                                                         加入了<br>
+                                                         chiselsandbits-0.2.10-RELEASE<br>
+                                                         Aquaculture-1.16.5-2.1.15<br>
+                                                         Industrial-Reborn-1.16.3-0.9.1<br>
+                                                         更新了部分mod<br>
+                                                         twilightforest-1.16.5-4.0.339-universal
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="940" data-line-end="943">
+                                                         2021/3/28 1.16.5-5.4.180Forge/Mohist/Arclight Forge-1.16.5-36.0.42[build-20939]<br>
+                                                         更新Forge及服务器核心<br>
+                                                         更新启动器 支持微软登录
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="944" data-line-end="983">
+                                                         加入了<br>
+                                                         [BOP]超多生物群系BiomesOPlenty-1.16.4-13.0.0.432-universal<br>
+                                                         [装饰]absentbydesign-1.16.5-1.4.1<br>
+                                                         [VC]虚空工艺Voidscape-1.16-0.1.12<br>
+                                                         [Macaw的画]mcw-paintings-1.0.0-mc1.16.4-5<br>
+                                                         [Macaw的栏杆]mcw-fences-1.0.0-mc1.16.5<br>
+                                                         [Macaw的家具]mcw-furniture-2.0.1-mc1.16.5<br>
+                                                         [Macaw的trapdors]mcw-trapdors-1.0.1-mc1.16.5<br>
+                                                         [Macaw的窗户]mcw-windows-1.0.3-mc1.16.5<br>
+                                                         [Macaw的门]mcw-doors-1.0.2-mc1.16.5<br>
+                                                         [凿子]chiselsandbits-0.2.10-RELEASE<br>
+                                                         [水产养殖2]Aquaculture-1.16.5-2.1.15<br>
+                                                         插件<br>
+                                                         [Bug修复]PlayerPoints-RcVersionV1.1.jar<br>
+                                                         [ColorMOTD]ColorMOTD-Reremake<br>
+                                                         [摆摊]PlayerStall-1.7-1.14-1.2.7<br>
+                                                         [备份]Wayback-20.1.2<br>
+                                                         [单挑]Dantiao-2.2.1<br>
+                                                         [多世界]Multiverse-Core-4.2.2<br>
+                                                         [更好的睡眠]BetterSleeping<br>
+                                                         [管理插件]Yum-14<br>
+                                                         [经济前置]Vault<br>
+                                                         [聊天频道]VexChat1.0<br>
+                                                         [皮肤显示]SkinsRestorer13.8.8<br>
+                                                         [前置]PlaceholderAPI-2.10.9<br>
+                                                         [前置]ProtocolLib-4.5.1<br>
+                                                         [区域音乐]AreaMusic1.13-1.15.2-1.0.1<br>
+                                                         [全息显示]HolographicDisplays<br>
+                                                         [玩家称号]PlayerTitle-2.1.7<br>
+                                                         EssentialsX-2.0.1<br>
+                                                         EssentialsXChat-2.0.1<br>
+                                                         EssentialsXSpawn-2.0.1<br>
+                                                         更新了<br>
+                                                         [暮色森林]twilightforest-1.16.5-4.0.403-universal<br>
+                                                         [匠魂3]TConstruct-1.16.5-3.0.1.68<br>
+                                                         [IE]沉浸工程ImmersiveEngineering-1.16.5-4.2.4-134<br>
+                                                         [YUNG的矿井优化]BetterMineshafts-Forge-1.16.4-2.0.3<br>
+                                                         [夸克]Quark-r2.4-308<br>
+                                                         [植物魔法]Botania-1.16.4-414
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="984" data-line-end="1077">
+                                                         2021/6/14 1.16.5-5.5.1Forge /Arclight Forge-1.16.5-36.1.31[build-21494]<br>
+                                                         更新Forge<br>
+                                                         加入Optifine高清修复<br>
+                                                         更新启动器<br>
+                                                         更新内置java<br>
+                                                         加入了/更新了<br>
+                                                         【前置】cavebiomes-1.0-SNAPSHOT<br>
+                                                         【洞穴和山崖更新】CavesAndCliffsBackport-6.0.1<br>
+                                                         【匠魂3】TConstruct-1.16.5-3.0.4.171<br>
+                                                         【前置】Mantle-1.16.5-1.6.103<br>
+                                                         【暮色森林】twilightforest-1.16.5-4.0.490-universa<br>
+                                                         【热力基本】thermal_foundation-1.16.4-1.2.0<br>
+                                                         【旅行者背包】TravelersBackpack-1.16.5-5.4.1<br>
+                                                         【[Mek]通用机械】Mekanism-1.16.5-10.0.21.448<br>
+                                                         【[Mek]通用机械】MekanismTools-1.16.5-10.0.21.448<br>
+                                                         【[Mek]通用机械】MekanismAdditions-1.16.5-10.0.21.448<br>
+                                                         【[Mek]通用机械】MekanismGenerators-1.16.5-10.0.21.448<br>
+                                                         【前置】YungsApi-1.16.4-Forge-6<br>
+                                                         【矿辞统一】JAOPCA-1.16.5-3.4.0.8<br>
+                                                         【优化】entityculling-1.2.2<br>
+                                                         【女仆Mod】LMRB-Forge-1.16.5-2.5.4<br>
+                                                         【前置】CreativeCore_v2.1.3_mc1.16.5<br>
+                                                         【[JEI]JEI物品管理器】jei-1.16.5-7.6.4.90<br>
+                                                         【懒人厨房】CookingForBlockheads_1.16.5-9.3.1<br>
+                                                         【矿辞统一】alltheores-1.3.2-1.16.5-36.1.0<br>
+                                                         【优化】out_of_sight-1.16.4-1.0.1<br>
+                                                         【[AS3]自然音效3】AmbientSounds_v3.1.6_mc1.16.5<br>
+                                                         【前置】Bookshelf-1.16.5-10.0.7<br>
+                                                         【高亮显示】WailaHarvestability-mc1.16.x-forge-1.1.15<br>
+                                                         【前置】Placebo-1.16.4-4.4.2<br>
+                                                         【凿子】chiselsandbits-0.3.4-RELEASE<br>
+                                                         【植物科技2】planttech2-0.02.28<br>
+                                                         【植物魔法】Botania-1.16.5-415<br>
+                                                         【潘马斯农场2】pamhc2foodextended-1.16.3-1.0.2<br>
+                                                         【潘马斯农场2】pamhc2crops-1.16.3-1.0.2<br>
+                                                         【高亮显示】Jade-1.16.4-2.6.2<br>
+                                                         【潘马斯农场2】pamhc2trees-1.16.3-1.0.1<br>
+                                                         【热力膨胀】thermal_expansion-1.16.4-1.2.0<br>
+                                                         【前置】cofh_core-1.16.4-1.2.1<br>
+                                                         【热力农业】thermal_cultivation-1.16.4-1.2.0<br>
+                                                         【前置】mrplibrary-1.16.5-2.0.0.0-forge<br>
+                                                         【光照优化】starlight-forge-1.0.0-RC2-1.16.5<br>
+                                                         【资源蜜蜂】productivebees-1.16.5-0.6.9.11<br>
+                                                         【墙纸创造：台阶】WallpapercraftSlabs-1.16.3-1.4.0<br>
+                                                         【墙纸创造：楼梯】WallpapercraftStairs-1.16.3-1.4.0<br>
+                                                         【墙纸创造：围墙】WallpapercraftWalls-1.16.3-1.4.0<br>
+                                                         【墙纸创造】WallpaperCraft-1.16.3-1.4.6<br>
+                                                         【发言时间】wwta-1.16-2.0<br>
+                                                         【前置】einsteins_library-2.0-1.16.5<br>
+                                                         【水母】Jellyfishing-1.6.9<br>
+                                                         【切割与染色】cutandcolored-5.0-1.16.5<br>
+                                                         【更多水母】MoreJellyfish-1.1.5<br>
+                                                         【切割与染色】cutandcolored-5.0-1.16.5<br>
+                                                         【添补】supplementaries-1.16.5-0.12.1<br>
+                                                         【结构藏宝图】cartographer-0.0.2-1.16.5-36.0.52<br>
+                                                         【前置】Kiwi-1.16.5-3.4.2<br>
+                                                         【中式工坊】ChineseWorkshop-1.16.3-3.2.1<br>
+                                                         【无限随机烟花】phireworks-1.2.3<br>
+                                                         【更好升级的装备】EU_1.16.5_1.0.3<br>
+                                                         【更好的傀儡】bettergolem-1.16.5-0.2.0<br>
+                                                         【多功能传送门】versatileportals-1.16.5-3.1.0.0-forge<br>
+                                                         【更多船】extraboats-1.16.5-2.1.0<br>
+                                                         【小箱子】TinyChests-1.4.2<br>
+                                                         【栅栏和围墙】customfence-1-16-5<br>
+                                                         【混搭半砖】DoubleSlabs-1.16-3.4.10<br>
+                                                         【额外的灯】additional_lights-1.16.4-2.1.3 (1)<br>
+                                                         【布娃娃】dads_sewing-6.0<br>
+                                                         【建筑工艺品及添加】buildersaddition-1.16.5-20210421a<br>
+                                                         【前置】collective-1.16.5-2.26<br>
+                                                         【反向附魔台】Disenchanting-forge-1.16.5-1.7.1<br>
+                                                         【下车】dismountentity_1.16.5-1.4<br>
+                                                         【骑羊驼】llamasteeds-forge-2021.03.09<br>
+                                                         【不坏】undestroying-1.16.5-1.1.1<br>
+                                                         【前置】kotlinforforge-1.11.1-obf<br>
+                                                         【游戏内输入法】IngameIME-forge-1.16.5-1.5<br>
+                                                         【前置】curios-forge-1.16.5-4.0.5.1<br>
+                                                         【台阶地毯】carpetstairsmod-1.16.4_v1.4.7<br>
+                                                         【天花板地毯】ceiling_carpets-mc1.16.1_v0.0.1<br>
+                                                         【前置】abnormals_core-1.16.5-3.1.1<br>
+                                                         【水产养殖2】Aquaculture-1.16.5-2.1.18<br>
+                                                         【热力运输】thermal_locomotion-1.16.4-1.2.0<br>
+                                                         【热力革新】thermal_innovation-1.16.4-1.2.0<br>
+                                                         【神化】Apotheosis-1.16.4-4.5.2<br>
+                                                         【魔法使】mahoutsukai-1.16.5-v1.30.3<br>
+                                                         【工作台性能优化】FastWorkbench-1.16.4-4.5.1<br>
+                                                         【更好的燃烧机制】BetterBurning-1.16.5-6.0.5<br>
+                                                         【优化】ferritecore-2.0.4-forge<br>
+                                                         【[BOP]超多生物群系】BiomesOPlenty-1.16.5-13.1.0.465-universal<br>
+                                                         【模组选项】GameMenuModOption-1.16.4-1.8l<br>
+                                                         【传送石碑】Waystones_1.16.5-7.5.1<br>
+                                                         删除了<br>
+                                                         【[VC]虚空工艺】Voidscape-1.16-0.1.18.jar<br>
+                                                         【夸克】Quark-r2.4-311.jar
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1078" data-line-end="1094">
+                                                         2021/8/5 1.16.5-5.5.10Forge /Arclight Forge-1.16.5-36.2.0[build-21501]<br>
+                                                         skniro 2021/7/25 20:21:54<br>
+                                                         1.16.5-5.5.10<br>
+                                                         updata<br>
+                                                         java16.0.2+7<br>
+                                                         Forge -&gt; 36.2.0<br>
+                                                         arclight -&gt; 1.0.20<br>
+                                                         【前置】Mantle-1.16.5-1.6.115.jar<br>
+                                                         【匠魂3】TConstruct-1.16.5-3.1.0.231.jar<br>
+                                                         【暮色森林】twilightforest-1.16.5-4.0.515-universal<br>
+                                                         【前置】cavebiomes-1.16.5-2.0.jar<br>
+                                                         【洞穴和山崖更新】CavesAndCliffsBackport-6.1<br>
+                                                         add<br>
+                                                         【甘蔗矿物】ore_reeds-1.16.3-1.1.4.jar<br>
+                                                         remove<br>
+                                                         【[BOP]超多生物群系】BiomesOPlenty-1.16.5-13.1.0.465-universal
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1095" data-line-end="1119">
+                                                         2021/10/1 1.16.5-5.6.0Forge /Arclight [build-22100]<br>
+                                                         skniro 2021/7/25 20:21:54<br>
+                                                         提升了稳定性，减少崩溃,更新服务端体系<br>
+                                                         Updata<br>
+                                                         HMCL3.3.192<br>
+                                                         java16.0.2+7—&gt; java1.8.301<br>
+                                                         Forge -&gt; 36.2.6<br>
+                                                         arclight -&gt; 1.0.21<br>
+                                                         【魔法使】mahoutsukai-1.16.5-v1.32.0<br>
+                                                         【前置】Mantle-1.16.5-1.6.123<br>
+                                                         【匠魂3】TConstruct-1.16.5-3.1.2.265<br>
+                                                         【前置】cavebiomeapi-1.16.5-1.3.7<br>
+                                                         【洞穴和山崖更新】CavesAndCliffsBackport-6.1<br>
+                                                         【魔法使】mahoutsukai-1.16.5-v1.32.0<br>
+                                                         【暮色森林】twilightforest-1.16.5-4.0.546-universal<br>
+                                                         【潘马斯农场2】pamhc2foodextended-1.16.3-1.0.4<br>
+                                                         【[JEI]JEI物品管理器】jei-1.16.5-7.7.1.121<br>
+                                                         【旅行地图】journeymap-1.16.5-5.7.3<br>
+                                                         Add<br>
+                                                         PCL2<br>
+                                                         STG插件体系3.0.0Lite-1.16.5<br>
+                                                         【甘蔗矿物】ore_reeds-1.16.3-1.1.4.jar<br>
+                                                         remove<br>
+                                                         【[BOP]超多生物群系】BiomesOPlenty-1.16.5-13.1.0.465-universal
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1120" data-line-end="1126">
+                                                         2021-12-12 1.16.5-5.7.0[Build-22107]<br>
+                                                         重要！！<br>
+                                                         更新Forge<br>
+                                                         修复CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.4.212<br>
+                                                         更新PLC至2.2.7
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1127" data-line-end="1142">
+                                                         2022-2-26 1.16.5-5.7.13[Build-22302]<br>
+                                                         更新HMCL至3.5.218<br>
+                                                         更新PLC至2.2.9<br>
+                                                         STG plugin core 6.0.0Lite-1.16.5<br>
+                                                         Updata<br>
+                                                         【前置】Patchouli-1.16.4-53.2.jar<br>
+                                                         【前置】architectury-1.30.53<br>
+                                                         【前置】Placebo-1.16.5-4.6.1 (1)<br>
+                                                         【自定义主界面】PackMenu-1.16.5-2.5.0<br>
+                                                         【镇守府】ChinjufuMod[1.16.5]6.1.2.1<br>
+                                                         【林业】forestry-1.16.5-6.0.10<br>
+                                                         【洞穴和山崖更新】cavesandcliffs-1.16.5-7.2.0<br>
+                                                         【前置】ftb-library-forge-1605.3.4-build.90<br>
+                                                         【工业】ftb-industrial-contraptions-1605.1.3-build.122<br>
+                                                         arclight-forge-1.16.5-1.0.22
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1143" data-line-end="1206">
+                                                         2022-4-9 [Beta AI]1.16.5-5.8.1 [Build-22310]<br>
+                                                         更新HMCL至3.5.218<br>
+                                                         更新PLC至2.2.9<br>
+                                                         add<br>
+                                                         【自定义主界面】PackMenu-1.16.5-2.5.0<br>
+                                                         【镇守府】ChinjufuMod[1.16.5]6.2.1<br>
+                                                         【林业】forestry-1.16.5-6.0.10<br>
+                                                         【洞穴和山崖更新】cavesandcliffs-1.16.5-7.2.0<br>
+                                                         【前置】ftb-library-forge-1605.3.4-build.90<br>
+                                                         【工业】ftb-industrial-contraptions-1605.1.3-build.122<br>
+                                                         【加载画面改良】better-loading-screen-1.4.0<br>
+                                                         【前置】selene-1.16.5-1.9.0<br>
+                                                         updata<br>
+                                                         【优化】entityculling-forge-mc1.16.5-1.5.1<br>
+                                                         【多功能传送门】versatileportals-1.16.5-3.2.0.1-forge<br>
+                                                         【更多水母】MoreJellyfish-1.1.7<br>
+                                                         【切割与染色】cutandcolored-5.1-1.16.5<br>
+                                                         【前置】mrplibrary-1.16.5-2.0.1.0-forge<br>
+                                                         【优化】ferritecore-2.1.0-forge<br>
+                                                         【舒适用品】comforts-forge-1.16.5-4.0.1.5<br>
+                                                         【高亮显示】WAWLA-1.16.5-8.0.9<br>
+                                                         【前置】abnormals_core-1.16.5-3.3.1<br>
+                                                         【前置】kotlinforforge-1.17.0-obf<br>
+                                                         【矿辞统一】JAOPCA-1.16.5-3.4.3.26<br>
+                                                         【匠魂3】TConstruct-1.16.5-3.3.4.335<br>
+                                                         【前置】Mantle-1.16.5-1.6.157<br>
+                                                         【前置】selene-1.16.5-1.9.0<br>
+                                                         【水母】Jellyfishing-1.6.13<br>
+                                                         【添补】supplementaries-1.16.5-0.18.4<br>
+                                                         【更多箱子】ironchest-1.16.5-11.2.21 (1)<br>
+                                                         【前置】curios-forge-1.16.5-4.0.5.3<br>
+                                                         【一键砍树】FallingTree-1.16.5-2.11.5<br>
+                                                         【前置】CreativeCore_v2.2.1_mc1.16.5<br>
+                                                         【热力革新】thermal_innovation-1.16.5-1.4.1.3<br>
+                                                         【热力运输】thermal_locomotion-1.16.5-1.4.1.2<br>
+                                                         【热力农业】thermal_cultivation-1.16.5-1.4.1.3<br>
+                                                         【热力膨胀】thermal_expansion-1.16.5-1.4.2.4<br>
+                                                         【热力基本】thermal_foundation-1.16.5-1.4.3.10<br>
+                                                         【[Mek]通用机械】MekanismGenerators-1.16.5-10.1.1.456<br>
+                                                         【[Mek]通用机械】MekanismTools-1.16.5-10.1.1.456<br>
+                                                         【[Mek]通用机械】Mekanism-1.16.5-10.1.1.456<br>
+                                                         【[Mek]通用机械】MekanismAdditions-1.16.5-10.1.1.456<br>
+                                                         【神化】Apotheosis-1.16.5-4.8.4<br>
+                                                         【静谧四季】SereneSeasons-1.16.5-4.0.1.125-universal<br>
+                                                         【前置】YungsApi-1.16.4-Forge-13<br>
+                                                         【前置】cofh_core-1.16.5-1.4.2.9<br>
+                                                         【林业】forestry-1.16.5-6.0.11<br>
+                                                         【IE】沉浸工程ImmersiveEngineering-1.16.5-5.0.7-143<br>
+                                                         【前置】CodeChickenLib-1.16.5-4.0.7.445-universal<br>
+                                                         【暮色森林】twilightforest-1.16.5-4.0.870-universal<br>
+                                                         【前置】AutoRegLib-1.6-49<br>
+                                                         【家具】cfm-7.0.0pre22-1.16.3<br>
+                                                         【潘马斯农场2】pamhc2foodcore-1.16.3-1.0.2<br>
+                                                         【前置】architectury-1.30.57<br>
+                                                         【AI改进】AI-Improvements-1.16.5-0.4.0<br>
+                                                         【[YUNG的矿井优化]】BetterMineshafts-Forge-1.16.4-2.0.4<br>
+                                                         【装饰】absentbydesign-1.16.5-1.5.2<br>
+                                                         【前置】Placebo-1.16.5-4.6.1<br>
+                                                         remove<br>
+                                                         [工业重生]Industrial-Reborn-1.16.3-0.9.1<br>
+                                                         【植物科技2】planttech2-0.02.28<br>
+                                                         【游戏内输入法】IngameIME-forge-1.16.5-1.5<br>
+                                                         【更好升级的装备】EU_1.16.5_1.0.3
+                                                     </p>
+                                                 </details>
+                                                 <h5 class="code-line" data-line-start="1206" data-line-end="1207"><a id="117X_1206"></a>1.17.X</h5>
+                                                 <details>
+                                                     <summary>展开/收起</summary>
+                                                     <p class="has-line-data" data-line-start="1207" data-line-end="1237">
+                                                         2021/12/4 1.17.1Beta-5.100.1Forge [build-22102]<br>
+                                                         Forge Version 37.1.0<br>
+                                                         Optifine:None<br>
+                                                         add<br>
+                                                         AI-Improvements-1.17.1-0.4.0<br>
+                                                         alltheores-1.5.3-1.17.1-37.0.104<br>
+                                                         AmbientSounds_v4.0.4_mc1.17.1<br>
+                                                         balm-1.17.1-1.8.1+0<br>
+                                                         blueprint-1.17.1-4.1.1<br>
+                                                         Bookshelf-Forge-1.17.1-11.0.3<br>
+                                                         collective-1.17.1-3.8<br>
+                                                         comforts-forge-1.17.1-5.0.0.1<br>
+                                                         CreativeCore_v2.3.0_mc1.17.1<br>
+                                                         indreb-1.17.1-0.10.0<br>
+                                                         Jade-1.17.1-3.3.1<br>
+                                                         ironchest-1.17.1-12.0.2<br>
+                                                         JAOPCA-1.17.1-4.a.0.4<br>
+                                                         jei-1.17.1-8.2.0.37<br>
+                                                         journeymap-1.17.1-5.8.0beta1<br>
+                                                         JustEnoughResources-1.17.1-0.13.0.131<br>
+                                                         kotlinforforge-1.17.1-2.2.0-obf<br>
+                                                         mahoutsukai-1.17.1-v1.33.3<br>
+                                                         Placebo-1.17.1-5.0.0<br>
+                                                         productivebees-1.17.1-0.7.0.14<br>
+                                                         SereneSeasons-1.17.1-5.0.0.6-universal<br>
+                                                         starlight-1.0.0+forge.5d16647<br>
+                                                         torcherino-15.0.0+1.17.1<br>
+                                                         TravelersBackpack-1.17.1-6.0.5<br>
+                                                         twilightforest-1.17.1-4.0.860-universal<br>
+                                                         waystones-8.2.0+0
+                                                     </p>
+                                                     <p class="has-line-data" data-line-start="1238" data-line-end="1244">
+                                                         2021-12-12 1.17.1-5.200.0[Build-22106]<br>
+                                                         重要！！<br>
+                                                         更新Forge<br>
+                                                         修复CVE-2021-44228 log4j2 RCE漏洞<br>
+                                                         更新HMCL至3.4.212<br>
+                                                         更新PLC至2.2.7
+                                                     </p>
+                                                     <h5 class="code-line" data-line-start="1246" data-line-end="1247"><a id="118X_1246"></a>1.18.X</h5>
+                                                     <p class="has-line-data" data-line-start="1247" data-line-end="1300">
+                                                         2022-2-26 1.18.1-6.0.5[Build-22303]<br>
+                                                         更新HMCL至3.5.218<br>
+                                                         更新PLC至2.2.9<br>
+                                                         Add<br>
+                                                         AI-Improvements-1.18-0.4.0 (1)<br>
+                                                         AmbientSounds_v5.0.8_mc1.18.1<br>
+                                                         Apotheosis-1.18.1-5.3.3<br>
+                                                         Aquaculture-1.18.1-2.3.3<br>
+                                                         architectury-3.6.17<br>
+                                                         balm-2.4.2+0<br>
+                                                         betteranimalsplus-1.18.1-11.0.4-forge<br>
+                                                         Botania-1.18.1-428<br>
+                                                         comforts-forge-1.18.1-5.0.0.2<br>
+                                                         cookingforblockheads-forge-1.18.1-11.1.0<br>
+                                                         CreativeCore_v2.4.2_mc1.18.1<br>
+                                                         CTM-1.18-1.1.3+1<br>
+                                                         curios-forge-1.18.1-5.0.6.2<br>
+                                                         durabilityviewer-1.18.1-forge39.0.9-1.10<br>
+                                                         FallingTree-1.18.1-3.2.1<br>
+                                                         FastWorkbench-1.18.1-6.0.1<br>
+                                                         ftb-library-forge-1801.3.5-build.109<br>
+                                                         furniture-7.0.0-pre28-1.18.1<br>
+                                                         HQM-1.18.1-5.9.1-forge<br>
+                                                         ImmersiveEngineering-1.18.1-7.1.0-145<br>
+                                                         industrialcraft-2-2.9.50+ex118-1.18.1-forge<br>
+                                                         InsaneLib-1.4.3-mc1.18.1<br>
+                                                         ironchest-1.18-13.0.7<br>
+                                                         Jade-1.18-4.1.2<br>
+                                                         jei-1.18.1-9.2.1.69<br>
+                                                         JustEnoughResources-1.18.1-0.13.1.138<br>
+                                                         LMML-Fo-Arc-1.18-4.0.0<br>
+                                                         LMRB-Fo-Arc-1.18.1-4.0.3<br>
+                                                         mahoutsukai-1.18.1-v1.34.7<br>
+                                                         Mantle-1.18.1-1.8.31<br>
+                                                         mcw-bridges-2.0.1-mc1.18.1<br>
+                                                         mcw-doors-1.0.5-mc1.18.1<br>
+                                                         mcw-fences-1.0.2-mc1.18.1<br>
+                                                         mcw-lights-1.0.2-mc1.18.1<br>
+                                                         mcw-paintings-1.0.2-mc1.18.1<br>
+                                                         mcw-trapdoors-1.0.4-mc1.18.1<br>
+                                                         mcw-windows-2.0.2-mc1.18.1<br>
+                                                         netherportalfix-forge-1.18-9.0.0<br>
+                                                         PackMenu-1.18.1-4.0.1<br>
+                                                         Patchouli-1.18.1-65<br>
+                                                         Placebo-1.18.1-6.1.1<br>
+                                                         polymorph-forge-1.18.1-0.37<br>
+                                                         productivebees-1.18.1-0.8.0.7<br>
+                                                         ProgressiveBosses-3.5.0-mc1.18.1<br>
+                                                         SereneSeasons-1.18.1-6.0.0.10-universal<br>
+                                                         starlight-1.0.0+forge.4fd2e63<br>
+                                                         TConstruct-1.18.1-3.3.2.33<br>
+                                                         TravelersBackpack-1.18.1-7.0.1<br>
+                                                         YungsApi-1.18.1-Forge-23
+                                                     </p>
+                                                 </details>
+                                                 <h4 class="code-line" data-line-start="1301" data-line-end="1302"><a id="_1301"></a>下载地址</h4>
+                                                 <h6 class="code-line" data-line-start="1302" data-line-end="1303"><a id="httpspanbaiducoms16xFrPlAzCbw43I2UqQgA_1302"></a><a href="https://pan.baidu.com/s/16xFrPl--AzCbw43I2UqQgA">百度云</a></h6>
+                                                 <h4 class="code-line" data-line-start="1305" data-line-end="1306"><a id="_1305"></a>授权&amp;二次修改</h4>
+                                                 <p class="has-line-data" data-line-start="1306" data-line-end="1310">
+                                                     本整合包使用CC BY-NC-SA 4.0许可证CC BY-NC-SA 4.0<br>
+                                                     BY-署名 — 您必须给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。您可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为您或您的使用背书。<br>
+                                                     NC-非商业性使用 — 您不得将本作品用于商业目的。<br>
+                                                     SA-相同方式共享 — 如果您再混合、转换或者基于本作品进行创作，您必须基于与原先许可协议相同的许可协议 分发您贡献的作品。
+                                                 </p>
+                                             </div>
+                                         </div>
+
+                                     </div>
+                                 </div>
+                             </div>
+                         </article>
+                         <div id="new-footer">
+                             <script>
+                                 $("#new-footer").load("../master2.html");
+                             </script>
+                         </div>
+                         <script type="text/javascript">
+                             document.getElementById("stg2020-3").style.height = document.getElementById("stg2018-2").scrollWidth * 0.36 + "px";
+                         </script>
+                     </body></html>

@@ -1,0 +1,916 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>システムコマンド</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_13";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">システムコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「システム」コマンドでは、特定の目的のために、データベースやゲームシステムの機能を管理します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Call_Common_Event" id="Call_Common_Event"></a>「共通イベントを呼び出す」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">選択した共通イベントを呼び出します。共通イベントの「並列実行」チェックボックスがオンになっている場合、シーンは、その共通イベントが終了するのを待たずに続行します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「共通イベント」</span> - あらかじめデータベースに設定した共通イベントの中から、呼び出したいものを選択します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「パラメータ」</span> - 共通イベントのパラメータを指定します（選択した共通イベントに何らかのパラメータが設定されている場合に限ります）。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="End_Common_Event" id="End_Common_Event"></a>「共通イベントを終了」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;">選択した共通イベントの実行を終了させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「共通イベント」 -</span> 終了する共通イベントを選択します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Resume_Common_Event" id="Resume_Common_Event"></a>「共通イベントを再開」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">選択した共通イベントを、一時停止したポイントから再開します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「共通イベント」</span> - 再開する共通イベントを選択します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Unlock_CG" id="Unlock_CG"></a>「CGのロックを解除」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">選択したCGをアンロックし、CGギャラリーメニューから閲覧できるようにします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「CG」</span> - アンロックするCGを選択します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="UI_Access" id="UI_Access"></a>「UIアクセス」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">セーブメニューなど、特定のゲーム内UI／メニューへのプレイヤーのアクセス許可を設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「セーブメニュー」</span> - セーブメニューへのアクセス許可を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ロードメニュー」</span> - ロードメニューへのアクセス許可を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「メニュー」</span> - メインメニューへのアクセス許可を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「バックログ」</span> - バックログへのアクセス許可を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Save_Persistent_Data" id="Save_Persistent_Data"></a>「永続データを保存」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;">永続変数の現在の状態を保存します。永続変数を変更した際は、再度このコマンドを呼び出す必要があります。このコマンドは、ディスクへの書き込みを行うため、時間がかかる場合があります。</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Save_Settings" id="Save_Settings"></a>「設定を保存」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none; font-family: Arial, sans-serif;">現在のゲーム設定を保存します。「<a 
+	 href="#Set_Game_Data">ゲームデータを設定</a>」コマンドなどでゲーム設定を変更した際は、再度このコマンドを呼び出す必要があります。</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Get_Game_Data" id="Get_Game_Data"></a>「ゲームデータを取得」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">現在のシーンIDや日時など、特定のゲームデータを取得します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「フィールド」</span> - 取得するゲームデータ値の種類を選択します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「シーンID」</span> - 現在のシーンUID（固有ID）を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ゲーム時間&#160;- 秒」</span>&#160;- 現在のゲーム／プレイ時間の秒を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ゲーム時間&#160;- 分」</span> - 現在のゲーム／プレイ時間の分を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ゲーム時間&#160;- 時」</span>&#160;- 現在のゲーム／プレイ時間の時を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「日付&#160;- 日」</span>&#160;- 現在の日にちを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「日付&#160;- 曜日」</span> - 現在の曜日を取得します（日曜日から開始して「0」～「6」）。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「日付&#160;- 月」</span> - 現在の月（「0」～「11」）を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「日付&#160;- 年」</span> - 現在の年を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定 - スキップを許可」</span> - スキップの許可設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定 - 未読スキップを許可」</span> - 未読メッセージのスキップの許可設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- メッセージスピード」</span> - メッセージスピードの設定を取得します（現在のメッセージスピードと異なる可能性があります）。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 自動メッセージ」</span> - 自動メッセージの有効／無効を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 自動メッセージ時間」</span> - 自動メッセージが有効となっている際、次のメッセージが表示されるまでの時間を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスを待機」</span> - 自動メッセージが有効となっている際、現在再生されているボイスの終了を待機してから次のメッセージを表示するかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- クリックして自動メッセージを停止」</span> - プレイヤーがメッセージボックスをクリックした場合に、自動メッセージを無効にするかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- メッセージの同期」</span> - メッセージの描写を音声と同期させるかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 動画をスキップ」</span> - クリックで動画をスキップできるかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 選択肢をスキップ」</span> - 選択肢をスキップできるかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスのスキップ」</span> - 音声をスキップできるかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 全画面モード」 </span>- ゲームを全画面モードで開始するかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 引き伸ばしモード」</span> - ゲーム画面を、解像度を無視して画面またはウィンドウいっぱいに引き伸ばすかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 確認」</span> - ゲームのセーブなど、重要な処理を行う前に必ずプレイヤーに確認するかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 音楽の音量」</span> - 音楽の音量設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスの音量」</span> - ボイスの音量設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 効果音の音量」</span> - 効果音の音量設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 音楽の有効化」</span> - 音楽が有効かどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスの有効化」</span> - 音声が有効かどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 効果音の有効化」</span> - 効果音が有効かどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「言語&#160;- コード」</span> - 「de」や「jp」など、現在設定されている言語のコードを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「言語&#160;- 名前」</span> - 現在設定されている言語の名前を取得します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「保存先」</span> - 取得したゲームデータ値の保存先を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Game_Data" id="Set_Game_Data"></a>「ゲームデータを設定」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">ゲームデータを設定します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「フィールド」</span> - 設定するゲームデータの種類を選択します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- スキップを許可」</span> - スキップを許可するかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 未読スキップを許可」</span> - 未読メッセージのスキップを許可するかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- メッセージ速度」</span> - メッセージ速度を設定します（現在のメッセージ速度と異なる可能性があります）。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 自動メッセージ」</span> - 自動メッセージの有効／無効を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 自動メッセージ時間」</span> - 自動メッセージが有効となっている際、次のメッセージが表示されるまでの時間を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスを待機」</span> - 自動メッセージが有効となっている際、現在再生されているボイスの終了を待機してから次のメッセージを表示するかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- クリックして自動メッセージを停止」</span> - プレイヤーがメッセージボックスをクリックした場合に、自動メッセージを無効にするかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- メッセージの同期」</span> - メッセージの描写を音声と同期させるかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 動画をスキップ」</span> - クリックで動画をスキップできるかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 選択肢をスキップ」</span> - 選択肢をスキップできるかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスをスキップ」</span> - 音声をスキップできるかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 全画面モード」</span> - ゲームを全画面モードで開始するかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 引き伸ばしモード」</span> - ゲーム画面を、解像度を無視して画面またはウィンドウいっぱいに引き伸ばすかどうかの設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 確認」</span> - ゲームのセーブなど、重要な処理を行う前に必ずプレイヤーに確認するかどうかの設定を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 音楽の音量」</span> - 音楽の音量を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスの音量」</span> - ボイスの音量を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 効果音の音量」</span> - 効果音の音量を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 音楽の有効化」</span> - 音楽を有効にするかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- ボイスの有効化」</span> - 音声を有効にするかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定&#160;- 効果音の有効化」</span> - 効果音を有効にするかどうかを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「言語&#160;- コード」</span> - ゲームの現在の言語を設定します。あらかじめ「言語プロファイル」に設定されている言語コードを使用する必要があります。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「保存先」</span> - 設定したゲームデータ値の保存先を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Input_Data" id="Input_Data"></a>「入力データ」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">指定したキー／ボタンの、現在のステータスを取得します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「フィールド」</span> - 現在のステータスを取得するキー／ボタンを選択します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「保存先」</span> - 取得したステータスを保存先を設定します。<br />
+	「0」は「押されていない」、「1」は「押された」、「2」は「離された」を意味します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Get_Object_Data" id="Get_Object_Data"></a>「オブジェクトデータを取得」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">キャラクター、ピクチャー、背景、ムービー、テキスト、メッセージボックスなどのゲームオブジェクトから、指定した値を取得します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 line-height: normal; mso-pagination: none; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「オブジェクトタイプ」</span> - 値を取得するゲームオブジェクトの種類を選択します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「ピクチャー」</span> 
+	 - ピクチャーのオブジェクトを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none; font-weight: bold;">「背景」<span style="font-weight: normal;"> 
+	 - 背景のオブジェクト／レイヤーを取得します。</span></p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「テキスト」</span> 
+	 - テキストのオブジェクトを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「ムービー」</span> 
+	 - ムービーのオブジェクトを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「ホットスポット」</span> 
+	 - ホットスポットのオブジェクトを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「メッセージボックス」</span> - 現在のメッセージボックスのオブジェクトを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「メッセージ」</span> - メッセージエリアを取得します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「数」</span> - 値を取得するゲームオブジェクト（キャラクターやメッセージボックスを除きます）のインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - 値を取得する背景のレイヤーを選択します（背景のみが対象です）。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - 値を取得するキャラクターを選択します（キャラクターのみが対象です）。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「フィールド」</span> - 取得する値を選択します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ID」</span> - データベースで設定されているキャラクターレコードのIDを取得します。<span 
+	 style="font-weight: bold;">（キャラクターのみが対象です）</span>。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「名前」</span>&#160;- キャラクターの名前を取得します。<span style="font-weight: bold;">（キャラクターのみが対象です）</span>。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「リソース名」</span> - ゲームオブジェクトが使用するグラフィックリソースの名前を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「位置&#160;- X」</span> - ゲームオブジェクトの位置のX座標を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「位置&#160;- Y」</span> - ゲームオブジェクトの位置のY座標を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「アンカー&#160;- X」</span> - ゲームオブジェクトの回転や拡大／縮小のポイントを決める、アンカーポイントのX座標を取得します。「0%（左）～100%（右）」のパーセンテージで表示されます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「アンカー&#160;- Y」</span> - ゲームオブジェクトの回転や拡大／縮小のポイントを決める、アンカーポイントのY座標を取得します。「0%（左）～100%（右）」のパーセンテージで表示されます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: bold;">「拡大／縮小&#160;- 
+	 X」<span style="font-weight: normal;"> - ゲームオブジェクトにおける、水平方向の拡大／縮小の値を取得します。パーセンテージで表示されます。</span></p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「拡大／縮小&#160;- Y」</span> - ゲームオブジェクトにおける、垂直方向の拡大／縮小の値を取得します。パーセンテージで表示されます。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サイズ&#160;- 幅」</span> - ゲームオブジェクトの幅（ピクセル単位）を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サイズ&#160;- 高さ」</span> - ゲームオブジェクトの高さ（ピクセル単位）を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「Zオーダー」</span> - オーバーラップを調整するゲームオブジェクトのZオーダーを取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「不透明度」</span> - ゲームオブジェクトの不透明度を「0（透明）～255（不透明）」で取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「角度」</span> - ゲームオブジェクトの回転角度（°）を取得します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「表示」</span> 
+	 - ゲームオブジェクトの可視度を取得します。「オフ」の場合、ゲームオブジェクトは表示されていません。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「ブレンドモード」</span> 
+	 - ゲームオブジェクトに適用されているブレンドの種類を取得します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「0」</span> 
+		 - 標準のブレンドモードが適用されています。</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「1」</span> 
+		 - 「加算」のブレンドモードが適用されています。</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「2」</span> 
+		 - 「減算」のブレンドモードが適用されています。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「保存先」</span> - 取得した値の保存先を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Set_Object_Data" id="Set_Object_Data"></a>「オブジェクトデータを設定」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">キャラクター、ピクチャー、背景、ムービー、テキスト、メッセージボックスなどの、ゲームオブジェクトの値を設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「オブジェクトタイプ」</span> - 値を設定するゲームオブジェクトの種類を選択します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ピクチャー」</span> - ピクチャーのオブジェクトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「背景」</span> - 背景のオブジェクト／レイヤーを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「テキスト」</span> - テキストのオブジェクトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ムービー」</span> - ムービーのオブジェクトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ホットスポット」</span> - ホットスポットのオブジェクトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「メッセージボックス」</span> - 現在のメッセージボックスのオブジェクトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「メッセージ」</span> - メッセージエリアを設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「数」</span> - 値を設定するゲームオブジェクト（キャラクターやメッセージボックスを除きます）のインデックス（ID）を記入します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - 値を設定する背景のレイヤーを選択します（背景のみが対象です）。</p></li>
+
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「キャラクター」</span> - 値を設定するキャラクターを選択します（キャラクターのみが対象です）。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「フィールド」</span> - 設定する値を選択します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; margin-left: 0px;"><span 
+	 style="font-weight: bold;">「名前」</span>&#160;- キャラクターの名前を設定します<span style="font-weight: bold;">（キャラクターのみが対象です）</span>。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; margin-left: 0px;"><span 
+	 style="font-weight: bold;">「リソース名」</span> - ゲームオブジェクトが使用するグラフィックリソースの名前を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; margin-left: 0px;"><span 
+	 style="font-weight: bold;">「位置&#160;- X」</span> - ゲームオブジェクトの位置のX座標を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「位置&#160;- Y」</span> - ゲームオブジェクトの位置のY座標を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「アンカー&#160;- X」</span> - ゲームオブジェクトの回転や拡大／縮小のポイントを決める、アンカーポイントのX座標を設定します。「0%（左）～100%（右）」のパーセンテージで指定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「アンカー&#160;- Y」</span> - ゲームオブジェクトの回転や拡大／縮小のポイントを決める、アンカーポイントのY座標を設定します。「0%（左）～100%（右）」のパーセンテージで指定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; font-weight: bold;">「拡大／縮小&#160;- 
+	 X」<span style="font-weight: normal;"> - ゲームオブジェクトにおける、水平方向の拡大／縮小の値を設定します。パーセンテージで指定します。</span></p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「拡大／縮小&#160;&#160;- Y」</span> - ゲームオブジェクトにおける、垂直方向の拡大／縮小の値を設定します。パーセンテージで指定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サイズ&#160;- 幅」</span> - ゲームオブジェクトの幅（ピクセル単位）を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サイズ&#160;- 高さ」</span> - ゲームオブジェクトの高さ（ピクセル単位）を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「Zオーダー」</span> - オーバーラップを調整するゲームオブジェクトのZオーダーを設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「不透明度」</span> - ゲームオブジェクトの不透明度を「0（透明）～255（不透明）」で設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「角度」</span> - ゲームオブジェクトの回転角度（°）を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+			 text-autospace: none;"><span style="font-weight: bold;">「表示」</span> 
+	 - ゲームオブジェクトの可視度を設定します。「オフ」にした場合、ゲームオブジェクトは表示されません。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none; margin-left: 0px; 
+			 font-weight: bold;">「ブレンドモード」 - ゲームオブジェクトに適用されているブレンドの種類を取得します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「0」</span> 
+		 - 標準のブレンドモードを適用します。</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「1」</span> 
+		 - 「加算」のブレンドモードを適用します。</p></li>
+		<li><p class="MsoNormal" style="margin-bottom: .0001pt; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+				 line-height: normal; mso-pagination: none; mso-layout-grid-align: none; 
+				 text-autospace: none;"><span style="font-weight: bold;">「2」</span> 
+		 - 「減算」のブレンドモードを適用します。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「設定」</span> - 設定した値の保存先を指定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Reset_Global_Data" id="Reset_Global_Data"></a>「グローバルデータをリセット」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">ゲームの永続変数をすべてリセットします。アンロックしたCGや既読メッセージなど、永続の変数やデータはすべて削除されます。<span 
+	 style="line-height: normal; mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">ニューゲームを開始する度にリスタートされるグローバル変数やスイッチ変数と混同しないように注意してください。</span></p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Sounds" id="Change_Sounds"></a>「効果音を変更」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">テキストコード「{SP:1}」～「{SP:8}」をメッセージに記入することで使用できる、効果音1～8を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 1」</span> - テキストコード「{SP:1}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none; 
+										 font-weight: bold;">「効果音 2」<span 
+	 style="font-weight: normal;"> - テキストコード「{SP:2}」の効果音を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 3」</span> - テキストコード「{SP:3}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 4」</span> - テキストコード「{SP:4}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 5」</span> - テキストコード「{SP:5}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 6」</span> - テキストコード「{SP:6}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 7」</span> - テキストコード「{SP:7}」の効果音を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「効果音 8」</span> - テキストコード「{SP:8}」の効果音を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Colors" id="Change_Colors"></a>「色を変更」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">テキストコード「{C:1}」～「{C:8}」をメッセージに記入することで使用できる、色1～8を変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 1」</span> - テキストコード「{C:1}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 2」</span> - テキストコード「{C:2}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 3」</span> - テキストコード「{C:3}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 4」</span> - テキストコード「{C:4}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 5」</span> - テキストコード「{C:5}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 6」</span> - テキストコード「{C:6}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 7」</span> - テキストコード「{C:7}」の色を設定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「色 8」</span> - テキストコード「{C:8}」の色を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Cursor" id="Change_Cursor"></a>「カーソルを変更」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">マウスカーソルの外観を変更します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ファイル」</span> - マウスカーソルのグラフィックを設定します（最大32x32ピクセル）。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ホットスポット-X」</span> - マウスカーソルがクリックするホットスポットのX座標を設定します。</p></li>
+	<li><p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+			 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+			 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「ホットスポット-Y」</span> - マウスカーソルがクリックするホットスポットのY座標を設定します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Prepare_Save_Game" id="Prepare_Save_Game"></a>「ゲームセーブを準備」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">現在のゲーム状態のスナップショットとスクリーンショット（任意）を作成します。ただし、「<a 
+	 href="#Save_Game">ゲームをセーブ</a>」コマンドではないため、ディスク／ストレージには保存されません。<br />
+「<a href="#Save_Game">ゲームをセーブ</a>」コマンドを使用するには、先にこのコマンドを呼び出す必要があります。通常の場合、このコマンドはシーンがセーブメニューへとスイッチされる前に呼び出さなければなりません。現在のゲーム状態からスナップショットを作成するため、時間がかかる場合があります。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「スクリーンショット」</span> - 「はい」に設定すると、現在のシーンのスクリーンショットを作成します。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Save_Game" id="Save_Game"></a>「ゲームをセーブ」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">「<a href="#Prepare_Save_Game">ゲームセーブを準備</a>」コマンドで作成したゲーム状態のスナップショットを、指定したセーブゲームスロットに保存します。<br />
+このコマンドではゲーム状態のスナップショットは作成されません。シーンがまだアクティブな場合、「<a href="#Prepare_Save_Game">ゲームセーブを準備</a>」コマンドを先に呼び出すことが最重要事項です。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「スロット」</span> - ゲーム状態のスナップショットを保存するセーブゲームスロットを選択します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サムネイルの幅」</span> - サムネイル画像の幅を指定します。「0」は「自動」を意味し、サムネイル画像のサイズが自動的に計算されます。<br />
+	カスタムのゲーム内UIで使用しやすいように、固定サイズで設定することもできます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「サムネイルの高さ」</span>&#160;- サムネイル画像の高さを指定します。「0」は「自動」を意味し、サムネイル画像のサイズが自動的に計算されます。<br />
+	カスタムのゲーム内UIで使用しやすいように、固定サイズで設定することもできます。</p></li>
+</ul>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#160;</p>
+<p class="Sub_Heading"><a name="Load_Game" id="Load_Game"></a>「ゲームをロード」</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-pagination: none; tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+	 mso-layout-grid-align: none; text-autospace: none;">指定したセーブゲームスロットからゲームをロードします。選択したスロットにゲームが保存されていない場合、何も起こりません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal" style="margin-bottom: .0001pt; 
+										 line-height: normal; mso-pagination: none; 
+										 tab-stops: 28.3pt 56.65pt 85.0pt 113.35pt 141.7pt 170.05pt 198.4pt 226.75pt 255.1pt 283.45pt 311.8pt 340.15pt; 
+										 mso-layout-grid-align: none; text-autospace: none;"><span 
+	 style="font-weight: bold;">「スロット」</span> - ロードするセーブゲームスロットを指定します。</p></li>
+</ul>
+</body>
+</html>

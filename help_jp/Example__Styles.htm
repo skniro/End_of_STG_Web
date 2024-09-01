@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：スタイル</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：スタイル</p>
+</div>
+<p>最初の例で作ったカスタムタイトル画面を見ると、下の余白が10ピクセルである、あるいはすべてサイズ変更が可能であるなど、ボタンの定義に冗長するデータがあります。</p>
+<p>今回の例では問題ありませんが、より複雑なシナリオに取り組んでいる場合、後から余白を10ピクセルではなく15ピクセルにしようとすれば、大きな問題に発展します。</p>
+<p>なぜなら、すべてのコントロールを修正して変更点を反映しなくてはならないからです。そのような時は、スタイルが役に立ちます！</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>スタイルの定義</span></p>
+<p>スタイルは、1度だけプロパティのセットを定義したら、好きなだけコントロールやレイアウトに再利用することができます。新しいスタイルを定義する場合、</p>
+<p>任意のスクリプトのどれでも、または新しいスクリプトを作ってその中で定義することができます。すべての既定のスタイルは「Style_Default」スクリプトの「Styles」フォルダにあります。</p>
+<p>次のスタイルの例を参照してください。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;resizable&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;margin&quot;: [0, 0, 
+ 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>これを「Style_Default」スクリプトの末尾に追加します。最初の行は常に同じフォーマットです。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.&lt;style_name&gt; = {</span></p>
+<p>&#160;</p>
+<p>この行を完全に理解する必要はありませんが、自分のスタイルに固有の名前を定義しなくてはならないということを知っていることが重要になります。</p>
+<p>名前にはスペースや特殊文字を含めることはできません。</p>
+<p>&#160;</p>
+<p>スタイルの定義ができたら、次のようにタイトル画面の例に変更を加えることができます。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&quot;frame&quot;: [0, 0, Graphics.width, 
+ Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&quot;controls&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;image&quot;: 
+ &quot;bg-generic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, &quot;100%&quot;, &quot;100%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.StackLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;orientation&quot;: 
+ &quot;vertical&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [&quot;35%&quot;, &quot;60%&quot;, &quot;30%&quot;, &quot;30%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;controls&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ニューゲーム&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;newGame&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;titleScreenButton&quot;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ゲームを読み込む&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;switchLayout&quot;, &quot;params&quot;: { &quot;name&quot;: &quot;loadMenuLayout&quot;, 
+ &quot;savePrevious&quot;: true } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;titleScreenButton&quot;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;終了&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;quitGame&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;style&quot;: 
+ &quot;titleScreenButton&quot;</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>次のように、複数のスタイルを1つのアイテムに適用することもできます。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;styles&quot;: [&quot;titleScreenButton&quot;, 
+ &quot;otherStyle&quot;]</span></p>
+<p>&#160;</p>
+<p>その場合、スタイルは次から次へと適用されます。2つのスタイルで同じプロパティを含んでいるなどして、プロパティ同士が衝突する場合、</p>
+<p>最後に適用したスタイルが優先されます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>イベント</span></p>
+<p>特定のイベントを使えば、ランタイムにコントロールのスタイルを変更することも可能です。例えば、マウスポインタでコントロールエリアにマウスオーバーすると、</p>
+<p>別のスタイルが適用され、コントロールの色を変更するなど、ユーザーに視覚的なフィードバックを返すようにすることができます。</p>
+<p>&#160;</p>
+<p>イベントにスタイルをバインドするには、まずベースとなるスタイルを定義しなくてはなりません。その際に特殊なイベントは使用できません。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.hyperlink = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;font&quot;: { &quot;color&quot;: 
+ [255, 255, 255], &quot;size&quot;: 30 }</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>この例では、ハイパーリンクを生成するのに使用できるスタイルを作成したいと思います。マウスオーバーすると、テキストの色が変わります。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles[&quot;hyperlink:hover&quot;] 
+ = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;font&quot;: { &quot;color&quot;: 
+ [255, 0, 0], &quot;size&quot;: 30 }</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>スタイルをイベントにバインドするには、次の構文を使用します。</p>
+<p>&#160;</p>
+<p><span class="Code">:&lt;event&gt;</span></p>
+<p>&#160;</p>
+<p>次のイベントが使用可能です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>hover - コントロールエリアをマウスポインタでマウスオーバーするとスタイルが適用されます。</li>
+	<li>selected - コントロールが選択されるとスタイルが適用されます。</li>
+</ul>
+<p>&#160;</p>
+<p>この例では、「hover」イベントを使用します。これで、基本となる「hyperlink」スタイルセットとともに、各コントロールがマウスオーバーされとスタイルが適用されます。</p>
+<p>スクリプトを次のように作成すると、マウスオーバーでテキストの色が変わります！</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.Text&quot;,</span></p>
+<p style="margin-left: 40px;"><span class="Code">&quot;style&quot;: &quot;hyperlink&quot;,</span></p>
+<p style="margin-left: 40px;"><span class="Code">&quot;text&quot;: &quot;ここにマウスオーバー&quot;,</span></p>
+<p style="margin-left: 40px;"><span class="Code">&quot;frame&quot;: [0, 
+ 0],</span></p>
+<p style="margin-left: 40px;"><span class="Code">&quot;sizeToFit&quot;: 
+ true</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+</body>
+</html>

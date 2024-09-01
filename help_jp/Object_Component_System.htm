@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>オブジェクトコンポーネントシステム</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ 
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="Scripter's Guide > VN Engine" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.2.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > VNエンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+
+<p class="Topic_Heading">オブジェクトコンポーネントシステム</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ラ</span>ノゲツクールMVのビジュアルノベルエンジンは、ベーシックエンジンの上に構築されており、オブジェクトコンポーネントシステム (OCS) デザインを使用して、拡張や管理を行いやすくしています。</p>
+<p>&#160;</p>
+<p>初心者の方には ラノゲツクールMV の OCS の利点や欠点を理解するのは難しい場合がありますので、ここでは OCS の使い方について焦点を当てて説明します。徐々に慣れていけば違和感もなくなるはずです。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームオブジェクト</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV の OCS において、ゲーム全体は「ゲームオブジェクト」と呼ばれるものに分けられます。 この言葉は前にも聞いたことがあるでしょう。各ゲームオブジェクトは現在のゲームの一部分を表します。例えば、背景も現在のキャラクターもメッセージボックスもそれぞれすべてゲームオブジェクトです。1 つのゲームオブジェクトは別の複数のゲームオブジェクトから構成されていることもあります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">コンポーネント</p>
+<p>&#160;</p>
+<p>ゲームオブジェクトはそれ自身が何かゲームの特定のロジックや挙動を実現することはせず、それらはゲームオブジェクトに動的に追加される「コンポーネント」と呼ばれるものによってもたらされます。コンポーネントは、オブジェクトのレンダリングや画面表示、キャラクターの挙動などの特定の機能を実現します。多くの場合、コンポーネントは独立性と再利用性を目的として作成されます。</p>
+<p>&#160;</p>
+<p>ゲームオブジェクトは自身に付属するすべてのコンポーネントを知り、コンポーネントは自身が付属するゲームオブジェクトを知ります。1 つのコンポーネントは 1 つの具体的なゲームオブジェクトの一部にしかなれません。そのゲームオブジェクトが破壊されるとそこに付属していたすべてのコンポーネントも破壊されます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">プロパティ</p>
+<p>&#160;</p>
+<p>コンポーネントの他に、ゲームオブジェクトは一種のコンポーネントとしてみなすことも可能な一連のプロパティを持つことができます。大きな違いは、プロパティは受動的であり、多くの場合はデータを格納して、ゲームオブジェクトの現在のステータスを定義するだけです。複数の独立したコンポーネントからプロパティにアクセスしたり処理する場合、プロパティはゲームオブジェクトに追加すべきです。 </p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームオブジェクトを作成する</p>
+<p>&#160;</p>
+<p>新規にゲームオブジェクトを作成するには、gs.Object_Base クラスの新規インスタンスを作成し、そこに次の例のようにコンポーネントとプロパティを追加します。</p>
+<pre><code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &nbsp;
+prepareVisual: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a new game object
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject = new gs.Object_Base()
+&nbsp;&nbsp;&nbsp;&nbsp;# Make it visible
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.visible = yes
+&nbsp;&nbsp;&nbsp;&nbsp;# No offset
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.offset = new gs.Point(0, 0)
+&nbsp;&nbsp;&nbsp;&nbsp;# Upper-Left origin
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.origin = new gs.Point(0, 0)
+&nbsp;&nbsp;&nbsp;&nbsp;# Set the position and size of the square on screen.
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.dstRect = new gs.Rect(0, 0, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;# Set the color of the square.
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.color = new gs.Color(255, 0, 0, 255)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add a quad-component to the game object. A quad-component displays
+&nbsp;&nbsp;&nbsp;&nbsp;# the game object as a square/quad on screen.
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject.addComponent(new gs.Component_Quad())
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the game object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@gameObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# We are done with preparing our visual objects. So we can start
+&nbsp;&nbsp;&nbsp;&nbsp;# the screen transition to fade in our new created objects smoothly.
+&nbsp;&nbsp;&nbsp;&nbsp;@transition()</code></pre>
+<p>&#160;</p>
+<p>この例をテストすると、画面の左上に赤い正方形が表示されます。なぜならゲームオブジェクトに gs.Component_Quad コンポーネントを追加し、他の必要なプロパティと一緒に color プロパティを追加したからです。quad コンポーネントは gs.Component_Visual を拡張して視覚化コンポーネントとなり、それによってゲームオブジェクトが自身を画面上に表示できるようゲームオブジェクトに機能を追加しています。 </p>
+<p>&#160;</p>
+<p>より詳しくみていくと、quad コンポーネントはゲームオブジェクトの color プロパティにアクセスし、ベーシックエンジンの gs.Quad オブジェクトを使ってゲームオブジェクトを画面に表示しています。gs.Component_Quad スクリプトを見ると、とてもシンプルなコンポーネントであることがわかります。</p>
+<p>&#160;</p>
+<p>@object で現在のシーンにアクセスしていますが、それはゲームオブジェクトそのものです。テストベッドのクラス定義に目を向けると次のようになっています。</p>
+<pre><code class="coffee">class Component_TestBedBehavior extends gs.Component_SceneBehavior</code></pre>
+<p>これを見ると我々のテストベッドは実際にコンポーネントそのものであるとわかります。これはシーンがゲームオブジェクトでもあり、ゲームのルートゲームオブジェクトであるからです。キャラクターや背景などのその他のゲームオブジェクトはすべてその下にあります。</p>
+<p>&#160;</p>
+<p>各コンポーネントは 「@object」と呼ばれるゲームオブジェクトを参照しています。したがって 「@object.addObject」を使って新規作成したゲームオブジェクトをルートゲームオブジェクト、現在のシーンに追加しています。これは非常に重要な点です。そうでなければ、ゲームオブジェクトは現在のゲームの一部にならないし、更新もされず、したがって画面上に表示されません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームオブジェクト テンプレートクラスを定義する</p>
+<p>&#160;</p>
+<p>最後の例は問題なく動作しますが、何も問題がないわけではありません。まず、赤い正方形を作成する度に毎回これらすべてのプロパティを追加するのは面倒です。それは factory パターンで解決できるかもしれませんが、別の問題があります。 gs.Object_Base は実際は color プロパティや我々が設定するその他すべてのプロパティを定義しません。我々は動的にこれらのプロパティをゲームオブジェクトに追加するだけで、それについては JavaScript / CoffeeScript のおかげで問題ありません。 </p>
+<p>&#160;</p>
+<p>他のプログラミング言語ではそのようなことは不可能で、 JavaScript / CoffeeScript でもそのようなやり方は JIT 最適化を妨げ、パフォーマンスを低下します。gs.Object_Base を拡張し、必要なプロパティのすべてを定義して、必要なコンポーネントもオプションでインスタンス化する独自のクラスを作成するのがお勧めです。このクラス定義をゲームオブジェクトテンプレートのようなものとして考えてもいいでしょう。</p>
+<p>&#160;</p>
+<p>上の例では、挙動と視覚表現はゲームオブジェクトクラス自体には実装されていませんが、代わりに複数の独立したコンポーネントに実装されています。</p>
+<p>&#160;</p>
+<p>それでは次にゲームオブジェクト テンプレートを作成して画面に正方形を表示してみましょう。まず、 「Objects」 フォルダー内に 「Object_Square」 という名前の新しいスクリプトを追加する必要があります。そこに次のコードをコピー＆ペーストで入力してください:</p>
+<pre><code class="coffee">
+# Define a new class which inherits from gs.Object_Base and serves as a
+# game object template for squares.
+class Object_Square extends gs.Object_Base
+&nbsp;&nbsp;&nbsp;&nbsp;constructor: (color) -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Make it visible
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@visible = yes
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# No offset
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@offset = new gs.Point(0, 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Upper-Left origin
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@origin = new gs.Point(0, 0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Set the position and size of the square on screen.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@dstRect = new gs.Rect(0, 0, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Set the color of the square.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@color = color
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Add a quad-component to the game object. A quad-component displays
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# the game object as a square/quad on screen.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@addComponent(new gs.Component_Quad())
+gs.Object_Square = Object_Square</code></pre>
+<p>新しいクラス Object_Square を定義し、 gs.Object_Base から継承します。constructor では、 square-color をパラメータとして、必要なすべてのプロパティを定義し、また quad-component を追加しています。それではテストベッドコンポーネントに戻り、 prepareVisual を少し変更します:</p>
+<pre><code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &nbsp;
+prepareVisual: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a new game object
+&nbsp;&nbsp;&nbsp;&nbsp;@gameObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the game object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@gameObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# We are done with preparing our visual objects. So we can start
+&nbsp;&nbsp;&nbsp;&nbsp;# the screen transition to fade in our new created objects smoothly.
+&nbsp;&nbsp;&nbsp;&nbsp;@transition()</code></pre>
+<p>これでかなり見やすくなりました。gs.Object_Square オブジェクトを新規作成し、使用したい色を渡してそれをシーンに追加します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">既存のゲームオブジェクトとコンポーネントクラス</p>
+<p>&#160;</p>
+<p>ラノゲツクールMV には、一連のゲームオブジェクトとコンポーネントクラスが付属し、実際の Visual Novel エンジンを形成しています。そこには背景やキャラクター、メッセージなどのゲームオブジェクトテンプレートが含まれます。次の例では、背景と 1 人のキャラクター、 1 つのメッセージが含まれるだけの非常にシンプルなシーンを作成します。</p>
+<pre><code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &nbsp;
+prepareVisual: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a new background object
+&nbsp;&nbsp;&nbsp;&nbsp;@backgroundObject = new vn.Object_Background()
+&nbsp;&nbsp;&nbsp;&nbsp;# Set the background image
+&nbsp;&nbsp;&nbsp;&nbsp;@backgroundObject.image = &quot;Bench_Morning&quot;
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the game object
+&nbsp;&nbsp;&nbsp;&nbsp;@backgroundObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Get character data at 0006 in database
+&nbsp;&nbsp;&nbsp;&nbsp;characterData = RecordManager.characters[5]
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a new character object. We are passing the character data to it.
+&nbsp;&nbsp;&nbsp;&nbsp;@characterObject = new vn.Object_Character(characterData)
+&nbsp;&nbsp;&nbsp;&nbsp;# We set the expression to the default expression of the character defined in database.
+&nbsp;&nbsp;&nbsp;&nbsp;@characterObject.expression = RecordManager.characterExpressions[characterData.defaultExpressionId]
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the game object.
+&nbsp;&nbsp;&nbsp;&nbsp;@characterObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;# Center the character on x-axis
+&nbsp;&nbsp;&nbsp;&nbsp;@characterObject.dstRect.x = (Graphics.width - @characterObject.dstRect.width) / 2
+&nbsp;&nbsp;&nbsp;&nbsp;# Update the character object manually to apply latest changes before the scene
+&nbsp;&nbsp;&nbsp;&nbsp;# becomes visible.
+&nbsp;&nbsp;&nbsp;&nbsp;@characterObject.update()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create black-transparent message background object
+&nbsp;&nbsp;&nbsp;&nbsp;@messageBackgroundObject = new gs.Object_Square(new gs.Color(0, 0, 0, 160))
+&nbsp;&nbsp;&nbsp;&nbsp;# Set z-index to 800 to make sure it is displayed above the background + character
+&nbsp;&nbsp;&nbsp;&nbsp;@messageBackgroundObject.zIndex = 800
+&nbsp;&nbsp;&nbsp;&nbsp;# Set position and size. We place it at the bottom of the screen.
+&nbsp;&nbsp;&nbsp;&nbsp;@messageBackgroundObject.dstRect.set(0, Graphics.height - 150, Graphics.width, 150)
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the message background object.
+&nbsp;&nbsp;&nbsp;&nbsp;@messageBackgroundObject.setup()
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a message object to display a message on screen.
+&nbsp;&nbsp;&nbsp;&nbsp;@messageObject = new ui.Object_Message()
+&nbsp;&nbsp;&nbsp;&nbsp;# Set position and size of the message
+&nbsp;&nbsp;&nbsp;&nbsp;@messageObject.dstRect.set(0, Graphics.height - 150, Graphics.width, 150)
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the message object.
+&nbsp;&nbsp;&nbsp;&nbsp;@messageObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;# Add a single message to the message object
+&nbsp;&nbsp;&nbsp;&nbsp;@messageObject.behavior.addMessage(&quot;Hey! How is it going?&quot;, null, no, yes)
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the background object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@backgroundObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the character object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@characterObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the message background object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@messageBackgroundObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the message object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@messageObject)
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# We are done with preparing our visual objects. So we can start
+&nbsp;&nbsp;&nbsp;&nbsp;# the screen transition to fade in our new created objects smoothly.
+&nbsp;&nbsp;&nbsp;&nbsp;@transition()
+&nbsp;&nbsp;&nbsp;&nbsp;
+###*
+* Prepares all data for the scene and loads the necessary graphic and audio resources.
+### 
+prepareData: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Load the background image
+&nbsp;&nbsp;&nbsp;&nbsp;ResourceManager.getBitmap(&quot;Graphics/Backgrounds/Bench_Morning&quot;)
+&nbsp;&nbsp;&nbsp;&nbsp;# Load the character expression image
+&nbsp;&nbsp;&nbsp;&nbsp;ResourceManager.getBitmap(&quot;Graphics/Characters/JaneDate_Normal&quot;)</code></pre>
+<p>上の例を見るとわかるように、背景は  vn.Object_Background を使用して簡単に作成でき、背景の名前に image プロパティを設定しています。キャラクターは vn.Object_Character クラスで、メッセージは ui.Object_Message を使用してそれぞれ追加されています。また以前作成したゲームオブジェクトテンプレート gs.Object_Square を使用してメッセージの可読性を向上させるための暗い背景を表示しています。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ゲームオブジェクト間の通信</p>
+<p>&#160;</p>
+<p>2 つ以上のゲームオブジェクトはお互いに通信するのが一般的です。例えば、プレイヤーがボタンオブジェクトをクリックしたら、 シーンオブジェクトはクリックされたことを知らされる必要があります。ラノゲツクールMV では、ゲームオブジェクトは gs.Component_EventEmitter コンポーネントを使用して、お互いに通信します。このコンポーネントはゲームオブジェクトにメッセージの送信を許可し、それらメッセージが通知されるよう他のゲームオブジェクトに登録を許可します。 次の例でご確認ください。</p>
+<pre><code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &nbsp;
+prepareVisual: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a colored square object
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+&nbsp;&nbsp;&nbsp;&nbsp;# Place it at the center of the game window
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the game object.
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a hotspot object to catch mouse-clicks from the user.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject = new ui.Object_Hotspot()
+&nbsp;&nbsp;&nbsp;&nbsp;# Place the hotspot at the same location and same size as the square object.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;# Register for the &quot;click&quot; message/event. The events-property is a quick-accessor to the event-emitter component.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.events.on &quot;click&quot;, =&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the hotspot gets clicked we change the color of the square to blue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.color = new gs.Color(0, 0, 255)
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the hotspot object
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the square object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@squareObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the htospot to the scene.
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@hotspotObject)</code></pre>
+<p>ここでは gs.Object_Square ゲームオブジェクトを使用して画面上に赤い四角形を表示します。次に、マウスの動きに応答する領域、ホットスポットを追加してそれを赤い四角形上に配置します。続いて シーンオブジェクトが hotspot オブジェクトのクリックメッセージを登録します。 したがってホットスポットがクリックされると callback-function が呼び出され、四角形の色を青に変更します。ゲームを起動し、赤い四角形をクリックすると色が青に変わるわけです。</p>
+<p>&#160;</p>
+<p>しかしながら、このやり方だと、2 つのゲームオブジェクトがお互いにお互いを知る必要がある、という不便な点があります。hotspot オブジェクトは シーンオブジェクトからアクセスできる必要があります。これは 2 つのゲームオブジェクト間に依存関係を生み、それは全く問題のない場合もありますが、独立性を保たなければならない場合もあります。</p>
+<p>&#160;</p>
+<p>そこで登場するのが gs.GlobalEventManager で、それ自身は グローバルな gs.Component_EventEmitter オブジェクトです。このグローバルイベントマネージャは 2 つ以上のゲームオブジェクト間の通知センターのような役割を果たし、ゲームオブジェクトが個々に直接通信する必要がなくなります。例えば、あるゲームオブジェクトがユーザーにクリックされたことをメッセージとして送信したい場合。特定の登録済みのオブジェクトにそれを通知するのではなく、グローバルイベントマネージャにクリックされたことを知らせ、それを受けたグローバルイベントマネージャはそれを関係のあるすべてのゲームオブジェクトに通知します。 </p>
+<pre><code class="coffee">
+###*
+* Prepares all visual game object for the scene.
+### &nbsp;
+prepareVisual: -&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a colored square object
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject = new gs.Object_Square(new gs.Color(255, 0, 0))
+&nbsp;&nbsp;&nbsp;&nbsp;# Place it at the center of the game window
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the game object.
+&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Create a hotspot object to catch mouse-clicks from the user.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject = new ui.Object_Hotspot()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Place the hotspot at the same location and same size as the square object.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.dstRect.set((Graphics.width - 100) / 2, (Graphics.height - 100) / 2, 100, 100)
+&nbsp;&nbsp;&nbsp;&nbsp;# Register for the &quot;click&quot; message/event. The events-property is a quick-accessor to the event-emitter component.
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.events.on &quot;click&quot;, (sender) =&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Fire an event through global event manager
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gs.GlobalEventManager.emit &quot;hotspotClicked&quot;, sender
+&nbsp;&nbsp;&nbsp;&nbsp;# Initialize the hotspot object
+&nbsp;&nbsp;&nbsp;&nbsp;@hotspotObject.setup()
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Register for &quot;hotspotClicked&quot; message
+&nbsp;&nbsp;&nbsp;&nbsp;gs.GlobalEventManager.on &quot;hotspotClicked&quot;, (sender) =&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# If the hotspot gets clicked we change the color of the square to blue
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@squareObject.color = new gs.Color(0, 0, 255)
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the square object to the scene
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@squareObject)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the hotspot to the scene.
+&nbsp;&nbsp;&nbsp;&nbsp;@object.addObject(@hotspotObject)
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;# We are done with preparing our visual objects. So we can start
+&nbsp;&nbsp;&nbsp;&nbsp;# the screen transition to fade in our new created objects smoothly.
+&nbsp;&nbsp;&nbsp;&nbsp;@transition()</code></pre>
+<p>上の例では、シーンオブジェクトは、hotspot オブジェクトを直接知ることなく通知を受けます。なぜなら通信は gs.GlobalEventManager を介して行われるからです。したがって hotspot オブジェクトと シーンオブジェクトはお互いを知る必要がありません。このやり方は、関連するゲームオブジェクトの種類や数が明確でない場合やゲームオブジェクトがアクセスできない場合、お互いについて知らない場合に便利です。</p>
+<p>&#160;</p>
+<p>しかしながら、この方法は基本的な通信方法として乱用すべきではありません。 グローバルイベントマネージャに登録したゲームオブジェクトは、どんなゲームオブジェクトからのメッセージでも通知されるからです。シンプルな「クリック」メッセージの場合、シーンオブジェクトは、パネルオブジェクトからだけでなく、「クリック」メッセージを送信するすべてのゲームオブジェクトからのメッセージを受け取ることになります。</p>
+</body>
+</html>

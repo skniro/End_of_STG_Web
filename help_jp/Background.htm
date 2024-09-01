@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>背景</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_4";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">背景コマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;「背景」コマンドでは、スクリーンを演出するさまざまな効果を追加できます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Background" id="Change_Background"></a>「背景を変更」</p>
+<p style="font-family: Arial, sans-serif;">シーンの背景を設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ファイル」</span> 
+	 - 表示する画像ファイルを指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「レイヤー」</span> 
+	 - 背景の優先順位を設定します。数値が高いほど、前面に表示されます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - アニメーションの描写時間をミリ秒単位で設定します。「0（ミリ秒）」に設定すると、背景はすぐに表示されるようになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト／続行」</span> 
+	 - ウエイトに設定すると、シーンは背景の表示が完了するのを待ってから次のコマンドを実行するようになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - 背景の表示方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「</span><span style="font-weight: bold; 
+												 text-decoration: none; ">イージング</span><span 
+	 style="font-weight: bold;">」</span> &#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 背景のアニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下から背景を登場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いて背景をフェードイン／フェードアウトさせます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「マスキング」 
+		 <span style="font-weight: normal;">- 「Graphics/Masks」フォルダにあるマスク画像を用いて背景をフェードインさせます。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「スムーズ」 
+			 <span style="font-weight: normal;">- マスクの外縁の滑らかさを設定します。</span></p></li>
+		</ul></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ループ」</span> 
+	 - 「はい」に設定すると垂直または水平にループします。「なし」に設定するとループはオフになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span> 
+	 - 背景の表示順とアンカーを指定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span>&#160;- 背景のアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「Z オーダー」</span>&#160;- 背景の表示順を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ビューポート」</span>&#160;- 背景に割り当てられるビューポートです。ビューポートの設定次第で、背景がカメラの移動や画面効果に影響を受けるかどうかが決まります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「シーン」</span> - 背景をシーンビューポートに割り当て、シーンに属するオブジェクトのように動作させます。そのため、カメラの移動や画面効果に影響を受けます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - 背景をユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br />
+		そのため、カメラの移動や画面効果に影響を受けません。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Background" id="Blend_Background"></a>「背景をブレンド」</p>
+<p style="font-family: Arial, sans-serif;">指定した不透明度まで背景をブレンドします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「レイヤー」<span style="font-weight: normal;"> 
+	 - ブレンドする背景画像を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「不透明度」</span> - 不透明度を指定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> - ブレンドアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ブレンドが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Background" id="Zoom_Background"></a>「背景を拡大／縮小」</p>
+<p style="font-family: Arial, sans-serif;">背景のアンカーポイントに向かってズームします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - ズームする背景画像を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「拡大／縮小 X」</span> 
+	 - 水平方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「拡大／縮小 Y」</span> 
+	 - 垂直方向の拡大／縮小を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span>&#160;- 
+	 背景を拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト／続行」</span> 
+	 - ウエイトに設定すると、シーンはコマンドが終了するのを待ってから次のコマンドを実行するようになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">&#160;<span 
+	 style="font-weight: bold;">「イージング」</span> &#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Background" id="Rotate_Background"></a>「背景を回転」</p>
+<p style="font-family: Arial, sans-serif;">指定した速度や方向で背景を回転させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;"><span>「レイヤー」</span> 
+	 <span style="font-weight: normal;">- 回転させる背景画像を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「方向」</span> 
+	 - 回転方向（時計回りまたは反時計回り）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - 回転速度を設定します。数値が高くなるほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 回転アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 回転アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Shake_Background" id="Shake_Background"></a>「背景を揺らす」</p>
+<p style="font-family: Arial, sans-serif;">背景を振動させます。ショックや衝撃を表現するシーンで役立ちます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - 振動させる背景を設定します。たとえば、複数の背景を使用している場合、レイヤー1の背景は振動させずに、レイヤー2の背景のみを振動させることも可能です。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「範囲 X」</span> - 水平方向の動作を設定します。背景は、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。<br />
+	<span style="font-weight: bold;">「範囲 Y」</span> - 垂直方向の動作を設定します。背景は、設定した値の正負の間をランダムに動きます。たとえば、「5」を入力すると、「-5」と「5」の間で振動します。<br />
+	<span style="font-weight: bold;">「速度」</span> - ピクセルオフセットを設定することで、振動の強度を決定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 背景が振動するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト／続行」</span> 
+	 - ウエイトに設定すると、シーンは背景の振動が止まるのを待ってから次のコマンドを実行するようになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span> 
+	 &#160;- アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Background" id="Scroll_Background"></a>「背景をスクロール」</p>
+<p style="font-family: Arial, sans-serif;">背景にスクロール効果を与えます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「レイヤー」</span> 
+	 - スクロールさせる背景を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度 X」</span> 
+	 - 水平方向のスクロール速度を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度 Y」 
+	 </span>- 垂直方向のスクロール速度を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 背景がスクロールし続ける時間を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ウエイト／続行」</span> 
+	 - ウエイトに設定すると、シーンはコマンドが完了するのを待ってから次のコマンドを実行するようになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Background_To" id="Scroll_Background_To"></a>「背景を位置までスクロール」</p>
+<p style="font-family: Arial, sans-serif;">指定の場所に背景をスクロールします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - スクロールする背景画像を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「位置」</span> - スクロールのターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム 
+	 &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「直接」</span> - グラフィックエディターを使用してターゲット位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span> - 座標でターゲット位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「時間」 <span 
+	 style="font-weight: normal;">- ターゲット位置に背景が到達するまでの時間を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「ウエイト／続行」<span 
+	 style="font-weight: normal;"> - ウエイトに設定すると、シーンはコマンドが完了するのを待ってから次のコマンドを実行するようになります。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「イージング」&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Effect" id="Background_Effect"></a>「背景効果」</p>
+<p style="font-family: Arial, sans-serif;"><span>背景</span><span>に効果を適用します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - 背景に適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - 背景を不規則にぐらつかせます。ループが無効になっている場合にのみ機能します。</p></li>
+	<li><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「方向」</span> - ぐらつきの方向を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「垂直」</span>&#160;- ぐらつきを垂直方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「水平」</span>&#160;- ぐらつきを水平方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「両方」</span>&#160;- ぐらつきを垂直水平の両方向に設定します。</p></li>
+		</ul></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきのアニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- 背景には効果がありません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセル化」</span>&#160;- 背景をピクセル／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「幅」</span>&#160;- ブロック／ピクセルの幅を設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「高さ」</span>&#160;- ブロック／ピクセルの高さを設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。背景をスムーズにピクセル化させる際に使用します。</p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Mask_Background" id="Mask_Background"></a>「背景をマスク」</p>
+<p style="font-family: Arial, sans-serif;">背景に静的マスクを適用したり、動的なマスキングアニメーションを実行したりできます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「レイヤー」</span> - マスキングする背景を設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「ファイル」</span> 
+	 - 背景に適用するマスクファイルの種類を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクチャー」</span>&#160;- 「Graphics/Masks」フォルダから、使用するマスク画像を選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムービー」</span>&#160;- マスクとして使用するムービーを選択します。.webm形式のムービーをあらかじめ「Movies」にインポートしておく必要があります。<br>設定したムービーファイルに色彩情報が格納されている場合であっても、赤のカラーチャンネルしか使用されません。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - マスキングの種類を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「静的」</span>&#160;- アルファチャンネルマスクを重ねます。<br><img src="static_mask.jpg" alt="" style=" border:none; width:100%; max-width:520px;" border="0" /></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「オフセット-X」</span>&#160;- 設定した値に応じて、マスキングが左右に移動します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「オフセット-Y」</span>&#160;- 設定した値に応じて、マスキングが上下に移動します。</p></li>
+		</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「動的」</span>&#160;- マスキングで、背景の特定の部分を描写します。<br><img src="dynamicmask.gif" alt="" style=" border:none; width:100%; max-width:453px;" border="0" /></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「値」</span>&#160;- 「0」～「255」で任意の値（ピクセル）を設定することで、マスキングが表示される部分を調整できます。「0」の場合、マスキングは一切描写されません。値が大きくなればなるほど、マスキングの描写範囲が広くなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スムーズ」</span>&#160;- マスクの外縁の滑らかさを設定します。以下は、「スムーズ」が「0（最小）」の場合と「255（最大）」の場合を比較したものです。</p></li>
+		</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="vague0.png" alt="" style=" border:none; width:100%; max-width:538px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;"><img src="vague255.png" alt="" style=" border:none; width:100%; max-width:538px;" border="0" /></p>
+
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - マスキングアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- マスキングアニメーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Motion_Blur" id="Background_Motion_Blur"></a>「背景をモーションブラー」</p>
+<p style="font-family: Arial, sans-serif;">背景にモーションブラーを適用します。このコマンドは、「パスに沿ってスクロール」や「背景を位置までスクロール」といった、背景を移動させるコマンドの上位に設定しなければ効果はありません。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「レイヤー」</span> 
+	 - モーションブラーを適用するレイヤーを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーションブラー」</span> 
+	 - 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「発生間隔」</span> 
+	 - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「消滅速度」</span> 
+	 - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「不透明度」</span> 
+	 - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br>例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span>「</span><span 
+	 style="font-weight: bold;">モーションブラー</span>」- 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li style="list-style: none; display: inline; margin-left: -20px;"><ul 
+			 style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">スポーン時間</span><span>」</span>- 新規コピーが作成された後のフレーム数。既定では2。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">ディゾルブ速度</span>」- スポーンしたコピーが消える速度。具体的には、フレームごとにコピーの不透明度が落ちます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+		 style="font-weight: bold;">不透明度</span>」- スポーン時のコピーの不透明度。既定では100。<br />
+		例えば、ディゾルブ速度が2の場合、50ミリ秒、アニメーションが動く際の意図しない残像や粒子は完全になくなります。</p></li>
+	</ul></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Scroll_Along_Path" id="Scroll_Along_Path"></a>「パスに沿ってスクロール」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif; 
+												 font-weight: normal;">ポイントと曲線を使用して背景を動かすことのできる、カスタムパスを作成します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「レイヤー」</span> 
+	 - カスタムパスでスクロールする背景レイヤーを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「パス」</span> 
+	 - 曲線でパスを定義するパスエディターを開きます。右クリックでモーションポイントの追加・削除ができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Sの円</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの開始点です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">緑の円</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーション内のポイントです。このポイントを使うことで、より動的なモーションを作成することができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">黄色の円</span>（<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの曲線を調整します。緑の円（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）をクリックすると、そのパスのモーションも同様に調整が可能です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">Eの円</span>（<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの終了点です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Background_Defaults" id="Background_Defaults"></a>「背景の既定」</p>
+<p style="font-family: Arial, sans-serif;">背景コマンドの既定値を上書きします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 背景の出現／消失アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「効果」</span> 
+	 - 背景の表示方法に関するオプションです。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 背景のアニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ムーブメント」<span 
+		 style="font-family: Arial, sans-serif; font-weight: normal;">&#160;- 
+		 画面の左／上／右／下から背景を登場させます。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いて背景をフェードイン／フェードアウトさせます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">&#160;「マスキング」 
+		 <span style="font-weight: normal;">- 「Graphics/Masks」フォルダにあるマスク画像を用いて背景をフェードインさせます。</span></p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+												 font-weight: bold;">「スムーズ」 
+			 <span style="font-weight: normal;">- マスクの外縁の滑らかさを設定します。</span></p></li>
+		</ul></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ループ」</span> 
+	 - 「はい」に設定すると垂直または水平のループがオンになります。「いいえ」に設定するとループがオフになります。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「表示」</span> 
+	 - 背景の表示順とアンカーを指定することができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アンカー」</span>&#160;- 背景のアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「Z オーダー」</span>&#160;- 背景の表示順を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Background" id="Color_Background"></a>「背景を色付け」</p>
+<p style="font-family: Arial, sans-serif;">指定した色で背景を色付けします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「レイヤー」<span style="font-weight: normal;"> 
+	 - ブレンドする背景画像を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「色調」</span> - 色付けする色を指定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> - 色付けアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ブレンドが終了するまでシーンを待機させます。</p></li>
+</ul>
+
+</body>
+</html>

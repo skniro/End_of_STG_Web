@@ -1,0 +1,248 @@
+.clearfix {
+    zoom: 1
+}
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: block
+    }
+
+#project-page {
+    padding-top: 159px
+}
+
+.pagetitile {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 100px
+}
+
+    .pagetitile.page--detail {
+        margin-bottom: 100px
+    }
+
+.pagetitile__inner {
+    width: 980px;
+    margin: 0 auto;
+    position: relative
+}
+
+.pagetitile__head {
+    font-family: 'DM Sans',sans-serif;
+    font-weight: 700;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 50px;
+    letter-spacing: .15em;
+    color: #fff;
+    line-height: 1em
+}
+
+    .pagetitile__head span {
+        font-family: a-otf-midashi-go-mb31-pr6n,sans-serif;
+        font-weight: 600;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-size: 20px;
+        letter-spacing: 0;
+        display: block;
+        line-height: 1em;
+        padding-top: 18px
+    }
+
+.staff {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 95px
+}
+
+.staff__inner {
+    width: 980px;
+    margin: 0 auto;
+    position: relative
+}
+
+.staff__list {
+    width: 100%
+}
+
+    .staff__list dl {
+        display: block;
+        width: 100%;
+        zoom: 1
+    }
+
+        .staff__list dl:after {
+            content: "";
+            clear: both;
+            display: block
+        }
+
+    .staff__list dt {
+        display: block;
+        width: 170px;
+        float: left;
+        line-height: 1em
+    }
+
+    .staff__list dd {
+        display: block;
+        width: 810px;
+        float: right;
+        line-height: 1em
+    }
+
+        .staff__list dd p {
+            margin-bottom: 20px
+        }
+
+            .staff__list dd p:last-child {
+                margin-bottom: 0
+            }
+
+.staff__list__01 {
+    margin-bottom: 58px
+}
+
+    .staff__list__01 dt {
+        padding-top: 5px
+    }
+
+.staff__list__02 {
+    margin-bottom: 51px
+}
+
+.staff__list__03 dt {
+    padding-top: 4px
+}
+
+.staff__list__04, .staff__list__05 {
+    margin-bottom: 48px
+}
+
+    .staff__list__04 dt, .staff__list__05 dt {
+        padding-top: 5px
+    }
+
+
+@media screen and (max-width:1024px) {
+    .pagetitile {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        margin-bottom: 32px;
+        margin-bottom: 10vw
+    }
+
+    .staff {
+        position: relative;
+        width: 100%;
+        z-index: 0;
+        margin-bottom: 50px;
+        margin-bottom: 15.625vw
+    }
+
+    .staff__inner {
+        width: 87.5%;
+        margin: 0 auto;
+        position: relative
+    }
+
+    .staff__list {
+        width: 100%
+    }
+
+        .staff__list dl {
+            display: block;
+            width: 100%;
+            zoom: 1
+        }
+
+            .staff__list dl:after {
+                content: "";
+                clear: both;
+                display: block
+            }
+
+        .staff__list dt {
+            display: block;
+            width: 25.89%;
+            float: left;
+            line-height: 1em
+        }
+
+        .staff__list dd {
+            display: block;
+            width: 74.11%;
+            float: right;
+            line-height: 1em
+        }
+
+            .staff__list dd p {
+                margin-bottom: 10px;
+                margin-bottom: 3.125vw
+            }
+
+                .staff__list dd p:last-child {
+                    margin-bottom: 0
+                }
+
+    .staff__list__01 {
+        margin-bottom: 32.5px;
+        margin-bottom: 10.15625vw
+    }
+
+        .staff__list__01 dt {
+            padding-top: 2.5px;
+            padding-top: .78125vw
+        }
+
+            .staff__list__01 dt img {
+                height: 10px;
+                height: 3.125vw;
+                width: auto
+            }
+
+    .staff__list__02 {
+        margin-bottom: 27.5px;
+        margin-bottom: 8.59375vw
+    }
+
+        .staff__list__02 dt img {
+            height: 26px;
+            height: 8.125vw;
+            width: auto
+        }
+
+    .staff__list__03 dt {
+        padding-top: 2.5px;
+        padding-top: .78125vw
+    }
+
+        .staff__list__03 dt img {
+            height: 10px;
+            height: 3.125vw;
+            width: auto
+        }
+
+    .staff__list__04, .staff__list__05 {
+        margin-bottom: 27.5px;
+        margin-bottom: 8.59375vw
+    }
+
+        .staff__list__04 dt, .staff__list__05 dt {
+            padding-top: 2.5px;
+            padding-top: .78125vw
+        }
+
+            .staff__list__04 dt img, .staff__list__05 dt img {
+                height: 10px;
+                height: 3.125vw;
+                width: auto
+            }
+}

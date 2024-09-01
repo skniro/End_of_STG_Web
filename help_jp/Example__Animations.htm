@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：アニメーション</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：アニメーション</p>
+</div>
+&#160; 
+<br /><span class="Topic_Start">ア</span>ニメーションがつあるとUIはよりスムーズな印象になりますが、使いすぎたり、アニメーションの動きが遅すぎたりすると、プレイヤーを苛立たせる原因にもなりますので、慎重に使用しなければなりません。
+<br />&#160; 
+<p class="Sub_Heading">振動効果</p>
+<p>次の例は、アニメーションでできることのほんの一部です。アニメーション機能について詳しくは、<a href="igui_doc/index.html">ゲーム内のUI 
+ APIリファレンス</a>を参照してください。</p>
+<p>&#160;</p>
+<p>タイトル画面でボタンの位置にオフセットを追加し、マウスポインタがボタンをマウスオーバーする時に、ボタンの位置に「shake-effect」効果を追加したいとします。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;resizable&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;margin&quot;: [0, 0, 
+ 0, 10],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;animations&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;event&quot;: 
+ &quot;onMouseHover&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;flow&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;changeTo&quot;, &quot;duration&quot;: 45,&quot;field&quot;: 
+ &quot;o.offset.x&quot;, &quot;value&quot;: 10, &quot;easing&quot;: &quot;quad_inout&quot;, 
+ &quot;wait&quot;: true },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;changeTo&quot;, &quot;duration&quot;: 45,&quot;field&quot;: 
+ &quot;o.offset.x&quot;, &quot;value&quot;: -10, &quot;easing&quot;: &quot;quad_inout&quot;, 
+ &quot;wait&quot;: true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;event&quot;: 
+ &quot;onMouseLeave&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;flow&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;changeTo&quot;, &quot;duration&quot;: 0,&quot;field&quot;: 
+ &quot;o.offset.x&quot;, &quot;value&quot;: 0, &quot;easing&quot;: &quot;quad_inout&quot; 
+ }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>上記のように、アニメーションプロパティを使用してコントロールにアニメーションを追加することができます。このとき、そのプロパティを各ボタンに追加するのではなく、</p>
+<p>自動的に3つのボタンに適用されるよう「titleScreenButton 」スタイルに追加します。もしここでゲームをテストプレイしたなら、マウスオーバーされている最中ずっとボタンは振動することになります。</p>
+<p>&#160;</p>
+<p>アニメーションは、例えばマウスのアクションのように、イベントにバインドする必要があります。今回の場合、アニメーションは２種類あります。</p>
+<p>1つは「onMouseHover」イベントにバインドされ、ボタンにマウスオーバーしている時だけ実行されます。もう1つは「onMouseLeave」イベントにバインドされ、</p>
+<p>ボタンからマウスポインタが離れた時にだけ実行されます。</p>
+<p>&#160;</p>
+<p>アニメーションは、アニメーション効果を作り出す基本的なアニメーションを複数含んだ、アニメーションフローで成立します。基本的なアニメーションというのは、単純な移動や、回転やズームなどで、</p>
+<p>順番に再生したり、あるいは複数を同時に再生することもできます。つまり、画像を回転したりズームしながら移動させるようなことも可能なのです。今回の例では、2つの「changeTo」アニメーションを使い。</p>
+<p>まずボタンを右に動かして、2つ目の「changeTo」でボタンを左へと動かします。</p>
+<p>&#160;</p>
+<p>アニメーションフローは常にループします。最後の基本的なアニメーションが終わると、フローは繰り返され、アニメーションフローの最初のアニメーションから再び始まります。</p>
+<p>&#160;</p>
+<p>そこで、マウスポインタがボタンのエリアから離れると2つ目のアニメーションは1度しか再生しないよう定義しました。これで、ボタンが元の位置に戻るよう、ボタンのXオフセットがゼロに戻るようになります。</p>
+<p>アニメーションをすぐ終了したいなら、アニメーション時間をゼロに設定します。いろいろ試して、「onMouseLeave」アニメーションを削除してみたりして、何が起こるか試行錯誤してみてください。</p>
+<p>&#160;</p>
+<p>次に、プロパティについて説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">animations</p></li>
+</ul>
+<p>イベント発生時に実行されるコントロールのアニメーションリスト。各アニメーションは、異なるイベントにバインドされる必要があります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">event</p></li>
+</ul>
+<p>アニメーションがいつ実行されるべきかを指定するイベント。「onMouseHover」、「onMouseLeave」、「onMouseDown」、「onAlways」など。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">flow</p></li>
+</ul>
+<p>実際のアニメーション効果を作る基本的なアニメーションのリストとなるアニメーションフロー。今回の場合、振動効果を作ります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type</p></li>
+</ul>
+<p>基本的なアニメーションのタイプ。今回の場合、あらゆる視覚的なプロパティをアニメーション化する「changeTo」を使い、ボタンのXオフセットをアニメーション化して振動効果を作ります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">duration</p></li>
+</ul>
+<p>基本的なアニメーションの再生時間。今回は45フレームです。（1フレーム = 1 / フレームレート（既定では60）秒）</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">easing</p></li>
+</ul>
+<p>アニメーションに使用されるイージングタイプ。動きをよりスムーズにするイージングの二次関数である「quad_inout」を使用します。ただし、他にも多数のイージング関数が使用可能です。</p>
+<p>イージングを無効化するには、「linear_inout」を使用します。詳しくは「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">wait</p></li>
+</ul>
+<p>アニメーションフローが次の基本的なアニメーションを再生する前に、現在のアニメーションが終了するまで待機するかどうかを示します。今回の場合、左方向へ進む振動を開始する前に</p>
+<p>右方向への振動が終わるまで待機する必要があります。ただし、待機しない場合、例えばイメージを移動させながら同時に回転させるなどして、2つ以上の基本的なアニメーションを並行して実行する必要があります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">field</p></li>
+</ul>
+<p>このプロパティは「changeTo」アニメーション固有のものです。ここで、バインディング構文を使ってアニメーション化するフィールドを定義することができます。</p>
+<p>バインディングについて詳しくは、データバインディングの例を参照してください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">value</p></li>
+</ul>
+<p>このプロパティは「changeTo」アニメーション固有のものです。ここで、リーチしたいターゲットの値を指定することができます。今回の場合、最初のステップでXオフセットを30ピクセルで</p>
+<p>アニメーション化して、第2のステップで-30でXオフセットをアニメーション化します。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>パルス効果</span></p>
+<p>前述の例の中でアニメーションの基本を学びましたので、今度はボタンのエリアにマウスオーバーした時に発動する別のアニメーション効果、「パルス効果」に挑戦しましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.styles.titleScreenButton = {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;resizable&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;margin&quot;: [0, 0, 
+ 0, 10],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;anchor&quot;: [0.5, 
+ 0.5],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;animations&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;event&quot;: 
+ &quot;onMouseHover&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;flow&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;zoomTo&quot;, &quot;duration&quot;: 45,&quot;zoom&quot;: 
+ [110, 110], &quot;easing&quot;: &quot;quad_inout&quot;, &quot;wait&quot;: 
+ true },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;zoomTo&quot;, &quot;duration&quot;: 45,&quot;zoom&quot;: 
+ [100, 100], &quot;easing&quot;: &quot;quad_inout&quot;, &quot;wait&quot;: 
+ true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;event&quot;: 
+ &quot;onMouseLeave&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;flow&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;type&quot;: &quot;zoomTo&quot;, &quot;duration&quot;: 0,&quot;zoom&quot;: 
+ [100, 100], &quot;easing&quot;: &quot;quad_inout&quot;, &quot;wait&quot;: 
+ true }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>この時点でゲームをテストプレイし、ボタンのエリアにマウスポインタを移動させると、ボタンはズームインそしてズームアウトします（「パルス効果」）。</p>
+<p>この例では、「zoomTo」という新しいタイプの基本的なアニメーションを使用します。このタイプは、ズームプロパティで定義されたパーセンテージでボタンをズームします。</p>
+<p>それでは、順を追ってアニメーションフローを説明します。</p>
+<p>&#160;</p>
+<p>最初のステップは、ボタンからズームアウトするように、ボタンに110%のズームを設定します。その後、待機プロパティをtrue（真）に設定して、ズームアウトが完了するまで待ちます。</p>
+<p>次のステップでは、ボタンのズームを100%に戻します。それから再び待機プロパティをtrue（真）に設定して、ズームアニメーションが完了するまで待ちます。</p>
+<p>アニメーションフローは常にループされているので、ボタンはズームインとアウトを繰り返し、まるで脈打っているかのように見えるはずです。</p>
+<p>&#160;</p>
+<p>また、新しいプロパティ「アンカー」もボタンに加えたことにお気づきでしょうか。アンカープロパティを使うと、ボタンのアンカーポイントをその中心（0.5, 
+ 0.5）に変更し、</p>
+<p>ズーム効果が全4方向iに作用するようになります。これを設定しないと、ズーム効果は右下方向へのみ作用します。試しにアンカーのプロパティを削除して、何が起こるか見てみてください。</p>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>テキスト</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_11";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">テキストコマンド</p>
+</div>
+<p>&#160;</p>
+<p>テキストをカスタマイズすることで、シーンでより目立たせることができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><a name="Show_Text" id="Show_Text"></a>「テキストを表示」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">シーンにテキストを設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 表示するテキストのインデックス（ID）を設定します。ここでレイヤーの順番も決定されます。<br />
+	数値入力ボックスの横にある「...」をクリックして、変数を使用することもできます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「位置」</span> 
+	 <span style="font-family: Arial, sans-serif;">- テキストの位置を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span> &#160;- 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span>&#160;- 座標で位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 表示アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ウエイト」<span 
+	 style="font-weight: normal;">&#160;- 表示アニメーションが終了するまでシーンを待機させます。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「効果」<span 
+	 style="font-weight: normal;"> - テキストの表示方法に関するオプションです。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。詳細については、「<a 
+	 href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- テキストの表示アニメーションを設定します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下からテキストを登場させます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてテキストをフェードインさせます。</p></li>
+		<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「マスキング」）<span 
+		 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてテキストをフェードインさせます。</span></p></li>
+	</ul></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「表示」<span 
+	 style="font-weight: normal;"> - テキストの表示順とアンカーを指定することができます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「アンカー」<span 
+	 style="font-weight: normal;"> - テキストのアンカーポイントを左上または中央に設定します。アンカーを中央に設定するのは、拡大／縮小や回転のコマンドを使用し、かつそれらが位置決めに影響を与えない時に限ります。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「位置アンカー」<span 
+	 style="font-weight: normal;"> - テキストの位置アンカーポイントを設定します。この設定は位置に対してのみ影響し、回転や拡大／縮小には適用されません。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Z オーダー」 
+	 <span style="font-weight: normal;">- </span><span style="font-weight: normal;">テキストの表示順を設定します。数値入力ボックスの横にある「...」をクリックして、変数を使用することもできます。</span></p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「ブレンドモード」<span 
+	 style="font-weight: normal;"> - テキストを表示させる際に使用するブレンドの種類を設定します。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「通常」<span 
+		 style="font-weight: normal;">&#160;- 標準のブレンドモードです。色を混ぜることなく、テキストをシンプルに画面上に表示します。</span></p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「加算」<span 
+		 style="font-weight: normal;">&#160;- 表示するテキストをより明るくします。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「減算」</span>&#160;- 表示するテキストをより暗くします。</p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「ビューポート」<span 
+	 style="font-weight: normal;">&#160;-</span> <span style="font-weight: normal;">テキストに割り当てられるビューポートです。ビューポートの設定次第で、テキストがカメラの移動や画面効果に影響を受けるかどうかが決まります。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「シーン」<span 
+		 style="font-weight: normal;"> - テキストをシーンビューポートに割り当て、シーンに属するオブジェクトのように動作させます。そのため、カメラの移動や画面効果に影響を受けます。</span></p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ユーザーインターフェイス」</span> - テキストをユーザーインターフェイスビューポートに割り当て、ユーザーインターフェイスに属するオブジェクトのように動作します。<br>そのため、カメラの移動や画面効果に影響を受けません。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Blend_Text" id="Blend_Text"></a>「テキストをブレンド」</p>
+<p style="font-family: Arial, sans-serif;">指定した不透明度までテキストをブレンドします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- ブレンドするテキストのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="mso-bidi-font-weight: normal; 
+	 font-weight: bold;">「不透明度」</span><span style="mso-bidi-font-weight: normal;"> 
+	 - 不透明度を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 - ブレンドアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- シーンをすぐに続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- ブレンドアニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Text" id="Move_Text"></a>「テキストを移動」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">テキストの位置を設定します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 移動させるテキストのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「位置」</span> 
+	 - テキストの位置を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「定義済み」</span>&#160;- 「データベース &rarr; システム &rarr; 定義済みのオブジェクト位置」に設定された定義済みの位置から選択します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「計算済み」</span>&#160;- 座標で位置を指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 移動アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「続行」<span 
+	 style="font-weight: normal;">&#160;- シーンをすぐに続行します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 移動アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span> 
+	 - アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Rotate_Text" id="Rotate_Text"></a>「テキストを回転」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">指定した速度や方向でテキストを回転させます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 回転させるテキストのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「方向」</span> 
+	 - 回転方向（時計回り／反時計回り）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「速度」</span> 
+	 - 回転速度を設定します。数値が高いほど速く回転します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 回転アニメーションの効果時間を設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 回転アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Zoom_Text" id="Zoom_Text"></a>「テキストを拡大／縮小」</p>
+<p class="MsoNormal">テキストを拡大／縮小します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「数」</span> 
+	 - 拡大／縮小するテキストのインデックス（ID）を指定します。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「拡大／縮小 X」</span> 
+	 - 水平方向の拡大／縮小を設定します。フォントサイズを変更することなく、水平方向の長さを視覚的に変更できます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「拡大／縮小 Y」</span> 
+	 - 垂直方向の拡大／縮小を設定します。フォントサイズを変更することなく、垂直方向の長さを視覚的に変更できます。</p></li>
+	<li style="margin-left: -20px;"><p class="MsoNormal"><span style="font-weight: bold;">「時間」</span> 
+	 <span style="font-family: Arial, sans-serif;">-</span> テキストを拡大／縮小するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 拡大／縮小アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Color_Text" id="Color_Text"></a>「カラーテキスト」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">選択したテキストの色を調整します。実際にテキストの色を変更するわけではなく、「ピクチャーを点滅」と同じように、指定した色でテキスト全体を覆います。そのため、テキストに輪郭がある場合、輪郭も色付けされます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- 色を適用するテキストのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「色」<span 
+	 style="font-weight: normal;"> - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、テキストの色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「時間」</span> 
+	 - 色を適用するアニメーションの描写時間をミリ秒単位で設定します。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 色を適用するアニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Erase_Text" id="Erase_Text"></a>「テキストを消去」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">シーンからテキストを消去します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold; font-family: Arial, sans-serif;">「数」 
+	 <span style="font-weight: normal;">- 消去するテキストのインデックス（ID）を設定します。</span></p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「時間」<span 
+	 style="font-weight: normal;"> - 消去アニメーションの描写時間をミリ秒単位で設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ウエイト」</span>&#160;- 消去アニメーションが終了するまでシーンを待機させます。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「アニメーション」</span>&#160;- 
+	 テキストの消去アニメーションを設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムーブメント」</span>&#160;- 画面の左／上／右／下へとテキストを撤去します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブレンド」</span>&#160;- ブレンド機能を用いてテキストをフェードアウトさせます。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「マスキング」<span 
+	 style="font-weight: normal;">&#160;- 「Graphics/Masks」フォルダにあるマスク画像を用いてテキストをフェードアウトさせます。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Settings" id="Text_Settings"></a>「テキスト設定」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">テキストのフォントやサイズ、スタイルを変更します。</p>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「数」</span> - 変更するテキストのインデックス（ID）を設定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「フォント」</span> - テキストに適用するフォントを入力します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「サイズ」</span> - フォントのサイズをピクセル単位で設定します。</p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スタイル」</span> - テキストのスタイルを変更したり、袋文字（輪郭）や影を適用したりできます。袋文字と影を同時に使用することはできません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「色」 </span>- テキストの色を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「太字」</span> - テキストを太字にします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「斜体」 </span>- テキストを斜体にします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「スモールキャピタル」</span>&#160;- 小文字を、小さなサイズの大文字として表示します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「下線」</span> - テキストに下線を引きます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「取り消し線」</span> - テキストに取り消し線を引きます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「行間」</span> - 行間をピクセル単位で設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「袋文字」</span> 
+	 - テキストに輪郭を追加します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「袋文字」</span> - テキストに輪郭を追加します。「はい」にすると輪郭が追加され、「なし」にすると輪郭が無効になります。</p></li>
+		<li><p 
+			 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「色」</span> - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、輪郭の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</p></li>
+		<li><p 
+			 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「サイズ」 </span>- 輪郭の厚みをピクセル単位で設定します。</p></li>
+</li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「影」</span> - テキストに影を追加します。</p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: normal;"><span 
+	 style="font-weight: bold;">「影」</span> - 「はい」にすると影が有効に、「いいえ」にすると無効になります。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「色」<span 
+	 style="font-weight: normal;"> - カラーコントローラーで「赤」「緑」「青」のスライドバー（0～255）を調整し、影の色を指定します。<br />
+	指定した色は、コントローラー上部にあるプレビューエリアで確認できます。色の不透明度（0～255）を指定するには「パワー」を指定します。<br />
+	「パワー」を「0」に設定すると、その色は完全に透明になり、画面上で見えなくなります。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「オフセット-X」<span 
+	 style="font-weight: normal;"> - 設定した値（ピクセル）に応じて、影が右に移動します。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「オフセット-Y」<span 
+	 style="font-weight: normal;"> - 設定した値（ピクセル）に応じて、影が下に移動します。</span></p></li>
+	<li style="font-family: Arial, sans-serif; margin-left: -20px;"><p 
+		 style="font-family: Arial, sans-serif; font-weight: bold;">「余白」<span 
+	 style="font-weight: normal;"> - テキストに余白を追加します。影や袋文字など、特殊なスタイルが大きすぎてすべて表示されない場合に便利です。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「左」 
+	 <span style="font-weight: normal;">- 左側の余白をピクセル単位で指定します。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「上」<span 
+	 style="font-weight: normal;"> - 上側の余白をピクセル単位で指定します。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;">「右」 
+	 <span style="font-weight: normal;">- 右側の余白をピクセル単位で指定します。</span></p></li>
+	<li style="font-family: Arial, sans-serif;"><p style="font-family: Arial, sans-serif; 
+													 font-weight: bold;"><span>「下」 
+	 </span><span style="font-weight: normal;">- 下側の余白をピクセル単位で指定します。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="Move_Text_Along_Path" id="Move_Text_Along_Path"></a>「テキストをパスに沿って移動」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">ポイントと曲線を使用してテキストを動かすことのできる、カスタムパスを作成します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - パスに沿って移動するテキストのインデックス（ID）を設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「パス」</span> - 曲線でパスを定義するパスエディターを開きます。右クリックでモーションポイントの追加・削除ができます。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Sの円</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーションの開始点です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">緑の円</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）は、モーション内のポイントです。このポイントを使うことで、より動的なモーションを作成することができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">黄色の円</span>（<img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />） はモーションの曲線を調整します。緑の円（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）をクリックすると、そのパスのモーションも同様に調整が可能です。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">Eの円</span>（<img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終了点です。</p></li>
+	</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「垂直方向に鏡像反転」 </span>- 曲線を垂直に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「水平方向に鏡像反転」</span> - 曲線を水平に反転し			ます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「90度回転」</span> - 曲線を90度回転させます。</p></li>
+		<li><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+		 style="font-weight: bold;">「効果」</span> - テキストがパスに従って移動する際に、一定の間隔で効果音を再生します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ループ」</span> - パスを繰り返し移動させることができます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「なし」</span> - ループをオフにします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「通常」</span> - パスを終了点からループします。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「反転」</span> - パスを終了点から反対方向にループします。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「時間」</span> - モーションの移動時間をミリ秒単位で設定します。</p></li>
+	<li style="list-style: none; display: inline;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「続行」</span>&#160;- すぐにシーンを続行します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「ウエイト」</span>&#160;- モーションが終了するまでシーンを待機させます。</p></li>
+</ul>
+<div>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">パス</span>」- 
+	 曲線によってパスを定義できる、パスエディタを開きます。モーションポイントは右クリックで削除したり、<span>何もないエリアをクリックして新規のモーションポイントを追加できます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">S丸</span>（<img src="circ1.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの開始点です。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">緑の丸</span>（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はより動的なモーションを作れるポイントです。 
+	 </p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">黄色の丸</span><span>（</span><img src="circ3.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションカーブを調整します。緑の丸（<img src="circ2.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）を押すと、そのパスの調整もできます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">E丸</span><span>（</span><img src="circ4.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" />）はモーションの終点です。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="path.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">垂直方向に鏡像反転</span><span>」</span><span style="font-weight: bold;">-</span> 
+	 カーブを垂直方向に反転させます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">水平方向に鏡像反転</span><span>」</span>- カーブを水平方向に反転させます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">90度回転</span><span>」</span><span style="font-weight: bold;">*</span>- 
+	 カーブを90度回転させます。</p></li>
+	<li><p style="font-weight: normal; font-family: Arial, sans-serif;">「<span 
+	 style="font-weight: bold;">効果</span><span>」</span>- 背景をパスに沿って動かしながら、一定間隔で効果音を設定することができます。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">ループ</span><span>」</span>- 
+	 指定した時間パスを繰り返します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">なし</span><span>」</span>- ループをオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">普通</span>」<span>- 終点からパスをループします。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">「<span 
+	 style="font-weight: bold;">反転</span>」- 終点から逆方向にパスをループします。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;">「<span style="font-weight: bold;">時間</span><span>」</span>- 
+	 モーションが終了しなくてはならない時間（ミリ秒）。</p></li>
+	<li style="font-weight: bold; margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+															 font-weight: normal;">「<span 
+	 style="font-weight: bold;">ウエイト</span>」<span style="font-weight: bold;">/</span>「<span 
+	 style="font-weight: bold;">続行</span><span>」</span>- 待機するようコマンドを設定すると、モーションが次のコマンドを読み込む前に、現在のモーションが完了するのを待つことになります。</p></li>
+</ul>
+</div>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Refresh_Text" id="Refresh_Text"></a>「テキストを再表示」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">シーンに表示されているテキストを再表示します。このコマンドは、たとえば、テキストコードを用いて変数の値を表示しているテキストに、更新した変数を表示させたい場合に便利です。<br />
+このコマンドはテキスト全体を再レンダリングするため、過度に使用すると時間がかかることがあります。特に、携帯端末やスマートフォンではそれが顕著にあらわれます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「数」</span> 
+	 - 更新するテキストのインデックス（ID）を設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Effect" id="Text_Effect"></a>「テキスト効果」</p>
+<p style="font-family: Arial, sans-serif;"><span style="font-family: Arial, sans-serif;">テキストに効果を適用します。</span></p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「種類」</span> 
+	 - テキストに適用する効果を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「揺れ」</span> - テキストを不規則にぐらつかせます。ループが無効になっている場合にのみ機能します。c</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「パワー」</span>&#160;- ぐらつきの大きさを設定します。値が高いほど、ぐらつきの効果が大きくなります。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「速度」</span>&#160;- ぐらつきの速度を設定します。値が高いほど、素早くぐらつきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「方向」</span> - ぐらつきの方向を設定します。</p></li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「垂直」</span>&#160;- ぐらつきを垂直方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「水平」</span>&#160;- ぐらつきを水平方向に設定します。</p></li>
+			<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+			 style="font-weight: bold;">「両方」</span>&#160;- ぐらつきを垂直水平の両方向に設定します。</p></li></ul>
+		<li><p style="font-family: Arial, sans-serif; 
+											 font-weight: bold;">「時間」<span 
+		 style="font-weight: normal;">&#160;- ぐらつきの時間をミリ秒単位で設定します。</span></p></li>
+
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ブラー」</span>&#160;- 背景には効果がありません。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ピクセル化」</span>&#160;- テキストをピクセル化／ブロック化して表示します。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「幅」</span>&#160;- ブロック／ピクセルの幅を設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「高さ」</span>&#160;- ブロック／ピクセルの高さを設定します。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「時間」</span>&#160;- 指定のブロック／ピクセルサイズに達するまでの時間をミリ秒単位で設定します。テキストをスムーズにピクセル化させる際に使用します。</p></li>
+	</li></ul>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「イージング」</span>&#160;- 
+	 アニメーションの加速・減速を設定します。詳細については、「<a href="Easing_Effects.htm">イージング効果</a>」のページを参照してください。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Defaults" id="Text_Defaults"></a>「テキストの既定」</p>
+<p class="MsoNormal" style="font-family: Arial, sans-serif; font-weight: normal;">テキストコマンドの既定値を上書きします。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「登場時間」</span>&#160;- 
+	 出現アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「退場時間」</span>&#160;- 
+	 消失アニメーションの描写時間をミリ秒単位で指定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「登場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 出現時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「退場効果」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「イージング」</span>&#160;- アニメーションの加速・減速を設定します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「アニメーション」</span>&#160;- 消失時のアニメーションを設定します。</p></li>
+</ul>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「表示」</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「Z オーダー」<span 
+	 style="font-weight: normal;">&#160;- テキストの表示順を設定します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「モーションブラー」</span> - 「はい」に設定するとモーションブラーが適用されます。「いいえ」に設定するとオフになります。</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「発生間隔」</span> - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「消滅速度」</span> - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「不透明度」</span> - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br />
+	例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+	</ul></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Text_Motion_Blur" id="Text_Motion_Blur"></a>「テキストをモーションブラー」</p>
+<p style="font-family: Arial, sans-serif;">テキストにモーションブラーを適用します。このコマンドは、「テキストを移動」や「テキストをパスに沿って移動」といった、テキストを移動させるコマンドの上位に設定しなければ効果はありません。</p>
+<ul style="list-style: disc;">
+	
+<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: bold;">「数」 <span 
+	 style="font-weight: normal;">- モーションブラーさせるテキストのインデックス（ID）を設定します。</span></p></li>
+<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「モーションブラー」</span> 
+	 - 「はい」に設定するとモーションブラーの効果をオンにし、「いいえ」にすると効果をオフにします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「発生間隔」</span> 
+	 - 残像を再生成する頻度をフレーム数で設定します。既定では「2」となっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「消滅速度」</span> 
+	 - 残像が消滅する速度を設定します。残像の不透明度は毎フレーム落ちていきます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span style="font-weight: bold;">「不透明度」</span> 
+	 - 残像を生成した瞬間の不透明度を設定します。既定では「100」となっています。<br>例えば、消滅速度が2の場合、残像は50ミリ秒後に完全になくなります。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+</body>
+</html>

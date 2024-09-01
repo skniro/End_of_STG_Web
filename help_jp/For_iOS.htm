@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>iOS用</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > テストとデプロイ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">iOS用</p>
+<p>&#160;</p>
+<p>iOSプラットフォームには非常に高いセキュリティ基準が設けられているため、iOSでのテストとデプロイを正しく機能させるにはいくつかの準備手順が必要です。必要な手順について説明します。疑問や不明な点がある場合は、当社のサポートフォーラムを参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">要件</p>
+<p>&#160;</p>
+<p>iOSでゲームをテスト／デプロイするには次の要件を満たす必要があります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>Apple Developer AccountとiOS Developer Membership</li>
+	<li>macOS搭載のコンピュータ</li>
+	<li>iOS端末（iPhone、iPadなど）</li>
+	<li>Xcode開発ツール</li>
+	<li>Node.js</li>
+	<li>Cordova</li>
+</ul>
+<p>&#160;</p>
+<p>各要件の説明は次の通りです。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Apple Developer for iOSになる</p>
+<p>&#160;</p>
+<p>Apple Developer for iOSになるのは非常に簡単です。 まずはApple Developerのウェブサイト（<a href="http://developer.apple.com">http://developer.apple.com</a>）にアクセスしてアカウントを登録するか、既存のApple 
+ IDを使用します。</p>
+<p>&#160;</p>
+<p>ログイン後、ウェブサイトの指示に従ってiOS Developer Programに参加します。次に、プロビジョニングプロフィールを作成し、端末を開発者端末として登録し、コンピューターにプロビジョニングプロフィールをダウンロードしてインストールします。開発者ウェブサイトのガイドラインに従い、すべての設定手順を完了してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Xcode開発ツールをインストールする</p>
+<p>&#160;</p>
+<p>ゲームをビルドしてiOSにデプロイするにはXcode開発ツールが必要です。Apple Developer Portalにログインし、ダウンロードセクション 
+ を確認してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Node.jsをインストールする</p>
+<p>&#160;</p>
+<p>iOSへのデプロイ用にゲームをパッケージングするのに必要なCordovaを起動するにはNode.jsが必要です。Node.jsは対象サイトからダウンロードできます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">Cordovaをインストールする</p>
+<p>&#160;</p>
+<p>iOSへのデプロイ用にゲームをパッケージングするにはCordovaが必要です。Cordovaをインストールするにはターミナルを開きます。macOSで、スポットライト検索やLaunchpadに「Terminal」と入力してください。</p>
+<p>&#160;</p>
+<p>ターミナルが開くと黒いウィンドウが表示されます。カーソルが点滅している箇所にはテキスト（コマンド）を入力できます。次のコマンドを入力してください。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">npm install -g cordova</p>
+<p>&#160;</p>
+<p>入力後にEnterキーを押すと、ターミナルウィンドウにメッセージが表示されます。処理が完了するのを待ってから次のコマンドを入力してください。</p>
+<p>&#160;</p>
+<p style="font-style: italic;">cordova --version</p>
+<p>&#160;</p>
+<p>入力後、Enterキーを押します。Cordovaのバージョン番号が表示された場合、インストールは成功です。エラーが表示された場合は問題が生じています。その場合は、ターミナルウィンドウのテキスト／メッセージを確認し、当社フォーラムを参照してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ラノゲツクールMVプロジェクトをiOSへのデプロイ用に準備する</p>
+<p>&#160;</p>
+<p>すべての設定が完了し、iOS用にゲームをビルドできるようになりました。「データベース &rarr; システム」でプロジェクトに<span style="font-weight: bold;">ゲームタイトル</span>が設定されていることを確認してください。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">オーディオと動画のアセット</p>
+<p>&#160;</p>
+<p>現時点で、iOSはオーディオ形式として.m4a／.mp4／.mp3／.aac／.wav、動画形式として.mp4のみ対応しています。.oggや.webmvideoなどの別の形式を使用している場合は、オーディオや動画ファイルを適切な形式に変換してください。VN 
+ Makerでは、同じファイルを異なる形式で複数回インポートし、ランタイム時に適切な形式を選択できます。この方法はHTML5ウェブブラウザゲームで便利です。ただし、App 
+ Storeでゲームをオフライン提供する場合は、.oggファイルや.webmファイルをすべて削除してファイルサイズを抑える必要があります。<br />
+</p>
+<p>動画ファイルについては、技術的制限により、iOS 10+以外の動画再生はサポートされていません。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">プロジェクト環境設定</p>
+<p>&#160;</p>
+<p>最後の手順では、「<a href="Project_Preferences.htm">プロジェクト環境設定</a>」を開き、「iOS Deployment」タブを選択します。</p>
+<p><img src="iOSDeploy.png" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p>
+<p>（上のスクリーンショットのプロビジョニングプロフィールと開発チームは一例で、実際には作成者が入力したデータが表示されます）</p>
+<p>&#160;</p>
+<p>"プロビジョニングプロフィールを取得する最も簡単な方法は、ダウンロードしたプロビジョニングプロフィールファイル（.mobileprovision）をテキストエディター（TextEditなど）で開き、
+その中に記載されているUUIDと16進数を確認することでしょう。"</p>
+<p>&#160;</p>
+<p>プロビジョニングプロフィールファイルには開発チームIDも表示されます。com.apple.developer.team-identifierを確認してください。<span 
+	 style="font-weight: bold;">全般</span>タブで、ゲームのユニークな<span style="font-weight: bold;">ゲームID</span>を設定することを忘れないでください。必要な情報をすべて入力したら、「閉じる」ボタンをクリックしてプロジェクトを保存します。</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">iOSでのテスト</p>
+<p>&#160;</p>
+<p>iOSで簡単なプレイテストを行うには、端末をコンピュータに接続し、端末がロック解除されていること／アクティブであることを確認します。</p>
+<p>&#160;</p>
+<p>次はメニューバーから「指定してビルド &rarr; iOS（Cordova）」を選択し、iOS用にゲームをビルドします。ビルドプロセスは数分かかります。ビルドプロセスがの完了後、「ツール 
+ &rarr; デバッグコンソール 」からデバッグコンソールを開き、エラーがないかどうか点検します。「**ARCHIVE_SUCCEEDED**」（アーカイブ完了）や「**EXPORT_SUCCEEDED**」（エクスポート完了）などのメッセージを探し、ビルドプロセスが正常に完了していることを確認してください。</p>
+<p>&#160;</p>
+<p>プロジェクトのビルドフォルダには、<span style="font-weight: bold;">.ipa</span> ファイルがあります。</p>
+<p>&#160;</p>
+<p><span style="font-style: italic;">&lt;プロジェクトフォルダ&gt;/build/&lt;プロジェクト名&gt;/&lt;プロジェクト名&gt;/platforms/ios/build/device/&lt;プロジェクト名&gt;.ipa</span> 
+ </p>
+<p>&#160;</p>
+<p>上記の場所から必要に応じて<span style="font-weight: bold;">.ipa</span> ファイルを手動でインストールできます。</p>
+<p>&#160;</p>
+<p>これでメニューバーから「指定してプレイ &rarr; iOS（Cordova）」を選択すると、接続した端末でゲームをプレイできます。ゲームのビルドは接続された端末に転送およびインストールされ、自動的に起動します。デバッグコンソールでエラーがないかどうか点検してください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">iOSへのデプロイ</p>
+<p>&#160;</p>
+<p>「<a href="Create_Game_Package.htm">ゲームパッケージを作成</a>」ウィザードを使用すると、iOSにゲームをデプロイできます。プラットフォームのリストから「iOS (Cordova)」を選択し、デバッグコンソールを開いてエラーがないかどうか点検してください。パッケージの作成には時間がかかる場合があります。.ipaファイルは以下の場所にあります。 
+ </p>
+<p>&#160;</p>
+<p style="font-style: italic;">&lt;出力場所&gt;/&lt;プロジェクト名&gt;/&lt;プロジェクト名&gt;/platforms/ios/build/device/&lt;プロジェクト名&gt;.ipa.</p>
+<p>&#160;</p>
+<p>アプリをApp Storeで公開する方法の詳細については、Apple Developer ウェブサイトのガイドに従ってください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">トラブルシューティング</p>
+<p>&#160;</p>
+<p>上記手順がすべてエラーなしに終わればテストとデプロイは完了ですが、特にゲームのテストとデプロイを初めて行う場合、エラーなしに終わることはまれです。エラーメッセージが表示されても心配はありません。設定の誤りに関連することがほとんどで、簡単に解決できます。 
+ </p>
+<p>&#160;</p>
+<p>トラブルシューティングの最初の手順はエラーログを点検してエラーメッセージを把握することです。一部のエラーメッセージはプログラマーでなくても理解できるものになっています。以下に一般的なエラーを示します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>端末がプロビジョニングプロフィールに登録されていません</li>
+	<li>端末が接続されていないかロック画面になっています</li>
+	<li>プロビジョニングプロフィールとチームIDが一致しません</li>
+	<li>プロビジョニングプロフィールかチームIDまたはその両方が間違っています</li>
+	<li>プロビジョニングプロフィールの期限が切れています</li>
+	<li>コード署名IDが間違っています</li>
+	<li>Cordovaがインストールされていません</li>
+	<li>Xcodeコマンドラインツールがインストールされていません</li>
+	<li>オーディオファイルか動画ファイルの形式が間違っています</li>
+</ul>
+<p>&#160;</p>
+<p>エラーを解決できない場合は、当社のサポートフォーラムを参照してください。</p>
+<p>&#160;</p>
+<h1>&#160;</h1>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>選択肢とラベルラベル</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.1.0_5";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > 基礎を学ぶ" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">選択肢とラベル</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>こでは選択肢とラベルの使い方について説明します。ラベルとは、シーンの特定の部分をブックマークしたり、好きな時にその場面へと<span 
+	 style="font-family: Arial, sans-serif;">「ジャンプ」できるようになるコマンドです。設定方法は以下をご覧ください。</span></p>
+<p>&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="2017-01-30_13-10-13.jpg" alt="" style=" border:none; width:100%; max-width:876px;" border="0" /></p>
+<p>&#160;</p>
+<p>一番最初に「start」と名前が付けられたラベルを追加しました。「メッセージを表示」、そして「start」へと戻る「ラベルに移動」コマンドを追加しました。こうすると、このシーンは永遠にループすることになります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">演習</p>
+<p>この機能を使って、キャラクターに対していくつもの質問をし続ける設定にしたい、とします。次のように設定しましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>「<a href="Making_your_first_scene.htm">最初のシーンの作成</a>」から、次の画像にならって、いくつか設定を追加します。<br />
+	<br />
+	<img src="2017-01-30_12-46-26.jpg" alt="" style=" border:none; width:100%; max-width:977px;" border="0" /><br />
+	</li>
+	<li><img src="MsgCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span 
+	 style="font-weight: bold;"><a href="Message.htm">メッセージ</a></span>コマンドをクリックし、「<span 
+	 style="font-weight: bold;"><a href="Message.htm#Add_Choice">選択肢を追加</a></span>」を使用します。キャラクターに聞きたい質問の数だけ、「<span 
+	 style="font-weight: bold;">選択肢を追加</span>」を追加します。最後に、「選択肢を表示」コマンドを追加します。これは画面に選択肢を表示させるために必要なコマンドです。<br />
+	<img src="2017-01-30_12-52-44.jpg" alt="" style=" border:none; width:100%; max-width:960px;" border="0" /><br />
+	<br />
+	「選択時に」という項目に「ラベル」があることに注目してください。これはつまり、プレイヤーが選択肢を選ぶと、それによってラベルがトリガーされます。今のところ、ラベルには質問の内容に基づいた名前をつけています。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li><img src="BasicCmd.png" alt="" style=" border:none; width:100%; max-width:22px;" border="0" /><span 
+	 style="font-weight: bold;">基本</span><span>コマンドに戻って「</span><span 
+	 style="font-weight: bold;">ラベル</span><span>」を選ぶか、シーンコンテンツで「ラベル」と入力します。フィールドにラベルの名前を入力してください。</span>それが完了したら、次のようになっているはずです。<br />
+	<img src="image66.gif" alt="" style=" border:none; width:100%; max-width:960px;" border="0" /><br />
+	</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>今度は、各質問への回答を設定していきましょう！</li>
+	<li>「選択肢を表示」やその他すべての上に「start」と名付けたラベルを追加しましょう。それができたら「<a href="Basic.htm#Jump_to_Label">ラベルに移動</a>」を追加して、各回答の終わりのラベルへとリダイレクトできるようにします。これは、残りのラベルをプレイし、最後に到達したら止まるようにするために必要です。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>これができたら、次のようになっているはずです。<br />
+	<br />
+	<img src="2017-01-30_13-04-09.jpg" alt="" style=" border:none; width:100%; max-width:1066px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>これで、延々とエースに質問をし続けるシーンの完成です！</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>リソース マネージメント</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_2";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Topic_Heading">データ＆リソース マネージメント</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">ゲ</span>ームの「resources」フォルダーに格納されているすべてのリソースは、 
+ gs.ResourceManager によって管理されます。シーンやキャラクターなどのゲームデータは、ゲームの data フォルダー内に格納され、gs.DataManager 
+ によって管理されます。</p>
+<p>&#160;</p>
+<p>gs.ResourceManager と gs.DataManager には、リソースやゲームデータの読み込み、開放、キャッシュ格納などを行うための使いやすい関数が用意されています。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">リソース コンテキスト</p>
+<p>&#160;</p>
+<p>リソースが要求され gs.ResourceManager によって読み込まれると、既定のシステム コンテキストである現在のリソース コンテキストに自動的にバインドされます。システム 
+ コンテキストにバインドされたすべてのリソースは開放されません。 つまりゲームを終了するまでメモリを消費します。</p>
+<p>&#160;</p>
+<p>シーン毎に専用のリソース コンテキストを作成し、シーン終了時にすべてのリソースを開放して、メモリの消費を減らすことをお勧めします。説明をシンプルにするため、最初の例ではこの部分は省略しています。では 
+ <a href="Display_a_Picture.htm">ピクチャーを表示する</a> の項で作成したピクチャーの例に戻り、システム 
+ コンテキストの代わりに専用のリソース コンテキストを使うように変更してみましょう。</p>
+<p>&#160;</p>
+<pre>
+<code class="coffee">
+###*
+* A test bed scene behavior. Here you can play around with ラノゲツクールMV&amp;apos;s 
+* game engine to get a better feeling for everything.
+###
+constructor: -&gt;
+&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;# Define instance variable to store resource context.
+&#160;&#160;&#160;&#160;@resourceContext = null
+###*
+* Initializes the scene. 
+###
+initialize: -&gt;
+&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext</code></pre>
+<p>&#160;</p>
+<p>必要なのは constructor と initialize メソッドを少し変更して、新規リソース コンテキストを作成し、割り当てるだけです。リソース 
+ コンテキストは gs.ResourceContext クラスで表されますが、 gs.ResourceContext オブジェクトを作成せずに 
+ ResourceManager.createContext メソッドを使用することをお勧めします。</p>
+<p>&#160;</p>
+<p>読み込まれたピクチャーは gs.Bitmap オブジェクトとして表され、今度は専用のコンテキストにバインドされました。したがって別のシーンに移動すると、ビットマップオブジェクトが消費していたメモリは解放されます。</p>
+<p>&#160;</p>
+<p>これらはすべて自動的に行われ通常はこれ以上の手順は必要ありません。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">ドキュメント</p>
+<p>&#160;</p>
+<p>ドキュメントとはゲームの data フォルダーに格納されているシーンやキャラクターなどのファイルすべてを指します。これらは .json 
+ や .json.js ファイルとして格納されており、 gs.DataManager クラス経由で簡単に読み込み、アクセスが可能です。 </p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load all scene documents
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@scenes = DataManager.getDocumentsByType(&quot;vn.scene&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Start Screen Transition
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Iterate over all scenes and print out name + number of commands.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for scene in @scenes
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Print out scene name + number of commands
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log(&quot;The scene &amp;apos;#{scene.items.name}&amp;apos; contains #{scene.items.commands.length} commands.&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>上の例では、 「vn.scene」 という種類のすべてのドキュメントを読み込み、その名前とコマンドの数をシーン毎にプリントアウトしています。全体の処理はリソースに似ています。ドキュメントがキャッシュされていない場合、 
+ getDocumentByUid メソッドは読み込まれていないドキュメントオブジェクトを返します。そこには UID と名前のような サマリー 
+ フィールドのみが含まれます。データ管理の詳細につきましては、 <a href="Data_Getting_Started.htm">ドキュメントマネージメントシステム</a> 
+ の項を参照してください。</p>
+<p>&#160;</p>
+<p>prepareData が呼び出されると、要求されたすべてのドキュメントが読み込まれ、読み込まれていないドキュメントオブジェクトは自動的に、すべてのフィールドを含む、読み込み済みドキュメントオブジェクトに変わります。通常、シーンに必要なドキュメントはすべて 
+ scene-behavior の initialize メソッドで読み込まれます。しかし、 prepareData で追加のドキュメントを読み込むと、 
+ それらの読み込みが終了した後で prepareData が再度呼び出されます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">まとめ</p>
+<p>&#160;</p>
+<p>本項についてまとめると次のようになります。 </p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>リソースは resources フォルダーに、ドキュメントは data フォルダーに格納されています。</li>
+	<li>リソースは gs.ResourceManager によって、ドキュメントは gs.DataManager によって管理されます。</li>
+	<li>ドキュメントは通常 scene-behavior の initialize メソッドで読み込まれます。要求されたすべてのドキュメントが読み込まれると、prepareData 
+	 メソッドが呼び出されます。</li>
+	<li>リソースは通常 scene-behavior の prepareData メソッドで読み込まれます。要求されたすべてのリソースが読み込まれると、prepareVisual 
+	 メソッドが呼び出されます。</li>
+	<li>追加のドキュメントは prepareData で読み込み可能で、その場合は prepareData が再度呼び出されます。</li>
+	<li>ドキュメントがまだ読み込まれていない場合、読み込まれていないドキュメントオブジェクトが返されます。</li>
+	<li>リソースがまだ読み込まれていない場合、読み込まれていないリソースオブジェクトが返されます。</li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+</body>
+</html>

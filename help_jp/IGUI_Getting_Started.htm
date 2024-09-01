@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>IGUI Getting Started</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">はじめに：ゲーム内ユーザーインターフェイス</p>
+</div>
+<p>&#160;</p>
+<p>ラノゲツクールMVには、プログラミングを介することなく、JSON（JavaScript Object Notation）の定義を使用して素晴らしいUIを作成することができる、</p>
+<p>強力なゲーム内UIシステムが内蔵されています。 次のガイドで順を追って概要を説明します。また、ゲーム内UIシステムによって何ができるかを示した例もいくつか紹介します。</p>
+<p>&#160;</p>
+<p>とはいえ、その複雑さゆえ、このガイドではすべての機能を説明しきれませんので、<a href="igui_doc/index.html">ゲーム内UIのAPIリファレンス</a>で詳細を確認してみてください。<br />
+不明な点があれば、ラノゲツクールMVの公式フォーラムをぜひ利用してください。 </p>
+<p>&#160;</p>
+<p class="Sub_Heading">レイアウト</p>
+<p>ゲーム内UIはレイアウトを使用して定義されます。ご自分のゲームで使用できるすべての既定のレイアウトは、「スクリプト」 &rarr; 
+ 「Layouts」フォルダ内にあります。</p>
+<p>&#160;</p>
+<p><img src="image5.gif" alt="" style=" border:none; width:100%; max-width:193px;" border="0" /></p>
+<p>&#160;</p>
+<p>レイアウトにはイメージ、ボタン、テキストなど、コントロールのセットが含まれ、レイアウトタイプごとにそれぞれのコントロールの位置やサイズを管理します。</p>
+<p>例えば、グリッドレイアウトではアイテムを行と列によるグリッドの中に表示します。</p>
+<p>&#160;</p>
+<p><img src="image6.gif" alt="" style=" border:none; width:100%; max-width:369px;" border="0" /></p>
+<p>（グリッドレイアウトの例）</p>
+<p>レイアウトの中に別のレイアウトを使用し、より複雑なレイアウトを構築することも可能です。</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span>コントロール</span></p>
+<p>コントロールは、イメージやボタン、テキストなどを表示するといった、UIロジックの一部を担います。技術的に言うと、コントロールとレイアウトに違いはあまりありません。</p>
+<p>ただし、コントロールには通常コントロールを含めることはできません。</p>
+<p>&#160;</p>
+<p><img src="image8.gif" alt="" style=" border:none; width:100%; max-width:156px;" border="0" /></p>
+<p>（コントロールの例）</p>
+<p>&#160;</p>
+<p class="Sub_Heading"><span style="font-weight: bold; font-size: 18pt; 
+							 font-family: 'Book Antiqua', serif;">実例</span></p>
+<p>独自のユーザーインターフェイス（ゲーム内UI）を修正または作成する方法について詳しくは、ゲーム内UIの例を参考にしてください！</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Custom_Title-Screen.htm">例1：カスタムタイトル画面</a></p>
+<p>この例では、ラノゲツクールMVのゲーム内UIシステムを利用してオリジナルのタイトル画面を作成します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Styles.htm">例2：スタイル</a></p>
+<p>この例ではスタイルの使い方を説明し、冗長コードを回避したり、レイアウトに変更を加えるのをより簡単にしたりします。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Animations.htm">例3：アニメーション</a></p>
+<p>この例では、UIへのアニメーションの追加方法について説明します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Templates.htm">例4：テンプレート</a></p>
+<p>スタイルがレイアウト内の冗長データを避けるのにどのように役に立つかということを見てきました。しかし、スタイルは限定的ですので、</p>
+<p>この例ではより強力な手段である「テンプレート」について説明したいと思います。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Actions.htm">例5：アクション</a></p>
+<p>この例では、シーンやレイアウトを切り替えるような場合に使用するアクションについて説明します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Data_Bindings.htm">例6：データバインディング</a></p>
+<p>これまでで基本を学びましたので、今回の例ではもう少し高度な内容、データバインディングに挑戦してみましょう。データバインディングを使うと、ゲーム設定やデータベースのキャラクターなど、</p>
+<p>バックグラウンドデータを表示または変更することもできるようになります。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Formulas.htm">例7：計算式</a></p>
+<p>この例では、計算式というもう１つの複雑な機能について説明します。これらはコントロールの下定義された関数で、特定の条件下で実行されます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading"><a href="Example__Using_Components.htm">例8：コンポーネントの使用</a></p>
+<p>この例では、コンポーネントというもう1つの複雑な機能について説明します。これにより特定の条件をコントロールに指定することができます。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">役立つヒント</p>
+<p>実際に必要になる以上にレイアウトを複雑に作らないでください。大規模で複雑なレイアウト構造を構築するのではなく、シンプルなイメージ数点で問題が解決できないかどうか、よく考えましょう。</p>
+<p>複雑なレイアウトは、そのぶんパフォーマンスコストも高まります。パフォーマンスが比較的低いモバイルデバイス向けにゲームを公開する場合は特に気を付けましょう。</p>
+</body>
+</html>

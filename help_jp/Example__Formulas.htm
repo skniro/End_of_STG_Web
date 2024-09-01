@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：計算式</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：計算式</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">計</span>算式を使えば、通常のデータバインディングに比べ、さらに自由自在にコントロールすることができます。計算式とは要するに、コントロールのために定義され、</p>
+<p>特定の条件下で実行される匿名の関数です。「Layout_CGGalleryEntry」を見てみましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;orientation&quot;: 
+ &quot;vertical&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;preload&quot;: {</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;graphics&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;path&quot;: ($ -&gt; [$tempFields.selectedImage]), &quot;image&quot;: 
+ ($ -&gt; o)},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{ 
+ &quot;path&quot;: [&quot;locked&quot;], &quot;image&quot;: ($ -&gt; o)}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;frame&quot;: [0, 0, 
+ Graphics.width, Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;controls&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span><span 
+	 class="Code" style="font-weight: bold;">&quot;formulas&quot;: [$ -&gt; 
+ o.image = $tempFields.selectedImage],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;action&quot;: 
+ { &quot;name&quot;: &quot;executeFormulas&quot;, &quot;params&quot;: [$ 
+ -&gt; $backButton.visible = !$backButton.visible] }</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;id&quot;: 
+ &quot;backButton&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: { &quot;lcId&quot;: &quot;B0FD4BF121D9E44E7589CDD35869F86F2227&quot;, 
+ &quot;defaultText&quot;: &quot;Back&quot; }, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;previousLayout&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [Graphics.width - 170, Graphics.height - 65, 150, 45],</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;order&quot;: 
+ 1</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>このように、計算式は「formulas」のプロパティによって定義されています。複数の計算式で構成される配列であり、次々とシンクロして実行されます。</p>
+<p>この例では、計算式がオブジェクトのイメージのプロパティを、「CGGallery」でフルサイズ表示されるよう選択したイメージの名前を含む「$tempFields.selectedImage」に設定します。</p>
+<p>今回の場合、通常のデータバインディングでも解決できますが、より複雑なケースでは不可能です。また、計算式を使えば通常のデータバインディングよりも速くこなせます。</p>
+<p>&#160;</p>
+<p>計算式は、以下のコードのショートカットである「$ symbol」を使って定義されます。</p>
+<p>&#160;</p>
+<p><span class="Code">new ui.Formula( &lt;function&gt; )</span></p>
+<p>&#160;</p>
+<p>しかし、次のように定義される「$-function」の使用が推奨されています。</p>
+<p>&#160;</p>
+<p>window.$ = (f, data, event) -&gt; new ui.Formula(f, data || null, event 
+ || null)</p>
+<p>&#160;</p>
+<p>実行される関数はFパラメータですが、他の2つのパラメータは任意です。詳しくは<a href="igui_doc/index.html">ゲーム内UI 
+ APIリファレンス</a>を参照してください。</p>
+<p>また、計算式は「formulas」プロパティ以外の場所でも使用されます。</p>
+<p>&#160;</p>
+<p>では、計算式のほうがよりパワフルで速いのであれば、データバインディングはどうして未だ存在するのでしょうか？データバインディングは、初心者が理解しやすく、また、</p>
+<p>計算式ではスムーズに解決できないケースがあるためです。例えば、アニメーションの例で使用した基本的なアニメーション「changeTo」があります。</p>
+<p>ここでは計算式ではなくバインディングエクスプレッションを使います。アニメーションはそのフィールド（「ui.Component_BindingHandler」をチェックしましょう）に</p>
+<p>読み取り、書き込みむことができます。ここで計算式を指定すると、2つの計算式を定義する必要があります。1つは値を読み取るもの。もう1つは値を書き込むものです。</p>
+<p>データバインディングを使えば、フィールド名を指定するだけでいいのです。そのため特に初心者にとってはより使いやすいということになります。</p>
+</body>
+</html>

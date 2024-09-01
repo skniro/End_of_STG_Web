@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>パララックススクロール</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.4.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > カメラの動き" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">パララックススクロール</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">パ</span>ララックススクロールとは、画像のレイヤーを異なる速度で動かし、奥行きがあるような錯覚を起こさせる視覚的なテクニックです。</p>
+<p>&#160;</p>
+<p><img src="ParallaxScrolling-2.gif" alt="" style=" border:none; width:100%; max-width:517px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">準備</p>
+<p>まず、すべての画像をレイヤーに分けます。それから、前景、中景、背景のレイヤーをそれぞれ異なるスピードで動かします。</p>
+<p>&#160;</p>
+<p><img src="01_Background.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">これが背景です。背景</span>は一番遅い速度で動きます。</p>
+<p>&#160;</p>
+<p><img src="02_Middleground.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">こちらは中景。中景</span>は前景と背景の速度の中間の速さで動きます。</p>
+<p>&#160;</p>
+<p><img src="02_MiddlegroundB.jpg" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p>&#160;</p>
+<p>こちらは動かない<span style="font-weight: bold;">もう1枚の中景</span>になります。</p>
+<p>&#160;</p>
+<p><img src="03_Foreground.png" alt="" style=" border:none; width:100%; max-width:544px;" border="0" /></p>
+<p>&#160;</p>
+<p><span style="font-weight: bold;">前景</span><span>は一番速く動きます。</span></p>
+<p>&#160;</p>
+<p>このときに使用される画像は、ループすることを前提に作成したものを使用してください。つまり、同じ画像を横に並べた時にズレがなくつながっているように見える必要があります。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">実装</p>
+<p><img src="ParallaxScrolling_Forest.jpg" alt="" style=" border:none; width:100%; max-width:870px;" border="0" /></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>まず、すべての背景レイヤーを設定します。「水平ループ」を「はい」に設定してください。</li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li>最後の「背景を変更」で、必ず「待機」を追加してください。 
+		 これがなければ、ループの効果が発動する前に、すぐスクロールしてしまいます。</li>
+	</ul></li>
+	<li>その後、「<a href="Background.htm#Scroll_Background">背景をスクロール</a>」コマンドを追加します。</li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li>「時間」が「0ms」に設定されている点に注目してください。これはつまり、背景が永遠にスクロールし続けることを意味しています。</li>
+		<li>「速度 
+		 X」と「速度 
+		 Y」は、それぞれのスクロール速度を表しています。小数点の値を使用することが可能です。数値が高い程、より速くスクロールします。</li>
+		<li><a href="Easing_Effects.htm">イージング効果</a>を取り入れて、スクロールアニメーションの動きに変化をつけることもできます。</li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p>これらのコマンドを駆使して、このような視覚効果を作ることもできます。</p>
+<p>&#160;</p>
+<p><img src="ParallaxScrolling.gif" alt="" style=" border:none; width:100%; max-width:517px;" border="0" /></p>
+<p>&#160;</p>
+</body>
+</html>

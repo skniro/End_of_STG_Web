@@ -1,0 +1,270 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>バストアップイメージの表示</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.2.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > バストアップイメージの表示方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">バストアップイメージの表示</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">最</span>近のビジュアルノベルでは、メッセージボックスの近くにキャラクターのバストアップ画像を使うのがトレンドになっています。開発者がこの手法を好む理由は多数ありますが、いくつか例を紹介します。</p>
+<ul style="list-style: disc;">
+	<li>メインキャラクターが感情を表現できるので、テキストのトーンがより明確になります。</li>
+	<li>キャラクターがいる場所が遠すぎる場合、または視点に変更がある場合でも、キャラクターを画面の中央に置くのではなく、バストアップとして表示できます。</li>
+</ul>
+<p>&#160;</p>
+<p>今回のゲームでは既定のUIを使用しているので、ゲーム内では次の画像のように表示されます。</p>
+<p>&#160;</p>
+<p><img src="BustTutorial.jpg" alt="" style=" border:none; width:100%; max-width:1035px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">定義済みのオブジェクト位置の準備</p>
+<p>まずは必ず「<a href="Understanding_Predefined_Position.htm">定義済みのオブジェクト位置</a>」を読んでください！このページのチュートリアルでは、詳細な説明は省きます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>「<img src="icon_database_view.png" style="width:100%; max-width:16px"><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">データベース</span><span 
+	 style="font-family: Arial, sans-serif;">」</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr;</span><span 
+	 style="font-family: Arial, sans-serif;">「</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;"><img src="icon_database_system.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />システム</span><span 
+	 style="font-family: Arial, sans-serif;">」の順に移動し、「定義済みのオブジェクト位置」まで下にスクロールします。</span></li>
+</ul>
+<ul style="list-style: disc;">
+	<li>ウィロウの顔を右下に持ってきたいので、右下の計算式をコピーして「Bust-BottomRight」と名付けたエントリーを作成しました。</li>
+</ul>
+<pre>
+return { x: Graphics.width - object.dstRect.width * object.zoom.x, y: Graphics.height - object.dstRect.height * object.zoom.y &#160;}</pre>
+<ul style="list-style: disc;">
+	<li>ここではY座標のパラメータのみを調整しています。キャラクターの高さを3で割り、胸から上だけが表示されるようにします。</li>
+</ul>
+<pre>
+return { x: Graphics.width - object.dstRect.width * object.zoom.x, <span style="background-color: #ffff00;">y: Graphics.height - (object.dstRect.height/3 * object.zoom.y) }</span>
+</pre>
+<p style="margin-left: 40px;">ところがご覧のように、ウィロウがメッセージボックスの下に入り込んでしまっています。</p>
+<p style="margin-left: 40px;">&#160;</p>
+<p style="margin-left: 0px;"><img src="BustTutorial-2.jpg" alt="" style=" border:none; width:100%; max-width:1035px;" border="0" /></p>
+<p style="margin-left: 0px;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="margin-left: 0px;">この問題を避けるには、「<a href="Character.htm#Join_Scene">シーンに登場</a>」のキャラクターのZオーダーを「9999」に調整するしかありません。ただし、キャラクターが登場するたび</p></li>
+</ul>
+<p style="margin-left: 0px;">　　　 それぞれのZオーダーを調整しなくてはならず、あまり効率的とは言えません。そこで、return文の直前にもう1行コードを追加しました。</p>
+<pre>
+<span style="background-color: #ffff00;">object.zIndex = 9999;</span> return { x: Graphics.width - object.dstRect.width * object.zoom.x, y: Graphics.height - (object.dstRect.height/3 * object.zoom.y) }
+</pre>
+<p style="margin-left: 40px;">このコードは、Zオーダーのオブジェクトを変更します。これはreturn文よりも前にあるので、<span 
+	 style="font-size: 13px; font-variant-ligatures: normal; font-variant-caps: normal; 
+	 orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; background-color: #ffffff; 
+	 text-decoration-style: initial; text-decoration-color: initial; display: inline	 ! important ; 
+	 float: none;">「Join Character」（キャラクターの登場）コマンドの座標項目には適用されません。</span></p>
+<p style="margin-left: 40px;">これにより、繰り返しの作業で取られる時間を大幅に節約できます。</p>
+<p style="margin-left: 0px;">&#160;</p>
+<p style="margin-left: 0px; text-align: center;"><img src="Metisnotes13_en.png" alt="" style=" border:none; width:100%; max-width:465px;" border="0" /></p>
+<ul style="list-style: disc;">
+	<li><p style="margin-left: 0px;">これまでの作業内容を忘れずに保存するようにしましょう！</p></li>
+</ul>
+<p style="margin-left: 0px;">&#160;</p>
+<p style="margin-left: 0px; text-align: center;">&#160;</p>
+<p class="Sub_Heading">テキストマクロの準備</p>
+<p>次に、テキストマクロを作成してキャラクターの表情を取り消します。この作業はキャラクターが喋っていないシーンで使います。</p>
+<p>必ず<a href="System.htm#Text_Macro">テキストマクロ</a>と<a href="Message.htm#Text_Codes">テキストコード</a>について読み、これから何をしようとしているか概要を掴んでおいてください。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>「<img src="icon_database_view.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">データベース</span><span 
+	 style="font-family: Arial, sans-serif;">」</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr;</span><span 
+	 style="font-family: Arial, sans-serif;">「</span><span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;"><img src="icon_database_system.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />システム</span><span 
+	 style="font-family: Arial, sans-serif;">」の順に進み、「テキストマクロ」まで下にスクロールします。</span></li>
+	<li><span style="font-family: Arial, sans-serif;">「&lt;New&gt;」をダブルクリックするか、右クリックから「新規マクロ」を選択して新しいマクロを作成します。</span></li>
+	<li><span style="font-family: Arial, sans-serif;">これに「clr」と名づけ、次の<a 
+	 href="Message.htm#Text_Codes">テキストコード</a>を追加します。</span></li>
+</ul>
+<pre>
+<span>{W:A}{WE:N}{E:1}</span>
+</pre>
+<ul style="list-style: disc;">
+	<li>このコードは次のことをします。</li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li>ユーザーによる入力を待機</li>
+		<li>メッセージ終了時に次のテキストコードを実行しない</li>
+		<li>割り当てられたキャラクターのアクションを1（またはなし）に変更</li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p style="margin-left: 40px;">つまり、プレイヤーがクリックするまで表情は取り消されません。このコードがなければ、キャラクターの表情はメッセージが完全に表示された時点で消えてしまいます！</p>
+<ul style="list-style: disc;">
+	<li><p style="margin-left: 0px;">このマクロを使用するには、「{M:clr}」を使う必要があります。</p></li>
+</ul>
+<p style="margin-left: 0px;">&#160;</p>
+<p>&#160;</p>
+<p class="Sub_Heading">メッセージウィンドウの調整</p>
+<p>今度は<a href="Scene_Content.htm">シーン</a>に移動してキャラクターを設定しましょう。キャラクター表示の位置関係のため、メッセージボックスの表示幅を変更する必要があります。変更前は次の画像のようになってしまうからです。</p>
+<p>&#160;</p>
+<p><img src="BustTutorial-3.jpg" alt="" style=" border:none; width:100%; max-width:1036px;" border="0" /></p>
+<p>&#160;</p>
+<p>ここでは「<a href="Message.htm#Create_Message_Area">メッセージエリアを作成</a>」と「<a 
+	 href="Message.htm#Set_Message_Target">メッセージターゲットを設定</a>」が役に立ちます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>まず「<a href="Message.htm#Create_Message_Area">メッセージエリアを作成</a>」コマンドを、次のように、長いテキストを表示する「メッセージを表示」の上に追加します。<br />
+	<br />
+	</li>
+	<li>ライブプレビュー がテキストを表示するのを待ちます。「[0, 0, 
+	 300, 100]」と書いてある長方形のボックスをクリックしてください。すると次のような画面になります。<br />
+	<br />
+	<img src="BustTutorial-5.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /><br />
+	<br />
+	ライブプレビューはリセットされることが時折あるので、「メッセージを表示」の上の「メッセージエリアを作成」コマンドを動かし、もう一度試みてください。<br />
+	</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>左上にある黒いボックスをドラッグし、必要に応じてサイズを変更してください。ボックスをダブルクリックまたは右クリックして、「セルのプロパティ」 ウィンドウを表示し、次のように手動で数値を入力することもできます。<br />
+	</li>
+</ul>
+<p style="margin-left: 40px;"><br />
+<img src="BustTutorial-7.jpg" alt="" style=" border:none; width:100%; max-width:1312px;" border="0" /><br />
+</p>
+<ul style="list-style: disc;">
+	<li>「メッセージエリアを作成」コマンドを「メッセージを表示」の<span style="font-style: italic;">上に</span>動かします（すでにそうなっていない場合）。<br />
+	</li>
+</ul>
+<p>　　　<img src="BustTutorial-4.jpg" alt="" style=" border:none; width:100%; max-width:824px;" border="0" /><br />
+</p>
+<ul style="list-style: disc;">
+	<li><span>次に、「</span><a href="Message.htm#Set_Message_Area">メッセージターゲットを設定</a>」コマンドを追加します。正しく追加できた場合、イベントコマンドは次のようになっています。<br />
+	<br />
+	<img src="BustTutorial-8.jpg" alt="" style=" border:none; width:100%; max-width:824px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>メッセージウィンドウのリセットは、次のコマンドを追加するだけでできます。</li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li>「<a href="Message.htm#Erase_Message_Area">メッセージエリアを消去</a>」- 数値は0になっているので、このままにしておきます。</li>
+		<li>「<a href="Message.htm#Set_Message_Area">メッセージターゲットを設定</a>」の「種類」を「<span 
+		 style="font-weight: bold;">レイアウトベース</span>」にし、「エリア」は「ADV Style」にします。必ず「クリア」を「はい」に設定します。</li>
+	</ul></li>
+	<li>忘れる前に、前に作成していたマクロコマンド「{M:clr}」を追加しましょう。これをウィロウのメッセージの最後に挿入します。</li>
+	<li>最終的に、コマンドは次の画像のようになります。<br />
+	<br />
+	<img src="BustTutorial-010.jpg" alt="" style=" border:none; width:100%; max-width:824px;" border="0" /></li>
+</ul>
+<p>&#160;</p>
+<p>お気づきかもしれませんが、主人公に喋らせたい場面で毎回このようなことをしていると非効率的です。そこで、次のセクションに進みましょう。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">共通イベントの設定</p>
+<p>どの<a href="Common_Events_Guide.htm">共通イベント</a>を使うべきか不確かな場合、必ずチュートリアルを参照してください！</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>「<img src="icon_database_view.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">データベース</span>」<span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr; 
+	 </span><span style="font-family: Arial, sans-serif;">「</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_database_commonevents.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />共通イベント</span><span style="font-family: Arial, sans-serif;">」の順に進みます。</span></li>
+	<li>新たに2つの共通イベントを作成します。それらをフォルダーに入れて整理しておくのもいいでしょう。</li>
+	<li>それらの共通イベントにそれぞれ「<span style="font-weight: bold;">メッセージエリアを作成</span>」と「<span style="font-weight: bold;">メッセージエリアをリセット</span>」と名付けます。</li>
+	<li>以上ができたら、次の画像のようになります。<br />
+	<br />
+	<img src="BustTutorial-011.jpg" alt="" style=" border:none; width:100%; max-width:273px;" border="0" /><br />
+	</li>
+	<li>今度は<a href="Scene_Content.htm">シーン</a>に戻り、最初のコマンド群「<a href="Message.htm#Create_Message_Area">メッセージエリアを作成</a>」と「<a 
+	 href="Message.htm#Set_Message_Area">メッセージターゲットを設定</a>」を切り取ります。</li>
+	<li>「<img src="icon_database_view.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">データベース</span>」<span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr; 
+	 </span><span style="font-family: Arial, sans-serif;">「</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_database_commonevents.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />共通イベント</span><span style="font-family: Arial, sans-serif;">」に戻り、それらを「</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">メッセージターゲットを設定</span><span 
+	 style="font-family: Arial, sans-serif;">」共通イベントの中に入れます。</span></li>
+	<li><a href="Scene_Content.htm">シーン</a>に戻り、2つ目のコマンド群「<a href="Message.htm#Erase_Message_Area">メッセージエリアを消去</a>」と「<a 
+	 href="Message.htm#Set_Message_Area">メッセージターゲットを設定</a>」を切り取ります。</li>
+	<li>「<img src="icon_database_view.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" /><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">データベース</span>」<span style="font-family: Arial, sans-serif; 
+															 font-weight: bold;">&rarr; 
+	 </span><span style="font-family: Arial, sans-serif;">「</span><span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;"><img src="icon_database_commonevents.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />共通イベント</span><span style="font-family: Arial, sans-serif;">」に戻り、それらを「<span 
+	 style="font-family: Arial, sans-serif; font-weight: bold;">メッセージエリアをリセット</span>」共通イベントの中に入れます。</span></li>
+</ul>
+<p>&#160;</p>
+<p>すると<span style="font-family: Arial, sans-serif;">「</span><span style="font-family: Arial, sans-serif; 
+	 font-weight: bold;"><img src="icon_database_commonevents.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />共通イベント</span><span 
+	 style="font-family: Arial, sans-serif;">」は次のようになるはずです。</span></p>
+<p>&#160;</p>
+<p><img src="BustTutorial-012.jpg" alt="" style=" border:none; width:100%; max-width:1343px;" border="0" /></p>
+<p>&#160;</p>
+<p><img src="BustTutorial-013.jpg" alt="" style=" border:none; width:100%; max-width:1343px;" border="0" /></p>
+<p>&#160;</p>
+<p class="Sub_Heading">シーンの内容の設定</p>
+<p>さて、あと少しです！<a href="Scene_Content.htm">シーン</a>に戻ってコマンドを設定しましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>キャラクターの「メッセージを表示」のすぐ上に、<a href="System_Command.htm#Call_Common_Event"><span 
+	 style="text-decoration: none; ">「</span>共通イベントを呼び出す</a>」コマンドを追加し、「イベント」を「メッセージエリアを設定」にします。</li>
+</ul>
+<ul style="list-style: disc;">
+	<li>キャラクターの「メッセージを表示」のすぐ下に、<a href="System_Command.htm#Call_Common_Event"><span 
+	 style="text-decoration: none; ">「</span>共通イベントを呼び出す</a>」コマンドを追加し、「イベント」を「<span 
+	 style="font-family: Arial, sans-serif;">メッセージエリアをリセット</span>」にします。</li>
+</ul>
+<p>&#160;</p>
+<p>以上ができれば、最終的にシーンは次のようになるはずです。</p>
+<p>&#160;</p>
+<p><img src="BustTutorial-015.jpg" alt="" style=" border:none; width:100%; max-width:825px;" border="0" />.</p>
+<p>&#160;</p>
+<p>これで、コマンドを4つ使うのではなく、2つに減らすことができました！今後はこれをどこでも好きな場所で使うことができます！</p>
+<p>&#160;</p>
+</body>
+</html>

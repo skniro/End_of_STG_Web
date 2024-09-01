@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>プロジェクトの環境設定</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_7";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">プロジェクトの環境設定</p>
+</div>
+<p>&#160;</p>
+<p>ラノゲツクールMVでは、<a href="The_Menu_Bar.htm">メニューバー</a>からプロジェクトの環境設定を変更できます。<br />
+</p>
+<p><img src="ProjectPref.png" alt="" style=" border:none; width:100%; max-width:600px;" border="0" /></p>
+<p>&#160;</p>
+<p>入力欄のほとんどはプロジェクトに直接影響しませんが、「<a href="Build_Configurations.htm">ビルド設定</a>」と「<a 
+	 href="Run_Configurations.htm">起動設定</a>」で処理およびアクセスできます。たとえば、デフォルトのiOS（Cordova）ビルド設定では「iOS 
+ Deployment」タブのデータを使用し、CordovaでIPAパッケージをビルドし、署名します。説明と作成者情報をビルドに追加し、アプリストアのリストに表示することもできます。</p>
+<p>&#160;</p>
+<p>「<a href="Plugin_Getting_Started.htm">エクステンション &rarr; Custom Views &rarr; 
+Preferences</a>」では、「プロジェクトの環境設定」ダイアログウィンドウを変更してタブやフィールドを追加できます。<br />
+</p>
+<p>&#160;</p>
+<p class="Sub_Heading">「全般」</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「ゲームID」</span> - 同じ形式のゲームの固有IDです。上のピクチャーに表示されます。</li>
+	<li><span style="font-weight: bold;">「バージョン」</span> - ゲームの現在のバージョンです。上のピクチャーに表示される形式に適合している必要があります。</li>
+	<li><span style="font-weight: bold;">「方向」</span> - スマートフォンやタブレットなど方向変換が可能な端末の場合、ゲームの方向変換を許可するかどうかを設定できます。</li>
+	<li><span style="font-weight: bold;">「説明」</span> - ゲームの説明です。</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">「作者」</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「メールアドレス」</span> - 作成者の連絡先／サポートのEメールアドレスです。</li>
+	<li><span style="font-weight: bold;">「ウェブサイト」</span> - 作成者のウェブサイトです。</li>
+	<li><span style="font-weight: bold;">「説明」</span> - 作成者または作成チームの説明です。</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">「iOS Deployment」</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「コード署名ID」</span> - コード署名のIDです。</li>
+	<li><span style="font-weight: bold;">「プロビジョニングプロファイル」</span> - プロビジョニングプロフィールの固有IDです。</li>
+	<li><span style="font-weight: bold;">「開発チーム」</span> - 開発チームのIDです。</li>
+	<li><span style="font-weight: bold;">「パッケージタイプ」</span> - パッケージのタイプです。</li>
+</ul>
+<p>&#160;</p>
+<p class="Sub_Heading">「Android Deployment 」</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">「キーストア」</span><span>&nbsp;- </span><span style="font-weight: bold;">keytool</span><span> コマンドラインユーティリティで生成されたキーストア ファイルです。 </span></li>
+	<li><span style="font-weight: bold;">「キーストアパスワード」</span><span>- キーストアパスワードを入力します。</span></li>
+	<li><span style="font-weight: bold;">「キーエイリアス」</span><span> - キーのエイリアスを入力します。</span></li>
+	<li><span style="font-weight: bold;">「キーパスワード」</span><span>&nbsp;- プライベートキーのパスワードです。</span></li>
+	<li><span style="font-weight: bold;">「Play ストア ライセンスキー」</span><span> - Playストアにゲームを登録したい場合に入力します。</span></li>
+	<li><span style="font-weight: bold;">「Play ストア拡張ファイルを使用」</span><span> - Playストアにゲームを登録したい場合は、 通常は APK のファイルサイズを 100 MB 以下に抑える必要があります。この制限に収まらない場合は、拡張ファイルを使用する必要があります。その場合は、このオプションをチェックしてください。最大 2 GB まで利用可能な拡張ファイルを生成します。 </span></li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>例：カスタムタイトル画面</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.3.1.0_1";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > ゲーム内UIに関するドキュメンテーション > はじめに" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">例：カスタムタイトル画面</p>
+</div>
+<p><br />
+この例では、「ラノゲツクールMV」のゲーム内UIシステムを利用してオリジナルのタイトル画面を作成します。</p>
+<p>&#160;</p>
+<p>まずはスクリプトエディタを開き、「Layouts」フォルダを開いたら、タイトル画面のレイアウト定義を含む「Layout_Title」というスクリプトを選択します。</p>
+<p>次に、既に存在するコンテンツを削除し、スクリプトを完全に空の状態にしましょう。それから、次のJSONを追加します。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&quot;frame&quot;: [0, 0, Graphics.width, 
+ Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&quot;items&quot;: []</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>この状態でゲームをテストプレイすると、まだ空のレイアウトを加えただけで何のコンテンツも入れていないので、タイトル画面にはただ真っ暗な画面が表示されます。</p>
+<p>では順を追って作業を進めていきましょう。</p>
+<p>&#160;</p>
+<p>最初の行は必ず次のようになります。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.&lt;unique_layout_name&gt; = 
+ {</span></p>
+<p>&#160;</p>
+<p>この行を完全に理解する必要はありません。知っていなくてはならない唯一の重要事項は、レイアウトに固有の名前を付けなくてはならないということです。</p>
+<p>名前にスペースや特殊文字を使うことはできません。名前は、そのレイアウトと他のレイアウトを繋げるため、またはシーンコマンド「レイアウトに切り替え」を使ってレイアウトを表示するのに必要です。</p>
+<p>&#160;</p>
+<p>コントロールを追加する前に、まずはレイアウトを少なくとも1つ、つまりメインレイアウトを定義しなくてはなりません。今回の例では、フリーレイアウトを使います。</p>
+<p>特定の位置にコントロールを自由に設置できます。レイアウトには次の3つのプロパティがあります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type</p></li>
+</ul>
+<p>レイアウトのタイプを定義します。今回は「ui.FreeLayout」となります。他にも、「ui.GridLayout」や「ui.StackLayout」といったレイアウトタイプを使用することができます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">frame</p></li>
+</ul>
+<p>レイアウトの位置とサイズをピクセルで定義します。最初の2つの数値は位置を定義します。ここでは「0, 0,」とあり、画面の左上の隅を示しています。</p>
+<p>次の2つの数値はレイアウトのサイズです。今回は現在の画面サイズを指す「Graphics.width」と「Graphics.height」という2つの特殊な定数を使用します。</p>
+<p>これでレイアウトが画面全体を覆うことになります。以下に、ピクセルによる座標ではなく、パーセンテージによる値を使用することが可能である例を見ることができます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">controls</p></li>
+</ul>
+<p>このプロパティには、表示するUIコントロールが含まれています。まだコントロールは何も追加していないので、真っ暗な画面しかありません。次の手順でこれに手を加えていきましょう！</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&quot;frame&quot;: [0, 0, Graphics.width, 
+ Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&quot;controls&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;image&quot;: 
+ &quot;bg-generic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, &quot;100%&quot;, &quot;100%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>この段階でゲームをテストプレイすると、既定の背景イメージ「bg-generic」が画面全体を覆っている状態のはずです。</p>
+<p>&#160;</p>
+<p>今度はこの仕組みについて見ていきましょう。</p>
+<p>&#160;</p>
+<p>タイプ「ui.Image」のアイテムを追加しました。これはその名のとおり、ただのイメージです。それではプロパティを見てみましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type</p></li>
+</ul>
+<p>コントロールのタイプ。今回は「ui.Image」というイメージを表示するだけのものを使います。ただし、他にも多数、使用可能なコントロールのタイプがあり、</p>
+<p>独自のコントロールテンプレートを定義する事も可能ですが、それについては別の例で紹介しましょう。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">image</p></li>
+</ul>
+<p>表示するイメージリソースの名前。リソースは既定で「Graphics/Pictures」フォルダに入っています。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">frame</p></li>
+</ul>
+<p>イメージの位置とサイズ。画面の左上の隅にイメージを置きます。サイズは「100%」に設定されています。「100%」とは、イメージをレイアウトサイズの100%に合わせます。</p>
+<p>この例では、「Graphics.width」と「Graphics.height」に相当します。いろいろなパーセンテージで設定してみて、どのように見えるか試してみましょう。</p>
+<p>自分で計算してピクセルの値とパーセンテージの値を混ぜることもできます（例：「100% - 250」など）。</p>
+<p>&#160;</p>
+<p>次の手順では、次のタイトル画面の選択肢で5つのボタンを追加します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>ニューゲーム</li>
+	<li>ゲームを読み込む</li>
+	<li>終了</li>
+</ul>
+<p>&#160;</p>
+<p>上から下に選択肢を並べるためスタックレイアウトを使用します。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&quot;frame&quot;: [0, 0, Graphics.width, 
+ Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&quot;controls&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;image&quot;: 
+ &quot;bg-generic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, &quot;100%&quot;, &quot;100%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.StackLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;orientation&quot;: 
+ &quot;vertical&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [&quot;35%&quot;, &quot;60%&quot;, &quot;30%&quot;, &quot;30%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;controls&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ニューゲーム&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ゲームを読み込む&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;終了&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>この段階でゲームをテストプレイすると、背景に3つボタンがある状態が確認できます。</p>
+<p>&#160;</p>
+<p>イメージの後、新しい垂直型のスタックレイアウトを追加しました。フレームのプロパティを見ると、パーセンテージの値のみがあります。</p>
+<p>前述のように、フレームのプロパティにパーセンテージの値を使い、「50% - 20」のように計算することもできます。</p>
+<p>パーセンテージの値では、画面の正確な位置や親となるレイアウト範囲を把握しなくても位置とサイズを定義できます。</p>
+<p>&#160;</p>
+<p>また、オリエンテーションのプロパティを「垂直」に設定しました。これで重なるように、上から下に垂直にボタンを並べることができます。各選択肢にボタンを3つずつ追加します。</p>
+<p>次で詳しく見ていきましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;type&quot;: &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;params&quot;: { &quot;text&quot;: 
+ &quot;ニューゲーム&quot; },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;resizable&quot;: true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&quot;margin&quot;: [0, 0, 
+ 0, 10]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">type</p></li>
+</ul>
+<p>「ui.Button」を使用してボタンコントロールを作成します。「ui.Button」は「Template_Button」スクリプトの「Templates」サブフォルダーで定義されたテンプレートです。</p>
+<p>テンプレートについては、後ほど例の中で説明します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">params</p></li>
+</ul>
+<p>「ui.Button」はテンプレートです。「params」を使ってデータをテンプレートに受け渡します。今回は値「ニューゲーム」とともにパラメータ「text」のみをテンプレートに渡します。</p>
+<p>テンプレートがどのようにそのデータを扱っているかについては把握する必要はありません。そのテキストがボタンのテキストを定義しているということだけ知っていれば十分です。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">resizable</p></li>
+</ul>
+<p>必要に応じ、ボタンがレイアウトによって自動的にサイズ変更されるかどうかを定義します。この定義によってはフレームのプロパティを指定する必要がなくなります。</p>
+<p>今回はボタンのサイズを心配しなくてもいいように、true（真）に設定しました。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">margin</p></li>
+</ul>
+<p>余白のプロパティはボタンの周りの空白を定義します。コントロール間の隙間を定義したり、コントロールを少し調整したい場合に使用します。</p>
+<p>余白の値はピクセルで、[&lt;左&gt;, &lt;上&gt;, &lt;右&gt;, &lt;下&gt;]として定義されます。つまり、この例では各ボタンの下に10pxの余白があることになります。</p>
+<p>&#160;</p>
+<p>ボタンにアクションを追加して、例を完成させましょう。ボタンをクリックすると、アクションによって実行される背景ロジックのピースについて説明します。</p>
+<p>&#160;</p>
+<p><span class="Code">ui.UIManager.layouts.titleLayout = {</span></p>
+<p><span class="Code">&#160;&#160;&quot;type&quot;: &quot;ui.FreeLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&quot;frame&quot;: [0, 0, Graphics.width, 
+ Graphics.height],</span></p>
+<p><span class="Code">&#160;&#160;&quot;controls&quot;: [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Image&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;image&quot;: 
+ &quot;bg-generic&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [0, 0, &quot;100%&quot;, &quot;100%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.StackLayout&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;orientation&quot;: 
+ &quot;vertical&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;frame&quot;: 
+ [&quot;35%&quot;, &quot;60%&quot;, &quot;30%&quot;, &quot;30%&quot;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;controls&quot;: 
+ [</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ニューゲーム&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;newGame&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;ゲームを読み込む&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;switchLayout&quot;, &quot;params&quot;: { &quot;name&quot;: &quot;loadMenuLayout&quot;, 
+ &quot;savePrevious&quot;: true } } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;},</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;type&quot;: 
+ &quot;ui.Button&quot;,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;params&quot;: 
+ { &quot;text&quot;: &quot;終了&quot;, &quot;action&quot;: { &quot;name&quot;: 
+ &quot;quitGame&quot; } },</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;resizable&quot;: 
+ true,</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;margin&quot;: 
+ [0, 0, 0, 10]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;]</span></p>
+<p><span class="Code">&#160;&#160;&#160;&#160;&#160;&#160;}</span></p>
+<p><span class="Code">&#160;&#160;]</span></p>
+<p><span class="Code">}</span></p>
+<p>&#160;</p>
+<p>各ボタン用に、「action」というボタンテンプレートへ新しいパラメータを渡します。アクションには固有の名前がついており、オプションとしてパラメータのセットがあることもあります。</p>
+<p>最初のボタンのアクションを見てみましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;action&quot;: { &quot;name&quot;: &quot;newGame&quot; 
+ }</span></p>
+<p>&#160;</p>
+<p>これにより、ボタンがクリックされると、アクション「newGame」が実行されるようになります。その名の通りこのアクションはゲームを開始します。</p>
+<p>つまり「ニューゲーム」ボタンをクリックすると、新しいゲームが開始されるということになります。</p>
+<p>&#160;</p>
+<p>次に3つ目のボタン「終了」について見てみましょう。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;action&quot;: { &quot;name&quot;: &quot;quitGame&quot; 
+ }</span></p>
+<p>&#160;</p>
+<p>同様に、今度はゲームを終了する別のアクション「quitGame」を実行します。</p>
+<p>&#160;</p>
+<p>2つ目の「ゲームを読み込む」ボタンのアクションは見たところ複雑ですが、実際は他2つと同じです。</p>
+<p>&#160;</p>
+<p><span class="Code">&quot;action&quot;: { &quot;name&quot;: &quot;switchLayout&quot;, 
+ &quot;params&quot;: { &quot;name&quot;: &quot;loadMenuLayout&quot;, &quot;savePrevious&quot;: 
+ true } }</span></p>
+<p>&#160;</p>
+<p>ここでは「params」プロパティで指定した別のレイアウトに切り替えるアクション「switchLayout」を実行しています。</p>
+<p>前述の2つのアクションとの違いは、アクションに受け渡すデータを指定しなくてはならないという点です。「switchLayout」は次のパラメータを要求します。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">name</p></li>
+</ul>
+<p>切り替え先のレイアウトの名前。今回は読み込みメニューのレイアウト定義のために使用した固有の名前「loadMenuLayout』を使います。「Layout_LoadMenu」で確認できます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: bold;">savePrevious</p></li>
+</ul>
+<p>このパラメータはオプションです。既定ではfalse（偽）ですが、true（真）に設定した場合、前のシーン（今回の場合、タイトル画面）は完全に消去されず、</p>
+<p>一時停止され、非表示になります。これはアクション「returnToPrevious」で返すことができます。</p>
+<p>今回は「戻る」ボタンがクリックされた時、読み込みメニューがタイトル画面に戻ってこられるように、true（真）に設定する必要があります。</p>
+<p>&#160;</p>
+<p>これでタイトル画面は完成です！</p>
+</body>
+</html>

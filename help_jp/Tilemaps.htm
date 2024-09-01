@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="topic-breadcrumbs" content="Scripter's Guide &gt; Basic Engine" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>タイルマップ</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<link rel="stylesheet" href="highlight/styles/default.css" type="text/css" />
+
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+<script src="highlight/highlight.pack.js" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+hljs.initHighlightingOnLoad();
+//]]></script>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]></script>
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+<script type="text/javascript">//<![CDATA[
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.1.0_7";
+//]]></script>
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "4.1.0_7";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプターズ ガイド > 基本エンジン" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+
+<p class="Sub_Heading">タイルマップ</p>
+<p>&#160;</p>
+<p><span class="Topic_Start">タ</span>イルマップは、 アドベンチャーや横スクロール、ストラテジーゲームなどでよく使用されます。現在のレベルの環境を表示するために使用され、例えば下図のようなものです。</p>
+<p>&#160;</p>
+<p><img src="TilemapExample.png" alt="" style=" border:none; max-width:836px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>この例はトップビューのアドベンチャーゲームですが、タイルマップは横スクロールゲームなどでも使用されます。 </p>
+<p>&#160;</p>
+<p>タイルマップは gs.Tilemap クラスで表されます。グラフィックオブジェクトとしても扱われますので、同様に回転や拡大縮小が可能です。タイルマップに直接色付けすることはできませんが、ビューポートに色付けするとタイルマップにも影響します。 
+ </p>
+<p>&#160;</p>
+<p class="Sub_Heading">タイルセット</p>
+<p>&#160;</p>
+<p>タイルマップはタイルセットと呼ばれるもので構成されています。タイルセットとは 1 つのイメージファイルで、そこにはゲームのタイルマップ 
+ / レベルを構築するために必要なすべてのグラフィック (「タイル」とも呼ばれます) が含まれています。スプライトシートに非常に似ています。</p>
+<p>&#160;</p>
+<p><img src="image45.gif" alt="" style=" border:none; max-width:256px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>上の図で、黄色く囲まれ Tile と書かれた部分のグラフィックを「タイル」と呼びます。この例のように、すべてのタイルは 32 x 32 
+ ピクセルのサイズの 平面画像です。これらのタイルを画面上の 32 x 32 ピクセルのグリッドに配置することにより、レベルを作成することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">シンプルなタイルマップを設定する</p>
+<p>&#160;</p>
+<p>それでは極単純なタイルマップから始めてみましょう。タイルマップの作成には次のタイルセットを使用します。</p>
+<p>&#160;</p>
+<p><img src="WoodsTileset.png" alt="" style=" border:none; max-width:256px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>プロジェクトの Graphics/Pictures フォルダーに &quot;WoodsTileset&quot; という名前でこのタイルセットイメージをインポートしておいてください。インポートが完了したら次のコードをテストベッドシーンに使います。</p>
+<pre>
+<code class="coffee">
+# ===================================================================
+#
+# &#160;&#160;Script: Component_TestBedBehavior
+#
+# &#160;&#160;Put your name here
+#
+# ===================================================================
+class Component_TestBedBehavior extends gs.Component_SceneBehavior
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* A test bed scene behavior. Here you can play around with Visual Novel Maker&amp;apos;s 
+&#160;&#160;&#160;&#160;* game engine to get a better feeling for everything.
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;constructor: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Define resource context property
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = null
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Initializes the scene. 
+&#160;&#160;&#160;&#160;###
+&#160;&#160;&#160;&#160;initialize: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create a new resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@resourceContext = ResourceManager.createContext()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set current object manager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;gs.ObjectManager.current = SceneManager
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set it as the current resource context
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.context = @resourceContext
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Disposes the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;dispose: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;super
+&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all visual game object for the scene.
+&#160;&#160;&#160;&#160;### &#160;
+&#160;&#160;&#160;&#160;prepareVisual: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Create tilemap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap = new gs.Tilemap(Graphics.viewport)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Assign tileset bitmap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.tileset = ResourceManager.getBitmap(&quot;Graphics/Pictures/WoodsTileset&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the width of the tilemap in tiles
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.width = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the height of the tilemap in tiles
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.height = 100
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set the size of a single tile to 32x32. Only quadratic tiles are supported.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.tileSize = 32
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the map data array
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.mapData = []
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the z-order array
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.priorities = []
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Fill in the map data. The tile number 0 refers to the upper-left tile of the tileset.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;for i in [0...(@tilemap.width * @tilemap.height)]
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Set tile number 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.mapData[i] = 0
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Initialize the tilemap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.setup()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the tilemap before transition so that it fades-in smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.update()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# We are done with preparing our visual objects. So we can start
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# the screen transition to fade in our new created objects smoothly.
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@transition()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Prepares all data for the scene and loads the necessary graphic and audio resources.
+&#160;&#160;&#160;&#160;### 
+&#160;&#160;&#160;&#160;prepareData: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Load the tileset image
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ResourceManager.getBitmap(&quot;Graphics/Pictures/WoodsTileset&quot;)
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;###*
+&#160;&#160;&#160;&#160;* Update the scene&amp;apos;s content.
+&#160;&#160;&#160;&#160;### &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+&#160;&#160;&#160;&#160;updateContent: -&gt;
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;# Update the tilemap
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;@tilemap.update()
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+gs.Component_LayoutSceneBehavior = Component_TestBedBehavior</code></pre>
+<p>上記のコードでゲームを起動すると、巨大な草原が表示されます。</p>
+<p>&#160;</p>
+<p>コードを上から見ていきましょう。まず gs.Tilemap のインスタンスを作成し、それにタイルセットビットマップを割り当てています。次にマップのサイズを 
+ 100 x 100 タイルに設定しています。したがってタイルマップは 100 x 100 タイルのグリッドを画面に表示します。各セルのサイズは 
+ 32 x 32 ピクセルです。つまり、1 つのタイルが 32 x 32 ピクセルですので、マップのサイズは 3200 x 3200 ピクセルとなります。</p>
+<p>&#160;</p>
+<p>次にマップのデータを設定しなければなりません。map-data はタイルセットからどんな種類のタイルを選んで画面上のグリッドのどのセルに表示するかを制御します。つまり 
+ map-data 自体は、マップのサイズの配列で、各セルの番号を格納し、その番号 (タイル ID とも呼ばれます) はタイルセットの 1 つのタイルを参照します。ここでは各セルを 
+ 0 に設定し、タイルセットの左上の草のタイルを参照しています。 </p>
+<p>&#160;</p>
+<p>マップデータを設定したら、 setup メソッドを呼び出してタイルマップを初期化しなければなりません。さらにその後に update メソッドを直接呼び出して、真っ黒の画面からタイルマップへ滑らかにトランジション 
+ (画面転換) するため、それを開始する前にタイルマップの描画が済んでいるようにしています。その行を削除するとどう変化するか確認してみてください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">アニメーションタイル</p>
+<p>&#160;</p>
+<p>前の例では、標準のタイルセットを使って画面上にシンプルなタイルマップを表示しました。では、海や川をマッピングしたい場合はどうでしたらいいでしょうか？海や川がアニメーションせず静止していたらそれとはわからないかもしれません。 
+ そのため gs.Tilemap はアニメーションタイルにも対応しています。</p>
+<p>&#160;</p>
+<p>アニメーションタイルを使用するには gs.Tilemap でアニメーションタイルがタイルセットのどこにあるか、それをどのように表示するかを指定しなければなりません。</p>
+<p>&#160;</p>
+<p><img src="ExpandedTileset.png" alt="" style=" border:none; max-width:684px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>上図で赤い太線の右側はすべてアニメーションタイルとして処理されます。既定では、赤線は 8 タイル分の位置に設定されています。赤い線を右に移動するほど標準タイルのスペースが増えます。逆にアニメーションタイルは減ります。 
+ </p>
+<p>&#160;</p>
+<p>上の例で、アニメーションタイルのためのスペースは、縦に 64 種類分のアニメーションタイルが、横に最大 56 アニメーションフレーム分利用できます。スペースとしては少し大きすぎるような気もしますが、本項の後半で説明するオートタイルやアニメーションオートタイルを使うようになると、これぐらい必要だと思うことがあるでしょう。</p>
+<p>&#160;</p>
+<p>アニメーションタイルやスペシャルタイルを全く使う必要がない場合は赤い線を右端まで移動してもかまいません。その場合タイルセットのすべてのタイルが標準タイルとなります。タイルセットとアニメーションタイルについての詳細は 
+ gs.TilesetConfiguration クラスをご確認ください。</p>
+<p>&#160;</p>
+<p>既定では、タイルセットのタイルを 8 の倍数 (1列に8タイル) で作成していれば特に何も設定することはありません。タイルセットには無制限にタイルの列を設定することができますが、列が増えるほどイメージが大きくなり、必要なグラフィックメモリも増えます。ほとんどのモバイルデバイスでは、イメージの最大サイズは 
+ 2048 x 2048 ピクセルです。 </p>
+<p>&#160;</p>
+<p class="Sub_Heading">自動リンクタイルセット</p>
+<p>&#160;</p>
+<p>最初の例では、標準のタイルセットを使って画面上にシンプルなタイルマップを表示しました。ここでは標準以外で「自動リンクタイルセット」とか「オートタイル」、「地形タイルセット」などと呼ばれるものについて説明します。オートタイルは非常に小さなタイルセットです。これは 
+ 1 つの種類のタイルに特化したものですが、異なる種類のパターンを構築できます。</p>
+<p>&#160;</p>
+<p></p>
+<p>&#160;</p>
+<p>上の例は土のオートタイルで、土の地面を非常に簡単に、またより自然に見えるように作成するために使用されます。</p>
+<p>&#160;</p>
+<p><img src="image69.gif" alt="" style=" border:none; max-width:426px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>上図のような自然な土の地面を標準タイルだけ作成しようと思ったら、形の異なる土のタイルが数多く必要になるでしょう。さらにマップエディタでそれらを自然に見えるように配置する作業も大変です。おそらく途中でいやになってしまうはずです。オートタイルは、このような問題を解決するためのものです。</p>
+<p>&#160;</p>
+<p>上の例を見てもわかるように、オートタイルは非常に小さいものですが、実行時に「拡張」されます。 つまり 48 種類以上の異なる土のタイルがオートタイルから計算されて自然な土の感じを表現しています。拡張されたオートタイルはこのようになります。</p>
+<p>&#160;</p>
+<p><img src="image46.gif" alt="" style=" border:none; max-width:256px; width:100%;" border="0" /></p>
+<p>&#160;</p>
+<p>オートタイルや地形タイルをサポートしているマップエディタを使えば、土、草、川などの地形を簡単に作成できます。例えば土のオートタイルを選択してマップ上で描画すれば、土の形状が自動的に計算され、エディタが自動的に適切なタイルを選択してくれるのです。</p>
+<p>&#160;</p>
+<p>オートタイルはマップ作成を容易にしてくれる便利な機能です。 タイルを 1 つ 1 つ自分で選ぶ必要がないので、デザインに集中できます。逆に最初の例のようにハードコードされたタイルマップデータを生成する場合は、その便利さ感じられません。マップエディタ使用時に威力を発揮します。Tiled 
+ Map Editor のようなマップエディタを使って自分で色々トライしてみるとよいでしょう。 </p>
+<p>&#160;</p>
+<p>ラノゲツクールMV のベーシックエンジンで利用できる gs.AutotileExpander クラスは上のフォーマットでオートタイルを簡単に拡大できます。また、タイルセットのアニメーションタイル領域に、拡張版のオートタイルを左から右へ配置すればオートタイルをアニメーション表示させることも可能です。アニメーション表示するためには、アニメーションオフセット値を大きく設定するだけです。詳しくは 
+ gs.TilesetConfiguration クラスの説明をお読みください。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">制限</p>
+<p>&#160;</p>
+<p>オートタイルやアニメーションタイルを持つタイルマップを画面に表示することは、使用するレンダリング技術やデバイス/ハードウェアによっては時間がかかる場合があります。 
+ </p>
+<p>&#160;</p>
+<p>最近の PC/Mac であれば、どんなレンダリング技術であってもほとんどの場合、問題なくタイルマップを表示できます。しかし、スマートフォンなどのモバイルプラットフォームとなると話は別です。本項執筆時点で、平均的なスマートフォンの多くにある程度の性能の 
+ GPU が搭載されていますが、帯域幅は非常に狭く、1 ゲームフレームで GPU に転送可能なデータ量は非常に少なくなります。 </p>
+<p>&#160;</p>
+<p>ラノゲツクールMV のタイルマップレンダリングは、低帯域幅のデバイスに最適化されていますが、それによって以下のような制限もあります。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>1 タイルマップレイヤーにつき 1 つのタイルセットしか利用できません</li>
+	<li>マップサイズは GPU の最大テクスチャサイズ (一般的なモバイル GPU では2048 x 2048 タイル) に限定されます</li>
+	<li>タイルセットのサイズは GPU の最大テクスチャサイズ (一般的なモバイル GPU では 2048 x 2048 ピクセル) 
+	 に限定されます</li>
+	<li>オートタイルとアニメーションタイルの量は限定され、タイルセットのサイズと設定に依存します。</li>
+	<li>オート/アニメーション/スペシャルタイルは、タイルセットにつき 1 種類に限定されます</li>
+	<li>リアルタイムでのマップデータ変更は可能ですが、マップが大きくなるほど処理に時間がかかり、GPU 性能に依存します。</li>
+</ul>
+<p>&#160;</p>
+<p>最適化するため、タイルマップはニーズに合わせて設定変更が可能です。以下のパラメータが変更できます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li>レイヤーの数 (既定では 3)</li>
+	<li>標準タイルの数</li>
+	<li>オートタイル / アニメーションタイルの数</li>
+	<li>1 アニメーションタイルのアニメーションフレームの数</li>
+	<li>アニメーションオフセット (オートタイルのアニメーション表示用)</li>
+	<li>アニメーションタイルのアニメーション表示速度</li>
+</ul>
+</body>
+</html>

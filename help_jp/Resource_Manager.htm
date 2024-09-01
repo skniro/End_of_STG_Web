@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>リソースマネージャー</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.5_2";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">リソースマネージャー</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">ラノゲツクールMVではユーザー固有のリソースをインポートすることができます。<a 
+	 href="The_Toolbar.htm">ツールバー</a>で「リソースマネージャー」アイコン（<img src="icon_resource_manager.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />）をクリックしてください。</p>
+<p style="font-family: Arial, sans-serif;">リソースはすべて「リソースマネージャー」で管理する必要があります。<br />
+このウィンドウでリソースのインポート（プロジェクトへのロード）、エクスポート（ファイルへの書き込み）、削除を実行できます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="resourcemanager-win2.jpg" alt="" style=" border:none; width:100%; max-width:836px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（1）「メインフォルダー」</p>
+<p>フォルダーにはすべてのゲームファイルが含まれます。</p>
+使用できるファイルタイプの詳細については、「<a href="Resource_Standards.htm">リソースの基準</a>」のページを参照してください。<br />
+<br />
+
+<table style=" border-collapse:separate; width:100%; max-width:50.579%;" cellspacing="0" border="1">
+	<col style="width: 29.837%;" />
+	<col style="width: 70.163%;" />
+	<tr>
+		<td><span style="font-weight: bold;">Graphics/Characters</span></td>
+		<td>キャラクターに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Graphics/Backgrounds</span></td>
+		<td>背景に使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Graphics/Pictures</span></td>
+		<td>CG、アニメーション、システム、画像、UIに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Graphics/Icons</span></td>
+		<td>言語選択などのアイコンに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><span style="font-weight: bold;">Graphics/Masks</span></td>
+		<td>マスクに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Graphics/Fonts</p></td>
+		<td>フォントに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Audio/Music</p></td>
+		<td>音楽に使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Audio/Sounds</p></td>
+		<td>効果音に使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Live2D</p></td>
+		<td>Live2Dに使用するファイルです。</td>
+	</tr>
+	<tr>
+		<td><p style="font-weight: bold;">Movies</p></td>
+		<td>ムービーに使用するファイルです。</td>
+	</tr>
+</table>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（2）「ファイル」</p>
+<p>各フォルダーの内容です。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">（3）「インポート」</p>
+<p style="font-family: Arial, sans-serif;">指定したフォルダーにリソースを追加します。リソースをインポートする際に接頭辞や接尾辞は必要ありません。</p>
+<ul style="list-style: disc;">
+	<li><span style="font-family: Arial, sans-serif; font-weight: bold;">「接頭辞」</span> 
+	 <span style="font-family: Arial, sans-serif;">- インポートされたリソースのファイル名の最初に指定のキーワードを追加します。</span></li>
+	<li><span style="font-family: Arial, sans-serif; font-weight: bold;">「接尾辞」</span> 
+	 <span style="font-family: Arial, sans-serif;">- インポートされたリソースのファイル名の最後に指定のキーワードを追加します。</span></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（4）「エクスポート」</p>
+<p>選択されたファイルのコピーを作成して別の場所に保存します。</p>
+<p style="font-family: Arial, sans-serif;">フォルダーをエクスポートすることはできず、無視されます。エクスポート対象はファイルである必要があります。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（5）「削除」</p>
+<p>選択したリソースを削除します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（6）「DLC」</p>
+<p style="font-family: Arial, sans-serif;">「DLC」フォルダーからリソースを直接インポートします。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="SubSubHeading">（7）「最新DLCをチェック」</p>
+<p>Steamストアのページを開き、ラノゲツクールMVのDLCを確認します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">（8）プレビューウィンドウ</p>
+<p style="font-family: Arial, sans-serif;">選択されたファイルの内容を表示する小さなプレビューウィンドウです。ダブルクリックすると、選択された画像の元のサイズでプレビューが表示されます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">コンテキストメニュー</p>
+<p style="font-family: Arial, sans-serif;">コンテキストメニューでは、論理グループを新たに作成したり、リソースの名前を変更したりできます。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">新規グループ</p>
+<p style="font-family: Arial, sans-serif;">論理グループを、新たな名前で作成することができます。このグループはただの整頓用の論理要素ですので、ディスク上に物理的なフォルダーがあるわけではありません。そのため、グループが異なっていても、2つ以上のリソースを同じ名前で管理することはできません。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="SubSubHeading">削除</p>
+<p>選択したリソースを削除します。</p>
+<p>&#160;</p>
+<p class="SubSubHeading">プロパティ</p>
+<p>現在選択しているリソースのプロパティを開き、名前を変更することができます。</p>
+<p>&#160;</p>
+<ul style="list-style: disc;">
+	<li><span style="font-weight: bold;">名前</span><span>&#160; - リソースのファイル名で、いつでも変更が可能です。</span></li>
+	<li><span style="font-weight: bold;">すべての参照の名前を変更</span><span> 
+	 - これにチェックを入れると、ラノゲツクールMV は「シーン」や「データベース」内のレコードをくまなく検索し、そのリソースが使用されている箇所を、変更後のファイル名にすべて修正します。しかし、テキスト変数やスクリプトなど、この機能が使用できないケースがあります。デバッグコンソールで、エラーや予期せぬ結果が生じていないか確認することができます。</span></li>
+</ul>
+</body>
+</html>

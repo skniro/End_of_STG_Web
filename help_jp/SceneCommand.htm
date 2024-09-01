@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>シーン</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3.1.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > シーン > シーンコンテンツのコマンド" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">シーンコマンド</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;">「シーン」コマンドでは、シーンやトランジションを変更することができます。また、メニューやスクリプトからでしかアクセスできない、特定のレイアウトを呼び出すことも可能です。 
+ </p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Scene" id="Change_Scene"></a>「シーンを変更」</p>
+<p style="font-family: Arial, sans-serif;">新しいシーンに移動します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「シーン」</span> - 移動先の新しいシーンを指定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「前を保存」</span> - 現在のシーンを保存し、「<a href="#Previous_Scene">前のシーン</a>」コマンドで戻れるようにするかどうかを設定します。<br />
+	シーンベースのゲーム内UIを使用する場合に便利です。</p></li>
+	<li style="margin-left: -20px;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「オブジェクトを消去」</span> 
+	 - 新しいシーンに移動する際に特定のオブジェクトを削除します。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif; 
+										 font-weight: normal;"><span style="font-weight: bold;">「ピクチャーを消去」</span> 
+	 - 新しいシーンに移動する際に現在表示されているピクチャーをすべて削除します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「テキストを消去」 </span>- 新しいシーンに移動する際に現在表示されているテキストをすべて削除します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+	 style="font-weight: bold;">「ムービーを消去」&#160;</span>- 新しいシーンに移動する際に現在表示されているムービーをすべて削除します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading"><a name="Previous_Scene" id="Previous_Scene"></a>「前のシーン」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">前のシーンに戻ります。「<a 
+	 href="#Change_Scene">シーンを変更</a>」コマンドの「前を保存」が「はい」になっている場合にのみ機能します。</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Change_Transition" id="Change_Transition"></a>「トランジションを変更」</p>
+<p style="font-family: Arial, sans-serif;">トランジション／マスク画像を用いて、視覚的にシーンからシーンへと移行するように変更します。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「ファイル」</span> - 「Graphics/Masks」フォルダからマスク画像を選択します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「スムーズ」 </span>- マスクの滑らかさを設定します。値が大きいほど滑らかになります（0～255）。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - 移行アニメーションの描写時間をミリ秒単位で設定します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Switch_Layout" id="Switch_Layout"></a>「レイアウトに切り替え」</p>
+<p style="font-family: Arial, sans-serif;">ゲーム内のメニューコマンドからのみアクセス可能なUIメニュー／レイアウトを呼び出します。<br />
+（「タイトル画面」「セーブメニュー」などが代表として挙げられますが、その他にもあります）</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「名前」</span> - 呼び出すレイアウトを設定します。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「前を保存」</span> - 有効にすると、「戻る」ボタンを使用して前のシーンに戻ることができます。カスタムメニューを使用する際に便利です。</p></li>
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「時間」</span> - シーン移行のフェードイン時間をミリ秒単位で設定します。</p></li>
+</ul>
+<p style="font-weight: normal; font-family: Arial, sans-serif;">&#160;</p>
+<p class="Sub_Heading"><a name="Call_Scene" id="Call_Scene"></a>「シーンを呼び出し」</p>
+<p style="font-family: Arial, sans-serif;">共通イベントを呼び出す時のように、選択したシーンを呼び出します。呼び出したシーンに<span 
+	 style="font-weight: bold;">切り替わることはなく</span>、バックグラウンドで同期的にコマンドを実行してきます。</p>
+<ul style="list-style: disc;">
+	<li style="margin-left: -20px;"><p style="font-weight: normal; font-family: Arial, sans-serif;"><span 
+	 style="font-weight: bold;">「シーン」</span> - 呼び出すシーンを指定します。</p></li>
+</ul>
+</body>
+</html>

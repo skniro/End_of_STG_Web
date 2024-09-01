@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>シーン</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.3";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">シーンエディター</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><span class="Topic_Start">I</span>n 
+ Scene Editor, you can easily put your scene together by dragging commands 
+ into the Scene Content or just with your keyboard. The top area contains 
+ the Live Preview which gives a accurate preview of your current scene.</p>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="17.jpg" alt="" style=" border:none; width:100%; max-width:1195px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif;"><img src="SceneEditor.png" alt="" style=" border:none; width:100%; max-width:1223px;" border="0" /></p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">1 - 「シーン」</p>
+<p>You can organize your Visual Novel with chapters and scenes. </p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「チャプター」<span 
+	 style="font-weight: normal;"> - ここにシーンを含めることができます。チャプターごとにシーンをまとめる場合に便利です。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">「シーン」 <span 
+	 style="font-weight: normal;">- ゲーム中のシーンの1つです。ここにサブシーンを含めてまとめることができます。</span></p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading"><a name="2_-_Live_Preview"></a>2 - 「ライブプレビュー」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><span><span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;"><img src="LivePreview.png" alt="" style=" border:none; width:100%; max-width:924px;" border="0" /></span></span></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">By default, 
+ the top area of the Scene Content contains the Live Preview. The Live 
+ Preview shows you how your current scene looks like at the selected command. 
+ It does that by skipping through your scene until it reaches the selected 
+ command. That means that certain commands such as Wait or Wait for Input 
+ are ignored in Live Preview since it skips everything. Also, for better 
+ stability, commands such as <a href="SceneCommand.htm#Change_Scene">Change 
+ Scene</a> have no effect in Live Preview and all Audio commands are muted 
+ by default.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">In <a href="Application_Preferences.htm">Application 
+ Preferences</a> you can configure Live Preview to your needs or deactivated 
+ if you don't need it. You can also turn off Live Preview for certain scenes 
+ only if you open <a href="Scene_Properties.htm">Scene 
+ Properties</a> from the scene's <a href="Context_Menu.htm">Context 
+ Menu</a>. Check <a href="The_Menu_Bar.htm">The 
+ Menu Bar</a> to learn how you can detach Live Preview and put it on a 
+ second monitor to get more space for commands.</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ also make a mouse click into the Live Preview which will then play your 
+ scene from the selected command normally including timing, waits, etc.</p>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading">3 - 「シーンコンテンツ」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">シーンのコンテンツです。各コマンドの詳細については、「<a 
+	 href="Scene_Content_Commands.htm">シーンコンテンツコマンド</a>」ページを参照してください。&#160; 
+ </p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">4 - 「コマンド」</p>
+<p>「シーンコンテンツ」フィールドでは次のコマンドを使用できます。コマンドは、フィールド内でシングルクリックまたはドラッグ&amp;ドロップできます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">データベースの選択</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">一部のコマンドでは、キャラクターやキャラクターの表情などのレコード／要素をデータベースから選択する必要があります。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="DataRecordSelection.png" alt="" style=" border:none; width:100%; max-width:720px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">画面上部の検索ボックスを使用すると、データベースのレコードをフィルタリングし、必要なレコードを簡単に見つけて選択することができます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Tabキー（<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />）を押すと、検索ボックスとレコード選択ボックスの間でジャンプします。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">検索ボックスでEscapeキー（<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押すと、検索ボックスの内容が消去されます。もう一度押すと選択内容がキャンセルされます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">レコード選択ボックスでEnter/Returnキー（<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押すと、選択内容が承認されます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">レコード選択ボックスでEscapeキー（<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押すと、選択内容がキャンセルされます。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「グラフィックエディタとプレビュー」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">「<a href="Character.htm#Join_Scene">キャラクターの登場</a>」や「<a 
+	 href="Picture.htm#Show_Picture">画像を表示</a>」 （画像を表示）など、一部のコマンドではグラフィックエディターを使用して簡単に位置調整を行うことができます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="GraphicalEditor.png" alt="" style=" border:none; width:100%; max-width:672px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">画面解像度に対してグラフィックエディターが大きすぎる場合は、「<a 
+	 href="Application_Preferences.htm">アプリケーションの環境設定</a>」を開いて「<span style="font-weight: bold;">オリジナルサイズプレビュー</span>」チェックボックスのチェックを外してください。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">Groups</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">For some 
+ game-object related commands such as Show Picture, you can specify a group 
+ to distinguish between your own game objects and game objects created 
+ and managed by extensions. You can just click on &quot;<span style="font-weight: bold;">@default</span>&quot; 
+ to switch to another group. </p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="NumberDomain.png" alt="" style=" border:none; width:100%; max-width:1054px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">You can 
+ learn more about groups and how to share content via extensions under 
+ <a href="Domains.htm">Sharing  Content.</a></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">「キーボード入力」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">また、キーボードを使用してコマンド名の最初の数文字を入力するとオートコンプリートボックスが自動的に表示されます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;"><img src="CommandSearch.png" alt="" style=" border:none; width:100%; max-width:843px;" border="0" /></p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Enter/Returnキー（<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押して目的のコマンドをシーンに追加すると、コマンドは選択中のコマンドの<span 
+	 style="font-weight: bold;">後</span>に挿入されます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">ShiftキーとEnter/Returnキー（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Enter_Alt.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押して目的のコマンドをシーンに追加すると、コマンドは選択中のコマンドの<span 
+	 style="font-weight: bold;">前に</span>挿入されます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">Escapeキー（<img src="Keyboard_White_Esc.png" alt="" style=" border:none; width:100%; max-width:35px;" border="0" />）を押すと、オートコンプリートボックスがキャンセルされます。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<p class="Sub_Heading">*重要</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">ロックアイコン（<img src="locked-padlock.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />）は、コマンドでフィールドが変更されず、デフォルト値が使用されることを示します。実際の動作はコマンドの実行状況に左右されます。<br />
+	デフォルト値は、「オーディオの既定」コマンドや「キャラクターの既定」コマンドなどの対応するコマンドを使用して変更できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">手動で値を変更した場合は、アイコンがロック解除アイコン（<img src="padlock.png" alt="" style=" border:none; width:100%; max-width:16px;" border="0" />）になり、視覚的に確認できるようになっています。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">位置設定が<span 
+	 style="font-family: Arial, sans-serif; font-weight: normal;"> 「直接」／「計算」（計算）のコマンドは、アンカーポイントにかかわらず、必ず「左上」の座標を使って位置調整を行います。 
+	 <br />
+	アンカーポイントはズームや回転などには使用されますが、位置調整では使用されません。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">タブ付けされたコマンドを要求するコマンドの下位のコマンドでなければ、右矢印キー（<img src="Keyboard_White_Arrow_Right.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />）を押すとコマンドを「条件」コマンドの下位に置くか、無効化することができます。<br />
+	たとえば、「条件」（条件）コマンドが「<span style="font-weight: bold;">true</span>」の場合、その下のタブ付けされたコマンドのみが実行されます。「<span 
+	 style="font-weight: bold;">true</span>」でない場合は、その下のタブ付けされたコマンドはスキップされます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">コマンドがインデントされている場合、左矢印キー（<img src="Keyboard_White_Arrow_Left.png" alt="" style=" border:none; padding-bottom:-5px; width:100%; max-width:35px;" border="0" />）を押すと位置を左に戻すことができます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">上矢印キー（<img src="Keyboard_White_Arrow_Up.png" alt="" style=" padding-bottom:-5px; border:none; width:100%; max-width:35px;" border="0" />）を押すと前のコマンドを選択できます。Shiftキー（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />）と組み合わせると選択範囲を拡張できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">下矢印キー（<img src="Keyboard_White_Arrow_Down.png" alt="" style=" padding-bottom:-5px; border:none; width:100%; max-width:35px;" border="0" />）を押すと、次のコマンドを選択できます。Shift（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />）と組み合わせると選択範囲を拡張できます。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Tabキー（<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />）を押すと次のフィールドに移動します。フィールドを編集するにはSpace（<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />）キーを押します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">Shift+Tabキー（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Tab.png" alt="" style=" border:none; width:100%; max-width:38px;" border="0" />）を押すと前のフィールドに移動します。フィールドを編集するにはSpace（<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />）キーを押します。</p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: normal;">フィールドを選択した状態でShift+Spaceキー（<img src="Keyboard_White_Shift.png" alt="" style=" border:none; width:100%; max-width:39px;" border="0" />+<img src="Keyboard_White_Space.png" alt="" style=" padding-bottom:-15px; border:none; width:100%; max-width:55px;" border="0" />）を押すと、 直接フィールドを編集することなく変数ボタンを押すことができます。</p></li>
+</ul>
+</body>
+</html>

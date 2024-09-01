@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>外部スクリプトエディター</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "5.4.0_3";
+</script>
+ <meta name="topic-breadcrumbs" content="スクリプトとプラグインのリファレンス > スクリプトに関するドキュメンテーション" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<p class="Topic_Heading">外部スクリプトエディター</p>
+<p>&#160;</p>
+<p>ラノゲツクールMVでは、一般的なACEコードエディターをベースにした統合型のスクリプトエディターを使用できます。<br />
+ただし、他のコードエディターを使用したい場合は、自由にエディターを選んで独自のカスタムスクリプトを作成することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">プロジェクトの準備</p>
+<p>&#160;</p>
+<p>外部スクリプトエディターを使用するには、プロジェクトフォルダを開き「scripts」という名前で新しいフォルダを作成します。<br />
+このフォルダに全てのカスタムスクリプトを.jsファイルとして格納すると、ラノゲツクールMVはこれらのスクリプトを自動的に認識してゲームに追加します。<br />
+スクリプトには以下のように、様々な末尾の数字を追加して組み入れの順番をコントロールすることができます。</p>
+<p>&#160;</p>
+<p>フルーツ-0.js</p>
+<p>りんご-1.js</p>
+<p>バナナ-2.js</p>
+<p>&#160;</p>
+<p>これは、ベースクラスのスクリプトが派生クラスよりも先に組み入れられなければならない場合などで便利です。</p>
+<p class="Sub_Heading"><br />
+プログラミング言語の選択</p>
+<p>&#160;</p>
+<p>ラノゲツクールMVはスクリプトがJavaScriptプログラミング言語で書かれていることを想定しています。<br />
+JavaScriptを使用したくない場合は、CoffeeScript、TypeScript、Rubyなど、JavaScriptにコンパイル可能な別の言語を選択することができます。</p>
+<p>&#160;</p>
+<p class="Sub_Heading">デフォルトスクリプトの編集</p>
+<p>&#160;</p>
+<p>外部スクリプトエディターではデフォルトのスクリプトを編集することはできません。これらのスクリプトはラノゲツクールMVのDMS（文書管理システム）で管理しているためです。<br />
+しかし、これは通常は問題になりません。アップデートや移行時に変更が失われるため、デフォルトスクリプトを直接編集することは推奨されないからです。</p>
+<p>&#160;</p>
+<p>デフォルトスクリプトを変更するには、コピーを作成してメソッドや動作を上書きします。これでその変更が移行によって上書きされることはありません。<br />
+その後は外部スクリプトエディターを使ってデフォルトスクリプトをスクリプトフォルダにコピーし、変更を加えます。</p>
+<p>&#160;</p>
+<p>ただし、デフォルトスクリプトを外部ファイルとしてエクスポートする場合は、<br />
+「ツール &rarr; スクリプトエージェント &rarr; Default &rarr; ゲームスクリプトエクスポーター」からゲームスクリプトエクスポータースクリプトを使用できます。<br />
+このエクスポーターにより、すべてのスクリプトを.jsファイルや.coffeeファイルとしてエクスポートできます。<br />
+「JavaScriptとしてエクスポート」チェックボックスにチェックを入れると、コンパイルされたJavaScriptや通常のJavaScriptのみがエクスポートされ、CoffeeScriptコードはエクスポートされません。</p>
+</body>
+</html>

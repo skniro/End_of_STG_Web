@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>条件選択</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "3.2.3.0_2";
+</script>
+ <meta name="topic-breadcrumbs" content="ビギナーズガイド > ゲームのカスタマイズ > ノンリニアの物語" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">条件選択</p>
+</div>
+<p>&#160;</p>
+<p><span class="Topic_Start">こ</span>のチュートリアルでは、動的な選択肢の作り方について説明します。動的な選択肢とはつまり、フラグをトリガーしなければ登場しない特定の選択肢のことを指します。少々高度な内容になりますので、変数、スイッチ、ラベル、条件についてよく理解してからこの項目にお進みください。</p>
+<p>&#160;</p>
+<p>ここでは、キャラクターが部屋に閉じ込められ、脱出のためにはオブジェクトを調べなくてはならない状況と仮定します。今、その部屋には、ベッド、扉、窓のみがあります。ここで、条件として、窓という選択肢は扉を調べた後にだけ登場させたいとします。以下の図はそのプロセスを表しています。</p>
+<p>&#160;</p>
+<p><img src="2017-01-31_1-09-07.jpg" alt="" style=" border:none; width:100%; max-width:686px;" border="0" /></p>
+<p>&#160;</p>
+<p>このフローチャートを元にすると、イベントは次のように展開されます。</p>
+<p>&#160;</p>
+<p><img src="2017-01-31_8-32-56.jpg" alt="" style=" border:none; width:100%; max-width:923px;" border="0" /></p>
+<p>&#160;</p>
+<p>まとめますと、次のとおりです。</p>
+<ul style="list-style: disc;">
+	<li>特定のアクションをもとに選択肢を表示させるには、選択肢と動作を「<a href="Basic.htm#Condition">条件</a>」の下に置く必要があります！</li>
+	<li>「選択肢を追加」の「窓」については、ローカルスイッチ#1で「＝」、「有効」に設定されている場合に表示されます。</li>
+	<li>フローチャートでは、扉を調べた際に「窓」のフラグが立っているかチェックすることになっていますので、シーンに、スイッチが「無効」かどうかを確認するもう1つの条件を追加しました。こうすると、無効の場合、扉を調べた後にナレーションが表示され、スイッチを有効にするようになります。この動作は一度限りですので、それ以降に扉を調べてもナレーションが表示されることはありません。</li>
+</ul>
+<p>&#160;</p>
+<p>わかってみれば構造はシンプルです。ぜひ、あなたのビジュアルノベルに面白い分岐を追加してみて下さい！</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>共通イベント</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+p.WebHelpNavBar { text-align:right; }
+-->
+</style>
+
+<script type="text/javascript" src="template/scripts/rh.min.js"></script>
+<script type="text/javascript" src="template/scripts/common.min.js"></script>
+<script type="text/javascript" src="template/scripts/topic.min.js"></script>
+<script type="text/javascript" src="template/scripts/constants.js"></script>
+<script type="text/javascript" src="template/scripts/utils.js"></script>
+<script type="text/javascript" src="template/scripts/mhutils.js"></script>
+<script type="text/javascript" src="template/scripts/mhlang.js"></script>
+<script type="text/javascript" src="template/scripts/mhver.js"></script>
+<script type="text/javascript" src="template/scripts/settings.js"></script>
+<script type="text/javascript" src="template/scripts/XmlJsReader.js"></script>
+<script type="text/javascript" src="template/scripts/loadparentdata.js"></script>
+<script type="text/javascript" src="template/scripts/loadscreen.js"></script>
+<script type="text/javascript" src="template/scripts/loadprojdata.js"></script>
+<script type="text/javascript" src="template/scripts/mhtopic.js"></script>
+ <link rel="stylesheet" type="text/css" href="template/styles/topic.min.css">
+<script type="text/javascript" >
+gRootRelPath = ".";
+gCommonRootRelPath = ".";
+gTopicId = "2.2.0_6";
+</script>
+ <meta name="topic-breadcrumbs" content="エディタの使用方法 > データベース" />
+</head>
+
+<body>
+<script type="text/javascript" src="./ehlpdhtm.js"></script>
+
+<div style="width: 100%; position: relative;" id="header">
+	<p class="Topic_Heading">共通イベント</p>
+</div>
+<p style="font-family: Arial, sans-serif;">&#160;</p>
+<p style="font-family: Arial, sans-serif;"><img src="15.jpg" alt="" style=" border:none; width:100%; max-width:1283px;" border="0" /></p>
+<p style="font-weight: bold; font-size: 18pt; font-family: 'Book Antiqua', serif;">&#160;</p>
+<p class="Sub_Heading">「全般」</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「名前」 
+	 <span style="font-weight: normal;">- 共通イベントの名前です。</span></p></li>
+	<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「トリガー」 
+	 <span style="font-weight: normal;">- 共通イベントを実行する条件です。</span></p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: disc;">
+		<li><p style="font-family: Arial, sans-serif; font-weight: normal;"><span 
+		 style="font-weight: bold;">「呼び出し」</span> - 共通イベントは「共通イベントを呼び出す」シーンコマンドを使用すると実行されます。</p></li>
+		<li><p style="font-weight: bold; font-family: Arial, sans-serif;">「自動」 
+		 <span style="font-weight: normal;">- 共通イベントは自動的に有効になります。「並列実行」にチェックが入っていない場合、すべての処理が停止します。</span></p></li>
+	</ul></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「条件スイッチ」 
+	 <span style="font-weight: normal;">- 共通イベントの実行条件としてスイッチを使用します。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「並列実行」 
+	 <span style="font-weight: normal;">- イベントを同期せずに実行します。チェックを入れると、共通イベントの実行中も現在のシーンの再生が続けられます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「自動プリロード」 
+	 <span style="font-weight: normal;">- 共通イベントをリソースプレローダーで処理するかどうかを決定します。<br />
+	「トリガー」が「自動」に設定されている共通イベントに対してのみ機能します。チェックを入れると、共通イベントで使用されているすべてのリソースがプリロードされます。<br />
+	「自動」かつ「並列実行」の共通イベントではチェックを入れてください。<br />
+	これらのイベントはシーン中に呼び出されることがないため、イベント開始時に使用リソースをリソースプリローダーにプリロードさせる方法はこのオプション以外ありません。<br />
+	「自動」かつ「並列実行」で「自動プリロード」（自動プレロード）を設定した共通イベントの数が多い場合、<br />
+	これらの共通イベントのすべての使用リソースが開始時点にロードされ、以降も解放されることがないため、大量のメモリが消費されるので注意が必要です。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「シングルインスタンス」 
+	 <span style="font-weight: normal;">- 共通イベントのインスタンスを1つに限定するかどうかを決定します。<br />
+	チェックを外すと、「</span><span style="font-weight: normal;">共通イベントを呼び出す</span><span 
+	 style="font-weight: normal;">」を使用するたびに、固有のコマンドインタープリターとローカル変数を持つ新しいインスタンスが発生します。<br />
+	並列実行や反復実行の共通イベントではチェックを外してください。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif; font-weight: bold;">「インライン」 
+	 <span style="font-weight: normal;">- チェックを入れると、エンジンはコマンドを呼び出し元に直接コピー&amp;ペーストしてコマンドの実行を迅速化することにより、共通イベントの呼び出しを最適化しようとします。<br />
+	ループなどでコマンドイベントが頻繁に（1000回または10000回など）呼び出される場合はチェックを入れてください。<br />
+	「トリガー」が「自動」に設定されている共通イベント、パラメーターを持つ共通イベント、反復実行（自動呼び出し）の共通イベントに対しては機能しません。</span></p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading">「パラメータ」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">パラメータを設定して、数字やテキストなどの共通イベントを発生させる値を定義できます。例については、「<a 
+	 href="Tips_and_Tricks.htm">ヒントとコツ</a>」のページを参照してください。</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">&#160;</p>
+<ul style="list-style: disc;">
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「名前」</span> 
+	 - 自動入力のUIウィンドウに表示されるパラメータの名前です。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「数」</span> 
+	 - 数値やIDを変数に挿入します。</p></li>
+	<li style="font-weight: bold;"><p style="font-family: Arial, sans-serif;">「リスト項目」 
+	 <span style="font-weight: normal;">- ユーザー定義のリストです。各リスト項目は「名前：数値」のペアになります。選択された項目の数値は変数に保存されます。</span></p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「スイッチ」</span> 
+	 - スイッチ変数にスイッチ値を挿入します。</p></li>
+	<li><p style="font-family: Arial, sans-serif;"><span style="font-weight: bold;">「テキスト」</span> 
+	 - テキスト変数にテキスト値を挿入します。</p></li>
+</ul>
+<p style="font-family: Arial, sans-serif; font-weight: bold;">&#160;</p>
+<p class="Sub_Heading">「シーンコンテンツ」</p>
+<p style="font-family: Arial, sans-serif; font-weight: normal;">共通イベントのコンテンツです。各コマンドの詳細については、「<a 
+	 href="Scene_Content.htm">シーン</a>」のページを参照してください。</p>
+</body>
+</html>
